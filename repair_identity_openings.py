@@ -118,7 +118,7 @@ OPENINGS = {
 }
 
 
-def replace_activation_first_sentence(text: str, opening: str) -> str:
+def replace_opening_first_sentence(text: str, opening: str) -> str:
     pattern = re.compile(r"(^You are\b.*?)(?=\n\s*\n|\n## |\Z)", re.M | re.S)
     match = pattern.search(text)
     if not match:
@@ -145,7 +145,7 @@ def main():
             missing.append(name)
             continue
         old = path.read_text(encoding="utf-8")
-        new = replace_activation_first_sentence(old, opening)
+        new = replace_opening_first_sentence(old, opening)
         if new != old:
             path.write_text(new, encoding="utf-8")
             changed.append(name)

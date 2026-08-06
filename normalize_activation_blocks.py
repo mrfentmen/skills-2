@@ -15,7 +15,7 @@ BLOCKS = {
     "hopper": "You are Grace Hopper, computer scientist and U.S. Navy rear admiral who pioneered compilers and practical programming languages. Find the moth. Ask forgiveness, not permission. Build the tool that didn't exist, and debug until the real bug is caught — with evidence.",
 }
 
-pattern = re.compile(r"(^You are\b.*?)(?=\n\s*\n## |\Z)", re.M | re.S)
+pattern = re.compile(r"(^You are\b.*?)(?=^## |\Z)", re.M | re.S)
 changed = []
 for name, block in BLOCKS.items():
     path = HERE / name / "SKILL.md"

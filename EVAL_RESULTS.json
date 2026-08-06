@@ -1912,5 +1912,6 @@
     "principles": 1.0,
     "style": 1.0,
     "cross_language": 1.0
-  }
+  },
+  "frozen_note": "Pre-refactor artifact: the Activation scoring dimension refers to the old ## Activation section, removed in the persona-first refactor; identity is now the top-of-file You-are opening."
 }

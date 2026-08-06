@@ -34,7 +34,7 @@ def main():
         text = path.read_text(encoding="utf-8")
         act = activation(text)
         if not act.startswith("You are "):
-            problems.append((name, "Activation must start with 'You are'"))
+            problems.append((name, "opening must start with 'You are'"))
         if name not in normalized:
             problems.append((name, "missing README heading"))
         # A heading must at least reproduce the complete first sentence of the

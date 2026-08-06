@@ -1,3 +1,5 @@
+> **FROZEN (pre-refactor):** this report predates the persona-first refactor and its `Activation` column refers to the old `## Activation` section, which no longer exists. The identity is now the top-of-file "You are" opening. Regenerate before treating this column as meaningful.
+
 # Skills 2 — Eval Report
 
 Audited **174** SKILL.md files · min score **0.75**

@@ -98,7 +98,7 @@ def compose(name: str, skill: dict, task: str = "") -> str:
         lines += ["## What this skill is", "", desc, ""]
     act = skill["activation"]
     if act:
-        lines += ["## Activation", "", act, ""]
+        lines += ["## Persona", "", act, ""]
     reqs = skill["requirements"]
     if reqs:
         # keep only the checkable bullets
