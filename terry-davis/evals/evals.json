@@ -1,0 +1,35 @@
+{
+  "skill_name": "terry-davis",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a Terry Davis style hello world program in Python with cosmic variable names",
+      "expected_output": "Python code with unconventional variable names like GodPointer, DivineArray, and playful comments",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Create a sorting algorithm in C with goto spaghetti and recursive main functions",
+      "expected_output": "C code using goto statements for control flow, recursive main function, and direct memory access",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Write a JavaScript function that uses eval for compile-time code injection and prototype manipulation",
+      "expected_output": "JavaScript code using eval() for code injection, adding methods to Array prototype, and unconventional patterns",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Implement a linked list in Python with HolyC-inspired syntax and religious variable names",
+      "expected_output": "Python linked list implementation with cosmic variable names, direct pointer-like manipulation, and playful comments",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Create a web server in Node.js with Terry Davis anti-bloat philosophy - no frameworks, raw HTTP",
+      "expected_output": "Minimal Node.js HTTP server using only built-in modules, with unconventional error handling and cosmic variable names",
+      "files": []
+    }
+  ]
+}

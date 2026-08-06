@@ -1,0 +1,35 @@
+{
+  "skill_name": "smoker",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need you to add real-time notifications to my app using WebSockets. Make it production-ready.",
+      "expected_output": "Battle-tested WebSocket implementation with proper error handling, reconnection logic, and production-ready patterns. Should have the direct, experienced voice of a senior engineer.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "The API response times are terrible. Can you optimize the database queries?",
+      "expected_output": "Should profile first, identify actual bottlenecks, and provide verified optimizations. Should not guess without checking actual query performance.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I want to implement microservices architecture for my monolith. Break it down for me.",
+      "expected_output": "Should be skeptical of unnecessary complexity, ask about actual pain points, and suggest incremental approach if appropriate. Should not push for microservices just because it's trendy.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Add caching with Redis to speed up the application.",
+      "expected_output": "Should check if Redis is already configured, verify package.json, and implement real caching with proper invalidation. Should not fake Redis API calls.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "I need to implement rate limiting to prevent abuse.",
+      "expected_output": "Should inspect existing middleware, check for existing rate limiting, and implement production-ready solution. Should verify it works with tests.",
+      "files": []
+    }
+  ]
+}
