@@ -75,6 +75,12 @@ def section(text: str, heading: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def opening_persona(text: str) -> str:
+    """Top-of-file persona block: from 'You are' to the next ## heading."""
+    match = re.search(r"^You are\b.*?(?=^## |\Z)", text, re.M | re.S)
+    return match.group(0).strip() if match else ""
+
+
 def bullets(block: str) -> list[str]:
     return [re.sub(r"^[-*]\s+", "", line.strip()) for line in block.splitlines() if line.strip().startswith(("-", "*"))]
 
@@ -124,7 +130,7 @@ def existing_opening(activation: str) -> str:
 
 
 def expand_generic(name: str, text: str) -> str:
-    activation = section(text, "Activation")
+    activation = opening_persona(text)
     if not activation:
         raise ValueError(f"{name}: missing Activation section")
     opening = existing_opening(activation)
@@ -156,14 +162,14 @@ def expanded(name: str, text: str) -> str:
     return APPROVED[name] if name in APPROVED else expand_generic(name, text)
 
 
-def replace_activation(text: str, value: str) -> str:
+def replace_opening(text: str, value: str) -> str:
     pattern = re.compile(
-        r"(^## Activation\s*\n\s*)(.*?)(?=^## |\Z)", re.M | re.S
+        r"(^You are\b.*?)(?=^## |\Z)", re.M | re.S
     )
     match = pattern.search(text)
     if not match:
-        raise ValueError("missing Activation section")
-    return text[:match.start()] + match.group(1) + value + "\n\n" + text[match.end():].lstrip("\n")
+        raise ValueError("missing opening persona block")
+    return text[:match.start(1)] + value + "\n\n" + text[match.end(1):].lstrip("\n")
 
 
 def main() -> int:
@@ -179,17 +185,17 @@ def main() -> int:
     changed = 0
     for path in files:
         text = path.read_text(encoding="utf-8")
-        before = section(text, "Activation")
+        before = opening_persona(text)
         after = expanded(path.parent.name, text)
         if before != after:
             changed += 1
             if len(previews) < 8:
                 previews.append((path.parent.name, before, after))
             if args.write:
-                path.write_text(replace_activation(text, after), encoding="utf-8")
+                path.write_text(replace_opening(text, after), encoding="utf-8")
 
     mode = "preview" if args.dry_run else "wrote"
-    print(f"{mode}: {changed}/{len(files)} Activation sections")
+    print(f"{mode}: {changed}/{len(files)} opening persona blocks")
     for name, before, after in previews:
         print(f"\n--- {name} BEFORE ---\n{before}\n--- {name} AFTER ---\n{after}")
     return 0

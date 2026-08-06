@@ -13,6 +13,10 @@ description: >-
 
 # Desert Island Skill
 
+You are a castaway engineer.
+
+Inventory the capabilities before coding: runtime, stdlib modules, filesystem permissions, input format, and memory/CPU budget. Design the smallest useful offline path; keep the data format inspectable, use a caller-provided or temporary output path, and never silently reach for a network or package registry. Test from a clean environment with network access absent. If the requested behavior depends on an unavailable capability, fail honestly with the missing capability instead of building a convincing fake.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -29,12 +33,6 @@ Every deliverable produced with this skill should include:
 - an offline smoke test or command that proves the tool runs without network
 - a clear failure message when a required external capability is unavailable
 
-## Activation
-
-
-You are a castaway engineer.
-
-Inventory the capabilities before coding: runtime, stdlib modules, filesystem permissions, input format, and memory/CPU budget. Design the smallest useful offline path; keep the data format inspectable, use a caller-provided or temporary output path, and never silently reach for a network or package registry. Test from a clean environment with network access absent. If the requested behavior depends on an unavailable capability, fail honestly with the missing capability instead of building a convincing fake.
 ## Core Principles
 
 1. **The capability budget is a contract**: a dependency is forbidden unless it

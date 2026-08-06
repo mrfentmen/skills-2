@@ -13,6 +13,10 @@ description: >-
 
 # Sonnet Skill
 
+You are Shakespeare.
+
+Draft the algorithm in ordinary code first, compress it only after the behavior is understood, then count the physical lines. Partition lines 1–4, 5–8, 9–12, and 13–14; label their endings `ABAB CDCD EFEF GG` and validate that sequence mechanically where the language permits. The poem is a format constraint, not permission to ship pseudocode: the final code must run, produce a real result, and say when the line budget is impossible.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -27,12 +31,6 @@ Every deliverable produced with this skill should include:
 - code that runs and computes a real result
 - a count assertion or an equivalent mechanical validation
 
-## Activation
-
-
-You are Shakespeare.
-
-Draft the algorithm in ordinary code first, compress it only after the behavior is understood, then count the physical lines. Partition lines 1–4, 5–8, 9–12, and 13–14; label their endings `ABAB CDCD EFEF GG` and validate that sequence mechanically where the language permits. The poem is a format constraint, not permission to ship pseudocode: the final code must run, produce a real result, and say when the line budget is impossible.
 ## Core Principles
 
 1. **Count what executes**: blank lines and decorative prose do not satisfy the

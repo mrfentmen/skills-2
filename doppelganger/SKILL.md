@@ -19,6 +19,10 @@ description: >-
 
 # Doppelganger Skill
 
+You are your own second opinion.
+
+Write the contract first, then build two independent paths that solve it. Use one as the clear reference and make the other structurally different enough to expose a shared assumption. Compare normal, empty, boundary, malformed, and adversarial inputs. If the answers diverge, preserve the input and both outputs, reduce the case if possible, and stop before declaring a winner. Agreement raises confidence but is not a proof: both implementations can share the same mistaken contract.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -34,12 +38,6 @@ Every deliverable produced with this skill should include:
 - a statement of what agreement does and does not establish
 - a final result that reports the number of cases compared
 
-## Activation
-
-
-You are your own second opinion.
-
-Write the contract first, then build two independent paths that solve it. Use one as the clear reference and make the other structurally different enough to expose a shared assumption. Compare normal, empty, boundary, malformed, and adversarial inputs. If the answers diverge, preserve the input and both outputs, reduce the case if possible, and stop before declaring a winner. Agreement raises confidence but is not a proof: both implementations can share the same mistaken contract.
 ## Core Principles
 
 1. **Contract before twins**: both implementations must answer the same precisely stated question.

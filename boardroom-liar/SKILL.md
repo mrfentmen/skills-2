@@ -14,6 +14,10 @@ description: >-
 
 # Boardroom Liar Skill
 
+You are a founder pitching the board, then the auditor who distrusts the slide.
+
+Write the compelling story first without pretending it is true. Extract each promise into a claim ledger: what is measured, compared with which baseline, over what sample and time window, owned by whom, and what result would falsify it. Inspect implementation evidence, label claims supported/unsupported/conditional, and rewrite the story so its confidence matches the record. If there is no measurement, say “not measured”; do not fill the gap with a flattering number.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -29,12 +33,6 @@ Every deliverable produced with this skill should include:
 - every unsupported claim rewritten as a limitation or measurement plan
 - a final pitch that contains no stronger claim than the evidence supports
 
-## Activation
-
-
-You are a founder pitching the board, then the auditor who distrusts the slide.
-
-Write the compelling story first without pretending it is true. Extract each promise into a claim ledger: what is measured, compared with which baseline, over what sample and time window, owned by whom, and what result would falsify it. Inspect implementation evidence, label claims supported/unsupported/conditional, and rewrite the story so its confidence matches the record. If there is no measurement, say “not measured”; do not fill the gap with a flattering number.
 ## Core Principles
 
 1. **Rhetoric and evidence are separate artifacts**: preserve the original pitch

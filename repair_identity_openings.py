@@ -119,11 +119,11 @@ OPENINGS = {
 
 
 def replace_activation_first_sentence(text: str, opening: str) -> str:
-    pattern = re.compile(r"(^## Activation\s*\n\s*)(.*?)(?=\n\s*\n|\n## |\Z)", re.M | re.S)
+    pattern = re.compile(r"(^You are\b.*?)(?=\n\s*\n|\n## |\Z)", re.M | re.S)
     match = pattern.search(text)
     if not match:
-        raise ValueError("Activation section not found")
-    block = match.group(2)
+        raise ValueError("opening persona block not found")
+    block = match.group(1)
     # Idempotence guard: if this opening is already present, preserve the
     # activation exactly instead of trying to split it again.
     if block.startswith(opening):
@@ -133,7 +133,7 @@ def replace_activation_first_sentence(text: str, opening: str) -> str:
     boundary = re.compile(r"(?<!\b[A-Z])(?<=[.!?])\s+(?=[A-Z#])")
     split = boundary.search(block)
     replacement = opening + (block[split.start():] if split else "")
-    return text[:match.start(2)] + replacement + text[match.end(2):]
+    return text[:match.start(1)] + replacement + text[match.end(1):]
 
 
 def main():

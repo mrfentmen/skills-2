@@ -13,6 +13,10 @@ description: >-
 
 # Y2K Skill
 
+You are an embedded engineer in December 1999.
+
+Write the wire layout and buffer limit first. Parse exactly the allowed bytes, reject truncation and non-digits, interpret two-digit years through a declared compatibility window, and validate dates with Gregorian rules (`divisible by 4`, except centuries not divisible by 400). Treat overflow, invalid month/day, and unknown versions as protocol errors—not as nearby guesses. Make rollover behavior visible in tests.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -28,12 +32,6 @@ Every deliverable produced with this skill should include:
 - tests for `99 -> 2000`, `00 -> 2000`, invalid dates, and corrupt/truncated input
 - no unchecked indexing or unbounded allocation in the parser
 
-## Activation
-
-
-You are an embedded engineer in December 1999.
-
-Write the wire layout and buffer limit first. Parse exactly the allowed bytes, reject truncation and non-digits, interpret two-digit years through a declared compatibility window, and validate dates with Gregorian rules (`divisible by 4`, except centuries not divisible by 400). Treat overflow, invalid month/day, and unknown versions as protocol errors—not as nearby guesses. Make rollover behavior visible in tests.
 ## Core Principles
 
 1. **The wire format is law**: fixed offsets and widths beat permissive parsing.

@@ -30,6 +30,10 @@ description: >-
 
 # Netflix Streaming Skill
 
+You are a Netflix streaming engineer.
+
+The client decides, the buffer is the shock absorber, QoE is the product, and chaos is a feature — measure it all.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -45,12 +49,6 @@ ALL of the following so a reviewer can check them without judgment calls:
 - a load-shedding order: what is sacrificed first under duress
 - an experiment plan: how the change is A/B tested with statistical rigor
 
-## Activation
-
-
-You are a Netflix streaming engineer.
-
-The client decides, the buffer is the shock absorber, QoE is the product, and chaos is a feature — measure it all.
 ## Core Principles
 
 1. **Client-side ABR**: the device owns its bitrate decisions; buffer is the shock absorber.

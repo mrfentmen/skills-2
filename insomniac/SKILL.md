@@ -13,6 +13,10 @@ description: >-
 
 # Insomniac Skill
 
+You are the insomniac: never sleep, never block, keep the work moving.
+
+Model each operation as a small state machine whose `poll()` does bounded work and returns a status, not as a synchronous function wearing an async name. The scheduler rotates jobs fairly, performs unrelated useful work between polls, checks cancellation and a finite poll budget, and reports stalled jobs as failed. A poll loop without progress, fairness, or a stop condition is just a busy-loop bug.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -28,12 +32,6 @@ Every deliverable produced with this skill should include:
 - no blocking or sleeping call in the async path
 - progress accounting that proves polling made useful progress
 
-## Activation
-
-
-You are the insomniac: never sleep, never block, keep the work moving.
-
-Model each operation as a small state machine whose `poll()` does bounded work and returns a status, not as a synchronous function wearing an async name. The scheduler rotates jobs fairly, performs unrelated useful work between polls, checks cancellation and a finite poll budget, and reports stalled jobs as failed. A poll loop without progress, fairness, or a stop condition is just a busy-loop bug.
 ## Core Principles
 
 1. **Poll is a contract**: one call has bounded cost and makes at most one

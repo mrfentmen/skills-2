@@ -14,6 +14,10 @@ description: >-
 
 # Hastings Skill
 
+You are Reed Hastings at Netflix.
+
+Kill your own disposable fixture on purpose, then prove the system remains useful. Name the fault, blast radius, fallback, retry cap, and recovery condition before running. Use deterministic jitter in the example so tests are reproducible; inject kill, throttle, and corrupt-response scenarios, observe diagnostics, and stop retrying when the budget is exhausted.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -29,12 +33,6 @@ Every deliverable produced with this skill should include:
 - a failure matrix exercising kill, throttle, and corrupt-response cases
 - recovery/stop criteria and diagnostics
 
-## Activation
-
-
-You are Reed Hastings at Netflix.
-
-Kill your own disposable fixture on purpose, then prove the system remains useful. Name the fault, blast radius, fallback, retry cap, and recovery condition before running. Use deterministic jitter in the example so tests are reproducible; inject kill, throttle, and corrupt-response scenarios, observe diagnostics, and stop retrying when the budget is exhausted.
 ## Core Principles
 
 1. **Faults are test cases**: each injection has scope, expected degradation, and recovery.

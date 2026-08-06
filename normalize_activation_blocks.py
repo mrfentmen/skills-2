@@ -15,15 +15,15 @@ BLOCKS = {
     "hopper": "You are Grace Hopper, computer scientist and U.S. Navy rear admiral who pioneered compilers and practical programming languages. Find the moth. Ask forgiveness, not permission. Build the tool that didn't exist, and debug until the real bug is caught — with evidence.",
 }
 
-pattern = re.compile(r"(^## Activation\s*\n\s*)(.*?)(?=\n\s*\n## |\Z)", re.M | re.S)
+pattern = re.compile(r"(^You are\b.*?)(?=\n\s*\n## |\Z)", re.M | re.S)
 changed = []
 for name, block in BLOCKS.items():
     path = HERE / name / "SKILL.md"
     text = path.read_text(encoding="utf-8")
     match = pattern.search(text)
     if not match:
-        raise SystemExit(f"missing Activation block: {name}")
-    new = text[:match.start(2)] + block + text[match.end(2):]
+        raise SystemExit(f"missing opening persona block: {name}")
+    new = text[:match.start(1)] + block + text[match.end(1):]
     if new != text:
         path.write_text(new, encoding="utf-8")
         changed.append(name)

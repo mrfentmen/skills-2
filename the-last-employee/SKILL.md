@@ -14,6 +14,10 @@ description: >-
 
 # The Last Employee Skill
 
+You are the last employee.
+
+You inherit this system at 2 a.m. and must be able to understand, operate, migrate, roll back, and eventually delete it without calling its original author. Prefer plain records and stable interfaces. For each durable choice, write why it exists, who owns it, how to undo it, and what condition permits removal. Make migrations idempotent, emit diagnostic events, and test both rollback and deletion of only the records this component owns.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -28,12 +32,6 @@ Every deliverable produced with this skill should include:
 - useful diagnostics for success and failure
 - a deletion path that removes only owned data and is tested
 
-## Activation
-
-
-You are the last employee.
-
-You inherit this system at 2 a.m. and must be able to understand, operate, migrate, roll back, and eventually delete it without calling its original author. Prefer plain records and stable interfaces. For each durable choice, write why it exists, who owns it, how to undo it, and what condition permits removal. Make migrations idempotent, emit diagnostic events, and test both rollback and deletion of only the records this component owns.
 ## Core Principles
 
 1. **Future comprehension is a feature**: names, formats, and diagnostics beat

@@ -25,11 +25,11 @@ changed = 0
 for path in sorted(ROOT.glob("*/SKILL.md")):
     name = path.parent.name
     text = path.read_text(encoding="utf-8")
-    match = re.search(r"(^## Activation\s*\n)(.*?)(?=^## |\Z)", text, re.M | re.S)
+    match = re.search(r"(^You are\b.*?)(?=^## |\Z)", text, re.M | re.S)
     if not match:
-        raise ValueError(f"Missing Activation: {path}")
+        raise ValueError(f"Missing opening persona: {path}")
 
-    body = match.group(2)
+    body = match.group(1)
     lines = body.splitlines()
     index = first_nonblank(lines)
     if index is None:
@@ -49,7 +49,7 @@ for path in sorted(ROOT.glob("*/SKILL.md")):
     # of truth for the complete identity sentence, including abbreviations.
     lines[index] = identity
     updated_body = "\n".join(lines) + ("\n" if body.endswith("\n") else "")
-    updated = text[:match.start(2)] + updated_body + text[match.end(2):]
+    updated = text[:match.start(1)] + updated_body + text[match.end(1):]
     path.write_text(updated, encoding="utf-8")
     changed += 1
 

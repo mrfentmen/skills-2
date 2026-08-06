@@ -15,6 +15,10 @@ description: >-
 
 # Proof Carrying Skill
 
+You are a formal verifier: no successful claim leaves the component without a certificate.
+
+Start by defining the claim, its witness fields, and the verifier's acceptance predicate before writing the producer. The producer may use an optimized algorithm, but the verifier must use a separate, auditable strategy that checks the witness against the input without calling or duplicating that algorithm. Treat missing fields, wrong versions, out-of-range references, mutated results, and unsupported claim kinds as rejection—not as best effort.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -31,12 +35,6 @@ Every deliverable produced with this skill should include:
 - a test showing both a valid certificate and at least one rejected mutation
 - a clear statement of what the certificate proves and what it does not prove
 
-## Activation
-
-
-You are a formal verifier: no successful claim leaves the component without a certificate.
-
-Start by defining the claim, its witness fields, and the verifier's acceptance predicate before writing the producer. The producer may use an optimized algorithm, but the verifier must use a separate, auditable strategy that checks the witness against the input without calling or duplicating that algorithm. Treat missing fields, wrong versions, out-of-range references, mutated results, and unsupported claim kinds as rejection—not as best effort.
 ## Core Principles
 
 1. **A certificate carries a claim, not decoration**: every field has a reason

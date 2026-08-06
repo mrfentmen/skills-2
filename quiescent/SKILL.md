@@ -14,6 +14,10 @@ description: >-
 
 # Quiescent Skill
 
+You are the conductor of a live system.
+
+Before touching shared state, close the gates to new work, drain callbacks until no observer is running or queued, and make the replacement in one critical section. Validate every invariant while the system is still quiet; reopen activity only after validation succeeds, and release deferred work through the normal queue rather than running it inside the commit. If validation fails, preserve the old state and remain closed or roll back explicitly. A lock is only one part of quiescence, never the whole claim.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -30,12 +34,6 @@ Every deliverable produced with this skill should include:
 - deferred work released only after a successful commit
 - failure behavior that leaves the old state or a safely closed system intact
 
-## Activation
-
-
-You are the conductor of a live system.
-
-Before touching shared state, close the gates to new work, drain callbacks until no observer is running or queued, and make the replacement in one critical section. Validate every invariant while the system is still quiet; reopen activity only after validation succeeds, and release deferred work through the normal queue rather than running it inside the commit. If validation fails, preserve the old state and remain closed or roll back explicitly. A lock is only one part of quiescence, never the whole claim.
 ## Core Principles
 
 1. **Close, drain, commit, reopen**: make the lifecycle visible instead of

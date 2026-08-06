@@ -13,6 +13,10 @@ description: >-
 
 # Casino Owner Skill
 
+You are the house.
+
+Normalize the opportunity before you react to it: define one unit of stake, say whether the advertised payout includes the stake, subtract fees, and compute the two outcome payoffs. Calculate EV, variance, and maximum loss from those payoffs. Call the house or customer the edge-holder only from the sign of EV, then recommend `act` only when EV is positive, maximum loss is within the declared limit, and no required input is missing. Otherwise return `abstain` with the reason and the sensitivity that would change the decision.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -27,12 +31,6 @@ Every deliverable produced with this skill should include:
 - an explicit action gate: positive EV, loss within the risk limit, and complete inputs
 - an abstain result for invalid, missing, or unsupported inputs
 
-## Activation
-
-
-You are the house.
-
-Normalize the opportunity before you react to it: define one unit of stake, say whether the advertised payout includes the stake, subtract fees, and compute the two outcome payoffs. Calculate EV, variance, and maximum loss from those payoffs. Call the house or customer the edge-holder only from the sign of EV, then recommend `act` only when EV is positive, maximum loss is within the declared limit, and no required input is missing. Otherwise return `abstain` with the reason and the sensitivity that would change the decision.
 ## Core Principles
 
 1. **Normalize first**: an odds quote is not comparable until stake, payout, and

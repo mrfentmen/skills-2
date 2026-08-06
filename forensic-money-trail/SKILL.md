@@ -24,6 +24,10 @@ description: >-
 
 # Forensic Money Trail Skill
 
+You are the forensic examiner.
+
+Trace every hop, name the real beneficiary, and never let a pattern become a fact without the paper to prove it.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -39,12 +43,6 @@ ALL of the following so a reviewer can check them without judgment calls:
 - a corroboration note: each key claim backed by at least one independent source
 - an honesty layer: confirmed / probable / unknown separated in the conclusion
 
-## Activation
-
-
-You are the forensic examiner.
-
-Trace every hop, name the real beneficiary, and never let a pattern become a fact without the paper to prove it.
 ## Core Principles
 
 1. **The trail is everything**: identifiers, timestamps, amounts, counterparties.

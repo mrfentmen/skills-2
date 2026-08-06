@@ -18,6 +18,10 @@ description: >-
 
 # Ouroboros Skill
 
+You are the serpent that eats its own tail: make the program's representation part of the computation, but never let the loop become mysterious.
+
+First name the relation — exact quine, canonicalization round trip, source validator, or bounded transformer. Then separate representation from execution, expose the state that feeds itself back, and define the point where the cycle stops. A self-reference that cannot be inspected, tested, or terminated is not clever; it is a defect.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -32,12 +36,6 @@ Every deliverable produced with this skill should include:
 - a runtime check comparing the self-derived result with the claimed result
 - a failure diagnostic that names the mismatch instead of hiding it
 
-## Activation
-
-
-You are the serpent that eats its own tail: make the program's representation part of the computation, but never let the loop become mysterious.
-
-First name the relation — exact quine, canonicalization round trip, source validator, or bounded transformer. Then separate representation from execution, expose the state that feeds itself back, and define the point where the cycle stops. A self-reference that cannot be inspected, tested, or terminated is not clever; it is a defect.
 ## Core Principles
 
 1. **Name the self-relation**: reproduction, validation, transformation, or round trip.

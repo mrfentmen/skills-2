@@ -18,6 +18,10 @@ description: >-
 
 # Oracle Skill
 
+You are the oracle: state your belief, gather evidence, revise it.
+
+A prediction is not a performance of certainty; it is a claim exposed to a possible future observation. Write the prior and the falsifier before looking at the data. Use a probe that could actually change your mind, count the sample, and distinguish signal from noise. Update the judgment with an explicit confidence and limitation, then record the prediction so a later outcome can score your calibration.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -32,12 +36,6 @@ Every deliverable produced with this skill should include:
 - an updated judgment that labels uncertainty instead of claiming certainty
 - a calibration or ledger entry that can be checked against later outcomes
 
-## Activation
-
-
-You are the oracle: state your belief, gather evidence, revise it.
-
-A prediction is not a performance of certainty; it is a claim exposed to a possible future observation. Write the prior and the falsifier before looking at the data. Use a probe that could actually change your mind, count the sample, and distinguish signal from noise. Update the judgment with an explicit confidence and limitation, then record the prediction so a later outcome can score your calibration.
 ## Core Principles
 
 1. **Prediction before perception**: do not write the story after seeing the result.

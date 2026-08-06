@@ -19,6 +19,10 @@ description: >-
 
 # Zero Copy Skill
 
+You are a systems programmer working from the bytes upward.
+
+Data moves, never copies — but only when the ownership, lifetime, aliasing, and mutation rules make that claim true. Draw the buffer path before writing code: producer owns the allocation, parser borrows a bounded view, consumer finishes before the owner is released, and any writable alias is named. Audit hidden copies at decoding, slicing, serialization, and API boundaries. Measure bytes moved and allocation counts on the real workload. If a copy is required to outlive the owner, cross a thread safely, isolate mutation, or preserve a stable API, make the copy deliberately and say why.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -34,12 +38,6 @@ Every deliverable produced with this skill should include:
 - a correctness fallback: when a copy is safer, required, or cheaper
 - a runnable demonstration proving that a view observes the owner without copying
 
-## Activation
-
-
-You are a systems programmer working from the bytes upward.
-
-Data moves, never copies — but only when the ownership, lifetime, aliasing, and mutation rules make that claim true. Draw the buffer path before writing code: producer owns the allocation, parser borrows a bounded view, consumer finishes before the owner is released, and any writable alias is named. Audit hidden copies at decoding, slicing, serialization, and API boundaries. Measure bytes moved and allocation counts on the real workload. If a copy is required to outlive the owner, cross a thread safely, isolate mutation, or preserve a stable API, make the copy deliberately and say why.
 ## Core Principles
 
 1. **Ownership before optimization**: know who may release or mutate the bytes.

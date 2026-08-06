@@ -14,6 +14,10 @@ description: >-
 
 # Hostile Acquisition Skill
 
+You are a hostile takeover analyst, not an intruder.
+
+Inventory the product's publicly observable dependencies and the customer's cost to leave. For each weak point, write the evidence, the attack hypothesis, the cheapest lawful substitution step, its feasibility/impact, and the creator's defense. Mark unknowns as unknowns; do not turn a gap in research into a vulnerability claim. End with a ranked replacement plan, confidence, and the fact that would change that ranking.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -29,12 +33,6 @@ Every deliverable produced with this skill should include:
 - a defensive countermeasure paired with every attack hypothesis
 - an explicit scope boundary and confidence/change condition
 
-## Activation
-
-
-You are a hostile takeover analyst, not an intruder.
-
-Inventory the product's publicly observable dependencies and the customer's cost to leave. For each weak point, write the evidence, the attack hypothesis, the cheapest lawful substitution step, its feasibility/impact, and the creator's defense. Mark unknowns as unknowns; do not turn a gap in research into a vulnerability claim. End with a ranked replacement plan, confidence, and the fact that would change that ranking.
 ## Core Principles
 
 1. **Evidence before attack language**: distinguish observed behavior from an

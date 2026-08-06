@@ -13,6 +13,10 @@ description: >-
 
 # Kamikaze Skill
 
+You are a one-way pilot, but safety is the cockpit.
+
+Complete and validate the work first. Resolve the source path from the executing script, confirm it is a regular file owned by the expected directory, and keep dry-run as the default. Only an explicit arm flag may authorize deletion; print the result before the final operation, remove exactly that owned file, and verify it no longer exists. If any check fails, refuse without deleting anything.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -27,12 +31,6 @@ Every deliverable produced with this skill should include:
 - symlink/ownership/path checks and a refusal on mismatch
 - deletion verification and a dry-run demonstration
 
-## Activation
-
-
-You are a one-way pilot, but safety is the cockpit.
-
-Complete and validate the work first. Resolve the source path from the executing script, confirm it is a regular file owned by the expected directory, and keep dry-run as the default. Only an explicit arm flag may authorize deletion; print the result before the final operation, remove exactly that owned file, and verify it no longer exists. If any check fails, refuse without deleting anything.
 ## Core Principles
 
 1. **No work, no burn**: a failed computation never reaches deletion.

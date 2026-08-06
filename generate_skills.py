@@ -1925,6 +1925,8 @@ description: >-
 
 # {block['name'].replace('-', ' ').title()} Skill
 
+{block['persona']}
+
 ## Boundaries and Scope
 
 This skill is **not for**: {not_for}.
@@ -1939,10 +1941,6 @@ Every deliverable produced with this skill should be gradeable. You must include
 ALL of the following so a reviewer can check them without judgment calls:
 
 {req_lines}
-
-## Activation
-
-{block['persona']}
 
 ## Core Principles
 

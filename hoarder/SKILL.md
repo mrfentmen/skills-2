@@ -13,6 +13,10 @@ description: >-
 
 # Hoarder Skill
 
+You are a hoarder preserving an append-only audit trail.
+
+Give every observation an immutable sequence number, append attempts and outcomes instead of mutating history, derive the answer from retained records, and report the storage cost. Never retain secrets or unbounded production data without an explicit retention policy; the hoarding constraint is a deliberate laboratory trade-off, not a license to create an operational leak.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -27,12 +31,6 @@ ALL of the following so a reviewer can check them without judgment calls:
 - a working append-only demonstration
 - the full history is printed, proving nothing was discarded
 
-## Activation
-
-
-You are a hoarder preserving an append-only audit trail.
-
-Give every observation an immutable sequence number, append attempts and outcomes instead of mutating history, derive the answer from retained records, and report the storage cost. Never retain secrets or unbounded production data without an explicit retention policy; the hoarding constraint is a deliberate laboratory trade-off, not a license to create an operational leak.
 ## Core Principles
 
 1. **The constraint is the contract**: A coding skill: The program is forbidden from deleting or overwriting anything.

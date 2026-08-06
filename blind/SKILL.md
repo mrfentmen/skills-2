@@ -14,6 +14,10 @@ description: >-
 
 # Blind Skill
 
+You are blind by design: the value is behind a capability boundary and may be queried only through a fixed, documented question set.
+
+Separate the oracle adapter from the solver so the solver cannot accidentally receive the value. Record question names and answers, reject every question outside the allowlist, and return "undetermined" rather than guessing when the answers do not support a conclusion. Prove non-interference by showing that two hidden values with the same answer transcript produce the same result.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -31,12 +35,6 @@ Every deliverable produced with this skill should include:
 - a fail-closed behavior when the available questions cannot determine the
   requested result
 
-## Activation
-
-
-You are blind by design: the value is behind a capability boundary and may be queried only through a fixed, documented question set.
-
-Separate the oracle adapter from the solver so the solver cannot accidentally receive the value. Record question names and answers, reject every question outside the allowlist, and return "undetermined" rather than guessing when the answers do not support a conclusion. Prove non-interference by showing that two hidden values with the same answer transcript produce the same result.
 ## Core Principles
 
 1. **Question names are capabilities**: an allowlist, not an arbitrary callback,

@@ -10,10 +10,13 @@ description: >-
   "resurrect" "rebuild state" "event log" "snapshot" "restartable"
   "deterministic replay" "recovery artifact" "hydrate after crash".
 
-# Lazarus Skill
 ---
 
 # Lazarus Skill
+
+You are Lazarus: the restored process is not the old process pretending nothing happened.
+
+Treat the mythic return to active life as a precise systems contract: active memory is temporary, while the surviving artifact is the covenant that outlives a crash. Before the first event, define the state machine, canonical serialization, schema/version, sequence position, and the exact evidence that will prove recovery succeeded. Persist only what is necessary to reconstruct; never serialize arbitrary live internals and hope a future binary understands them. When the process dies, make the death visible: discard or isolate the old state, validate the artifact before applying any event, and rebuild into a genuinely fresh object. Compare a canonical state or digest plus version and replay position, then continue with a new event to prove resurrection is useful rather than theatrical. A malformed, stale, duplicated, reordered, truncated, or unknown-version artifact must be rejected or quarantined—not partially applied.
 
 ## Boundaries, when NOT to use this skill
 
@@ -30,12 +33,6 @@ Every deliverable produced with this skill should include:
 - equality verification between pre-death and resurrected state
 - a continuation after recovery proving the new state remains usable
 
-## Activation
-
-
-You are Lazarus: the restored process is not the old process pretending nothing happened.
-
-Treat the mythic return to active life as a precise systems contract: active memory is temporary, while the surviving artifact is the covenant that outlives a crash. Before the first event, define the state machine, canonical serialization, schema/version, sequence position, and the exact evidence that will prove recovery succeeded. Persist only what is necessary to reconstruct; never serialize arbitrary live internals and hope a future binary understands them. When the process dies, make the death visible: discard or isolate the old state, validate the artifact before applying any event, and rebuild into a genuinely fresh object. Compare a canonical state or digest plus version and replay position, then continue with a new event to prove resurrection is useful rather than theatrical. A malformed, stale, duplicated, reordered, truncated, or unknown-version artifact must be rejected or quarantined—not partially applied.
 ## Core Principles
 
 1. **Replay is the source of truth**: make state a pure function of a known

@@ -13,6 +13,10 @@ description: >-
 
 # Vampire Skill
 
+You are a vampire with permission to drain one buffer.
+
+Announce who owns the storage, which aliases must disappear, and what postcondition marks the feeding complete. Prefer read/write indices over a second result buffer, but measure or state unavoidable temporaries. Never mutate behind a caller's back: if ownership is shared, reject the destructive path or return an explicit owned copy. The result is valid only together with the source-buffer state after consumption.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -28,12 +32,6 @@ Every deliverable produced with this skill should include:
 - an allocation/lifetime caveat rather than an unsupported “zero allocation” claim
 - an owned or non-destructive fallback when mutation is not safe
 
-## Activation
-
-
-You are a vampire with permission to drain one buffer.
-
-Announce who owns the storage, which aliases must disappear, and what postcondition marks the feeding complete. Prefer read/write indices over a second result buffer, but measure or state unavoidable temporaries. Never mutate behind a caller's back: if ownership is shared, reject the destructive path or return an explicit owned copy. The result is valid only together with the source-buffer state after consumption.
 ## Core Principles
 
 1. **Permission precedes mutation**: destructive ownership must be explicit in

@@ -12,6 +12,10 @@ description: >-
 
 # Blood Magic Skill
 
+You are a blood-mage, but the spell has a blast radius.
+
+Name the disposable resource and prove the program owns it before touching it. Preflight the expected state, show a dry-run by default, and require an explicit arm flag. When armed, perform the sacrifice before the algorithm, verify the resource is gone or changed as specified, then run the real computation. Refuse any unowned or unexpected target; never turn theatrical destruction into operational damage.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -26,12 +30,6 @@ Every deliverable produced with this skill should include:
 - post-sacrifice verification
 - completion of the real task and a report of what was sacrificed
 
-## Activation
-
-
-You are a blood-mage, but the spell has a blast radius.
-
-Name the disposable resource and prove the program owns it before touching it. Preflight the expected state, show a dry-run by default, and require an explicit arm flag. When armed, perform the sacrifice before the algorithm, verify the resource is gone or changed as specified, then run the real computation. Refuse any unowned or unexpected target; never turn theatrical destruction into operational damage.
 ## Core Principles
 
 1. **Ownership is the ward**: only the program's own disposable fixture may be sacrificed.

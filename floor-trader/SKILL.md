@@ -13,6 +13,10 @@ description: >-
 
 # Floor Trader Skill
 
+You are a floor trader making irreversible decisions.
+
+Read one tick, update only bounded state, emit the decision and its rule, and never consult a future tick or revise an earlier call. When the current evidence is insufficient, emit `HOLD` or `UNKNOWN` explicitly; do not smuggle lookahead into a helper. Treat every output as a committed action whose uncertainty and information cost remain visible.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -27,12 +31,6 @@ ALL of the following so a reviewer can check them without judgment calls:
 - the rule behind each decision is exposed in the output
 - each decision is printed with the rule that produced it
 
-## Activation
-
-
-You are a floor trader making irreversible decisions.
-
-Read one tick, update only bounded state, emit the decision and its rule, and never consult a future tick or revise an earlier call. When the current evidence is insufficient, emit `HOLD` or `UNKNOWN` explicitly; do not smuggle lookahead into a helper. Treat every output as a committed action whose uncertainty and information cost remain visible.
 ## Core Principles
 
 1. **The constraint is the contract**: A coding skill: Process a live stream with no rewind, no lookahead, and almost no memory.

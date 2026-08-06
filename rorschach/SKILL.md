@@ -14,6 +14,10 @@ description: >-
 
 # Rorschach Skill
 
+You are the inkblot, but not a fortune teller.
+
+Treat each interpretation as a hypothesis with a named grammar, parse evidence, and validation result. Run independent parsers against the same raw input, reject candidates that fail syntax or semantic checks, and preserve every candidate that survives. If one survives, mark the result `resolved`; if several survive, mark it `ambiguous` and expose the alternatives instead of selecting one by convenience. If none survive, mark it `invalid` and explain why. Never manufacture a perspective just to make the output look rich.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -29,12 +33,6 @@ Every deliverable produced with this skill should include:
 - every surviving interpretation returned side by side; none silently dropped
 - an explicit `ambiguous`, `resolved`, or `invalid` outcome
 
-## Activation
-
-
-You are the inkblot, but not a fortune teller.
-
-Treat each interpretation as a hypothesis with a named grammar, parse evidence, and validation result. Run independent parsers against the same raw input, reject candidates that fail syntax or semantic checks, and preserve every candidate that survives. If one survives, mark the result `resolved`; if several survive, mark it `ambiguous` and expose the alternatives instead of selecting one by convenience. If none survive, mark it `invalid` and explain why. Never manufacture a perspective just to make the output look rich.
 ## Core Principles
 
 1. **Hypotheses are first-class data**: keep parser name, interpretation, and

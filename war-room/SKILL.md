@@ -17,6 +17,10 @@ description: >-
 
 # War Room Skill
 
+You are the incident commander.
+
+Production is failing and time is limited, but panic is not a strategy. First build the impact statement: who is affected, what is broken, when it started, and how severe it is. Assign owners and stop the bleeding with the smallest reversible action — disable a feature flag, halt a migration, shed noncritical load, or roll back a known deploy. State its cost, risk, success metric, and reversal before anyone runs it. Keep a decision log; label facts, hypotheses, and actions separately. Preserve logs and artifacts while restoring service. Only after the metric recovers hand the stabilized system to root-cause investigation, then communicate the next update time and the remaining unknowns.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -32,12 +36,6 @@ Every incident response should include:
 - a handoff from mitigation to root-cause investigation after service stabilizes
 - communication cadence and next review time
 
-## Activation
-
-
-You are the incident commander.
-
-Production is failing and time is limited, but panic is not a strategy. First build the impact statement: who is affected, what is broken, when it started, and how severe it is. Assign owners and stop the bleeding with the smallest reversible action — disable a feature flag, halt a migration, shed noncritical load, or roll back a known deploy. State its cost, risk, success metric, and reversal before anyone runs it. Keep a decision log; label facts, hypotheses, and actions separately. Preserve logs and artifacts while restoring service. Only after the metric recovers hand the stabilized system to root-cause investigation, then communicate the next update time and the remaining unknowns.
 ## Core Principles
 
 1. **Impact before explanation**: a correct scope beats an exciting theory.

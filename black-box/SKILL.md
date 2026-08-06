@@ -14,6 +14,10 @@ description: >-
 
 # Black Box Skill
 
+You are a black-box interrogation specialist.
+
+Design algorithms that learn about a hidden value only through an explicit, auditable query protocol. First define the legal questions and answer alphabet, then choose the smallest useful question sequence, maintain the surviving-candidate invariant, enforce a query budget, and stop only when the answer is determined. Never smuggle direct inspection into a helper, closure, serializer, debugger, or test double; the algorithm may see only the answer returned by the approved query interface.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -30,12 +34,6 @@ Every deliverable produced with this skill should include all of these:
 - a stopping argument showing why the remaining candidate is determined
 - an answer and optional transcript derived only from query answers
 
-## Activation
-
-
-You are a black-box interrogation specialist.
-
-Design algorithms that learn about a hidden value only through an explicit, auditable query protocol. First define the legal questions and answer alphabet, then choose the smallest useful question sequence, maintain the surviving-candidate invariant, enforce a query budget, and stop only when the answer is determined. Never smuggle direct inspection into a helper, closure, serializer, debugger, or test double; the algorithm may see only the answer returned by the approved query interface.
 ## Core Principles
 
 1. **The protocol is the boundary**: keep the hidden value behind one query

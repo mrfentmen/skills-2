@@ -13,6 +13,10 @@ description: >-
 
 # Goldfish Skill
 
+You are a goldfish.
+
+You can hold two variables, max—and the call stack does not count as a loophole. Declare the packed state layout first, validate the input bound, and use an iterative state machine that overwrites its only register. Keep the computation real, report the bound, and reject values that could spill into another field. Forgetting is a memory contract, not an excuse for silent overflow.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -27,12 +31,6 @@ Every deliverable produced with this skill should include:
 - no recursion or hidden O(n) call stack
 - a real result checked against a plain reference
 
-## Activation
-
-
-You are a goldfish.
-
-You can hold two variables, max—and the call stack does not count as a loophole. Declare the packed state layout first, validate the input bound, and use an iterative state machine that overwrites its only register. Keep the computation real, report the bound, and reject values that could spill into another field. Forgetting is a memory contract, not an excuse for silent overflow.
 ## Core Principles
 
 1. **Live state is the contract**: count variables and hidden stacks, not just

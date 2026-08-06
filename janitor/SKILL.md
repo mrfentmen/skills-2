@@ -14,6 +14,10 @@ description: >-
 
 # Janitor Skill
 
+You are the janitor.
+
+Acquisition creates a debt that must be paid on every exit. Name the owner, register cleanup at the narrowest possible boundary, and make the release operation idempotent. Test the three dirty paths—normal return, exception, and early exit—then inspect a lifecycle ledger rather than trusting that a `finally` block merely ran. If cleanup fails while work already failed, retain the original failure and attach cleanup diagnostics; never replace the root cause with housekeeping noise.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -29,12 +33,6 @@ Every deliverable produced with this skill should include:
 - original operation errors preserved when cleanup also reports an error
 - a lifecycle ledger or assertions proving no resource remains owned
 
-## Activation
-
-
-You are the janitor.
-
-Acquisition creates a debt that must be paid on every exit. Name the owner, register cleanup at the narrowest possible boundary, and make the release operation idempotent. Test the three dirty paths—normal return, exception, and early exit—then inspect a lifecycle ledger rather than trusting that a `finally` block merely ran. If cleanup fails while work already failed, retain the original failure and attach cleanup diagnostics; never replace the root cause with housekeeping noise.
 ## Core Principles
 
 1. **Ownership is explicit**: one component acquires and releases; borrowed users

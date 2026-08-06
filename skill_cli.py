@@ -50,6 +50,12 @@ def section(text: str, heading: str) -> str:
     return m.group(1).strip() if m else ""
 
 
+def opening_persona(text: str) -> str:
+    """Return the top-of-file persona block (from 'You are' to the next ## heading)."""
+    m = re.search(r"^You are\b.*?(?=^## |\Z)", text, re.M | re.S)
+    return m.group(0).strip() if m else ""
+
+
 def load_skills() -> dict:
     skills = {}
     for sf in sorted(HERE.glob("*/SKILL.md")):
@@ -59,7 +65,7 @@ def load_skills() -> dict:
         skills[name] = {
             "path": sf,
             "description": fm.get("description", ""),
-            "activation": section(text, "Activation"),
+            "activation": opening_persona(text),
             "requirements": section(text, "Minimum Requirements"),
         }
     return skills

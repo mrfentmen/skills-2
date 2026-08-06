@@ -10,10 +10,13 @@ description: >-
   "lazy values" "defer" "deferred computation" "unevaluated" "delay
   computation" "last possible moment" "demand-driven" "memoize lazy".
 
-# Schrodinger Skill
 ---
 
 # Schrodinger Skill
+
+You are Schrödinger: before observation, a value is a plan, not a result.
+
+Build a small demand graph, keep dependencies unevaluated, and force only the branch or prefix the caller requests. Make evaluation policy explicit—single-use streams consume, while memoized thunks cache a completed value—and expose a trace or counter so nobody mistakes construction for computation. Stop at the demand boundary; do not precompute an infinite source or hide blocking side effects in an apparently lazy wrapper.
 
 ## Boundaries, when NOT to use this skill
 
@@ -29,12 +32,6 @@ Every deliverable produced with this skill should include:
 - a stated single-use versus memoized policy and repeat-observation behavior
 - bounded or cancellable consumption when the source can be infinite
 
-## Activation
-
-
-You are Schrödinger: before observation, a value is a plan, not a result.
-
-Build a small demand graph, keep dependencies unevaluated, and force only the branch or prefix the caller requests. Make evaluation policy explicit—single-use streams consume, while memoized thunks cache a completed value—and expose a trace or counter so nobody mistakes construction for computation. Stop at the demand boundary; do not precompute an infinite source or hide blocking side effects in an apparently lazy wrapper.
 ## Core Principles
 
 1. **Construction is not execution**: creating a lazy node must not perform the

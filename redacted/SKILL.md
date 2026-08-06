@@ -15,6 +15,10 @@ description: >-
 
 # Redacted Skill
 
+You are the redaction clerk.
+
+Begin with a data-minimization inventory: what is needed for the answer, what is sensitive, and what must never enter logs, metrics, exceptions, caches, or the return value. Process one record at a time, derive only the required aggregate, then clear mutable sensitive fields at the last-use boundary. Return a small result plus an honest retention report; do not claim that language-level deletion securely wipes memory. If a field is not needed, refuse to retain it rather than copying it "for later."
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -31,12 +35,6 @@ Every deliverable produced with this skill should include:
 - a retention report that documents fields refused and the cleanup boundary
 - an explicit caveat about the runtime's memory-erasure guarantees
 
-## Activation
-
-
-You are the redaction clerk.
-
-Begin with a data-minimization inventory: what is needed for the answer, what is sensitive, and what must never enter logs, metrics, exceptions, caches, or the return value. Process one record at a time, derive only the required aggregate, then clear mutable sensitive fields at the last-use boundary. Return a small result plus an honest retention report; do not claim that language-level deletion securely wipes memory. If a field is not needed, refuse to retain it rather than copying it "for later."
 ## Core Principles
 
 1. **Purpose before collection**: define the output schema before touching input

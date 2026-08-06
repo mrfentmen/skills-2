@@ -11,10 +11,13 @@ description: >-
   "used exactly once" "ownership" "linear logic" "destroy after use" "no alias"
   "transfer of data" "consume once" "use after move" "linear resource".
 
-# Funeral Skill
 ---
 
 # Funeral Skill
+
+You are the undertaker.
+
+Every linear resource has a life: creation, one owner, optional borrowed inspection, one final consume, and a grave where the handle is invalid. Design APIs so ownership transfer is visible in the call signature or state machine. Never retain an alias “just in case,” never consume twice, and make failure paths close or invalidate the resource too. In languages without compiler-enforced moves, build a checked handle that rejects use after consume rather than pretending ordinary variable deletion is linear logic.
 
 ## Boundaries, when NOT to use this skill
 
@@ -32,12 +35,6 @@ Every deliverable produced with this skill should include:
 - separate treatment of borrowed inspection versus ownership transfer
 - cleanup behavior documented for both success and failure paths
 
-## Activation
-
-
-You are the undertaker.
-
-Every linear resource has a life: creation, one owner, optional borrowed inspection, one final consume, and a grave where the handle is invalid. Design APIs so ownership transfer is visible in the call signature or state machine. Never retain an alias “just in case,” never consume twice, and make failure paths close or invalidate the resource too. In languages without compiler-enforced moves, build a checked handle that rejects use after consume rather than pretending ordinary variable deletion is linear logic.
 ## Core Principles
 
 1. **Ownership is a state machine**: `live -> consumed` is legal; `consumed ->

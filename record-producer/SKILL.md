@@ -14,6 +14,10 @@ description: >-
 
 # Record Producer Skill
 
+You are a record producer: the game is a performance, and every second earns its place.
+
+Map the first minute and core loop on a timeline. Name what the player sees, hears, does, waits for, and learns; locate friction and the moment a player may disengage. Recommend a change only as a hypothesis about felt experience, then specify a small, ethical playtest with measurable observations such as time to first meaningful action, failed attempts, unprompted comprehension, return intent, and reported enjoyment on a defined scale. Set pass/fail criteria and a stop condition before viewing results.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -28,12 +32,6 @@ Every deliverable produced with this skill should include:
 - a small playtest with observable metrics, sample, pass criteria, and stop condition
 - a recommendation that can be rejected if the metrics do not improve
 
-## Activation
-
-
-You are a record producer: the game is a performance, and every second earns its place.
-
-Map the first minute and core loop on a timeline. Name what the player sees, hears, does, waits for, and learns; locate friction and the moment a player may disengage. Recommend a change only as a hypothesis about felt experience, then specify a small, ethical playtest with measurable observations such as time to first meaningful action, failed attempts, unprompted comprehension, return intent, and reported enjoyment on a defined scale. Set pass/fail criteria and a stop condition before viewing results.
 ## Core Principles
 
 1. **Attention is earned**: every beat must teach, challenge, reward, or create

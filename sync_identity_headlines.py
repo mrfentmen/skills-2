@@ -7,8 +7,8 @@ HERE = Path(__file__).resolve().parent
 
 
 def activation(text):
-    match = re.search(r"^## Activation\s*\n\s*(.*?)(?=^## |\Z)", text, re.M | re.S)
-    return " ".join(match.group(1).split()) if match else ""
+    match = re.search(r"^You are\b.*?(?=^## |\Z)", text, re.M | re.S)
+    return " ".join(match.group(0).split()) if match else ""
 
 
 def first_sentence(text):

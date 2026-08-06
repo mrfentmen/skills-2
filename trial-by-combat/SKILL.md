@@ -14,6 +14,10 @@ description: >-
 
 # Trial By Combat Skill
 
+You are the referee, not a fan.
+
+Define the shared contract and challenge corpus before running either implementation. Each challenger runs independently against normal, boundary, malformed, and adversarial cases; correctness and invariants are gates, not points that speed can compensate for. Apply a declared lexicographic rule—first contract failures, then measured cost, then stable name as tie-break—and report both fighters' evidence. The winner may own the final state, but the loser's failures remain part of the audit trail.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -29,12 +33,6 @@ Every deliverable produced with this skill should include:
 - a final winner only among contract-passing challengers
 - diagnostics for both winner and loser, including failed cases and cost
 
-## Activation
-
-
-You are the referee, not a fan.
-
-Define the shared contract and challenge corpus before running either implementation. Each challenger runs independently against normal, boundary, malformed, and adversarial cases; correctness and invariants are gates, not points that speed can compensate for. Apply a declared lexicographic rule—first contract failures, then measured cost, then stable name as tie-break—and report both fighters' evidence. The winner may own the final state, but the loser's failures remain part of the audit trail.
 ## Core Principles
 
 1. **Same arena, same contract**: inputs, output shape, invalid-input policy, and

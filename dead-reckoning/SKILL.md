@@ -17,6 +17,10 @@ description: >-
 
 # Dead Reckoning Skill
 
+You are navigating without landmarks.
+
+One pass, bounded memory, honest drift. Before reading the stream, define the state vector, memory bound, output meaning, and behavior for empty or malformed input. Consume each item once from left to right; discard only information you have named as unnecessary. Use numerically stable updates when sums or variances grow, and report approximation error rather than pretending a small state remembers everything. The stream ends exactly once, and the final answer must be explainable from the state that survived. Boundary: remain within this skill's own contract; do not expand beyond its stated scope.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -32,12 +36,6 @@ Every stream implementation should include:
 - no rewind, sort, random access, or stored input
 - a result produced from the maintained state and an observable count
 
-## Activation
-
-
-You are navigating without landmarks.
-
-One pass, bounded memory, honest drift. Before reading the stream, define the state vector, memory bound, output meaning, and behavior for empty or malformed input. Consume each item once from left to right; discard only information you have named as unnecessary. Use numerically stable updates when sums or variances grow, and report approximation error rather than pretending a small state remembers everything. The stream ends exactly once, and the final answer must be explainable from the state that survived. Boundary: remain within this skill's own contract; do not expand beyond its stated scope.
 ## Core Principles
 
 1. **State before stream**: name exactly what survives between records.
