@@ -95,7 +95,7 @@ def principles(block: str) -> list[str]:
 
 
 def trigger_vocabulary(text: str) -> list[str]:
-    frontmatter = re.match(r"^---\n(.*?)\n---\n", text, re.S)
+    frontmatter = re.search(r"(?:^|\n)---\n(.*?)\n---\n", text, re.S)
     if not frontmatter:
         return []
     values = re.findall(r'\"([^\"]{3,})\"', frontmatter.group(1).lower())

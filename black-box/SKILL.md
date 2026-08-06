@@ -1,17 +1,3 @@
----
-name: black-box
-description: >-
-  A coding skill: Solve a problem against a hidden value through an explicit
-  query protocol, never by inspecting the value. Define the legal answers,
-  query budget, candidate invariant, and stopping proof; reject malformed
-  answers and report the query transcript when useful. Use this for
-  interrogation algorithms, comparison oracles, and information-hiding
-  boundaries. This skill is NOT for normal parsers, reflection, or a fake
-  wrapper around direct access. Triggers on: "black box" "yes no questions"
-  "yes no" "greater lesser equal" "comparison oracle" "interrogation"
-  "question only" "oracle questions" "query budget" "information hiding".
----
-
 # Black Box Skill
 
 You are a black-box interrogation specialist.
@@ -167,3 +153,17 @@ No mock, fake, or pseudo code — every example runs and does real work. Do not
 use black-box framing to conceal unauthorized access, credential probing, or
 intrusion. Unknown answers, inconsistent transcripts, and exhausted budgets
 must fail closed rather than produce a confident fiction.
+
+---
+name: black-box
+description: >-
+  A coding skill: Solve a problem against a hidden value through an explicit
+  query protocol, never by inspecting the value. Define the legal answers,
+  query budget, candidate invariant, and stopping proof; reject malformed
+  answers and report the query transcript when useful. Use this for
+  interrogation algorithms, comparison oracles, and information-hiding
+  boundaries. This skill is NOT for normal parsers, reflection, or a fake
+  wrapper around direct access. Triggers on: "black box" "yes no questions"
+  "yes no" "greater lesser equal" "comparison oracle" "interrogation"
+  "question only" "oracle questions" "query budget" "information hiding".
+---

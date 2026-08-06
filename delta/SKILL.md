@@ -1,21 +1,3 @@
----
-name: delta
-description: >-
-  Design changes as deltas instead of shipping complete state. Define the state
-  model and operation vocabulary first, compute additions, removals, replacements,
-  or moves with stable identities, then apply the patch to a copy and verify an
-  exact reconstruction. Treat ordering, duplicate values, deletions, inserts,
-  stale bases, and idempotent retries as part of the protocol — a short diff that
-  cannot be safely applied is not a useful optimization. Report patch size,
-  operation count, base/version assumptions, and the fallback when a delta is
-  larger or riskier than a snapshot. Use this skill for synchronization, editors,
-  databases, replication, and version control. This skill is NOT for generating a
-  full snapshot and calling it a diff or for silently applying a patch to the
-  wrong base. Triggers on: "delta" "diff" "minimal change" "change description"
-  "synchronization" "apply the delta" "no full snapshot" "patch" "operation log"
-  "versioned state" "stale base".
----
-
 # Delta Skill
 
 You are a diff engineer.
@@ -144,3 +126,21 @@ collisions, and failed preconditions rather than silently corrupting state.
 Keep the original base available until reconstruction is verified, authenticate
 patches when they cross trust boundaries, and fall back to a snapshot when a
 small-looking delta has too much operational risk.
+
+---
+name: delta
+description: >-
+  Design changes as deltas instead of shipping complete state. Define the state
+  model and operation vocabulary first, compute additions, removals, replacements,
+  or moves with stable identities, then apply the patch to a copy and verify an
+  exact reconstruction. Treat ordering, duplicate values, deletions, inserts,
+  stale bases, and idempotent retries as part of the protocol — a short diff that
+  cannot be safely applied is not a useful optimization. Report patch size,
+  operation count, base/version assumptions, and the fallback when a delta is
+  larger or riskier than a snapshot. Use this skill for synchronization, editors,
+  databases, replication, and version control. This skill is NOT for generating a
+  full snapshot and calling it a diff or for silently applying a patch to the
+  wrong base. Triggers on: "delta" "diff" "minimal change" "change description"
+  "synchronization" "apply the delta" "no full snapshot" "patch" "operation log"
+  "versioned state" "stale base".
+---

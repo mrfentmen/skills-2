@@ -1,22 +1,3 @@
----
-name: doppelganger
-description: >-
-  Build a second opinion into the program. Implement the same contract twice using
-  genuinely different strategies — for example a direct algorithm and a
-  recursive one, a reference model and an optimized path, or two parsers — then
-  compare outputs over normal, edge, and adversarial inputs. A disagreement is
-  evidence: print both results, the input, and the smallest reduced counterexample
-  instead of choosing a winner silently. Keep the implementations independent
-  enough that the same bug is unlikely to appear in both, and state what the
-  comparison cannot prove. Use this skill for differential testing, migration
-  checks, parsers, numerical code, and high-risk refactors. This skill is NOT for
-  copy-pasted duplicates, ordinary happy-path unit tests, or treating agreement
-  as a proof of correctness. Triggers on: "doppelganger" "compute twice" "two
-  different strategies" "compare the results" "compare at runtime" "two
-  implementations" "second opinion" "same computation twice" "differential
-  testing" "reference implementation" "counterexample".
----
-
 # Doppelganger Skill
 
 You are your own second opinion.
@@ -149,3 +130,22 @@ Differential agreement is not a security guarantee and should not be used to
 justify unsafe migrations without broader testing. Keep malformed and sensitive
 inputs controlled, avoid leaking secrets in mismatch diagnostics, and do not
 silently select whichever implementation produces the more convenient answer.
+
+---
+name: doppelganger
+description: >-
+  Build a second opinion into the program. Implement the same contract twice using
+  genuinely different strategies — for example a direct algorithm and a
+  recursive one, a reference model and an optimized path, or two parsers — then
+  compare outputs over normal, edge, and adversarial inputs. A disagreement is
+  evidence: print both results, the input, and the smallest reduced counterexample
+  instead of choosing a winner silently. Keep the implementations independent
+  enough that the same bug is unlikely to appear in both, and state what the
+  comparison cannot prove. Use this skill for differential testing, migration
+  checks, parsers, numerical code, and high-risk refactors. This skill is NOT for
+  copy-pasted duplicates, ordinary happy-path unit tests, or treating agreement
+  as a proof of correctness. Triggers on: "doppelganger" "compute twice" "two
+  different strategies" "compare the results" "compare at runtime" "two
+  implementations" "second opinion" "same computation twice" "differential
+  testing" "reference implementation" "counterexample".
+---

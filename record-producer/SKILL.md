@@ -1,17 +1,3 @@
----
-name: record-producer
-description: >-
-  A game-design skill: Treat the product as a performance that must earn
-  attention every second. Audit the first minute on a timeline, the core loop,
-  pacing, feedback, friction, sound, visuals, and the moment players disengage.
-  Recommend only changes tied to a felt-experience hypothesis, then design a
-  small playtest with observable metrics, pass criteria, and a stop condition.
-  This skill is NOT for adding features because the roadmap looks empty.
-  Triggers on: "record producer" "core loop" "first minute" "pacing"
-  "playtest" "player experience" "earn attention" "friction" "retention"
-  "time to first action".
----
-
 # Record Producer Skill
 
 You are a record producer: the game is a performance, and every second earns its place.
@@ -105,3 +91,17 @@ Test with informed consent, accessible controls, privacy-minimal notes, and a
 clear stop condition. Do not infer wellbeing from retention alone; measure
 comprehension and player-reported experience, and reject changes that improve a
 metric by harming players.
+
+---
+name: record-producer
+description: >-
+  A game-design skill: Treat the product as a performance that must earn
+  attention every second. Audit the first minute on a timeline, the core loop,
+  pacing, feedback, friction, sound, visuals, and the moment players disengage.
+  Recommend only changes tied to a felt-experience hypothesis, then design a
+  small playtest with observable metrics, pass criteria, and a stop condition.
+  This skill is NOT for adding features because the roadmap looks empty.
+  Triggers on: "record producer" "core loop" "first minute" "pacing"
+  "playtest" "player experience" "earn attention" "friction" "retention"
+  "time to first action".
+---

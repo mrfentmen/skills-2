@@ -1,17 +1,3 @@
----
-name: hostile-acquisition
-description: >-
-  A technical research skill: Examine a product as if you intend to defeat it
-  through lawful competitive substitution, not intrusion. Build an evidence
-  ledger for dependencies, switching costs, hidden assumptions, distribution,
-  weak points, replacement paths, and defensive countermeasures. Rank attacks
-  by feasibility and impact, then identify what evidence would change the rank.
-  Use this skill for competitor analysis, APIs, platforms, and startup ideas.
-  This skill is NOT for unauthorized intrusion or illegal access. Triggers on:
-  "hostile acquisition" "defeat" "switching costs" "competitor analysis"
-  "weak points" "replacement path" "attack surface" "defensive moat".
----
-
 # Hostile Acquisition Skill
 
 You are a hostile takeover analyst, not an intruder.
@@ -141,3 +127,17 @@ Do not scan, probe, exploit, or access systems without explicit authorization.
 Keep competitive analysis to public or supplied evidence, avoid proprietary
 information, and recommend ordinary migration or product improvements rather
 than sabotage. State uncertainty whenever evidence is incomplete.
+
+---
+name: hostile-acquisition
+description: >-
+  A technical research skill: Examine a product as if you intend to defeat it
+  through lawful competitive substitution, not intrusion. Build an evidence
+  ledger for dependencies, switching costs, hidden assumptions, distribution,
+  weak points, replacement paths, and defensive countermeasures. Rank attacks
+  by feasibility and impact, then identify what evidence would change the rank.
+  Use this skill for competitor analysis, APIs, platforms, and startup ideas.
+  This skill is NOT for unauthorized intrusion or illegal access. Triggers on:
+  "hostile acquisition" "defeat" "switching costs" "competitor analysis"
+  "weak points" "replacement path" "attack surface" "defensive moat".
+---

@@ -1,17 +1,3 @@
----
-name: blind
-description: >-
-  A coding skill: Treat the input as genuinely opaque and expose it only
-  through a fixed capability set of approved questions. The solver must not
-  inspect, copy, stringify, hash, index, serialize, or retain the value;
-  its result is a function of question answers alone. Use this for privacy
-  boundaries, oracle algorithms, and capability-based computation. This skill
-  is NOT for ordinary parsing or a wrapper that secretly forwards the value.
-  Triggers on: "blind" "opaque input" "fixed questions" "question only"
-  "predicate" "blind oracle" "capability boundary" "no inspection"
-  "fixed set of questions" "fail closed".
----
-
 # Blind Skill
 
 You are blind by design: the value is behind a capability boundary and may be queried only through a fixed, documented question set.
@@ -177,3 +163,17 @@ No mock, fake, or pseudo code — the examples perform real classification. A
 blind interface is not a security guarantee by itself: document who owns the
 adapter, validate every question and answer, and avoid claiming confidentiality
 that the runtime cannot provide. Never use blindness to conceal unsafe access.
+
+---
+name: blind
+description: >-
+  A coding skill: Treat the input as genuinely opaque and expose it only
+  through a fixed capability set of approved questions. The solver must not
+  inspect, copy, stringify, hash, index, serialize, or retain the value;
+  its result is a function of question answers alone. Use this for privacy
+  boundaries, oracle algorithms, and capability-based computation. This skill
+  is NOT for ordinary parsing or a wrapper that secretly forwards the value.
+  Triggers on: "blind" "opaque input" "fixed questions" "question only"
+  "predicate" "blind oracle" "capability boundary" "no inspection"
+  "fixed set of questions" "fail closed".
+---

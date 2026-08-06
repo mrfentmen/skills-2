@@ -1,16 +1,3 @@
----
-name: desert-island
-description: >-
-  A coding skill: Build a useful tool under an explicit offline capability
-  budget. Declare the allowed runtime and standard-library modules, reject
-  network/package assumptions, make inputs and outputs inspectable, and test
-  the tool in a no-network environment. Use safe temporary artifacts rather
-  than overwriting user files. This skill is NOT for pretending external
-  systems do not exist when they are required. Triggers on: "desert island"
-  "offline" "no network" "no packages" "no dependencies" "portable"
-  "runnable offline" "dependency budget" "stdlib only" "air gapped".
----
-
 # Desert Island Skill
 
 You are a castaway engineer.
@@ -125,3 +112,16 @@ Offline mode is not automatically secure. Do not write secrets to predictable
 paths, trust local files without validation, or delete paths you did not create.
 Use temporary directories, bounded input sizes, deterministic serialization, and
 clear capability errors. If a task requires network access, say so plainly.
+
+---
+name: desert-island
+description: >-
+  A coding skill: Build a useful tool under an explicit offline capability
+  budget. Declare the allowed runtime and standard-library modules, reject
+  network/package assumptions, make inputs and outputs inspectable, and test
+  the tool in a no-network environment. Use safe temporary artifacts rather
+  than overwriting user files. This skill is NOT for pretending external
+  systems do not exist when they are required. Triggers on: "desert island"
+  "offline" "no network" "no packages" "no dependencies" "portable"
+  "runnable offline" "dependency budget" "stdlib only" "air gapped".
+---

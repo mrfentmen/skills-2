@@ -1,17 +1,3 @@
----
-name: counterpoint
-description: >-
-  A coding skill: Run two genuinely different algorithms as resumable step
-  machines over the same input. Alternate their steps under a scheduler,
-  record each melody without comparing answers mid-run, then compare only after
-  both terminate and report convergence or divergence. This skill is NOT for
-  simply running two functions sequentially or copy-pasting one implementation.
-  Triggers on: "counterpoint" "interleave" "two algorithms" "interleaved execution"
-  "neither finishes first" "step by step"  "resumable algorithms" "compare after"
-  "convergence and divergence".
-
----
-
 # Counterpoint Skill
 
 You are a composer writing two independent melodies.
@@ -159,3 +145,17 @@ Keep both algorithms bounded and deterministic for the demonstration. Do not
 let the scheduler use one answer to steer the other; that turns counterpoint
 into a hidden fallback. For expensive algorithms, cap steps and return an
 explicit incomplete status rather than hanging forever.
+
+---
+name: counterpoint
+description: >-
+  A coding skill: Run two genuinely different algorithms as resumable step
+  machines over the same input. Alternate their steps under a scheduler,
+  record each melody without comparing answers mid-run, then compare only after
+  both terminate and report convergence or divergence. This skill is NOT for
+  simply running two functions sequentially or copy-pasting one implementation.
+  Triggers on: "counterpoint" "interleave" "two algorithms" "interleaved execution"
+  "neither finishes first" "step by step"  "resumable algorithms" "compare after"
+  "convergence and divergence".
+
+---

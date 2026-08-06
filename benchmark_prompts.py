@@ -483,7 +483,7 @@ def coverage_prompts(skill_dirs, golds_used):
 # Trigger extraction
 # ---------------------------------------------------------------------------
 def parse_frontmatter(text: str):
-    m = re.match(r"^---\n(.*?)\n---\n", text, re.S)
+    m = re.search(r"(?:^|\n)---\n(.*?)\n---\n", text, re.S)
     if not m:
         return {}
     data, current_key = {}, None

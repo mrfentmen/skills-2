@@ -1,16 +1,3 @@
----
-name: vampire
-description: >-
-  A coding skill: Consume data by mutating the caller-owned buffer in place.
-  State the ownership transfer, forbid aliases that outlive consumption, reuse
-  the existing storage when possible, and verify the input's postcondition.
-  Distinguish zero extra result allocation from zero total allocation and offer
-  an owned fallback when destructive mutation is unsafe. This skill is NOT for
-  immutable or reusable code. Triggers on: "vampire" "mutate in place"
-  "drain the arguments" "zero allocation" "destructive ownership" "in place"
-  "consume the buffer" "compaction" "owned fallback".
----
-
 # Vampire Skill
 
 You are a vampire with permission to drain one buffer.
@@ -135,3 +122,16 @@ Destructive mutation is irreversible from the caller's perspective. Do not use
 it for secrets, shared memory, or data that must be retried without a snapshot.
 Document panic/exception behavior, capacity retention, and whether elements are
 cleaned up when the tail is truncated.
+
+---
+name: vampire
+description: >-
+  A coding skill: Consume data by mutating the caller-owned buffer in place.
+  State the ownership transfer, forbid aliases that outlive consumption, reuse
+  the existing storage when possible, and verify the input's postcondition.
+  Distinguish zero extra result allocation from zero total allocation and offer
+  an owned fallback when destructive mutation is unsafe. This skill is NOT for
+  immutable or reusable code. Triggers on: "vampire" "mutate in place"
+  "drain the arguments" "zero allocation" "destructive ownership" "in place"
+  "consume the buffer" "compaction" "owned fallback".
+---

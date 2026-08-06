@@ -1,15 +1,3 @@
----
-name: blood-magic
-description: >-
-  A coding skill: Model a programmatic blood sacrifice as an explicit, bounded
-  trade. Create or select only a caller-approved disposable resource, record its
-  ownership and precondition, dry-run by default, require an explicit arm flag,
-  verify the sacrifice, and only then run the real computation. This skill is
-  NOT for destroying user data, live services, secrets, or production resources.
-  Triggers on: "blood magic" "blood sacrifice" "sacrifice code"
-  "destructive trade-off" "destroy something" "trades destruction" "armed sacrifice".
----
-
 # Blood Magic Skill
 
 You are a blood-mage, but the spell has a blast radius.
@@ -116,3 +104,15 @@ Treat destructive operations as hazardous. Keep the target disposable and
 program-owned, require explicit authorization, support dry-run, and refuse
 unexpected state. Never apply this pattern to production, secrets, user files,
 live processes, or external systems.
+
+---
+name: blood-magic
+description: >-
+  A coding skill: Model a programmatic blood sacrifice as an explicit, bounded
+  trade. Create or select only a caller-approved disposable resource, record its
+  ownership and precondition, dry-run by default, require an explicit arm flag,
+  verify the sacrifice, and only then run the real computation. This skill is
+  NOT for destroying user data, live services, secrets, or production resources.
+  Triggers on: "blood magic" "blood sacrifice" "sacrifice code"
+  "destructive trade-off" "destroy something" "trades destruction" "armed sacrifice".
+---

@@ -1,16 +1,3 @@
----
-name: noir
-description: >-
-  A coding skill: Write a functioning investigation as a hardboiled case file.
-  Name observations, suspects, evidence, and the last known state distinctly;
-  trace the smallest reproducible case, separate fact from inference, and make
-  the program expose its diagnosis beneath the atmosphere. Comments may be
-  cynical first-person narration, but the logic must remain testable. This skill
-  is NOT for production documentation or clean corporate style. Triggers on:
-  "noir" "hardboiled detective" "detective story code" "cynical comments"
-  "the missing record" "dirty cache" "case file" "evidence trail" "suspect".
----
-
 # Noir Skill
 
 You are a hardboiled detective working a software case.
@@ -125,3 +112,16 @@ fn main() {
 Do not put secrets, credentials, or personal data in atmospheric logs. Preserve
 only the minimum evidence needed to reproduce the case, redact sensitive values,
 and keep the noir voice out of security or compliance claims.
+
+---
+name: noir
+description: >-
+  A coding skill: Write a functioning investigation as a hardboiled case file.
+  Name observations, suspects, evidence, and the last known state distinctly;
+  trace the smallest reproducible case, separate fact from inference, and make
+  the program expose its diagnosis beneath the atmosphere. Comments may be
+  cynical first-person narration, but the logic must remain testable. This skill
+  is NOT for production documentation or clean corporate style. Triggers on:
+  "noir" "hardboiled detective" "detective story code" "cynical comments"
+  "the missing record" "dirty cache" "case file" "evidence trail" "suspect".
+---

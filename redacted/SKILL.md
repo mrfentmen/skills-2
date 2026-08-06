@@ -1,18 +1,3 @@
----
-name: redacted
-description: >-
-  A coding skill: Compute the required result while minimizing exposure at
-  every boundary. Classify fields before processing, keep only the smallest
-  aggregate needed, clear mutable sensitive fields immediately after use, and
-  return a retention report that names what was refused. State the limits of
-  runtime erasure: ordinary deletion is not guaranteed secure memory wiping.
-  Use this for privacy-preserving computation, secret handling, and data
-  minimization. This skill is NOT for hiding unsafe behavior or claiming that
-  `del` proves a secret is gone. Triggers on: "redacted" "privacy"
-  "minimize exposure" "sensitive values" "data minimization" "refuse to retain"
-  "secret handling" "field-level minimization" "retention report" "erase".
----
-
 # Redacted Skill
 
 You are the redaction clerk.
@@ -168,3 +153,18 @@ Do not print secrets in examples, logs, error messages, snapshots, or tests.
 For high-sensitivity material use an appropriate secret store, cryptographic
 erasure strategy, and platform-specific memory controls; document residual
 risk instead of overstating what the language runtime can guarantee.
+
+---
+name: redacted
+description: >-
+  A coding skill: Compute the required result while minimizing exposure at
+  every boundary. Classify fields before processing, keep only the smallest
+  aggregate needed, clear mutable sensitive fields immediately after use, and
+  return a retention report that names what was refused. State the limits of
+  runtime erasure: ordinary deletion is not guaranteed secure memory wiping.
+  Use this for privacy-preserving computation, secret handling, and data
+  minimization. This skill is NOT for hiding unsafe behavior or claiming that
+  `del` proves a secret is gone. Triggers on: "redacted" "privacy"
+  "minimize exposure" "sensitive values" "data minimization" "refuse to retain"
+  "secret handling" "field-level minimization" "retention report" "erase".
+---

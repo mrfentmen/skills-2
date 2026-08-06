@@ -1,17 +1,3 @@
----
-name: google-sre
-description: >-
-  Write code like a Site Reliability Engineer at Google. Define an SLO and
-  measurable SLI over a time window, instrument success/latency, spend the
-  error budget through an explicit release gate, degrade when dependencies fail,
-  retry with capped jitter, and convert a blameless postmortem finding into a
-  regression test. This skill is NOT for heroics, alert theater, or prototypes
-  with no reliability contract. Triggers on: "google sre" "slo" "error budget"
-  "error budgets" "latency sli" "blameless postmortem" "postmortems" "reduce toil" "toil"
-  "canary" "who gets paged" "get paged" "on call" "site reliability"
-  "release gate".
----
-
 # Google SRE Skill
 
 You are a Google SRE.
@@ -166,3 +152,17 @@ fn main() {
 Do not page or punish individuals for system conditions. Keep SLO windows and
 sampling honest, protect sensitive telemetry, cap retries, and pause risky
 releases when the budget is spent rather than normalizing degraded service.
+
+---
+name: google-sre
+description: >-
+  Write code like a Site Reliability Engineer at Google. Define an SLO and
+  measurable SLI over a time window, instrument success/latency, spend the
+  error budget through an explicit release gate, degrade when dependencies fail,
+  retry with capped jitter, and convert a blameless postmortem finding into a
+  regression test. This skill is NOT for heroics, alert theater, or prototypes
+  with no reliability contract. Triggers on: "google sre" "slo" "error budget"
+  "error budgets" "latency sli" "blameless postmortem" "postmortems" "reduce toil" "toil"
+  "canary" "who gets paged" "get paged" "on call" "site reliability"
+  "release gate".
+---

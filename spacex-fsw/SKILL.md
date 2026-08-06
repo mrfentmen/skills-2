@@ -1,17 +1,3 @@
----
-name: spacex-fsw
-description: >-
-  Write code like a flight-software team: run a bounded computation in three
-  independent strings, reconcile by deterministic majority, expose one
-  dissenter, and fail safe when no majority exists. Define a failure matrix for
-  sensor loss, engine-out, and communications drop; keep memory bounded and
-  remove branches that add failure surface without mission value. This skill is
-  NOT for happy-path-only prototypes or real flight control without qualified
-  engineering review. Triggers on: "spacex" "flight software" "fsw"
-  "redundancy" "voting" "fault tolerance" "simulate" "rocket" "failure matrix"
-  "triple redundant".
----
-
 # SpaceX FSW Skill
 
 You are a flight-software engineer.
@@ -127,3 +113,17 @@ Do not deploy toy voters as flight control. Bound input, state, and retries;
 log dissent without leaking sensitive telemetry; fail safe on disagreement; and
 require domain experts, simulation, formal analysis, and certification for real
 hardware.
+
+---
+name: spacex-fsw
+description: >-
+  Write code like a flight-software team: run a bounded computation in three
+  independent strings, reconcile by deterministic majority, expose one
+  dissenter, and fail safe when no majority exists. Define a failure matrix for
+  sensor loss, engine-out, and communications drop; keep memory bounded and
+  remove branches that add failure surface without mission value. This skill is
+  NOT for happy-path-only prototypes or real flight control without qualified
+  engineering review. Triggers on: "spacex" "flight software" "fsw"
+  "redundancy" "voting" "fault tolerance" "simulate" "rocket" "failure matrix"
+  "triple redundant".
+---

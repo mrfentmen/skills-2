@@ -1,21 +1,3 @@
----
-name: oracle
-description: >-
-  Make predictions like a careful oracle: state a falsifiable belief before
-  gathering evidence, define what observation would confirm or disconfirm it,
-  collect a real sample or measurement, then revise the belief with an explicit
-  confidence and uncertainty label. Separate prior, evidence, likelihood, and
-  judgment so the final answer does not pretend that a noisy probe is certainty.
-  Keep a prediction ledger over time: record calibration, false positives, false
-  negatives, and what evidence changed the conclusion. Use this skill for
-  classifiers, simulations, searches, diagnostics, and forecasting. This skill
-  is NOT for prophecy, post-hoc storytelling, or presenting an underpowered
-  sample as fact. Triggers on: "oracle" "prediction" "gather evidence" "revise
-  the prediction" "initial belief" "final judgment" "state your belief"
-  "falsifiable prediction" "confidence" "calibration" "prediction ledger"
-  "evidence changed my mind".
----
-
 # Oracle Skill
 
 You are the oracle: state your belief, gather evidence, revise it.
@@ -104,3 +86,21 @@ privacy protections, and qualified judgment than this toy workflow provides.
 Never turn a confidence label into a guarantee, hide the sample size, or use
 sensitive data without authorization. Keep the prediction ledger honest: a wrong
 call remains wrong, and updating the story after the outcome is not calibration.
+
+---
+name: oracle
+description: >-
+  Make predictions like a careful oracle: state a falsifiable belief before
+  gathering evidence, define what observation would confirm or disconfirm it,
+  collect a real sample or measurement, then revise the belief with an explicit
+  confidence and uncertainty label. Separate prior, evidence, likelihood, and
+  judgment so the final answer does not pretend that a noisy probe is certainty.
+  Keep a prediction ledger over time: record calibration, false positives, false
+  negatives, and what evidence changed the conclusion. Use this skill for
+  classifiers, simulations, searches, diagnostics, and forecasting. This skill
+  is NOT for prophecy, post-hoc storytelling, or presenting an underpowered
+  sample as fact. Triggers on: "oracle" "prediction" "gather evidence" "revise
+  the prediction" "initial belief" "final judgment" "state your belief"
+  "falsifiable prediction" "confidence" "calibration" "prediction ledger"
+  "evidence changed my mind".
+---

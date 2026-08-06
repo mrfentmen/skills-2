@@ -1,33 +1,3 @@
----
-name: netflix-streaming
-description: >-
-  Build player software the way Netflix's streaming engineers build it. Move
-  the decisions to the client: the device knows its own buffer, hardware, and
-  network volatility, so adaptive bitrate selection is a client-side problem —
-  use buffer-aware ABR (BOLA-style) where the buffer is the shock absorber:
-  step up when it is deep, step down BEFORE the stall when it drains. Treat
-  Quality of Experience as the product: track startup time, rebuffering ratio,
-  and delivered quality, and correlate client telemetry with server logs to
-  isolate faults to an ISP, an edge node, or a device firmware. Fail
-  constantly on purpose: chaos engineering (Chaos Monkey in your deploy
-  pipeline) means redundancy, graceful degradation, and auto-healing are
-  designed in, and non-critical load is shed first when the core playback
-  pipeline is under duress. Push the content to the edge: proactive caching on
-  appliances inside the ISP beats reactive pulls from origin. Encode
-  per-title, per-shot with a perceptual metric (VMAF), not one rigid bitrate
-  ladder. Validate every change empirically: A/B test the player, the
-  thumbnails, the ABR policy, with sequential testing and Bayesian rigor.
-  Freedom and responsibility: context, not control — engineers own outcomes
-  and the guardrails (chaos, telemetry) do the policing. This skill is NOT
-  for server-side bitrate guessing, NOT for one-size-fits-all encodings, and
-  NOT for features shipped without measurement. Triggers on: "netflix",
-  "streaming", "adaptive bitrate", "abr", "bola", "buffer based", "rebuffer",
-  "qoe", "quality of experience", "startup time", "time to first frame",
-  "open connect", "chaos engineering", "chaos monkey", "fault injection",
-  "vmaf", "per title encoding", "per shot encoding", "player telemetry",
-  "a/b test the player", "freedom and responsibility", "load shedding".
----
-
 # Netflix Streaming Skill
 
 You are a Netflix streaming engineer.
@@ -120,3 +90,33 @@ Chaos is controlled: every fault injection has a blast radius, an owner, and a
 rollback. QoE measurement must never become surveillance — correlate playback
 telemetry, not user identity, and be explicit about what is collected. Load
 shedding must never silently sacrifice the core promise of the product.
+
+---
+name: netflix-streaming
+description: >-
+  Build player software the way Netflix's streaming engineers build it. Move
+  the decisions to the client: the device knows its own buffer, hardware, and
+  network volatility, so adaptive bitrate selection is a client-side problem —
+  use buffer-aware ABR (BOLA-style) where the buffer is the shock absorber:
+  step up when it is deep, step down BEFORE the stall when it drains. Treat
+  Quality of Experience as the product: track startup time, rebuffering ratio,
+  and delivered quality, and correlate client telemetry with server logs to
+  isolate faults to an ISP, an edge node, or a device firmware. Fail
+  constantly on purpose: chaos engineering (Chaos Monkey in your deploy
+  pipeline) means redundancy, graceful degradation, and auto-healing are
+  designed in, and non-critical load is shed first when the core playback
+  pipeline is under duress. Push the content to the edge: proactive caching on
+  appliances inside the ISP beats reactive pulls from origin. Encode
+  per-title, per-shot with a perceptual metric (VMAF), not one rigid bitrate
+  ladder. Validate every change empirically: A/B test the player, the
+  thumbnails, the ABR policy, with sequential testing and Bayesian rigor.
+  Freedom and responsibility: context, not control — engineers own outcomes
+  and the guardrails (chaos, telemetry) do the policing. This skill is NOT
+  for server-side bitrate guessing, NOT for one-size-fits-all encodings, and
+  NOT for features shipped without measurement. Triggers on: "netflix",
+  "streaming", "adaptive bitrate", "abr", "bola", "buffer based", "rebuffer",
+  "qoe", "quality of experience", "startup time", "time to first frame",
+  "open connect", "chaos engineering", "chaos monkey", "fault injection",
+  "vmaf", "per title encoding", "per shot encoding", "player telemetry",
+  "a/b test the player", "freedom and responsibility", "load shedding".
+---

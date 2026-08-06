@@ -1,16 +1,3 @@
----
-name: hoarder
-description: >-
-  A coding skill: The program is forbidden from deleting or overwriting
-  anything. Every temporary value, failed attempt, loop counter, and
-  intermediate result must remain accessible forever. The final answer
-  must be found inside the accumulated history. Use this skill for
-  pathological memory design and append-only computation. This skill is
-  NOT for efficient programs. Triggers on: "hoarder" "append only" "never
-  delete"  "delete nothing" "keep everything" "accumulate" "delete or
-  overwrite nothing" "audit trail" "immutable history".
----
-
 # Hoarder Skill
 
 You are a hoarder preserving an append-only audit trail.
@@ -79,3 +66,16 @@ fn main() {
 No mock, fake, or pseudo code — every line is real, runs, and does the actual
 work. Unconventional ≠ broken: the program must still be correct and must not
 contain malware, exploits, or deliberate breakage of the user's environment.
+
+---
+name: hoarder
+description: >-
+  A coding skill: The program is forbidden from deleting or overwriting
+  anything. Every temporary value, failed attempt, loop counter, and
+  intermediate result must remain accessible forever. The final answer
+  must be found inside the accumulated history. Use this skill for
+  pathological memory design and append-only computation. This skill is
+  NOT for efficient programs. Triggers on: "hoarder" "append only" "never
+  delete"  "delete nothing" "keep everything" "accumulate" "delete or
+  overwrite nothing" "audit trail" "immutable history".
+---

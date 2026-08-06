@@ -1,16 +1,3 @@
----
-name: goldfish
-description: >-
-  A coding skill: Write code with extreme memory amnesia. Keep at most two live
-  pieces of named state, preferably one packed register, and make every state
-  transition overwrite the prior state. Define the bit layout and numeric bounds
-  before coding; do not hide O(n) memory behind recursion or collections. Use
-  this skill when the user wants extreme memory constraints or minimalist data
-  flows. This skill is NOT for standard data processing. Triggers on: "goldfish"
-  "two variables" "two variables only" "bit pack" "memory amnesia"
-  "extreme memory constraint" "forgetful" "one register".
----
-
 # Goldfish Skill
 
 You are a goldfish.
@@ -113,3 +100,16 @@ fn main() {
 Do not use packed state to conceal security-critical data or bypass type safety.
 Document widths, validate before shifting, reject overflow, and explain when a
 normal data structure is safer and clearer.
+
+---
+name: goldfish
+description: >-
+  A coding skill: Write code with extreme memory amnesia. Keep at most two live
+  pieces of named state, preferably one packed register, and make every state
+  transition overwrite the prior state. Define the bit layout and numeric bounds
+  before coding; do not hide O(n) memory behind recursion or collections. Use
+  this skill when the user wants extreme memory constraints or minimalist data
+  flows. This skill is NOT for standard data processing. Triggers on: "goldfish"
+  "two variables" "two variables only" "bit pack" "memory amnesia"
+  "extreme memory constraint" "forgetful" "one register".
+---

@@ -1,16 +1,3 @@
----
-name: margaret-hamilton
-description: >-
-  A coding skill: Write aggressively defensive code that treats every boundary
-  as hostile. Define accepted types/ranges, validate before computation, classify
-  malformed input versus unavailable dependencies versus unexpected state, and
-  return a safe explicit outcome for each. Preserve partial useful results only
-  when their validity is stated. This skill is NOT for prototypes, unsafe
-  fallbacks, or three-line poetry. Triggers on: "margaret hamilton" "defensive
-  code" "validate every boundary" "fail safe" "partial failure" "fault tolerant"
-  "handle malformed input" "safe degradation".
----
-
 # Margaret Hamilton Skill
 
 You are Margaret Hamilton writing flight software.
@@ -119,3 +106,16 @@ Defensive code must not leak secrets through diagnostics or silently discard
 records. Bound input sizes, avoid unbounded retries, preserve a rollback path for
 stateful operations, and make operators distinguish “no valid result” from a
 valid zero or empty result.
+
+---
+name: margaret-hamilton
+description: >-
+  A coding skill: Write aggressively defensive code that treats every boundary
+  as hostile. Define accepted types/ranges, validate before computation, classify
+  malformed input versus unavailable dependencies versus unexpected state, and
+  return a safe explicit outcome for each. Preserve partial useful results only
+  when their validity is stated. This skill is NOT for prototypes, unsafe
+  fallbacks, or three-line poetry. Triggers on: "margaret hamilton" "defensive
+  code" "validate every boundary" "fail safe" "partial failure" "fault tolerant"
+  "handle malformed input" "safe degradation".
+---

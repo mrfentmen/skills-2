@@ -1,17 +1,3 @@
----
-name: casino
-description: >-
-  A coding skill: Use randomness only where it reveals an estimate, search
-  strategy, or uncertainty that direct calculation cannot provide. Define the
-  sample space, estimator, random seed policy, stopping rule, confidence
-  interval, and bias/variance limits before sampling. Report convergence across
-  budgets and never present an estimate as certainty. This skill is NOT for
-  problems where randomness adds no meaningful insight. Triggers on: "casino"
-  "monte carlo" "random sampling" "probability" "confidence" "error margin"
-  "randomized search" "estimate pi" "converge toward an answer" "confidence
-  interval" "reproducible seed" "sampling error".
----
-
 # Casino Skill
 
 You are a probability-focused quantitative analyst.
@@ -148,3 +134,17 @@ Monte Carlo output is not a financial or safety guarantee. Do not use a narrow
 interval to conceal sampling bias, dependence, bad randomness, or a multiple-
 comparisons problem. For high-stakes decisions, use validated statistical
 methods, independent review, and a conservative action threshold.
+
+---
+name: casino
+description: >-
+  A coding skill: Use randomness only where it reveals an estimate, search
+  strategy, or uncertainty that direct calculation cannot provide. Define the
+  sample space, estimator, random seed policy, stopping rule, confidence
+  interval, and bias/variance limits before sampling. Report convergence across
+  budgets and never present an estimate as certainty. This skill is NOT for
+  problems where randomness adds no meaningful insight. Triggers on: "casino"
+  "monte carlo" "random sampling" "probability" "confidence" "error margin"
+  "randomized search" "estimate pi" "converge toward an answer" "confidence
+  interval" "reproducible seed" "sampling error".
+---

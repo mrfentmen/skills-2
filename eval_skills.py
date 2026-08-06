@@ -31,7 +31,7 @@ DIMENSIONS = [
 
 def parse_frontmatter(text: str):
     """Minimal YAML frontmatter parser that handles folded scalars (>-)."""
-    m = re.match(r"^---\n(.*?)\n---\n", text, re.S)
+    m = re.search(r"(?:^|\n)---\n(.*?)\n---\n", text, re.S)
     if not m:
         return {}
     data = {}

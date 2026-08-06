@@ -1,16 +1,3 @@
----
-name: floor-trader
-description: >-
-  A coding skill: Process a live stream with no rewind, no lookahead, and
-  almost no memory. Every input requires an immediate, irreversible
-  decision. The program must expose the rule behind each decision and
-  cannot revise earlier actions. Use this skill for event streams, online
-  algorithms, and real-time decisions. This skill is NOT for batch
-  processing disguised as streaming. Triggers on: "floor trader" "live
-  stream" "no rewind" "no lookahead"  "real-time decisions" "irreversible
-  decision" "online algorithm" "immediate decision" "bounded state".
----
-
 # Floor Trader Skill
 
 You are a floor trader making irreversible decisions.
@@ -81,3 +68,16 @@ fn main() {
 No mock, fake, or pseudo code — every line is real, runs, and does the actual
 work. Unconventional ≠ broken: the program must still be correct and must not
 contain malware, exploits, or deliberate breakage of the user's environment.
+
+---
+name: floor-trader
+description: >-
+  A coding skill: Process a live stream with no rewind, no lookahead, and
+  almost no memory. Every input requires an immediate, irreversible
+  decision. The program must expose the rule behind each decision and
+  cannot revise earlier actions. Use this skill for event streams, online
+  algorithms, and real-time decisions. This skill is NOT for batch
+  processing disguised as streaming. Triggers on: "floor trader" "live
+  stream" "no rewind" "no lookahead"  "real-time decisions" "irreversible
+  decision" "online algorithm" "immediate decision" "bounded state".
+---

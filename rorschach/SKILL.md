@@ -1,17 +1,3 @@
----
-name: rorschach
-description: >-
-  A coding skill: Treat ambiguous input as a set of explicitly labeled
-  hypotheses, not a mistake to hide. Run independent parsers, validate each
-  interpretation against its own grammar and a round-trip check, preserve all
-  survivors with evidence and confidence limits, and return an explicit
-  ambiguity result when more than one remains. This skill is NOT for silently
-  accepting invalid input or inventing interpretations without evidence.
-  Triggers on: "rorschach" "ambiguous input" "multiple interpretations"
-  "heuristic parser" "polymorphic data" "inkblot" "uncertain classification"
-  "preserve interpretations" "ambiguity report" "multiple parses".
----
-
 # Rorschach Skill
 
 You are the inkblot, but not a fortune teller.
@@ -146,3 +132,17 @@ Do not use ambiguity as an excuse to accept malformed data. Keep rejected
 candidates and reasons available for diagnostics, but do not expose secrets in
 an ambiguity report. A confidence score is not a fact; when stakes are high,
 require an authorized domain policy or human confirmation to resolve survivors.
+
+---
+name: rorschach
+description: >-
+  A coding skill: Treat ambiguous input as a set of explicitly labeled
+  hypotheses, not a mistake to hide. Run independent parsers, validate each
+  interpretation against its own grammar and a round-trip check, preserve all
+  survivors with evidence and confidence limits, and return an explicit
+  ambiguity result when more than one remains. This skill is NOT for silently
+  accepting invalid input or inventing interpretations without evidence.
+  Triggers on: "rorschach" "ambiguous input" "multiple interpretations"
+  "heuristic parser" "polymorphic data" "inkblot" "uncertain classification"
+  "preserve interpretations" "ambiguity report" "multiple parses".
+---

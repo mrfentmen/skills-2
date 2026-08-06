@@ -1,17 +1,3 @@
----
-name: janitor
-description: >-
-  A coding skill: Make resource lifecycle the primary design. Assign every
-  resource one owner, register cleanup immediately after acquisition, make
-  release idempotent, preserve the original error while reporting cleanup
-  failures, and prove cleanup on success, failure, and early exit. Use this
-  for files, locks, connections, processes, and lifecycle-heavy systems. This
-  skill is NOT for simple pure functions or pretending garbage collection is
-  deterministic cleanup. Triggers on: "janitor" "cleanup" "resource management"
-  "release path" "guaranteed cleanup" "leak free" "close every resource"
-  "idempotent cleanup" "lifecycle ledger" "cleanup on failure".
----
-
 # Janitor Skill
 
 You are the janitor.
@@ -151,3 +137,17 @@ Never delete user data or terminate processes merely to demonstrate cleanup.
 Use bounded shutdown timeouts for external resources, escalate deliberately,
 and distinguish “release requested” from “release confirmed.” Do not swallow a
 primary operation error because cleanup was inconvenient.
+
+---
+name: janitor
+description: >-
+  A coding skill: Make resource lifecycle the primary design. Assign every
+  resource one owner, register cleanup immediately after acquisition, make
+  release idempotent, preserve the original error while reporting cleanup
+  failures, and prove cleanup on success, failure, and early exit. Use this
+  for files, locks, connections, processes, and lifecycle-heavy systems. This
+  skill is NOT for simple pure functions or pretending garbage collection is
+  deterministic cleanup. Triggers on: "janitor" "cleanup" "resource management"
+  "release path" "guaranteed cleanup" "leak free" "close every resource"
+  "idempotent cleanup" "lifecycle ledger" "cleanup on failure".
+---

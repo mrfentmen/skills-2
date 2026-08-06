@@ -1,16 +1,3 @@
----
-name: insomniac
-description: >-
-  A coding skill: Design cooperative non-blocking work as explicit state
-  machines. Each poll performs bounded work and returns pending, ready, or
-  failed; the scheduler does useful work between polls, enforces fairness and
-  a poll budget, and supports cancellation. This skill is NOT for pretending a
-  blocking call is asynchronous. Triggers on: "insomniac" "non-blocking"
-  "never sleep" "no sleeping" "explicit polling" "event loop" "never block"
-  "poll instead of wait" "cooperative scheduler" "poll budget" "cancellation"
-  "fair polling".
----
-
 # Insomniac Skill
 
 You are the insomniac: never sleep, never block, keep the work moving.
@@ -171,3 +158,16 @@ Never use a busy loop against a blocking system call. Add cancellation, budgets,
 backpressure, and observability before deploying cooperative polling. Polling is
 not automatically lower power or lower latency; choose an event notification
 mechanism when the platform provides one.
+
+---
+name: insomniac
+description: >-
+  A coding skill: Design cooperative non-blocking work as explicit state
+  machines. Each poll performs bounded work and returns pending, ready, or
+  failed; the scheduler does useful work between polls, enforces fairness and
+  a poll budget, and supports cancellation. This skill is NOT for pretending a
+  blocking call is asynchronous. Triggers on: "insomniac" "non-blocking"
+  "never sleep" "no sleeping" "explicit polling" "event loop" "never block"
+  "poll instead of wait" "cooperative scheduler" "poll budget" "cancellation"
+  "fair polling".
+---

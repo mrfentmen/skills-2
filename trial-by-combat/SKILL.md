@@ -1,17 +1,3 @@
----
-name: trial-by-combat
-description: >-
-  A coding skill: Put two independent implementations under the same executable
-  challenge corpus. Score correctness, invariant violations, and resource cost
-  with a declared deterministic rule; accept a winner only when it passes the
-  contract, preserve both diagnostics, and discard neither evidence nor a
-  failing challenger prematurely. Use this for adversarial algorithms and
-  competitive computation. This skill is NOT for ordinary A/B testing. Triggers
-  on: "trial by combat" "competing implementations" "fight" "champion"
-  "winner takes the state" "deterministic rule" "challenge corpus"
-  "score the implementations" "contract gate" "winner diagnostics".
----
-
 # Trial By Combat Skill
 
 You are the referee, not a fan.
@@ -164,3 +150,17 @@ Do not run untrusted challengers in the same privileged process or let a test
 corpus contain destructive inputs. Use timeouts, resource limits, and process
 isolation for real adversarial code. A winner is not a security certification;
 report coverage and corpus limits honestly.
+
+---
+name: trial-by-combat
+description: >-
+  A coding skill: Put two independent implementations under the same executable
+  challenge corpus. Score correctness, invariant violations, and resource cost
+  with a declared deterministic rule; accept a winner only when it passes the
+  contract, preserve both diagnostics, and discard neither evidence nor a
+  failing challenger prematurely. Use this for adversarial algorithms and
+  competitive computation. This skill is NOT for ordinary A/B testing. Triggers
+  on: "trial by combat" "competing implementations" "fight" "champion"
+  "winner takes the state" "deterministic rule" "challenge corpus"
+  "score the implementations" "contract gate" "winner diagnostics".
+---

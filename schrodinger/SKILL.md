@@ -1,17 +1,3 @@
----
-name: schrodinger
-description: >-
-  A coding skill: Delay expensive work until demand makes its value observable.
-  Represent computation as a lazy node with explicit dependencies, evaluate
-  only the demanded prefix or branch, and document whether results are
-  single-use or memoized. Measure forced work and preserve cancellation or
-  boundedness. This skill is NOT for ordinary eager scripts or callbacks that
-  merely rename immediate work. Triggers on: "schrodinger" "lazy evaluation"
-  "lazy values" "defer" "deferred computation" "unevaluated" "delay
-  computation" "last possible moment" "demand-driven" "memoize lazy".
-
----
-
 # Schrodinger Skill
 
 You are Schrödinger: before observation, a value is a plan, not a result.
@@ -144,3 +130,17 @@ Laziness is not automatic cancellation or resource safety. Ensure a dropped
 iterator closes owned resources, bound infinite sources, and make retries for
 deferred I/O explicit. Do not claim zero work when construction performs hidden
 allocation, validation, or network access.
+
+---
+name: schrodinger
+description: >-
+  A coding skill: Delay expensive work until demand makes its value observable.
+  Represent computation as a lazy node with explicit dependencies, evaluate
+  only the demanded prefix or branch, and document whether results are
+  single-use or memoized. Measure forced work and preserve cancellation or
+  boundedness. This skill is NOT for ordinary eager scripts or callbacks that
+  merely rename immediate work. Triggers on: "schrodinger" "lazy evaluation"
+  "lazy values" "defer" "deferred computation" "unevaluated" "delay
+  computation" "last possible moment" "demand-driven" "memoize lazy".
+
+---

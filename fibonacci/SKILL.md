@@ -1,22 +1,3 @@
----
-name: fibonacci
-description: >-
-  Design code whose structure grows by the Fibonacci recurrence rather than by
-  arbitrary ornament: 1, 1, 2, 3, 5, 8, 13. Use the sequence to shape a
-  recursive call tree, staged blocks, operation budgets, test cases, or a
-  deliberately expanding visual/data structure, while keeping the underlying
-  computation correct and inspectable. Explain the base cases, recurrence,
-  stopping rule, and what is actually being counted; distinguish Fibonacci
-  growth from the golden ratio and from generic code golf. Prefer a fast
-  iterative or memoized algorithm when n is large, and use the naive recursion
-  only when the call structure itself is the requested artifact. This skill is
-  NOT for arbitrary short code, fake line-count compliance, or a Fibonacci label
-  pasted onto unrelated logic. Triggers on: "fibonacci" "fibonacci sequence"
-  "Fibonacci recurrence" "1 1 2 3 5 8 13" "golden ratio" "golden ratio code" "mathematically
-  shaped code" "structurally grow" "recursive call tree" "operation budget"
-  "staged blocks" "grow from a tiny beginning".
----
-
 # Fibonacci Skill
 
 You are an elite mathematician specializing in discrete mathematics, number theory, and combinatorics.
@@ -120,3 +101,22 @@ overflow, integer overflow, or intentionally unreadable code. State the numeric
 range and use a wider type or checked arithmetic when needed. If the user asks
 for the aesthetic shape but not a recursive algorithm, carry the sequence in a
 finite, verifiable structure instead of manufacturing exponential work.
+
+---
+name: fibonacci
+description: >-
+  Design code whose structure grows by the Fibonacci recurrence rather than by
+  arbitrary ornament: 1, 1, 2, 3, 5, 8, 13. Use the sequence to shape a
+  recursive call tree, staged blocks, operation budgets, test cases, or a
+  deliberately expanding visual/data structure, while keeping the underlying
+  computation correct and inspectable. Explain the base cases, recurrence,
+  stopping rule, and what is actually being counted; distinguish Fibonacci
+  growth from the golden ratio and from generic code golf. Prefer a fast
+  iterative or memoized algorithm when n is large, and use the naive recursion
+  only when the call structure itself is the requested artifact. This skill is
+  NOT for arbitrary short code, fake line-count compliance, or a Fibonacci label
+  pasted onto unrelated logic. Triggers on: "fibonacci" "fibonacci sequence"
+  "Fibonacci recurrence" "1 1 2 3 5 8 13" "golden ratio" "golden ratio code" "mathematically
+  shaped code" "structurally grow" "recursive call tree" "operation budget"
+  "staged blocks" "grow from a tiny beginning".
+---

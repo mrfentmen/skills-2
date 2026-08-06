@@ -207,14 +207,14 @@ def build_skill_md(name: str, phrases: list):
         return None, False
     new_desc = base + " Triggers on: " + quoted(phrases) + "."
     folded = fold(new_desc)
-    m = re.match(r"^---\nname: ([^\n]+)\n", text)
+    m = re.search(r"(?:^|\n)---\nname: ([^\n]+)\n", text)
     if not m:
         return None, False
     close = text.find("\n---", m.end())
     if close == -1:
         return None, False
-    rest = text[close + 4:]
-    new_text = "---\nname: %s\ndescription: >-\n  %s\n---\n%s" % (name, folded, rest)
+    body = text[:m.start()].rstrip()
+    new_text = body + "\n\n---\nname: %s\ndescription: >-\n  %s\n---\n" % (name, folded)
     return new_text, new_text != text
 
 

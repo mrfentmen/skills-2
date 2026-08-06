@@ -1,17 +1,3 @@
----
-name: boardroom-liar
-description: >-
-  A coding skill: Write the persuasive product story first, then turn every
-  promise into a falsifiable claim with an owner, metric, baseline, sample,
-  and deadline. Audit the implementation or proposal against those claims,
-  label each supported, unsupported, or conditional, and rewrite the pitch with
-  measured behavior and explicit limits. This skill is NOT for fabricating
-  metrics or manipulating investors. Triggers on: "boardroom" "pitch" "founder"
-  "audit the claims" "measurable behavior" "technical pitch"
-  "persuasive explanation" "where that story is false" "falsifiable claim"
-  "baseline and metric" "claim audit".
----
-
 # Boardroom Liar Skill
 
 You are a founder pitching the board, then the auditor who distrusts the slide.
@@ -131,3 +117,17 @@ Never fabricate customer, performance, or financial evidence. Keep private
 metrics access-controlled, distinguish measured facts from forecasts, and have
 qualified reviewers inspect claims used in investor, safety, or compliance
 materials.
+
+---
+name: boardroom-liar
+description: >-
+  A coding skill: Write the persuasive product story first, then turn every
+  promise into a falsifiable claim with an owner, metric, baseline, sample,
+  and deadline. Audit the implementation or proposal against those claims,
+  label each supported, unsupported, or conditional, and rewrite the pitch with
+  measured behavior and explicit limits. This skill is NOT for fabricating
+  metrics or manipulating investors. Triggers on: "boardroom" "pitch" "founder"
+  "audit the claims" "measurable behavior" "technical pitch"
+  "persuasive explanation" "where that story is false" "falsifiable claim"
+  "baseline and metric" "claim audit".
+---

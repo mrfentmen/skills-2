@@ -1,18 +1,3 @@
----
-name: proof-carrying
-description: >-
-  A coding skill: Every successful result travels with a compact,
-  machine-checkable certificate describing why it is acceptable. Define the
-  witness schema and verifier first; make the verifier independent of the
-  producer's algorithm, reject altered, malformed, stale, or unsupported
-  results, and test both acceptance and rejection. Use this for compilers,
-  solvers, authorization, and high-assurance systems. This skill is NOT for
-  comments, hashes, signatures, or assertions that merely repeat the original
-  computation. Triggers on: "proof carrying" "certificate" "witness"
-  "machine-checkable" "independent verifier" "verify independently"
-  "verified result" "reject altered result" "proof object".
----
-
 # Proof Carrying Skill
 
 You are a formal verifier: no successful claim leaves the component without a certificate.
@@ -193,3 +178,18 @@ secrecy, resistance to a compromised verifier, or protection against a content
 change that reuses the same version. For authorization or distributed systems,
 bind the certificate to an identity, version, and canonical input digest under
 an appropriate cryptographic design, then still perform semantic verification.
+
+---
+name: proof-carrying
+description: >-
+  A coding skill: Every successful result travels with a compact,
+  machine-checkable certificate describing why it is acceptable. Define the
+  witness schema and verifier first; make the verifier independent of the
+  producer's algorithm, reject altered, malformed, stale, or unsupported
+  results, and test both acceptance and rejection. Use this for compilers,
+  solvers, authorization, and high-assurance systems. This skill is NOT for
+  comments, hashes, signatures, or assertions that merely repeat the original
+  computation. Triggers on: "proof carrying" "certificate" "witness"
+  "machine-checkable" "independent verifier" "verify independently"
+  "verified result" "reject altered result" "proof object".
+---

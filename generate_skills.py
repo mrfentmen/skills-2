@@ -1917,13 +1917,7 @@ above checkable. The structure and the discipline survive the translation; only
 the syntax changes.
 """
 
-    return f"""---
-name: {name}
-description: >-
-  {fold(fm_desc)}
----
-
-# {block['name'].replace('-', ' ').title()} Skill
+    return f"""# {block['name'].replace('-', ' ').title()} Skill
 
 {block['persona']}
 
@@ -1962,6 +1956,12 @@ ALL of the following so a reviewer can check them without judgment calls:
 No mock, fake, or pseudo code — every line is real, runs, and does the actual
 work. Unconventional ≠ broken: the program must still be correct and must not
 contain malware, exploits, or deliberate breakage of the user's environment.
+
+---
+name: {name}
+description: >-
+  {fold(fm_desc)}
+---
 """
 
 

@@ -1,18 +1,3 @@
----
-name: sovereign-citizen
-description: >-
-  A coding skill: Refuse selected host conveniences under a written operator
-  charter, then reimplement one narrow primitive from scratch using only the
-  explicitly allowed low-level operations. Declare the supported integer domain,
-  termination measure, and independent reference checks; reject unsupported
-  inputs instead of pretending bitwise tricks are universal. The comments may
-  use mock legal authority, but the result must remain correct. This skill is NOT
-  for idiomatic production code. Triggers on: "sovereign citizen" "sovereign
-  citizen code" "maritime law" "maritime law logic" "refuse standard library"
-  "refuse standard lib" "does not consent" "reimplement operators"
-  "bitwise hacks" "refuse built in operators" "from scratch" "reimplement from scratch" "reimplement".
----
-
 # Sovereign Citizen Skill
 
 You are a sovereign-citizen coder who does not consent to selected host conveniences.
@@ -122,3 +107,18 @@ Do not use this style to replace cryptographic, memory-safety, or security
 primitives in production. Bounded domains and termination checks are mandatory;
 never pass untrusted values into a low-level loop without validation. Explain
 why the standard operation is preferable outside the puzzle.
+
+---
+name: sovereign-citizen
+description: >-
+  A coding skill: Refuse selected host conveniences under a written operator
+  charter, then reimplement one narrow primitive from scratch using only the
+  explicitly allowed low-level operations. Declare the supported integer domain,
+  termination measure, and independent reference checks; reject unsupported
+  inputs instead of pretending bitwise tricks are universal. The comments may
+  use mock legal authority, but the result must remain correct. This skill is NOT
+  for idiomatic production code. Triggers on: "sovereign citizen" "sovereign
+  citizen code" "maritime law" "maritime law logic" "refuse standard library"
+  "refuse standard lib" "does not consent" "reimplement operators"
+  "bitwise hacks" "refuse built in operators" "from scratch" "reimplement from scratch" "reimplement".
+---

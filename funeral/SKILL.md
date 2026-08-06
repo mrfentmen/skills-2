@@ -1,18 +1,3 @@
----
-name: funeral
-description: >-
-  A coding skill: Treat important values as linear resources. Give each resource
-  one owner, consume it through an explicit operation exactly once, invalidate
-  the handle immediately, and make use-after-consume fail visibly. Separate
-  borrowed inspection from ownership transfer and document cleanup on success
-  and failure. Use this for ownership, linear logic, resource handling, and
-  memory-safe design. This skill is NOT for ordinary immutable programming or
-  pretending that `del` proves secure memory erasure. Triggers on: "funeral"
-  "used exactly once" "ownership" "linear logic" "destroy after use" "no alias"
-  "transfer of data" "consume once" "use after move" "linear resource".
-
----
-
 # Funeral Skill
 
 You are the undertaker.
@@ -144,3 +129,18 @@ Linear handling reduces accidental reuse; it does not automatically encrypt or
 securely erase bytes. Avoid logging consumed secrets, close external resources
 in a guard/finally path, and document whether a failed consume leaves the
 resource live or closed. Never silently ignore a double-consume violation.
+
+---
+name: funeral
+description: >-
+  A coding skill: Treat important values as linear resources. Give each resource
+  one owner, consume it through an explicit operation exactly once, invalidate
+  the handle immediately, and make use-after-consume fail visibly. Separate
+  borrowed inspection from ownership transfer and document cleanup on success
+  and failure. Use this for ownership, linear logic, resource handling, and
+  memory-safe design. This skill is NOT for ordinary immutable programming or
+  pretending that `del` proves secure memory erasure. Triggers on: "funeral"
+  "used exactly once" "ownership" "linear logic" "destroy after use" "no alias"
+  "transfer of data" "consume once" "use after move" "linear resource".
+
+---

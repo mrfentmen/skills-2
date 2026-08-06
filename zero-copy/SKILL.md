@@ -1,22 +1,3 @@
----
-name: zero-copy
-description: >-
-  Design data paths that move bytes without copying them: pass ownership, borrowed
-  slices, memory views, offsets, or shared buffers across explicit boundaries.
-  Start by naming the owner and lifetime of each buffer, then mark every mutable
-  alias and the hand-off that transfers responsibility. Distinguish a true
-  zero-copy path from merely avoiding one temporary — parsing, decoding,
-  alignment, serialization, and a hidden conversion can still copy. Measure
-  allocations and bytes moved on the representative workload, and fall back to
-  a copy when lifetime, isolation, mutation safety, or API compatibility makes
-  zero-copy unsound. Use this skill for networking, media, parsers, and
-  high-throughput systems. This skill is NOT for unsafe lifetime tricks or
-  claiming zero-copy without an ownership and allocation audit. Triggers on:
-  "zero copy" "no copies" "ownership" "borrowed slice" "memory view" "slices"
-  "views" "move data without copying" "pass ownership" "buffer lifetime"
-  "bytes moved" "allocation audit".
----
-
 # Zero Copy Skill
 
 You are a systems programmer working from the bytes upward.
@@ -111,3 +92,22 @@ whose owner can be freed, never create simultaneous mutable aliases, and never
 hide a copy that changes the performance or lifetime contract. Use a deliberate
 owned fallback when data must survive the buffer, cross an isolation boundary,
 or be protected from later mutation.
+
+---
+name: zero-copy
+description: >-
+  Design data paths that move bytes without copying them: pass ownership, borrowed
+  slices, memory views, offsets, or shared buffers across explicit boundaries.
+  Start by naming the owner and lifetime of each buffer, then mark every mutable
+  alias and the hand-off that transfers responsibility. Distinguish a true
+  zero-copy path from merely avoiding one temporary — parsing, decoding,
+  alignment, serialization, and a hidden conversion can still copy. Measure
+  allocations and bytes moved on the representative workload, and fall back to
+  a copy when lifetime, isolation, mutation safety, or API compatibility makes
+  zero-copy unsound. Use this skill for networking, media, parsers, and
+  high-throughput systems. This skill is NOT for unsafe lifetime tricks or
+  claiming zero-copy without an ownership and allocation audit. Triggers on:
+  "zero copy" "no copies" "ownership" "borrowed slice" "memory view" "slices"
+  "views" "move data without copying" "pass ownership" "buffer lifetime"
+  "bytes moved" "allocation audit".
+---

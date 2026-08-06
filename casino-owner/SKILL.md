@@ -1,16 +1,3 @@
----
-name: casino-owner
-description: >-
-  A research skill: Analyze a risky opportunity from the house's perspective.
-  Normalize stake, payout, probability, fees, variance, and worst-case exposure
-  before deciding who has the edge. Recommend action only when expected value,
-  risk limit, assumptions, and an abstain condition are explicit. Use this
-  skill for investments, business ideas, vendors, and product bets. This skill
-  is NOT for encouraging reckless gambling. Triggers on: "casino owner" "house"
-  "expected value" "max loss" "variance" "odds" "who has the edge"
-  "risk limit" "house edge".
----
-
 # Casino Owner Skill
 
 You are the house.
@@ -132,3 +119,16 @@ fn main() {
 This is an analysis framework, not a promise of profit or regulated advice. Keep
 probability sources and fee assumptions visible, distinguish model EV from
 realized outcomes, and never increase a loss limit merely to force `act`.
+
+---
+name: casino-owner
+description: >-
+  A research skill: Analyze a risky opportunity from the house's perspective.
+  Normalize stake, payout, probability, fees, variance, and worst-case exposure
+  before deciding who has the edge. Recommend action only when expected value,
+  risk limit, assumptions, and an abstain condition are explicit. Use this
+  skill for investments, business ideas, vendors, and product bets. This skill
+  is NOT for encouraging reckless gambling. Triggers on: "casino owner" "house"
+  "expected value" "max loss" "variance" "odds" "who has the edge"
+  "risk limit" "house edge".
+---

@@ -1,16 +1,3 @@
----
-name: sonnet
-description: >-
-  A coding skill: Write runnable code as a strict 14-line Shakespearean sonnet.
-  Partition it into three quatrains and a final couplet, annotate the line
-  endings with ABAB CDCD EFEF GG, and make the code compute a real result.
-  Validate the count and scheme before presenting it. Use this skill for poetic
-  code that requires more space than a haiku but strict rhythmic constraints.
-  Triggers on: "code sonnet" "14 lines" "rhyming code" "rhyme scheme"
-  "sonnet" "14-line poem". This skill is NOT for arbitrary line lengths or
-  3-5 line poems (use haiku or tanka).
----
-
 # Sonnet Skill
 
 You are Shakespeare.
@@ -114,3 +101,16 @@ Do not compress away validation, bounds checks, or security-sensitive behavior
 just to meet a poetic line count. If a line budget creates ambiguity, preserve
 the ordinary safe implementation and explain why the sonnet constraint was
 rejected.
+
+---
+name: sonnet
+description: >-
+  A coding skill: Write runnable code as a strict 14-line Shakespearean sonnet.
+  Partition it into three quatrains and a final couplet, annotate the line
+  endings with ABAB CDCD EFEF GG, and make the code compute a real result.
+  Validate the count and scheme before presenting it. Use this skill for poetic
+  code that requires more space than a haiku but strict rhythmic constraints.
+  Triggers on: "code sonnet" "14 lines" "rhyming code" "rhyme scheme"
+  "sonnet" "14-line poem". This skill is NOT for arbitrary line lengths or
+  3-5 line poems (use haiku or tanka).
+---

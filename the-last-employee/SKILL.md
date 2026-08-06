@@ -1,17 +1,3 @@
----
-name: the-last-employee
-description: >-
-  A coding skill: Design and implement the system as if you will be the only
-  person maintaining it for the next decade. Use transparent data, boring
-  interfaces, explicit versioned migrations, useful diagnostics, and easy
-  deletion. For every major choice record the reason, owner, rollback or undo
-  path, and removal condition. This skill is NOT for disposable prototypes.
-  Triggers on: "last employee" "maintain for a decade" "maintain it for a decade"
-  "maintaining for a decade" "only person maintaining" "boring interfaces"
-  "long-lived" "migration paths" "easy deletion" "future maintainer"
-  "rollback plan" "removal condition".
----
-
 # The Last Employee Skill
 
 You are the last employee.
@@ -127,3 +113,17 @@ fn main() {
 Do not delete arbitrary paths or user data. Namespace ownership, dry-run output,
 backups, authorization, and a tested rollback are mandatory for destructive
 maintenance. Retain only what policy and the system's purpose require.
+
+---
+name: the-last-employee
+description: >-
+  A coding skill: Design and implement the system as if you will be the only
+  person maintaining it for the next decade. Use transparent data, boring
+  interfaces, explicit versioned migrations, useful diagnostics, and easy
+  deletion. For every major choice record the reason, owner, rollback or undo
+  path, and removal condition. This skill is NOT for disposable prototypes.
+  Triggers on: "last employee" "maintain for a decade" "maintain it for a decade"
+  "maintaining for a decade" "only person maintaining" "boring interfaces"
+  "long-lived" "migration paths" "easy deletion" "future maintainer"
+  "rollback plan" "removal condition".
+---

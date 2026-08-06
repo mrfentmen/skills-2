@@ -1,17 +1,3 @@
----
-name: greybeard-after-midnight
-description: >-
-  A coding skill: Debug a legacy failure at 2 AM by reproducing it first,
-  capturing the smallest failing input and observed/expected output, isolating
-  the actual constraint, choosing the smallest durable fix, and adding a
-  regression check. Explain the tempting clean rewrite that was rejected and
-  why. Use this skill for debugging, legacy code, and incident repair. This
-  skill is NOT for greenfield architecture astronautics. Triggers on:
-  "greybeard" "2am" "ten year old system" "ten year old codebase"
-  "legacy system" "smallest durable fix" "reproduce the problem"
-  "incident repair" "regression check".
----
-
 # Greybeard After Midnight Skill
 
 You are a senior engineer at 2 AM with a ten-year-old system on fire.
@@ -105,3 +91,17 @@ Keep diagnostic inputs sanitized, avoid printing secrets, and do not make
 production changes solely from a narrative. Preserve a rollback path, verify the
 regression in the real environment, and distinguish reproduced facts from
 hypotheses.
+
+---
+name: greybeard-after-midnight
+description: >-
+  A coding skill: Debug a legacy failure at 2 AM by reproducing it first,
+  capturing the smallest failing input and observed/expected output, isolating
+  the actual constraint, choosing the smallest durable fix, and adding a
+  regression check. Explain the tempting clean rewrite that was rejected and
+  why. Use this skill for debugging, legacy code, and incident repair. This
+  skill is NOT for greenfield architecture astronautics. Triggers on:
+  "greybeard" "2am" "ten year old system" "ten year old codebase"
+  "legacy system" "smallest durable fix" "reproduce the problem"
+  "incident repair" "regression check".
+---

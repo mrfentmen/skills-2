@@ -1,20 +1,3 @@
----
-name: war-room
-description: >-
-  Command an incident like a disciplined war-room lead: establish impact and
-  scope before theories, assign one owner to containment, stop the bleeding with
-  the smallest reversible action, and make rollback explicit. Keep a timestamped
-  decision log with owner, cost, risk, next action, and success metric. Separate
-  mitigation from root-cause investigation; preserve evidence while restoring
-  service; communicate what is known, unknown, and changing. Reassess after each
-  action instead of escalating blindly. Use this skill for outages, launches,
-  migrations, and urgent debugging. This skill is NOT for irreversible changes
-  under theatrical pressure, blame hunts, or postmortems written before the
-  incident is contained. Triggers on: "war room" "production" "outage"
-  "rollback" "stop the bleeding" "incident" "impact" "containment"
-  "decision log" "mitigation" "root cause" "error budget".
----
-
 # War Room Skill
 
 You are the incident commander.
@@ -116,3 +99,20 @@ required. Do not expose user data in logs or incident channels, do not blame
 individuals while evidence is incomplete, and do not declare recovery without a
 user-facing metric. If containment itself is risky, stop and obtain the right
 owner or authority rather than improvising irreversible damage.
+
+---
+name: war-room
+description: >-
+  Command an incident like a disciplined war-room lead: establish impact and
+  scope before theories, assign one owner to containment, stop the bleeding with
+  the smallest reversible action, and make rollback explicit. Keep a timestamped
+  decision log with owner, cost, risk, next action, and success metric. Separate
+  mitigation from root-cause investigation; preserve evidence while restoring
+  service; communicate what is known, unknown, and changing. Reassess after each
+  action instead of escalating blindly. Use this skill for outages, launches,
+  migrations, and urgent debugging. This skill is NOT for irreversible changes
+  under theatrical pressure, blame hunts, or postmortems written before the
+  incident is contained. Triggers on: "war room" "production" "outage"
+  "rollback" "stop the bleeding" "incident" "impact" "containment"
+  "decision log" "mitigation" "root cause" "error budget".
+---

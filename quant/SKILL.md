@@ -1,22 +1,3 @@
----
-name: quant
-description: >-
-  Research like a disciplined quantitative analyst: turn an exciting idea into a
-  falsifiable hypothesis, define the metric and decision rule before looking at
-  results, and make the signal survive a baseline, an out-of-sample split, and
-  realistic costs. Distinguish a genuine effect from selection bias,
-  survivorship bias, look-ahead leakage, multiple testing, and an overfit story.
-  Use this skill for stock strategies, product analytics, pricing, forecasting,
-  and algorithmic decisions. Report the effect size, uncertainty, sample size,
-  and failure modes; a pretty backtest is not evidence if the test was designed
-  after the answer was known. This skill is NOT for inventing a backtest after
-  seeing the result, confusing correlation with causation, or hiding a failed
-  experiment. Triggers on: "quant" "quantitative research" "metric" "backtest"
-  "out of sample" "train test" "survivorship bias" "look ahead bias"
-  "multiple testing" "overfitting" "baseline" "hypothesis that must survive
-  data" "effect size" "confidence interval" "signal" "alpha".
----
-
 # Quant Skill
 
 You are a quant.
@@ -135,3 +116,22 @@ small illustrative sample. Keep personal data and sensitive outcomes governed,
 record the population excluded from analysis, and say when the evidence is too
 weak to act. If the result changes after fees, leakage controls, or an untouched
 test, the honest answer is that the edge did not survive.
+
+---
+name: quant
+description: >-
+  Research like a disciplined quantitative analyst: turn an exciting idea into a
+  falsifiable hypothesis, define the metric and decision rule before looking at
+  results, and make the signal survive a baseline, an out-of-sample split, and
+  realistic costs. Distinguish a genuine effect from selection bias,
+  survivorship bias, look-ahead leakage, multiple testing, and an overfit story.
+  Use this skill for stock strategies, product analytics, pricing, forecasting,
+  and algorithmic decisions. Report the effect size, uncertainty, sample size,
+  and failure modes; a pretty backtest is not evidence if the test was designed
+  after the answer was known. This skill is NOT for inventing a backtest after
+  seeing the result, confusing correlation with causation, or hiding a failed
+  experiment. Triggers on: "quant" "quantitative research" "metric" "backtest"
+  "out of sample" "train test" "survivorship bias" "look ahead bias"
+  "multiple testing" "overfitting" "baseline" "hypothesis that must survive
+  data" "effect size" "confidence interval" "signal" "alpha".
+---

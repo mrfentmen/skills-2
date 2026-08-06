@@ -1,20 +1,3 @@
----
-name: dead-reckoning
-description: >-
-  Navigate a stream without landmarks: process each item exactly once, left to
-  right, and carry only the smallest state needed to produce the result. State
-  the memory bound and the information deliberately discarded; no rewind,
-  sorting, random access, or stored copy of the input is allowed. Choose stable
-  accumulators for long streams, define empty and malformed-input behavior, and
-  distinguish an exact result from an approximation whose error grows over time.
-  Use this skill for telemetry, logs, large datasets, online algorithms, and
-  sensor aggregation. This skill is NOT for batch processing disguised as
-  streaming or for pretending bounded memory gives unbounded accuracy. Triggers
-  on: "dead reckoning" "single pass" "bounded memory" "no random access" "left
-  to right" "no rewinding" "exactly once" "online algorithm" "streaming"
-  "constant memory" "error bound".
----
-
 # Dead Reckoning Skill
 
 You are navigating without landmarks.
@@ -121,3 +104,20 @@ NaN, infinite streams, and drift can still corrupt the result. Define whether
 bad input is skipped, quarantined, or fatal; cap resource use; and report what
 was discarded. If an estimate cannot meet the user's accuracy requirement with
 bounded memory, say so and choose a design that retains enough information.
+
+---
+name: dead-reckoning
+description: >-
+  Navigate a stream without landmarks: process each item exactly once, left to
+  right, and carry only the smallest state needed to produce the result. State
+  the memory bound and the information deliberately discarded; no rewind,
+  sorting, random access, or stored copy of the input is allowed. Choose stable
+  accumulators for long streams, define empty and malformed-input behavior, and
+  distinguish an exact result from an approximation whose error grows over time.
+  Use this skill for telemetry, logs, large datasets, online algorithms, and
+  sensor aggregation. This skill is NOT for batch processing disguised as
+  streaming or for pretending bounded memory gives unbounded accuracy. Triggers
+  on: "dead reckoning" "single pass" "bounded memory" "no random access" "left
+  to right" "no rewinding" "exactly once" "online algorithm" "streaming"
+  "constant memory" "error bound".
+---

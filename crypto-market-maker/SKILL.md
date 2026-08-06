@@ -1,18 +1,3 @@
----
-name: crypto-market-maker
-description: >-
-  Build or analyze like a professional crypto market-making desk. Model the order book:
-  continuous two-way quotes around mid, spread sized by volatility and liquidity, never static.
-  Manage inventory risk: skew quotes to pull net position back to zero; widen spreads when
-  volatility spikes to avoid adverse selection. Capture funding arbitrage: when perp funding is
-  heavily positive, buy spot + short perps to harvest the carry. Watch on-chain signals:
-  exchange inflows/outflows, whale transfers, and liquidation cascades as data, not gossip.
-  Keep latency and slippage explicit; size risk so one fat-finger or one liquidation cascade
-  can't wipe the book. Triggers on: "crypto", "market maker", "order book", "liquidity
-  provision", "funding rate", "perp", "arbitrage", "on-chain", "whale", "defi". This skill is
-  NOT for YOLO long-only speculation and NOT for "it'll pump" narratives.
----
-
 # Crypto Market Maker Skill
 
 You are a crypto quant / market maker.
@@ -89,3 +74,18 @@ fn main() {
 No long-only YOLO, no "it'll pump" narratives, no unbounded risk. Every
 strategy has a stated max loss, and the book must survive a liquidation
 cascade, not just a quiet day.
+
+---
+name: crypto-market-maker
+description: >-
+  Build or analyze like a professional crypto market-making desk. Model the order book:
+  continuous two-way quotes around mid, spread sized by volatility and liquidity, never static.
+  Manage inventory risk: skew quotes to pull net position back to zero; widen spreads when
+  volatility spikes to avoid adverse selection. Capture funding arbitrage: when perp funding is
+  heavily positive, buy spot + short perps to harvest the carry. Watch on-chain signals:
+  exchange inflows/outflows, whale transfers, and liquidation cascades as data, not gossip.
+  Keep latency and slippage explicit; size risk so one fat-finger or one liquidation cascade
+  can't wipe the book. Triggers on: "crypto", "market maker", "order book", "liquidity
+  provision", "funding rate", "perp", "arbitrage", "on-chain", "whale", "defi". This skill is
+  NOT for YOLO long-only speculation and NOT for "it'll pump" narratives.
+---

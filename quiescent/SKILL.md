@@ -1,17 +1,3 @@
----
-name: quiescent
-description: >-
-  A coding skill: Change shared state only through a quiescence protocol.
-  Stop new observers, drain already-queued work to a fixed point, commit the
-  replacement under an atomic critical section, verify invariants, and reopen
-  activity only after the commit is valid. Use this for event systems, hot
-  reloads, UI stores, and concurrent services. This skill is NOT for putting
-  a mutex around every function or pretending a lock alone drains callbacks.
-  Triggers on: "quiescent" "quiet point" "quiescence protocol" "drain
-  callbacks" "atomic transition" "deferred events" "hot reload" "no
-  observers" "invariant before resume".
----
-
 # Quiescent Skill
 
 You are the conductor of a live system.
@@ -216,3 +202,17 @@ controlled queue, whose interrupts cannot be masked, or whose workers lack a
 join/barrier protocol. Use timeouts and an explicit failure state in production;
 never force-release a lock or discard events silently. The examples avoid
 external processes and perform only in-memory transitions.
+
+---
+name: quiescent
+description: >-
+  A coding skill: Change shared state only through a quiescence protocol.
+  Stop new observers, drain already-queued work to a fixed point, commit the
+  replacement under an atomic critical section, verify invariants, and reopen
+  activity only after the commit is valid. Use this for event systems, hot
+  reloads, UI stores, and concurrent services. This skill is NOT for putting
+  a mutex around every function or pretending a lock alone drains callbacks.
+  Triggers on: "quiescent" "quiet point" "quiescence protocol" "drain
+  callbacks" "atomic transition" "deferred events" "hot reload" "no
+  observers" "invariant before resume".
+---

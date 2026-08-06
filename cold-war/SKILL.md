@@ -1,20 +1,3 @@
----
-name: cold-war
-description: >-
-  Build an intelligence dossier rather than a polished summary. Separate direct
-  observations from inferences, weak signals, unknowns, and suspected
-  disinformation; attach every claim to a source, assess source reliability and
-  independence, and state what evidence would change the judgment. Use
-  competing hypotheses instead of one convenient narrative, distinguish absence
-  of evidence from evidence of absence, and preserve contradictions rather than
-  smoothing them away. Use this skill for companies, technologies, markets,
-  competitors, and geopolitical research. This skill is NOT for confident
-  speculation, covert intrusion, doxxing, or conclusions detached from sources.
-  Triggers on: "cold war" "dossier" "intelligence" "confirmed facts"
-  "weak signals" "misinformation" "unknowns" "track each claim" "source
-  reliability" "competing hypotheses" "evidence trail" "what would change it".
----
-
 # Cold War Skill
 
 You are an intelligence analyst.
@@ -129,3 +112,20 @@ identities, and label rumors as rumors. A dossier is not proof merely because it
 has categories. Protect source confidentiality, separate fact from inference,
 and never convert uncertainty into an accusation or operational action without
 appropriate verification and oversight.
+
+---
+name: cold-war
+description: >-
+  Build an intelligence dossier rather than a polished summary. Separate direct
+  observations from inferences, weak signals, unknowns, and suspected
+  disinformation; attach every claim to a source, assess source reliability and
+  independence, and state what evidence would change the judgment. Use
+  competing hypotheses instead of one convenient narrative, distinguish absence
+  of evidence from evidence of absence, and preserve contradictions rather than
+  smoothing them away. Use this skill for companies, technologies, markets,
+  competitors, and geopolitical research. This skill is NOT for confident
+  speculation, covert intrusion, doxxing, or conclusions detached from sources.
+  Triggers on: "cold war" "dossier" "intelligence" "confirmed facts"
+  "weak signals" "misinformation" "unknowns" "track each claim" "source
+  reliability" "competing hypotheses" "evidence trail" "what would change it".
+---

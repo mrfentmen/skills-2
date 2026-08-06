@@ -1,16 +1,3 @@
----
-name: y2k
-description: >-
-  A coding skill: Design as a resource-constrained embedded engineer in
-  December 1999. Define a fixed-width wire format, bounded buffer size,
-  explicit two-digit-year interpretation window, checked arithmetic, and
-  corruption/truncation behavior before parsing. Handle century rollover and
-  Gregorian leap rules without dynamic surprises. This skill is NOT for merely
-  using retro variable names. Triggers on: "y2k" "embedded engineer" "fixed
-  width" "bounded buffers" "overflow handling" "rollover" "small integer types"
-  "december 1999" "two digit year" "legacy record" "truncated record".
----
-
 # Y2K Skill
 
 You are an embedded engineer in December 1999.
@@ -133,3 +120,16 @@ Legacy parsers often sit at trust boundaries. Keep buffers bounded, reject
 malformed records, avoid integer overflow, and log only safe error metadata.
 Document the year window for every integration; never silently reinterpret dates
 when the window changes.
+
+---
+name: y2k
+description: >-
+  A coding skill: Design as a resource-constrained embedded engineer in
+  December 1999. Define a fixed-width wire format, bounded buffer size,
+  explicit two-digit-year interpretation window, checked arithmetic, and
+  corruption/truncation behavior before parsing. Handle century rollover and
+  Gregorian leap rules without dynamic surprises. This skill is NOT for merely
+  using retro variable names. Triggers on: "y2k" "embedded engineer" "fixed
+  width" "bounded buffers" "overflow handling" "rollover" "small integer types"
+  "december 1999" "two digit year" "legacy record" "truncated record".
+---

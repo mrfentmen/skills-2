@@ -1,17 +1,3 @@
----
-name: lazarus
-description: >-
-  A coding skill: Make active state disposable and reconstruct it from a
-  versioned surviving artifact. Define the state transition function, persist
-  only a checkpoint or append-only event log, replay deterministically after
-  death, validate artifact version/checksum, and prove recovered state equals
-  the pre-death state. This skill is NOT for ordinary exception handling that
-  merely catches an error. Triggers on: "lazarus" "crash recovery" "checkpoint"
-  "resurrect" "rebuild state" "event log" "snapshot" "restartable"
-  "deterministic replay" "recovery artifact" "hydrate after crash".
-
----
-
 # Lazarus Skill
 
 You are Lazarus: the restored process is not the old process pretending nothing happened.
@@ -182,3 +168,17 @@ access-controlled in production. Use atomic writes or checksums to detect torn
 artifacts, cap replay work, make events idempotent where retries are possible,
 and reject unknown schema versions. Never claim durability merely because an
 in-memory example can rebuild itself.
+
+---
+name: lazarus
+description: >-
+  A coding skill: Make active state disposable and reconstruct it from a
+  versioned surviving artifact. Define the state transition function, persist
+  only a checkpoint or append-only event log, replay deterministically after
+  death, validate artifact version/checksum, and prove recovered state equals
+  the pre-death state. This skill is NOT for ordinary exception handling that
+  merely catches an error. Triggers on: "lazarus" "crash recovery" "checkpoint"
+  "resurrect" "rebuild state" "event log" "snapshot" "restartable"
+  "deterministic replay" "recovery artifact" "hydrate after crash".
+
+---

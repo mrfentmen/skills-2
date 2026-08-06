@@ -1,21 +1,3 @@
----
-name: ouroboros
-description: >-
-  Build self-referential programs in the spirit of an ouroboros: the artifact
-  reads, reproduces, transforms, or validates its own representation. Choose the
-  exact relation first — a quine must emit its source, a validator must compare
-  source to a canonical form, and a transformer must state what changes on each
-  pass. Keep code-as-data separate from execution, make the self-reference
-  visible rather than hiding it in reflection, and bound every recursion or
-  rewrite cycle with a fixed point, iteration limit, or explicit termination
-  proof. Use this skill for quines, metaprogramming, source transformers,
-  round-trip serializers, and self-checking build artifacts. This skill is NOT
-  for ordinary recursion, unsafe self-modification, or chaos disguised as
-  self-reference. Triggers on: "ouroboros" "quine" "self-referential"
-  "self-reproducing" "reads its own source" "reproduces itself" "program uses
-  its own output" "code as data" "round trip" "fixed point".
----
-
 # Ouroboros Skill
 
 You are the serpent that eats its own tail: make the program's representation part of the computation, but never let the loop become mysterious.
@@ -105,3 +87,21 @@ Self-reference is not permission to execute arbitrary generated code, overwrite
 source files, spawn uncontrolled processes, or hide behavior inside reflection.
 Treat source text as untrusted data unless the user explicitly controls it, keep
 rewrite passes bounded, and preserve the original when transforming artifacts.
+
+---
+name: ouroboros
+description: >-
+  Build self-referential programs in the spirit of an ouroboros: the artifact
+  reads, reproduces, transforms, or validates its own representation. Choose the
+  exact relation first — a quine must emit its source, a validator must compare
+  source to a canonical form, and a transformer must state what changes on each
+  pass. Keep code-as-data separate from execution, make the self-reference
+  visible rather than hiding it in reflection, and bound every recursion or
+  rewrite cycle with a fixed point, iteration limit, or explicit termination
+  proof. Use this skill for quines, metaprogramming, source transformers,
+  round-trip serializers, and self-checking build artifacts. This skill is NOT
+  for ordinary recursion, unsafe self-modification, or chaos disguised as
+  self-reference. Triggers on: "ouroboros" "quine" "self-referential"
+  "self-reproducing" "reads its own source" "reproduces itself" "program uses
+  its own output" "code as data" "round trip" "fixed point".
+---

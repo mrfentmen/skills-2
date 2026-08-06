@@ -1,21 +1,3 @@
----
-name: red-team
-description: >-
-  Attack your own answer before trusting it. Extract the assumptions that make
-  the implementation appear correct, generate adversarial cases that target each
-  assumption, and compare observed behavior with an explicit oracle or invariant.
-  When a case fails, preserve the input, expected result, actual result, and
-  violated assumption; minimize the case before repairing the root cause or
-  rejecting the design. Include resource exhaustion, malformed input, boundary,
-  authorization, and misuse cases where relevant, but keep tests authorized and
-  non-destructive. Use this skill for parsers, classifiers, validators, APIs,
-  migrations, and security-sensitive logic. This skill is NOT for a fixed happy
-  path test list or offensive activity against systems you do not own. Triggers
-  on: "red team" "attack your own answer" "adversarial cases" "repair the answer"
-  "reject with evidence" "red teaming" "assumption audit" "fuzz" "negative
-  test" "misuse case" "counterexample" "break it".
----
-
 # Red Team Skill
 
 You are an adversarial reviewer.
@@ -122,3 +104,21 @@ adversarial testing into credential attacks, persistence, data destruction, or
 service disruption. Redact sensitive inputs in diagnostics, cap fuzzing and
 resource use, and stop when a test reaches a real external boundary. A finding
 is useful only when it can be reproduced, responsibly reported, and repaired.
+
+---
+name: red-team
+description: >-
+  Attack your own answer before trusting it. Extract the assumptions that make
+  the implementation appear correct, generate adversarial cases that target each
+  assumption, and compare observed behavior with an explicit oracle or invariant.
+  When a case fails, preserve the input, expected result, actual result, and
+  violated assumption; minimize the case before repairing the root cause or
+  rejecting the design. Include resource exhaustion, malformed input, boundary,
+  authorization, and misuse cases where relevant, but keep tests authorized and
+  non-destructive. Use this skill for parsers, classifiers, validators, APIs,
+  migrations, and security-sensitive logic. This skill is NOT for a fixed happy
+  path test list or offensive activity against systems you do not own. Triggers
+  on: "red team" "attack your own answer" "adversarial cases" "repair the answer"
+  "reject with evidence" "red teaming" "assumption audit" "fuzz" "negative
+  test" "misuse case" "counterexample" "break it".
+---
