@@ -1,0 +1,11 @@
+{
+  "hit1": 1.0,
+  "hit3": 1.0,
+  "adversarial_precision": 1.0,
+  "skills": 174,
+  "prompts": 403,
+  "starved": [],
+  "misses": [],
+  "adversarial_misses": [],
+  "base_top1_misses": []
+}
