@@ -1,0 +1,80 @@
+# Audit & Package, runs on every push to a per-skill repo.
+#
+# 1. Static audit: scores SKILL.md on 8 objective dimensions. If the score
+#    falls below AUDIT_MIN_SCORE the run fails RED and nothing is published
+#    ("bad quality doesn't ship").
+# 2. Repackage: rebuilds dist/<skill>.skill from the current tree.
+# 3. Artifacts: SKILL_AUDIT.json + the .skill are uploaded on every run
+#    (even failures, for diagnostics).
+# 4. Commit-back: on the default branch only, the refreshed artifacts are
+#    committed back with "[skip actions]" in the message so the resulting
+#    push cannot re-trigger this workflow.
+#
+# Requires the audit + packager scripts at .github/scripts/ in the repo:
+#   .github/scripts/static_skill_audit.py
+#   .github/scripts/package_skills.py
+# (push_all_skills.sh copies them in when seeding the repos.)
+
+name: Audit & Package
+
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  # Quality gate (0.0-1.0 over 8 checks). Tunable per repo by editing this
+  # value, or per-run via workflow_dispatch.
+  AUDIT_MIN_SCORE: "0.75"
+
+concurrency:
+  group: audit-package-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  audit-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Static skill audit (quality gate)
+        run: |
+          python3 .github/scripts/static_skill_audit.py \
+            --min-score "$AUDIT_MIN_SCORE"
+
+      - name: Repackage .skill
+        run: |
+          python3 .github/scripts/package_skills.py
+
+      - name: Upload audit + package (always, for diagnostics)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: skill-dist-${{ github.sha }}
+          path: |
+            SKILL_AUDIT.json
+            dist/*.skill
+          if-no-files-found: warn
+
+      - name: Commit refreshed audit + package back (default branch only)
+        if: success() && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add SKILL_AUDIT.json dist/
+          if git diff --cached --quiet; then
+            echo "No artifact changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: refresh audit + dist package [skip actions]"
+          # self-heal against a concurrent run's commit-back landing first
+          git pull --rebase
+          git push

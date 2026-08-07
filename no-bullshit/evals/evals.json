@@ -1,0 +1,35 @@
+{
+  "skill_name": "no-bullshit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Implement user authentication with JWT tokens for my Express.js app. I need login, logout, and token refresh endpoints.",
+      "expected_output": "Production-ready authentication implementation with proper error handling, validation, and security best practices. Should inspect existing codebase first.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Fix the database connection pooling issue. The app is crashing under load with 'too many connections' errors.",
+      "expected_output": "Should trace the connection flow, identify the root cause, and provide a verified fix. Should not guess without inspecting the actual code.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Add a payment system using Stripe. I need to handle one-time payments and webhooks for payment confirmation.",
+      "expected_output": "Should check if Stripe is already configured, ask for API keys if missing, and implement real integration. Should not fake Stripe API calls.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Create a REST API for a blog with posts, comments, and user management.",
+      "expected_output": "Should inspect existing codebase structure, follow existing patterns, and implement real endpoints with proper validation. Should not invent database schemas without checking.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "The login endpoint is returning 500 errors. Can you fix it?",
+      "expected_output": "Should trace the login flow, inspect error logs, identify the actual bug, and provide a verified fix. Should not guess without checking the code.",
+      "files": []
+    }
+  ]
+}

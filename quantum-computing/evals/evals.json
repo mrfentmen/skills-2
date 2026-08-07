@@ -1,0 +1,35 @@
+{
+  "skill_name": "quantum-computing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a quantum computing simulator with qubits and gates in Python",
+      "expected_output": "Code implementing qubit superposition, measurement, and quantum gates",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Create a quantum entanglement demonstration with Bell states",
+      "expected_output": "Code showing entangled qubits and correlation measurements",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Implement Grover's quantum search algorithm",
+      "expected_output": "Quantum search algorithm with amplitude amplification",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Write a quantum random number generator",
+      "expected_output": "True quantum random numbers using superposition",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Create a quantum teleportation protocol simulation",
+      "expected_output": "Code demonstrating quantum teleportation using entanglement",
+      "files": []
+    }
+  ]
+}
