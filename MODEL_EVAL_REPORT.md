@@ -74,6 +74,29 @@ intro-safe):
    prompt was missed because description vocabulary differed from user
    phrasing; description boundaries were the issue.
 
+## Round 3: output-compliance eval (constraint skills)
+
+Harness `output_eval.py`: for each of 10 constraint-heavy skills, deepseek-v4
+receives the FULL SKILL.md as system prompt + a one-sentence task, writes
+Python code, which is executed and checked against the skill's own "Minimum
+Requirements (checkable)" with a per-skill structural grader.
+
+**Result: 10/10 pass.** Models reading the skill produce compliant, runnable
+code: goldfish packs state into a single register with a declared bit layout;
+sonnet is exactly 14 physical lines labeled ABAB CDCD EFEF GG; vampire drains
+in place; hoarder appends-only; insomniac polls with no sleep; trial-by-combat
+runs two implementations against a deterministic rule; counterpoint
+interleaves step machines; casino reports seed + confidence interval;
+dead-reckoning is a single pass with count; doppelganger compares two
+implementations at runtime.
+
+First-run 6/10 was fully traced to harness bugs (``` fence extraction on \r\n
+output, over-strict casino interval keyword, dead-reckoning grader regex, and
+max_tokens truncating long programs mid-token) plus one flaky model bug that
+passed on re-run. No skill edits were needed this round.
+
+Re-run: `KEY=... python3 output_eval.py`
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \
