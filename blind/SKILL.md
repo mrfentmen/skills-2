@@ -102,14 +102,14 @@ try:
     adapter({"active": True, "roles": [], "quota": 1})("who_are_you")
     raise AssertionError("unknown question should fail closed")
 except KeyError:
-    pass
+    print("unknown question rejected: KeyError")
 
 # Fail-closed: a malformed answer must RAISE in the solver, never be coerced.
 try:
     classify(lambda name: "maybe" if name == "is_active" else False)
     raise AssertionError("malformed answer should fail closed")
 except ValueError:
-    pass
+    print("malformed answer rejected: ValueError")
 
 print(first["label"], len(first["transcript"]))
 ```
