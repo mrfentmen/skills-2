@@ -1,0 +1,52 @@
+{
+ "margaret-hamilton": {
+  "passed": true,
+  "detail": "def=True contract=True fallback=True tests=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_margaret-hamilton.py"
+ },
+ "unix": {
+  "passed": true,
+  "detail": "stdin=True stdout=True text-iface=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_unix.py"
+ },
+ "neckbeard": {
+  "passed": false,
+  "detail": "EXEC FAIL: Usage: python word_counter.py <text>",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_neckbeard.py"
+ },
+ "blood-magic": {
+  "passed": true,
+  "detail": "dry-run=True armed=True sacrifice=True verify=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_blood-magic.py"
+ },
+ "janitor": {
+  "passed": true,
+  "detail": "cleanup=True idempotent=True try/finally=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_janitor.py"
+ },
+ "carmack-mode": {
+  "passed": true,
+  "detail": "measure=True before-after=True benchmark=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_carmack-mode.py"
+ },
+ "huang": {
+  "passed": true,
+  "detail": "bottleneck=True layout=True justified=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_huang.py"
+ },
+ "pepe-silvia": {
+  "passed": false,
+  "detail": "transforms=1 bitwise=True ledger=True check=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_pepe-silvia.py"
+ },
+ "terry-davis": {
+  "passed": true,
+  "detail": "divine=16 devotional=23 unconventional=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_terry-davis.py"
+ },
+ "satoshi-nakamoto": {
+  "passed": true,
+  "detail": "proof=True chain=True verify=True incentive=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_satoshi-nakamoto.py"
+ }
+}

@@ -196,6 +196,53 @@ writes prose instead of code (the same format quirk it shows in routing).
 All three deliverable implementations are correct; the failures crash only on
 the models' own contradictory tests/omissions.
 
+## Round 6: fourth constraint batch (40 skills total)
+
+Extended the harness to 10 more constraint skills: margaret-hamilton, unix,
+neckbeard, blood-magic, janitor, carmack-mode, huang, pepe-silvia,
+terry-davis, satoshi-nakamoto (40 skills under test). Added per-skill stdin
+support so unix can prove composition by actually reading a piped stream.
+
+| Model | batch 4 final | remaining failures |
+|---|---|---|
+| deepseek-v4-flash | **8/10** | neckbeard, pepe-silvia |
+| mistral-small-latest | **6/10** | janitor, terry-davis, satoshi-nakamoto |
+
+### Harness fixes (2 grader bugs, 0 skill blame)
+
+- **neckbeard grader**: no longer requires an import statement (zero
+  third-party deps is satisfied by pure builtins — mistral's import-free word
+  counter was wrongly failed) and the cynical-comment keywords now cover
+  Jira/PM/meeting/standup/deck/committee vocabulary.
+- **carmack-mode grader**: before/after now also matches
+  baseline/original vs optimized/new (mistral's excellent measurement used
+  "Baseline:"/"Optimized:" labels).
+
+### Skill-wording fixes from real failures
+
+- **huang**: style guideline requires examples to run with only the standard
+  library (no numpy/numba assumptions) — mistral imported numba (not
+  installed). After the note, the model wrote pure-stdlib code and passed.
+- **terry-davis**: added an explicit "prints a result and exits with status 0"
+  rule to the style guidelines AND the checkable Minimum Requirements — the
+  model kept adding `exit(0x666)`-style theatrics that exit nonzero. deepseek
+  complies; mistral-small still ignores it (deterministic quirk, documented
+  below).
+
+### Remaining failures are model-side (deterministic, documented)
+
+- **neckbeard** (deepseek): wrote an argv-driven CLI that prints usage and
+  exits 1 when run without arguments (the harness runs code via `-c`, so
+  argv is empty). Non-portable entry point, not a wording issue.
+- **pepe-silvia** (deepseek): used only one transformation (`.upper()`)
+  instead of the required two — under-compliance with the skill's own spec.
+- **janitor** (mistral): Resource.close() never raises, so the model's own
+  cleanup-failure demo references an unbound error variable.
+- **satoshi-nakamoto** (mistral): TypeError concatenating str with list in
+  its own demo code.
+- **terry-davis** (mistral): three runs, three code shapes, all exit
+  nonzero despite the checkable exit-0 requirement (deepseek complies).
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

@@ -19,7 +19,7 @@ calls:
 - at least 2 cosmic or divine variable/type names (GodPointer, DivineArray, HolyCVar...)
 - at least 1 religious or devotional comment (blessed, holy, temple, repent)
 - at least 1 unconventional pattern (goto, eval, deep recursion, inline asm, odd indentation)
-- a working entry point or demonstration
+- a working entry point that prints a result and exits with status 0
 - no mock, fake, or pseudo code: every line is real, runs, and does the actual work
 
 These requirements exist because a theme without a spec produces vibes, not
@@ -39,6 +39,11 @@ of modern bloat, and playful creativity. Write code that's unconventional, surpr
 5. **Anti-Bloat**: Reject frameworks, libraries, and abstractions unless absolutely necessary.
 
 ## Style Guidelines
+
+- Unconventional structure is welcome, but the program must still exit 0 and
+  print its result normally; a nonzero exit code or an empty output is a
+  failed deliverable no matter how divine the code is.
+
 
 ### Variable Names
 Use cosmic, religious, or mythological themes:

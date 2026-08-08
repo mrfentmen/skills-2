@@ -1,0 +1,22 @@
+{
+ "janitor": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError",
+  "code_file": "results/output/mistral-small-latest_janitor.py"
+ },
+ "huang": {
+  "passed": false,
+  "detail": "EXEC FAIL: OverflowError: signed integer is greater than maximum",
+  "code_file": "results/output/mistral-small-latest_huang.py"
+ },
+ "terry-davis": {
+  "passed": false,
+  "detail": "EXEC FAIL: WARNING: CIA may monitor this divine output",
+  "code_file": "results/output/mistral-small-latest_terry-davis.py"
+ },
+ "satoshi-nakamoto": {
+  "passed": false,
+  "detail": "EXEC FAIL: TypeError: can only concatenate str (not \"list\") to str",
+  "code_file": "results/output/mistral-small-latest_satoshi-nakamoto.py"
+ }
+}

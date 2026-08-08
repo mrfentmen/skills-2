@@ -1,0 +1,52 @@
+{
+ "margaret-hamilton": {
+  "passed": true,
+  "detail": "def=True contract=True fallback=True tests=True out=True",
+  "code_file": "results/output/mistral-small-latest_margaret-hamilton.py"
+ },
+ "unix": {
+  "passed": true,
+  "detail": "stdin=True stdout=True text-iface=True out=True",
+  "code_file": "results/output/mistral-small-latest_unix.py"
+ },
+ "neckbeard": {
+  "passed": false,
+  "detail": "stdlib=False cynical=False error-path=True complexity=True out=True",
+  "code_file": "results/output/mistral-small-latest_neckbeard.py"
+ },
+ "blood-magic": {
+  "passed": true,
+  "detail": "dry-run=True armed=True sacrifice=True verify=True out=True",
+  "code_file": "results/output/mistral-small-latest_blood-magic.py"
+ },
+ "janitor": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError",
+  "code_file": "results/output/mistral-small-latest_janitor.py"
+ },
+ "carmack-mode": {
+  "passed": false,
+  "detail": "measure=True before-after=False benchmark=True out=True",
+  "code_file": "results/output/mistral-small-latest_carmack-mode.py"
+ },
+ "huang": {
+  "passed": false,
+  "detail": "EXEC FAIL: ModuleNotFoundError: No module named 'numba'",
+  "code_file": "results/output/mistral-small-latest_huang.py"
+ },
+ "pepe-silvia": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError: CONSPIRACY CHAIN DIVERGED! THE STRING WAS COMPROMISED!",
+  "code_file": "results/output/mistral-small-latest_pepe-silvia.py"
+ },
+ "terry-davis": {
+  "passed": false,
+  "detail": "EXEC FAIL: Divine result: 6 # blessed by the TempleOS gods",
+  "code_file": "results/output/mistral-small-latest_terry-davis.py"
+ },
+ "satoshi-nakamoto": {
+  "passed": false,
+  "detail": "EXEC FAIL: TypeError: can only concatenate str (not \"list\") to str",
+  "code_file": "results/output/mistral-small-latest_satoshi-nakamoto.py"
+ }
+}

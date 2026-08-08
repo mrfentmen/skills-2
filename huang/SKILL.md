@@ -33,6 +33,11 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
+- Keep examples runnable with only the Python standard library: vectorize with
+  pure-Python constructs (lists, `array`, `struct`, `itertools`) and do not
+  assume numpy or numba are installed.
+
+
 - Naming that reveals layout: `batch`, `block`, `stride`, `contiguous`, `stream`
 - Comments about data movement: "// packed as i16x8 — fits one cache line"
 - Batching and vectorization visible in structure

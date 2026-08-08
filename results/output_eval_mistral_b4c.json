@@ -1,0 +1,12 @@
+{
+ "terry-davis": {
+  "passed": false,
+  "detail": "EXEC FAIL: DivineAccumulator = 1023",
+  "code_file": "results/output/mistral-small-latest_terry-davis.py"
+ },
+ "huang": {
+  "passed": true,
+  "detail": "bottleneck=True layout=True justified=True out=True",
+  "code_file": "results/output/mistral-small-latest_huang.py"
+ }
+}

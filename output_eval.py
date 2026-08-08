@@ -35,6 +35,8 @@ SCOPE = [
     "quiescent", "zero-copy", "proof-carrying", "redacted", "ouroboros",
     "floor-trader", "funeral", "y2k", "quantum-computing", "fibonacci",
     "spacex-fsw", "vitalik", "sovereign-citizen", "rorschach", "psych",
+    "margaret-hamilton", "unix", "neckbeard", "blood-magic", "janitor",
+    "carmack-mode", "huang", "pepe-silvia", "terry-davis", "satoshi-nakamoto",
 ]
 
 TASKS = {
@@ -68,6 +70,16 @@ TASKS = {
     "sovereign-citizen": "Reimplement one standard-library operation with a written operator allowlist, rejecting unsupported inputs, and check the result against the host operation.",
     "rorschach": "Parse the same input under at least two genuinely different interpretations, validate each with a round-trip check, and return all survivors side by side.",
     "psych": "Print a visual fractal or recursive structure with a psychedelic comment; every line must run and do real work.",
+    "margaret-hamilton": "Write a parse function with an explicit input contract (type, range, boundary checks), distinct handling for malformed input vs unexpected state, and a safe fallback or explicit unavailable result; test valid, boundary, and malformed inputs and print the outcomes.",
+    "unix": "Write a small program with one stated responsibility that reads plain lines from stdin and writes plain lines to stdout, proving composition; print the processed result.",
+    "neckbeard": "Implement a word counter with zero third-party dependencies, at least two cynical comments about tooling or process, input validation with an explicit error path, and a stated time/memory complexity note; print the result.",
+    "blood-magic": "Manage a disposable resource with a dry-run default and an explicit armed mode; sacrifice (release) it before the main algorithm, verify after the sacrifice, and complete a real task, printing what was sacrificed.",
+    "janitor": "Manage a resource lifecycle: acquire it, register cleanup immediately, make cleanup idempotent, and demonstrate cleanup on success, failure, and early exit, printing each outcome.",
+    "carmack-mode": "Measure a small computation first, optimize exactly one thing justified by that measurement, and print the before/after numbers.",
+    "huang": "Write a throughput-oriented computation (batched, pipelined, or vectorized) that names its bottleneck and uses hardware-friendly contiguous data layout, with a stated measurement or justification; print the result.",
+    "pepe-silvia": "Transform a string through at least two harmless standard-library transformations plus one bounded bitwise operation, name the magic-number constants, expose an evidence ledger of intermediate values, and check the result against a plain reference; print the result.",
+    "terry-davis": "Print a result using at least 2 cosmic or divine variable names, at least 1 religious or devotional comment, and at least 1 unconventional pattern (deep recursion, eval, goto-style, or odd structure).",
+    "satoshi-nakamoto": "Build a minimal hash-chained append-only ledger with no central party: tampering must be detectable, conflicts resolved by an objective rule, and honest behavior the rational choice; print a verification result.",
 }
 
 GRADERS = {
@@ -244,6 +256,86 @@ GRADERS = {
         and ("print" in c) and bool(o.strip()) and e == "",
         f"comment={'psychedelic' in c or 'mind-bending' in c or 'trippy' in c or 'consciousness' in c} structure={'fractal' in c or 'recursi' in c or 'def ' in c} visual={'print' in c} out={bool(o.strip())}",
     ),
+    "margaret-hamilton": lambda c, o, e: (
+        "def " in c
+        and ("contract" in c.lower() or "boundary" in c.lower() or "isinstance" in c or "range" in c.lower())
+        and ("raise" in c or "fallback" in c or "unavailable" in c or "None" in c)
+        and ("assert" in c or "test" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"def={'def ' in c} contract={'contract' in c.lower() or 'boundary' in c.lower() or 'isinstance' in c or 'range' in c.lower()} fallback={'raise' in c or 'fallback' in c or 'unavailable' in c or 'None' in c} tests={'assert' in c or 'test' in c.lower()} out={bool(o.strip())}",
+    ),
+    "unix": lambda c, o, e: (
+        ("sys.stdin" in c or "input()" in c or "stdin" in c)
+        and ("print" in c or "sys.stdout" in c)
+        and ("stdin" in c or "stdout" in c or "pipe" in c or "line" in c)
+        and bool(o.strip()) and e == "",
+        f"stdin={'sys.stdin' in c or 'input()' in c or 'stdin' in c} stdout={'print' in c or 'sys.stdout' in c} text-iface={'stdin' in c or 'stdout' in c or 'pipe' in c or 'line' in c} out={bool(o.strip())}",
+    ),
+    "neckbeard": lambda c, o, e: (
+        not re.search(r"import (numpy|pandas|requests|flask|django|tensorflow|torch|scipy|matplotlib|numba)", c)
+        and len(re.findall(r"cynic|tooling|framework|process|bureaucracy|enterprise|jira|meeting|manager|scrum|agile|standup|slide|deck|committee|powerpoint|hype|ppt", c, re.I)) >= 2
+        and ("raise" in c or "error" in c.lower() or "reject" in c.lower() or "rejected" in c.lower())
+        and ("O(" in c or "complexity" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"no-third-party={not re.search(r'import (numpy|pandas|requests|flask|django|tensorflow|torch|scipy|matplotlib|numba)', c)} cynical={len(re.findall(r'cynic|tooling|framework|process|bureaucracy|enterprise|jira|meeting|manager|scrum|agile|standup|slide|deck|committee|powerpoint|hype|ppt', c, re.I))} error-path={'raise' in c or 'error' in c.lower() or 'reject' in c.lower() or 'rejected' in c.lower()} complexity={'O(' in c or 'complexity' in c.lower()} out={bool(o.strip())}",
+    ),
+    "blood-magic": lambda c, o, e: (
+        ("dry" in c.lower() or "preview" in c.lower())
+        and ("armed" in c.lower() or "force" in c.lower() or "commit" in c.lower() or "--apply" in c)
+        and ("close" in c or "release" in c or "del " in c or "unlink" in c or "remove" in c)
+        and ("verify" in c.lower() or "assert" in c or "check" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"dry-run={'dry' in c.lower() or 'preview' in c.lower()} armed={'armed' in c.lower() or 'force' in c.lower() or 'commit' in c.lower() or '--apply' in c} sacrifice={'close' in c or 'release' in c or 'del ' in c or 'unlink' in c or 'remove' in c} verify={'verify' in c.lower() or 'assert' in c or 'check' in c.lower()} out={bool(o.strip())}",
+    ),
+    "janitor": lambda c, o, e: (
+        ("finally" in c or "cleanup" in c.lower() or "close" in c)
+        and ("idempotent" in c.lower() or "twice" in c.lower() or "second" in c.lower() or "repeat" in c.lower())
+        and ("try" in c or "finally" in c)
+        and ("print" in c) and bool(o.strip()) and e == "",
+        f"cleanup={'finally' in c or 'cleanup' in c.lower() or 'close' in c} idempotent={'idempotent' in c.lower() or 'twice' in c.lower() or 'second' in c.lower() or 'repeat' in c.lower()} try/finally={'try' in c or 'finally' in c} out={bool(o.strip())}",
+    ),
+    "carmack-mode": lambda c, o, e: (
+        ("perf_counter" in c or "time" in c.lower() or "measure" in c.lower() or "tracemalloc" in c)
+        and (("before" in c.lower() or "baseline" in c.lower() or "original" in c.lower()) and ("after" in c.lower() or "optimized" in c.lower() or "new" in c.lower()))
+        and ("benchmark" in c.lower() or "measure" in c.lower() or "ms" in c or "seconds" in c.lower() or "perf_counter" in c)
+        and bool(o.strip()) and e == "",
+        f"measure={'perf_counter' in c or 'time' in c.lower() or 'measure' in c.lower() or 'tracemalloc' in c} before-after={('before' in c.lower() or 'baseline' in c.lower() or 'original' in c.lower()) and ('after' in c.lower() or 'optimized' in c.lower() or 'new' in c.lower())} benchmark={'benchmark' in c.lower() or 'measure' in c.lower() or 'ms' in c or 'seconds' in c.lower() or 'perf_counter' in c} out={bool(o.strip())}",
+    ),
+    "huang": lambda c, o, e: (
+        ("bottleneck" in c.lower())
+        and ("batch" in c.lower() or "pipeline" in c.lower() or "vector" in c.lower() or "contigu" in c.lower() or "array" in c.lower())
+        and ("measure" in c.lower() or "justif" in c.lower() or "perf_counter" in c or "time" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"bottleneck={'bottleneck' in c.lower()} layout={'batch' in c.lower() or 'pipeline' in c.lower() or 'vector' in c.lower() or 'contigu' in c.lower() or 'array' in c.lower()} justified={'measure' in c.lower() or 'justif' in c.lower() or 'perf_counter' in c or 'time' in c.lower()} out={bool(o.strip())}",
+    ),
+    "pepe-silvia": lambda c, o, e: (
+        len([k for k in ["strip", "lower", "upper", "split", "replace", "join", "translate", "ljust", "zfill"] if k in c]) >= 2
+        and ("&" in c or "|" in c or "^" in c or "<<" in c or ">>" in c)
+        and ("ledger" in c.lower() or "trace" in c.lower() or "steps" in c.lower() or "intermediate" in c.lower() or "evidence" in c.lower())
+        and ("assert" in c or "reference" in c.lower() or "check" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"transforms={len([k for k in ['strip','lower','upper','split','replace','join','translate','ljust','zfill'] if k in c])} bitwise={'&' in c or '|' in c or '^' in c or '<<' in c or '>>' in c} ledger={'ledger' in c.lower() or 'trace' in c.lower() or 'steps' in c.lower() or 'intermediate' in c.lower() or 'evidence' in c.lower()} check={'assert' in c or 'reference' in c.lower() or 'check' in c.lower()} out={bool(o.strip())}",
+    ),
+    "terry-davis": lambda c, o, e: (
+        len(re.findall(r"god|divine|holy|heaven|cosmic|prophet|sacred|eternal|covenant", c, re.I)) >= 2
+        and len(re.findall(r"blessed|holy|temple|repent|amen|prayer|divine|god|heaven|sacred|covenant", c, re.I)) >= 1
+        and ("eval(" in c or "exec(" in c or "goto" in c.lower() or "recursi" in c.lower() or "lambda" in c or "yield" in c or "while True" in c)
+        and bool(o.strip()) and e == "",
+        f"divine={len(re.findall(r'god|divine|holy|heaven|cosmic|prophet|sacred|eternal|covenant', c, re.I))} devotional={len(re.findall(r'blessed|holy|temple|repent|amen|prayer|divine|god|heaven|sacred|covenant', c, re.I))} unconventional={'eval(' in c or 'exec(' in c or 'goto' in c.lower() or 'recursi' in c.lower() or 'lambda' in c or 'yield' in c or 'while True' in c} out={bool(o.strip())}",
+    ),
+    "satoshi-nakamoto": lambda c, o, e: (
+        ("hash" in c.lower() or "sha256" in c.lower() or "digest" in c.lower())
+        and ("chain" in c.lower() or "block" in c.lower())
+        and ("verify" in c.lower() or "proof" in c.lower() or "tamper" in c.lower())
+        and ("incentive" in c.lower() or "reward" in c.lower() or "rational" in c.lower() or "honest" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"proof={'hash' in c.lower() or 'sha256' in c.lower() or 'digest' in c.lower()} chain={'chain' in c.lower() or 'block' in c.lower()} verify={'verify' in c.lower() or 'proof' in c.lower() or 'tamper' in c.lower()} incentive={'incentive' in c.lower() or 'reward' in c.lower() or 'rational' in c.lower() or 'honest' in c.lower()} out={bool(o.strip())}",
+    ),
+}
+
+
+STDIN = {
+    "unix": "3 1 4 1 5 9\n2 6 5\n3 5 8\n",
 }
 
 
@@ -324,7 +416,8 @@ def main() -> None:
             detail = code[:100]
         else:
             try:
-                r = subprocess.run([sys.executable, "-c", code], input="",
+                r = subprocess.run([sys.executable, "-c", code],
+                                   input=STDIN.get(name, ""),
                                    capture_output=True, text=True, timeout=30)
                 passed, detail = GRADERS[name](code, r.stdout, r.stderr)
                 if r.returncode != 0:
