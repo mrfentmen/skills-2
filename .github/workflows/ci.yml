@@ -1,0 +1,50 @@
+# Skills-2 Catalog CI Gate
+#
+# Runs the full 9-check quality battery against all 180 skills on every push
+# and pull request. The gate is fail-closed: if any check regresses, the run
+# goes RED and the change is blocked from shipping.
+#
+# Checks (see run_ci.sh at the repo root):
+#   1. check_intro_integrity.py          - persona intros are add-only, never rewritten
+#   2. eval_skills.py --min 0.75         - 8-dimension static audit (>= 0.75)
+#   3. identity_audit.py                 - "You are" openings + README links
+#   4. verify_examples.py                - every Python example executes cleanly
+#   5. verify_crosslang.py               - every JS example executes cleanly (node)
+#   6. benchmark_prompts.py              - routing hit@1/hit@3 + adversarial precision
+#   7. quality_scan.py (wrapped)         - depth score; fails if any skill <= 12/24
+#   8. verify_rust_static.py             - Rust blocks structurally clean
+#   9. enforce_skill_self_containment.py - no cross-skill dependencies
+#
+# All checks are offline (no API keys, no network) so the gate is deterministic.
+
+name: Skills-2 CI Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  catalog-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run full catalog gate (9/9)
+        run: bash run_ci.sh
