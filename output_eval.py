@@ -31,6 +31,8 @@ from model_router_eval import make_ssl_context  # noqa: E402
 SCOPE = [
     "goldfish", "sonnet", "vampire", "hoarder", "insomniac",
     "trial-by-combat", "counterpoint", "casino", "dead-reckoning", "doppelganger",
+    "black-box", "blind", "lazarus", "delta", "schrodinger",
+    "quiescent", "zero-copy", "proof-carrying", "redacted", "ouroboros",
 ]
 
 TASKS = {
@@ -44,6 +46,16 @@ TASKS = {
     "casino": "Estimate pi by random sampling and print a confidence interval.",
     "dead-reckoning": "Find the maximum of a stream in one left-to-right pass with bounded memory.",
     "doppelganger": "Two different implementations of the same computation; compare them at runtime and print any disagreement.",
+    "black-box": "Find a hidden number in [0,100] using ONLY yes/no questions through a fixed query interface; never inspect the hidden value directly.",
+    "blind": "Solve a hidden value's parity using only a closed set of named questions and primitive answers.",
+    "lazarus": "Compute a rolling sum, checkpoint it, destroy the live state, then rebuild from the checkpoint and verify the result.",
+    "delta": "Represent inserting an item into a list as a delta, and apply it to a base without mutating the caller's base.",
+    "schrodinger": "Compute the first 5 even squares lazily; include a counter or trace proving the work was deferred until forced.",
+    "quiescent": "Drain a small job queue to a quiet point, then atomically swap the active config under a lock.",
+    "zero-copy": "Pass a buffer through two transforms reporting who owns it before, during, and after each hand-off.",
+    "proof-carrying": "Return a result with a small certificate, and verify the certificate independently without rerunning the computation.",
+    "redacted": "Compute a result using a sensitive intermediate value, then clear it before output; never print the secret.",
+    "ouroboros": "Write a quine: a program that prints exactly its own source text.",
 }
 
 GRADERS = {
@@ -96,6 +108,60 @@ GRADERS = {
         len(re.findall(r"^def ", c, re.M)) >= 2 and ("disagre" in c or "both" in c or "compare" in c)
         and bool(o.strip()) and e == "",
         f"defs={len(re.findall(r'^def ', c, re.M))} compare={'disagre' in c or 'both' in c or 'compare' in c} out={bool(o.strip())}",
+    ),
+    "black-box": lambda c, o, e: (
+        ("def ask" in c or "def query" in c or "def question" in c) and bool(o.strip()) and e == "",
+        f"query-iface={'def ask' in c or 'def query' in c or 'def question' in c} out={bool(o.strip())}",
+    ),
+    "blind": lambda c, o, e: (
+        ("def ask" in c or "QUESTIONS" in c or "def question" in c or "def answer" in c) and bool(o.strip()) and e == "",
+        f"closed-iface={'def ask' in c or 'QUESTIONS' in c or 'def question' in c or 'def answer' in c} out={bool(o.strip())}",
+    ),
+    "lazarus": lambda c, o, e: (
+        ("checkpoint" in c.lower() or "save_state" in c or "snapshot" in c.lower() or "artifact" in c.lower() or "saved" in c.lower())
+        and ("rebuild" in c.lower() or "restore" in c.lower() or "load_state" in c or "replay" in c.lower() or "recover" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"checkpoint={'checkpoint' in c.lower() or 'save_state' in c or 'snapshot' in c.lower() or 'artifact' in c.lower() or 'saved' in c.lower()} rebuild={'rebuild' in c.lower() or 'restore' in c.lower() or 'load_state' in c or 'replay' in c.lower() or 'recover' in c.lower()} out={bool(o.strip())}",
+    ),
+    "delta": lambda c, o, e: (
+        ("def apply" in c or "def patch" in c or "def delta" in c)
+        and ("op" in c.lower() or "insert" in c.lower() or "remove" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"apply={'def apply' in c or 'def patch' in c or 'def delta' in c} ops={'op' in c.lower() or 'insert' in c.lower() or 'remove' in c.lower()} out={bool(o.strip())}",
+    ),
+    "schrodinger": lambda c, o, e: (
+        ("yield" in c or "generator" in c or "lazy" in c)
+        and ("counter" in c or "trace" in c or "forced" in c or "evaluated" in c or "deferred" in c)
+        and bool(o.strip()) and e == "",
+        f"lazy={'yield' in c or 'generator' in c or 'lazy' in c} proof={'counter' in c or 'trace' in c or 'forced' in c or 'evaluated' in c or 'deferred' in c} out={bool(o.strip())}",
+    ),
+    "quiescent": lambda c, o, e: (
+        ("lock" in c or "atomic" in c or "with " in c)
+        and ("queued" in c or "drain" in c or "quiet" in c or "barrier" in c)
+        and bool(o.strip()) and e == "",
+        f"atomic={'lock' in c or 'atomic' in c or 'with ' in c} quiet={'queued' in c or 'drain' in c or 'quiet' in c or 'barrier' in c} out={bool(o.strip())}",
+    ),
+    "zero-copy": lambda c, o, e: (
+        ("memoryview" in c or "owner" in c or "ownership" in c or "no copy" in c)
+        and bool(o.strip()) and e == "",
+        f"ownership={'memoryview' in c or 'owner' in c or 'ownership' in c or 'no copy' in c} out={bool(o.strip())}",
+    ),
+    "proof-carrying": lambda c, o, e: (
+        ("def verify" in c or "verif" in c.lower())
+        and ("cert" in c.lower() or "witness" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"verify={'def verify' in c or 'verif' in c.lower()} cert/witness={'cert' in c.lower() or 'witness' in c.lower()} out={bool(o.strip())}",
+    ),
+    "redacted": lambda c, o, e: (
+        ("del " in c or "clear" in c.lower() or "overwrite" in c.lower())
+        and ("secret" in c.lower() or "sensitive" in c.lower())
+        and "print(secret" not in c and "print( secret" not in c
+        and bool(o.strip()) and e == "",
+        f"clear={'del ' in c or 'clear' in c.lower() or 'overwrite' in c.lower()} sensitive={'secret' in c.lower() or 'sensitive' in c.lower()} secret-printed={'print(secret' in c or 'print( secret' in c} out={bool(o.strip())}",
+    ),
+    "ouroboros": lambda c, o, e: (
+        o.strip() == c.strip() and e == "",
+        f"quine stdout==source: {bool(o.strip() == c.strip())} (src {len(c)}B, out {len(o.strip())}B)",
     ),
 }
 
