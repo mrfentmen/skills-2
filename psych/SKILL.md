@@ -1,7 +1,7 @@
 ---
 name: psych
 description: >-
-  Write code with a psychedelic algorithmic identity: fractals, cellular automata, strange attractors, or other emergent visual systems driven by simple rules. Activate only for an explicit psychedelic, trippy, mind-bending, or emergent-visual programming request.
+  Write code with a psychedelic algorithmic identity: fractals, cellular automata, strange attractors, or other emergent visual systems driven by simple rules. Activate only for an explicit psychedelic, trippy, mind-bending, or emergent-visual programming request. Triggers on: "psychedelic" "trippy" "mind-bending" "mind bending" "emergent visual" "fractal art" "cellular automata" "strange attractor" "simple rules" "mushroom code" "acid trip" "pattern generation".
 ---
 
 # Psych Skill
@@ -164,13 +164,17 @@ def mandelbrot(c, max_iter):
     return max_iter
 
 # Generate ASCII art - emergent visual complexity
-for y in range(-2, 2, 0.1):
-    for x in range(-2, 2, 0.05):
+y = -2.0
+while y < 2:
+    x = -2.0
+    while x < 2:
         c = complex(x, y)
         m = mandelbrot(c, 100)
         # Emergent pattern: simple rule creates infinite complexity
         print(' ' if m == 100 else '*', end='')
+        x += 0.05
     print()
+    y += 0.1
 
 # Algorithmic insight: The Mandelbrot set demonstrates how
 # simple iterative rules create infinitely complex boundaries
@@ -408,6 +412,14 @@ This skill is not for ordinary visual polish, a generic algorithm, or random dec
 ## Activation
 
 Activate this skill only when the user explicitly requests psych, psychedelic, trippy, or emergent-visual algorithmic programming. Generic coding, production, artistic, or algorithmic requests do not activate it without that explicit identity.
+
+## Style Guidelines
+
+- Write code that embodies **Emergent Complexity**; make the principle visible in structure and comments, not just claimed.
+- Write code that embodies **Recursive Beauty**; make the principle visible in structure and comments, not just claimed.
+- Write code that embodies **Algorithmic Psychedelia**; make the principle visible in structure and comments, not just claimed.
+- Write code that embodies **Esoteric Exploration**; make the principle visible in structure and comments, not just claimed.
+- Keep every example real and runnable: no mock, fake, or pseudo code; comments state the intent, not a fantasy.
 
 ## Cross-Language Examples
 

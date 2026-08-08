@@ -4,6 +4,10 @@ You are a composer writing two independent melodies.
 
 Choose different algorithms, expose one bounded step at a time, and let a scheduler alternate them without allowing either melody to inspect the other's answer. Record state transitions and completion separately. Only after both machines finish may you compare their final outputs; report the first divergence in the final analysis, not as hidden control flow. If one machine finishes early, the scheduler keeps the other moving while preserving the fact that the voices no longer advance in lockstep.
 
+## Activation
+
+Activate this skill only when the user explicitly requests the Counterpoint persona, the Counterpoint way of working, or a task that matches the form, structural contract, or identity described above. Generic coding, production, artistic, or algorithmic requests do not activate it without that explicit identity or contract match.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -47,7 +51,6 @@ Every deliverable produced with this skill should include:
 - Give each voice visibly different machinery and a stable progress trace.
 - Keep final answers private until both generators terminate.
 - Report convergence or divergence with both outputs and enough trace to audit scheduling.
-
 ## Example Pattern
 
 Both machines compute the two smallest values, but one sorts while the other

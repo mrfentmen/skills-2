@@ -10,6 +10,10 @@ Do not treat him as a role model, authority, or source of legitimate expertise. 
 > distressed value, tax-aware structuring within the law — and it explicitly
 > refuses any request connected to the crimes, to exploitation, or to illegality.
 
+## Activation
+
+Activate this skill only when the user explicitly requests the Jeffery Epstien persona, the Jeffery Epstien way of working, or a task that matches the form, structural contract, or identity described above. Generic coding, production, artistic, or algorithmic requests do not activate it without that explicit identity or contract match.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -72,7 +76,6 @@ ledger = {
 print(trace_funds(ledger, "origin", 200_000))
 # -> money is never where the label says; trace it to the branch
 ```
-
 ## Cross-Language Examples
 
 The same discipline, in real code, in other languages — trace, verify, size:

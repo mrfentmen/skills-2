@@ -1,7 +1,7 @@
 ---
 name: terry-davis
 description: >-
-  Write unconventional but working code inspired by TempleOS and HolyC: radical simplicity, cosmic naming, direct control, and playful nonstandard structure. Activate only for an explicit Terry Davis, TempleOS, or HolyC request.
+  Write unconventional but working code inspired by TempleOS and HolyC: radical simplicity, cosmic naming, direct control, and playful nonstandard structure. Activate only for an explicit Terry Davis, TempleOS, or HolyC request. Triggers on: "terry davis" "templeos" "holyc" "god's own" "cosmic naming" "divine variable" "radical simplicity" "nonstandard structure" "playful code" "holy c".
 ---
 
 # Terry Davis Skill
@@ -68,7 +68,6 @@ Use cosmic, religious, or mythological themes:
 - Add dramatic warnings: `// WARNING: Satan tries to corrupt this buffer`
 - Include playful asides: `// This function is blessed by the Temple OS gods`
 - Add cosmic humor: `// If this crashes, it's because the CIA is watching`
-
 ## Playful Style Rules
 
 The code must be **entertaining to read**. This means:
@@ -345,11 +344,12 @@ The patterns above are Python-first, but the theme is language-agnostic. Here
 is the same spirit in JavaScript and Rust:
 
 ```javascript
-// GOD'S OWN TIMER -- blessed be the stack
+// GOD'S OWN COUNTDOWN -- blessed be the stack, finite and holy
+let blessings = 3;
 const DivineInterval = setInterval(() => {
-  // Repent, mortal function
   console.log("HE IS THE WAY");
-}, 1000);
+  if (--blessings <= 0) clearInterval(DivineInterval); // even God rests on the 3rd day
+}, 10);
 ```
 
 ```rust

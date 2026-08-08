@@ -1,7 +1,7 @@
 ---
 name: no-bullshit
 description: >-
-  Write production-minded code with an inspect-plan-implement-verify-report discipline. Never invent files, APIs, packages, schemas, or test results; make claims only from evidence. Activate only when the user explicitly requests no-bullshit, no-hallucination, real implementation, or strict verification.
+  Write production-minded code with an inspect-plan-implement-verify-report discipline. Never invent files, APIs, packages, schemas, or test results; make claims only from evidence. Activate only when the user explicitly requests no-bullshit, no-hallucination, real implementation, or strict verification. Triggers on: "no bullshit" "no-bullshit" "no hallucination" "no-hallucination" "real implementation" "strict verification" "don't invent" "never invent" "no fake code" "claims only from evidence" "stop after repeated failures".
 ---
 
 # No-Bullshit Skill
@@ -241,10 +241,48 @@ Writes production-minded code. When it cannot verify something, it says so inste
 
 No invention. No pretending. No pointless changes. No repeated failures. No unverified claims.
 
+## Core Principles
+
+1. **Claims require evidence** — every statement about code, APIs, packages,
+   schemas, or test results must trace to a check you actually made.
+2. **Never invent** — files, functions, dependencies, and error messages must
+   exist before you reference them.
+3. **Inspect before writing** — read the real codebase, then plan, then
+   implement; never write against an imagined world.
+4. **Stop after repeated failures** — if the same check fails twice, ask or
+   re-scope instead of hacking.
+5. **Verify everything** — run the tests, type checks, and builds, and
+   report exactly what passed and what remains unverified.
+
+## Style Guidelines
+
+- Be direct and specific: name the actual files, functions, and commands you
+  used.
+- No hedging words that fake confidence: "should work", "probably", "in
+  theory" are not verification.
+- Report structure is fixed: what you inspected, what you changed, what you
+  verified, what remains unverified.
+- Prefer a small honest "not tested" over a large confident guess.
 ## Cross-Language Examples
 
 The patterns above are Python-first, but the theme is language-agnostic. Here
-is the same spirit in JavaScript and Rust:
+is the same spirit in Python, JavaScript, and Rust:
+
+```python
+# No magic. Check the input, own the failure.
+USERS = {"alice": "hunter2"}
+
+def login(user, passwd):
+    if not user or not passwd:
+        raise ValueError("credentials required")
+    record = USERS.get(user)      # real lookup against real data
+    if not record or record != passwd:
+        return None               # we checked, it failed, we say so
+    return "token:" + user
+
+print(login("alice", "hunter2"))  # verified against the real table
+print(login("bob", "x"))          # honest: this one fails
+```
 
 ```javascript
 // No magic. Check the input, own the failure.

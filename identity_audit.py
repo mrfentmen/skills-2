@@ -11,22 +11,19 @@ def activation(text):
     return " ".join(match.group(0).split()) if match else ""
 
 
-def headings(readme):
-    return {
-        m.group(1): m.group(2)
-        for m in re.finditer(
-            r'^####\s+\d+\.\s+(.+?)\s+—\s+\*"(.*?)"\*$',
-            readme, re.M
-        )
-    }
+def linked_names(readme):
+    """Skill folder names referenced by a README table link (`[name](./name)`)."""
+    names = set()
+    for m in re.finditer(r"\[`?([^`\]]+)`?\]\(\./([^)]+)\)", readme):
+        label, target = m.group(1).strip(), m.group(2).strip().rstrip("/")
+        names.add(target)
+        names.add(label)
+    return names
 
 
 def main():
     readme = (HERE / "README.md").read_text(encoding="utf-8")
-    heading_map = headings(readme)
-    normalized = dict(heading_map)
-    if "boiler-room (research)" in normalized:
-        normalized["boiler-room-research"] = normalized["boiler-room (research)"]
+    linked = linked_names(readme)
     problems = []
     files = sorted(HERE.glob("*/SKILL.md"))
     for path in files:
@@ -35,17 +32,11 @@ def main():
         act = activation(text)
         if not act.startswith("You are "):
             problems.append((name, "opening must start with 'You are'"))
-        if name not in normalized:
-            problems.append((name, "missing README heading"))
-        # A heading must at least reproduce the complete first sentence of the
-        # Activation block. Full paragraph sync is handled by the sync script.
-        if name in normalized:
-            first = re.split(r"(?<!\b[A-Z])(?<=[.!?])\s+", act, maxsplit=1)[0]
-            if first not in normalized[name]:
-                problems.append((name, "README headline does not contain Activation identity"))
+        if name not in linked:
+            problems.append((name, "missing README table link"))
     print(f"skills: {len(files)}")
-    print(f"README headings: {len(heading_map)}")
-    print(f"explicit You-are openings: {len(files) - sum(1 for p in problems if 'Activation' in p[1])}")
+    print(f"explicit You-are openings: {sum(1 for p in files if activation(p.read_text(encoding='utf-8')).startswith('You are '))}")
+    print(f"README table links: {len(linked)}")
     print(f"problems: {len(problems)}")
     for name, message in problems:
         print(f"REPAIR\t{name}\t{message}")

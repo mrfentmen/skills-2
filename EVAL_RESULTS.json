@@ -11,14 +11,14 @@
     "cross_language": 1.0
   },
   "altman": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "anders-hejlsberg": {
@@ -88,9 +88,9 @@
     "cross_language": 1.0
   },
   "azure-engineer": {
-    "overall": 0.75,
-    "frontmatter": 0.0,
-    "triggers": 0.0,
+    "overall": 1.0,
+    "frontmatter": 1.0,
+    "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
@@ -132,47 +132,47 @@
     "cross_language": 1.0
   },
   "black-box": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "blind": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "blood-magic": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "boardroom-liar": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "bob-ross": {
@@ -187,14 +187,14 @@
     "cross_language": 1.0
   },
   "boiler-room": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "boiler-room-research": {
@@ -297,25 +297,25 @@
     "cross_language": 1.0
   },
   "casino": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "casino-owner": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "cathie-wood": {
@@ -451,14 +451,14 @@
     "cross_language": 1.0
   },
   "desert-island": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "dijkstra": {
@@ -517,14 +517,14 @@
     "cross_language": 1.0
   },
   "fedora-hat-guy": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "fei-fei-li": {
@@ -605,14 +605,14 @@
     "cross_language": 1.0
   },
   "fred-rogers": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "funeral": {
@@ -659,15 +659,26 @@
     "style": 1.0,
     "cross_language": 1.0
   },
-  "goldfish": {
-    "overall": 0.875,
+  "god": {
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
+    "cross_language": 1.0
+  },
+  "goldfish": {
+    "overall": 1.0,
+    "frontmatter": 1.0,
+    "triggers": 1.0,
+    "boundaries": 1.0,
+    "requirements": 1.0,
+    "activation": 1.0,
+    "principles": 1.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "goldman-analyst": {
@@ -682,14 +693,14 @@
     "cross_language": 1.0
   },
   "google-sre": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "gordon-ramsay": {
@@ -715,25 +726,25 @@
     "cross_language": 1.0
   },
   "greybeard-after-midnight": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "hastings": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "hideo-kojima": {
@@ -770,14 +781,14 @@
     "cross_language": 1.0
   },
   "hostile-acquisition": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "howard-marks": {
@@ -792,9 +803,9 @@
     "cross_language": 1.0
   },
   "huang": {
-    "overall": 0.75,
-    "frontmatter": 0.0,
-    "triggers": 0.0,
+    "overall": 1.0,
+    "frontmatter": 1.0,
+    "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
@@ -814,14 +825,14 @@
     "cross_language": 1.0
   },
   "insomniac": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "isaac-newton": {
@@ -880,14 +891,14 @@
     "cross_language": 1.0
   },
   "janitor": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "jeff-dean": {
@@ -1001,14 +1012,14 @@
     "cross_language": 1.0
   },
   "kamikaze": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "katherine-johnson": {
@@ -1133,14 +1144,14 @@
     "cross_language": 1.0
   },
   "margaret-hamilton": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "marie-curie": {
@@ -1232,14 +1243,14 @@
     "cross_language": 1.0
   },
   "neckbeard": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "netflix-streaming": {
@@ -1253,15 +1264,26 @@
     "style": 1.0,
     "cross_language": 1.0
   },
-  "noir": {
-    "overall": 0.875,
+  "no-bullshit": {
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
+    "cross_language": 1.0
+  },
+  "noir": {
+    "overall": 1.0,
+    "frontmatter": 1.0,
+    "triggers": 1.0,
+    "boundaries": 1.0,
+    "requirements": 1.0,
+    "activation": 1.0,
+    "principles": 1.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "oracle": {
@@ -1309,14 +1331,14 @@
     "cross_language": 1.0
   },
   "pepe-silvia": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "peter-parker": {
@@ -1331,14 +1353,25 @@
     "cross_language": 1.0
   },
   "proof-carrying": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
+    "cross_language": 1.0
+  },
+  "psych": {
+    "overall": 1.0,
+    "frontmatter": 1.0,
+    "triggers": 1.0,
+    "boundaries": 1.0,
+    "requirements": 1.0,
+    "activation": 1.0,
+    "principles": 1.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "quant": {
@@ -1352,15 +1385,26 @@
     "style": 1.0,
     "cross_language": 1.0
   },
-  "quiescent": {
-    "overall": 0.875,
+  "quantum-computing": {
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
+    "cross_language": 1.0
+  },
+  "quiescent": {
+    "overall": 1.0,
+    "frontmatter": 1.0,
+    "triggers": 1.0,
+    "boundaries": 1.0,
+    "requirements": 1.0,
+    "activation": 1.0,
+    "principles": 1.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "rachael-carson": {
@@ -1386,14 +1430,14 @@
     "cross_language": 1.0
   },
   "record-producer": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "red-team": {
@@ -1408,14 +1452,14 @@
     "cross_language": 1.0
   },
   "redacted": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "reid-hoffman": {
@@ -1572,15 +1616,26 @@
     "style": 1.0,
     "cross_language": 1.0
   },
-  "sonnet": {
-    "overall": 0.875,
+  "smoker": {
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
+    "cross_language": 1.0
+  },
+  "sonnet": {
+    "overall": 1.0,
+    "frontmatter": 1.0,
+    "triggers": 1.0,
+    "boundaries": 1.0,
+    "requirements": 1.0,
+    "activation": 1.0,
+    "principles": 1.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "soros": {
@@ -1595,25 +1650,25 @@
     "cross_language": 1.0
   },
   "sovereign-citizen": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "spacex-fsw": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "stewart-brand": {
@@ -1661,25 +1716,36 @@
     "cross_language": 1.0
   },
   "sweeney": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
+    "cross_language": 1.0
+  },
+  "terry-davis": {
+    "overall": 1.0,
+    "frontmatter": 1.0,
+    "triggers": 1.0,
+    "boundaries": 1.0,
+    "requirements": 1.0,
+    "activation": 1.0,
+    "principles": 1.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "the-last-employee": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "thomas-edison": {
@@ -1716,14 +1782,14 @@
     "cross_language": 1.0
   },
   "trial-by-combat": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "tudor-jones": {
@@ -1771,14 +1837,14 @@
     "cross_language": 1.0
   },
   "vampire": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "van-rossum": {
@@ -1870,14 +1936,14 @@
     "cross_language": 1.0
   },
   "y2k": {
-    "overall": 0.875,
+    "overall": 1.0,
     "frontmatter": 1.0,
     "triggers": 1.0,
     "boundaries": 1.0,
     "requirements": 1.0,
     "activation": 1.0,
     "principles": 1.0,
-    "style": 0.0,
+    "style": 1.0,
     "cross_language": 1.0
   },
   "yukihiro-matsumoto": {
@@ -1912,6 +1978,5 @@
     "principles": 1.0,
     "style": 1.0,
     "cross_language": 1.0
-  },
-  "frozen_note": "Pre-refactor artifact: the Activation scoring dimension refers to the old ## Activation section, removed in the persona-first refactor; identity is now the top-of-file You-are opening."
+  }
 }

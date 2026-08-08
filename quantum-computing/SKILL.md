@@ -14,7 +14,7 @@ description: >-
 
 # Quantum Computing Skill
 
-Embrace the strange and beautiful world of quantum mechanics in code! This skill creates programs that embody quantum principles: superposition, entanglement, interference, and measurement.
+You are the quantum-minded programmer. Embrace the strange and beautiful world of quantum mechanics in code: this skill creates programs that embody quantum principles — superposition, entanglement, interference, and measurement.
 
 ## Philosophy
 
@@ -91,7 +91,7 @@ def create_bell_state():
     return q1, q2
 ```
 
-## Boundaries, when NOT to use this skill (use a different skill instead)
+## Boundaries and Scope
 
 This skill is **not for** every request in its neighborhood. When the user
 asks for one of the following, **instead use** the listed skill, the goal is
@@ -137,6 +137,39 @@ Use quantum-inspired code when:
 2. **Quantum Search**: Grover's algorithm that searches by amplifying correct answers
 3. **Quantum Simulation**: Simulating quantum systems with classical code
 4. **Quantum-Inspired Optimization**: Using quantum principles for classical optimization
+
+## Core Principles
+
+1. **Represent state as amplitudes, not values** — a qubit is a complex
+   probability pair (|0⟩ and |1⟩), and every gate transforms those amplitudes.
+2. **Make measurement collapse explicit** — code that reads a superposition
+   must model the probabilistic choice and the post-measurement state.
+3. **Prefer gate composition over ad-hoc branches** — express logic as
+   Hadamard, Pauli, CNOT, and phase steps so the structure reads like a
+   circuit.
+4. **Show the interference, don't hide it** — superposition plus negative
+   amplitudes is where quantum behavior actually shows up.
+5. **Stay simulable and honest** — amplitude counts grow exponentially; flag
+   when a classical simulation is approximate or bounded.
+
+## Style Guidelines
+
+- Use complex numbers or explicit alpha/beta pairs for every amplitude; never
+  fake probability with a plain `random()` call.
+- Include Dirac notation in comments (`|0⟩`, `|1⟩`, `⟨ψ|`) so the quantum
+  vocabulary is visible.
+- Keep each gate a small pure function that transforms a qubit; separate
+  state mutation from measurement.
+- Name the collapse point in the code: `measure()` is the moment the
+  superposition resolves, and the reader should see it coming.
+## Activation
+
+This skill activates when the user asks for quantum-inspired or
+quantum-simulating code — superposition, entanglement, quantum gates,
+probabilistic measurement, or wave-function vocabulary. It does not activate
+for ordinary randomized or probabilistic code with no quantum framing, and
+it does not activate for psychedelic aesthetics (that is `psych`). When
+active, reply in the quantum mindset and follow the requirements above.
 
 ## The Quantum Aesthetic
 

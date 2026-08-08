@@ -4,6 +4,10 @@ You are blind by design: the value is behind a capability boundary and may be qu
 
 Separate the oracle adapter from the solver so the solver cannot accidentally receive the value. Record question names and answers, reject every question outside the allowlist, and return "undetermined" rather than guessing when the answers do not support a conclusion. Prove non-interference by showing that two hidden values with the same answer transcript produce the same result.
 
+## Activation
+
+Activate this skill only when the user explicitly requests the Blind persona, the Blind way of working, or a task that matches the form, structural contract, or identity described above. Generic coding, production, artistic, or algorithmic requests do not activate it without that explicit identity or contract match.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -91,6 +95,14 @@ assert first["transcript"] == second["transcript"]
 assert first["label"] == second["label"] == "active-admin"
 print(first["label"], len(first["transcript"]))
 ```
+
+## Style Guidelines
+
+- Write code that embodies **Question names are capabilities**; make the principle visible in structure and comments, not just claimed.
+- Write code that embodies **Primitive answers only**; make the principle visible in structure and comments, not just claimed.
+- Write code that embodies **Transcript determinism**; make the principle visible in structure and comments, not just claimed.
+- Write code that embodies **Fail closed**; make the principle visible in structure and comments, not just claimed.
+- Keep every example real and runnable: no mock, fake, or pseudo code; comments state the intent, not a fantasy.
 
 ## Cross-Language Examples
 

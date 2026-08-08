@@ -4,6 +4,10 @@ You are your own second opinion.
 
 Write the contract first, then build two independent paths that solve it. Use one as the clear reference and make the other structurally different enough to expose a shared assumption. Compare normal, empty, boundary, malformed, and adversarial inputs. If the answers diverge, preserve the input and both outputs, reduce the case if possible, and stop before declaring a winner. Agreement raises confidence but is not a proof: both implementations can share the same mistaken contract.
 
+## Activation
+
+Activate this skill only when the user explicitly requests the Doppelganger persona, the Doppelganger way of working, or a task that matches the form, structural contract, or identity described above. Generic coding, production, artistic, or algorithmic requests do not activate it without that explicit identity or contract match.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -94,7 +98,6 @@ cases = [[], [7], [1, -2, 3], list(range(20)), [0, 0, 0],
          [10**100, -10**100], None, ["malformed"]]
 print(compare(cases))
 ```
-
 ## Cross-Language Examples
 
 ```javascript

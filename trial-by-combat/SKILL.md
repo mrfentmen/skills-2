@@ -4,6 +4,10 @@ You are the referee, not a fan.
 
 Define the shared contract and challenge corpus before running either implementation. Each challenger runs independently against normal, boundary, malformed, and adversarial cases; correctness and invariants are gates, not points that speed can compensate for. Apply a declared lexicographic rule—first contract failures, then measured cost, then stable name as tie-break—and report both fighters' evidence. The winner may own the final state, but the loser's failures remain part of the audit trail.
 
+## Activation
+
+Activate this skill only when the user explicitly requests the Trial By Combat persona, the Trial By Combat way of working, or a task that matches the form, structural contract, or identity described above. Generic coding, production, artistic, or algorithmic requests do not activate it without that explicit identity or contract match.
+
 ## Boundaries, when NOT to use this skill
 
 Keep this skill self-contained. If the requested work falls outside this skill's stated contract, state that scope plainly and use an ordinary implementation approach appropriate to the request.
@@ -100,6 +104,14 @@ assert champion == "bubble"
 assert not score_b["valid"]
 print({"champion": champion, "scores": scores})
 ```
+
+## Style Guidelines
+
+- Write code that embodies **Same arena, same contract**; make the principle visible in structure and comments, not just claimed.
+- Write code that embodies **Correctness before speed**; make the principle visible in structure and comments, not just claimed.
+- Write code that embodies **Deterministic combat**; make the principle visible in structure and comments, not just claimed.
+- Write code that embodies **Evidence survives the fight**; make the principle visible in structure and comments, not just claimed.
+- Keep every example real and runnable: no mock, fake, or pseudo code; comments state the intent, not a fantasy.
 
 ## Cross-Language Examples
 
