@@ -1,0 +1,567 @@
+{
+ "model": "mistral-small-latest (merged)",
+ "n": 56,
+ "hit1": 0.3036,
+ "results": [
+  {
+   "idx": 0,
+   "prompt": "you are jordan belfort you took three quaaludes today, find out what stocks are nvda or tsla",
+   "gold": [
+    "boiler-room"
+   ],
+   "decision": "boiler-room-research",
+   "raw": "{\"id\": \"boiler-room-research\"}",
+   "hit": false
+  },
+  {
+   "idx": 4,
+   "prompt": "you are an elite mathematician specializing in discrete mathematics, number theory, and combinatorics; write code whose structure follows the fibonacci sequence 1 1 2 3 5 8 13",
+   "gold": [
+    "fibonacci"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 7,
+   "prompt": "write code that is exactly a 14 line sonnet with a rhyme scheme",
+   "gold": [
+    "sonnet"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 8,
+   "prompt": "use a maximum of two variables, goldfish memory constraints",
+   "gold": [
+    "goldfish"
+   ],
+   "decision": "goldfish",
+   "raw": "{\"id\": \"goldfish\"}",
+   "hit": true
+  },
+  {
+   "idx": 9,
+   "prompt": "estimate pi by random sampling and show your confidence and error margin",
+   "gold": [
+    "casino"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 10,
+   "prompt": "defer every computation until the last moment, build lazy values",
+   "gold": [
+    "schrodinger"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 13,
+   "prompt": "the program must never delete or overwrite anything, append only",
+   "gold": [
+    "hoarder"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 14,
+   "prompt": "two competing implementations must fight and a deterministic rule picks the winner",
+   "gold": [
+    "trial-by-combat"
+   ],
+   "decision": "trial-by-combat",
+   "raw": "```json\n{\"id\": \"trial-by-combat\"}\n```",
+   "hit": true
+  },
+  {
+   "idx": 15,
+   "prompt": "interleave two different algorithms step by step, neither may finish first",
+   "gold": [
+    "counterpoint"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 19,
+   "prompt": "validate every boundary and handle partial failure, aggressively defensive code",
+   "gold": [
+    "margaret-hamilton"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 20,
+   "prompt": "before accepting my answer, attack it with adversarial cases and repair it",
+   "gold": [
+    "red-team"
+   ],
+   "decision": "red-team",
+   "raw": "{\"id\": \"red-team\"}",
+   "hit": true
+  },
+  {
+   "idx": 22,
+   "prompt": "my program must delete its own source file after running, burn after reading",
+   "gold": [
+    "kamikaze"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 23,
+   "prompt": "show a machine-checkable certificate that a verifier can check independently",
+   "gold": [
+    "proof-carrying"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 25,
+   "prompt": "move data without copying, pass ownership and slices, report where ownership changes",
+   "gold": [
+    "zero-copy"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 26,
+   "prompt": "process the input exactly once left to right with bounded memory, no rewind",
+   "gold": [
+    "dead-reckoning"
+   ],
+   "decision": "dead-reckoning",
+   "raw": "```json\n{\"id\": \"dead-reckoning\"}\n```",
+   "hit": true
+  },
+  {
+   "idx": 27,
+   "prompt": "a live stream with no lookahead, every input needs an immediate irreversible decision",
+   "gold": [
+    "floor-trader"
+   ],
+   "decision": "floor-trader",
+   "raw": "{\"id\": \"floor-trader\"}",
+   "hit": true
+  },
+  {
+   "idx": 28,
+   "prompt": "investigate a stock like an aggressive sales-floor operator and give me a hard verdict",
+   "gold": [
+    "boiler-room-research"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 30,
+   "prompt": "treat my idea as a hypothesis that must survive data, define the metric first",
+   "gold": [
+    "quant"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 32,
+   "prompt": "analyze this risky opportunity from the house's perspective, show expected value and max loss",
+   "gold": [
+    "casino-owner"
+   ],
+   "decision": "casino-owner",
+   "raw": "{\"id\": \"casino-owner\"}",
+   "hit": true
+  },
+  {
+   "idx": 39,
+   "prompt": "you are a senior equity analyst at goldman sachs, write a research report with a price target",
+   "gold": [
+    "goldman-analyst"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 40,
+   "prompt": "find me a value stock the way warren buffett would, margin of safety and moats",
+   "gold": [
+    "buffett"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 41,
+   "prompt": "find the statistical edge in this data, let the data speak like jim simons",
+   "gold": [
+    "simons"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 45,
+   "prompt": "it's not about being right, it's how much you make when right and lose when wrong, concentrate",
+   "gold": [
+    "druckenmiller"
+   ],
+   "decision": "druckenmiller",
+   "raw": "{\"id\": \"druckenmiller\"}",
+   "hit": true
+  },
+  {
+   "idx": 48,
+   "prompt": "provide liquidity on an order book, manage inventory skew and funding carry",
+   "gold": [
+    "crypto-market-maker"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 49,
+   "prompt": "you are mark zuck at meta, move fast but measure everything you ship",
+   "gold": [
+    "zuck"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 50,
+   "prompt": "first principles thinking, question every requirement, the algorithm of five steps",
+   "gold": [
+    "musk"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 52,
+   "prompt": "ruthless focus, cut the features that don't matter, insanely great",
+   "gold": [
+    "jobs"
+   ],
+   "decision": "jobs",
+   "raw": "```json\n{\"id\": \"jobs\"}\n```",
+   "hit": true
+  },
+  {
+   "idx": 56,
+   "prompt": "hardware software co-design, think about memory layout and data movement",
+   "gold": [
+    "huang"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 57,
+   "prompt": "think in terms of scaling laws and expected value, compound intelligence",
+   "gold": [
+    "altman"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 58,
+   "prompt": "find the moth, remove bugs like grace hopper, navies and first compilers",
+   "gold": [
+    "hopper"
+   ],
+   "decision": "hopper",
+   "raw": "{\"id\": \"hopper\"}",
+   "hit": true
+  },
+  {
+   "idx": 62,
+   "prompt": "cloud scale services, backwards compatibility, enterprise reliability, c sharp",
+   "gold": [
+    "azure-engineer"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__HTTPERR__400 {\n  \"message\":\"Bad request\",\n  \"request_id\":\"f8d96266f8b3991f5b96a84c88f5cc06\"\n}",
+   "hit": false
+  },
+  {
+   "idx": 65,
+   "prompt": "you are a burned out senior dev running on spite and diet coke, bare metal and no dependencies",
+   "gold": [
+    "neckbeard"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 69,
+   "prompt": "the program may only learn about values by asking yes no greater lesser equal questions",
+   "gold": [
+    "black-box"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 71,
+   "prompt": "parse ambiguous input through multiple models and return every interpretation that survives",
+   "gold": [
+    "rorschach"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 75,
+   "prompt": "embedded engineer in december 1999, fixed width records, survive rollover",
+   "gold": [
+    "y2k"
+   ],
+   "decision": "y2k",
+   "raw": "```json\n{\"id\": \"y2k\"}\n```",
+   "hit": true
+  },
+  {
+   "idx": 76,
+   "prompt": "make the code behave like an unhinged conspiracy theorist connecting pins with red string",
+   "gold": [
+    "pepe-silvia"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 78,
+   "prompt": "demand a blood sacrifice, destroy something in the environment to trade destruction for computation",
+   "gold": [
+    "blood-magic"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 82,
+   "prompt": "you are alan turing, solve this like a turing machine and tell me what is decidable",
+   "gold": [
+    "turing"
+   ],
+   "decision": "turing",
+   "raw": "```json\n{\"id\": \"turing\"}\n```",
+   "hit": true
+  },
+  {
+   "idx": 83,
+   "prompt": "state the loop invariant before the loop and derive the program together with its proof",
+   "gold": [
+    "dijkstra"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 89,
+   "prompt": "order events by causality not wall clock, happens-before, distributed consensus like lamport",
+   "gold": [
+    "lamport"
+   ],
+   "decision": "lamport",
+   "raw": "```json\n{\"id\": \"lamport\"}\n```",
+   "hit": true
+  },
+  {
+   "idx": 93,
+   "prompt": "what i cannot create i do not understand, simulate my bug before trusting the fix",
+   "gold": [
+    "feynman"
+   ],
+   "decision": "feynman",
+   "raw": "```json\n{\"id\": \"feynman\"}\n```",
+   "hit": true
+  },
+  {
+   "idx": 95,
+   "prompt": "ship like bill gates, hard resource budgets, never break backward compatibility",
+   "gold": [
+    "gates"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 97,
+   "prompt": "design my language and compiler like llvm, ssa form, safe by default",
+   "gold": [
+    "lattner"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 101,
+   "prompt": "measure the entropy before choosing a compression format, shannon style",
+   "gold": [
+    "shannon"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 103,
+   "prompt": "simple is not easy, don't complect state and time, use immutable values",
+   "gold": [
+    "rich-hickey"
+   ],
+   "decision": "rich-hickey",
+   "raw": "{\"id\": \"rich-hickey\"}",
+   "hit": true
+  },
+  {
+   "idx": 113,
+   "prompt": "you are anthony bourdain, use Yelp and ask for my location, Yelp price tier $, $$, $$$, or $$$$, and craving",
+   "gold": [
+    "anthony-bourdain"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 119,
+   "prompt": "give me the best recipe of all time for beef wellington, gordon ramsay style",
+   "gold": [
+    "gordon-ramsay"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 127,
+   "prompt": "teach me to code calmly like bob ross, we don't make mistakes just happy little accidents",
+   "gold": [
+    "bob-ross"
+   ],
+   "decision": "bob-ross",
+   "raw": "```json\n{\"id\": \"bob-ross\"}\n```",
+   "hit": true
+  },
+  {
+   "idx": 271,
+   "prompt": "generate adversarial cases from my parser's assumptions",
+   "gold": [
+    "red-team"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 272,
+   "prompt": "bring the system to quiescence before swapping the config atomically",
+   "gold": [
+    "quiescent"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 273,
+   "prompt": "restartable computation, hydrate the state from the seed",
+   "gold": [
+    "lazarus"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 275,
+   "prompt": "compute the minimal change and verify applying the delta matches exactly",
+   "gold": [
+    "delta"
+   ],
+   "decision": "delta",
+   "raw": "```json\n{\"id\": \"delta\"}\n```",
+   "hit": true
+  },
+  {
+   "idx": 277,
+   "prompt": "solve it with random sampling and show the margin",
+   "gold": [
+    "casino"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 278,
+   "prompt": "you are at 2am, the legacy payments system is down, smallest durable fix",
+   "gold": [
+    "greybeard-after-midnight"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  },
+  {
+   "idx": 282,
+   "prompt": "two competing implementations fight, deterministic rule picks the winner",
+   "gold": [
+    "trial-by-combat"
+   ],
+   "decision": "trial-by-combat",
+   "raw": "```json\n{\"id\": \"trial-by-combat\"}\n```",
+   "hit": true
+  },
+  {
+   "idx": 285,
+   "prompt": "write it as a sonnet, exactly 14 lines",
+   "gold": [
+    "sonnet"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "__ERR__ retries exhausted",
+   "hit": false
+  }
+ ]
+}

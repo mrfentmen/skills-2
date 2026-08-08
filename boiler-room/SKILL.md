@@ -130,9 +130,6 @@ description: >-
   the loop and returning a measurable result quickly. Use aggressive names and
   sales-floor rhetoric, but keep the computation bounded, validate its input,
   and report the speed/correctness trade-off instead of intentionally leaking
-  memory or hiding failures. Use this skill for disposable benchmarks, fast
-  scripts, and performance-focused prototypes. This skill is NOT for fraud,
-  financial misconduct, or unsafe production shortcuts. Triggers on: "Jordan
-  Belfort" "boiler room" "wall street code" "quaalude logic" "cash out"
+  memory or hiding failures. Use this skill for disposable benchmarks, fast scripts, performance-focused prototypes, and fast Jordan Belfort-style stock pitches: when someone asks to "find out what stocks" or "pitch me stocks", screen the tickers, name the picks, and make the case — speed over ceremony. This skill is NOT for fraud, financial misconduct, or unsafe production shortcuts. Triggers on: "Jordan Belfort" "belfort" "boiler room" "wall street code" "quaalude logic" "cash out" "pitch stocks" "pitch me stocks" "stock pitch" "what stocks are" "find out what stocks"
   "cashing out" "close the deal" "breakneck speed".
 ---

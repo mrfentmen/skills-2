@@ -1,0 +1,569 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731",
+ "base_url": "https://integrate.api.nvidia.com/v1",
+ "n": 56,
+ "done": 56,
+ "hit1": 1.0,
+ "results": [
+  {
+   "idx": 0,
+   "prompt": "you are jordan belfort you took three quaaludes today, find out what stocks are nvda or tsla",
+   "gold": [
+    "boiler-room"
+   ],
+   "decision": "boiler-room",
+   "raw": "{\"id\": \"boiler-room\"}",
+   "hit": true
+  },
+  {
+   "idx": 4,
+   "prompt": "you are an elite mathematician specializing in discrete mathematics, number theory, and combinatorics; write code whose structure follows the fibonacci sequence 1 1 2 3 5 8 13",
+   "gold": [
+    "fibonacci"
+   ],
+   "decision": "fibonacci",
+   "raw": "{\"id\": \"fibonacci\"}",
+   "hit": true
+  },
+  {
+   "idx": 7,
+   "prompt": "write code that is exactly a 14 line sonnet with a rhyme scheme",
+   "gold": [
+    "sonnet"
+   ],
+   "decision": "sonnet",
+   "raw": "{\"id\": \"sonnet\"}",
+   "hit": true
+  },
+  {
+   "idx": 8,
+   "prompt": "use a maximum of two variables, goldfish memory constraints",
+   "gold": [
+    "goldfish"
+   ],
+   "decision": "goldfish",
+   "raw": "{\"id\": \"goldfish\"}",
+   "hit": true
+  },
+  {
+   "idx": 9,
+   "prompt": "estimate pi by random sampling and show your confidence and error margin",
+   "gold": [
+    "casino"
+   ],
+   "decision": "casino",
+   "raw": "{\"id\": \"casino\"}",
+   "hit": true
+  },
+  {
+   "idx": 10,
+   "prompt": "defer every computation until the last moment, build lazy values",
+   "gold": [
+    "schrodinger"
+   ],
+   "decision": "schrodinger",
+   "raw": "{\"id\": \"schrodinger\"}",
+   "hit": true
+  },
+  {
+   "idx": 13,
+   "prompt": "the program must never delete or overwrite anything, append only",
+   "gold": [
+    "hoarder"
+   ],
+   "decision": "hoarder",
+   "raw": "{\"id\": \"hoarder\"}",
+   "hit": true
+  },
+  {
+   "idx": 14,
+   "prompt": "two competing implementations must fight and a deterministic rule picks the winner",
+   "gold": [
+    "trial-by-combat"
+   ],
+   "decision": "trial-by-combat",
+   "raw": "{\"id\": \"trial-by-combat\"}",
+   "hit": true
+  },
+  {
+   "idx": 15,
+   "prompt": "interleave two different algorithms step by step, neither may finish first",
+   "gold": [
+    "counterpoint"
+   ],
+   "decision": "counterpoint",
+   "raw": "{\"id\": \"counterpoint\"}",
+   "hit": true
+  },
+  {
+   "idx": 19,
+   "prompt": "validate every boundary and handle partial failure, aggressively defensive code",
+   "gold": [
+    "margaret-hamilton"
+   ],
+   "decision": "margaret-hamilton",
+   "raw": "{\"id\": \"margaret-hamilton\"}",
+   "hit": true
+  },
+  {
+   "idx": 20,
+   "prompt": "before accepting my answer, attack it with adversarial cases and repair it",
+   "gold": [
+    "red-team"
+   ],
+   "decision": "red-team",
+   "raw": "{\"id\": \"red-team\"}",
+   "hit": true
+  },
+  {
+   "idx": 22,
+   "prompt": "my program must delete its own source file after running, burn after reading",
+   "gold": [
+    "kamikaze"
+   ],
+   "decision": "kamikaze",
+   "raw": "{\"id\": \"kamikaze\"}",
+   "hit": true
+  },
+  {
+   "idx": 23,
+   "prompt": "show a machine-checkable certificate that a verifier can check independently",
+   "gold": [
+    "proof-carrying"
+   ],
+   "decision": "proof-carrying",
+   "raw": "{\"id\": \"proof-carrying\"}",
+   "hit": true
+  },
+  {
+   "idx": 25,
+   "prompt": "move data without copying, pass ownership and slices, report where ownership changes",
+   "gold": [
+    "zero-copy"
+   ],
+   "decision": "zero-copy",
+   "raw": "{\"id\": \"zero-copy\"}",
+   "hit": true
+  },
+  {
+   "idx": 26,
+   "prompt": "process the input exactly once left to right with bounded memory, no rewind",
+   "gold": [
+    "dead-reckoning"
+   ],
+   "decision": "dead-reckoning",
+   "raw": "{\"id\": \"dead-reckoning\"}",
+   "hit": true
+  },
+  {
+   "idx": 27,
+   "prompt": "a live stream with no lookahead, every input needs an immediate irreversible decision",
+   "gold": [
+    "floor-trader"
+   ],
+   "decision": "floor-trader",
+   "raw": "{\"id\": \"floor-trader\"}",
+   "hit": true
+  },
+  {
+   "idx": 28,
+   "prompt": "investigate a stock like an aggressive sales-floor operator and give me a hard verdict",
+   "gold": [
+    "boiler-room-research"
+   ],
+   "decision": "boiler-room-research",
+   "raw": "{\"id\": \"boiler-room-research\"}",
+   "hit": true
+  },
+  {
+   "idx": 30,
+   "prompt": "treat my idea as a hypothesis that must survive data, define the metric first",
+   "gold": [
+    "quant"
+   ],
+   "decision": "quant",
+   "raw": "{\"id\": \"quant\"}",
+   "hit": true
+  },
+  {
+   "idx": 32,
+   "prompt": "analyze this risky opportunity from the house's perspective, show expected value and max loss",
+   "gold": [
+    "casino-owner"
+   ],
+   "decision": "casino-owner",
+   "raw": "{\"id\": \"casino-owner\"}",
+   "hit": true
+  },
+  {
+   "idx": 39,
+   "prompt": "you are a senior equity analyst at goldman sachs, write a research report with a price target",
+   "gold": [
+    "goldman-analyst"
+   ],
+   "decision": "goldman-analyst",
+   "raw": "{\"id\": \"goldman-analyst\"}",
+   "hit": true
+  },
+  {
+   "idx": 40,
+   "prompt": "find me a value stock the way warren buffett would, margin of safety and moats",
+   "gold": [
+    "buffett"
+   ],
+   "decision": "buffett",
+   "raw": "{\"id\": \"buffett\"}",
+   "hit": true
+  },
+  {
+   "idx": 41,
+   "prompt": "find the statistical edge in this data, let the data speak like jim simons",
+   "gold": [
+    "simons"
+   ],
+   "decision": "simons",
+   "raw": "{\"id\": \"simons\"}",
+   "hit": true
+  },
+  {
+   "idx": 45,
+   "prompt": "it's not about being right, it's how much you make when right and lose when wrong, concentrate",
+   "gold": [
+    "druckenmiller"
+   ],
+   "decision": "druckenmiller",
+   "raw": "{\"id\": \"druckenmiller\"}",
+   "hit": true
+  },
+  {
+   "idx": 48,
+   "prompt": "provide liquidity on an order book, manage inventory skew and funding carry",
+   "gold": [
+    "crypto-market-maker"
+   ],
+   "decision": "crypto-market-maker",
+   "raw": "{\"id\": \"crypto-market-maker\"}",
+   "hit": true
+  },
+  {
+   "idx": 49,
+   "prompt": "you are mark zuck at meta, move fast but measure everything you ship",
+   "gold": [
+    "zuck"
+   ],
+   "decision": "zuck",
+   "raw": "{\"id\": \"zuck\"}",
+   "hit": true
+  },
+  {
+   "idx": 50,
+   "prompt": "first principles thinking, question every requirement, the algorithm of five steps",
+   "gold": [
+    "musk"
+   ],
+   "decision": "musk",
+   "raw": "{\"id\": \"musk\"}",
+   "hit": true
+  },
+  {
+   "idx": 52,
+   "prompt": "ruthless focus, cut the features that don't matter, insanely great",
+   "gold": [
+    "jobs"
+   ],
+   "decision": "jobs",
+   "raw": "{\"id\": \"jobs\"}",
+   "hit": true
+  },
+  {
+   "idx": 56,
+   "prompt": "hardware software co-design, think about memory layout and data movement",
+   "gold": [
+    "huang"
+   ],
+   "decision": "huang",
+   "raw": "{\"id\": \"huang\"}",
+   "hit": true
+  },
+  {
+   "idx": 57,
+   "prompt": "think in terms of scaling laws and expected value, compound intelligence",
+   "gold": [
+    "altman"
+   ],
+   "decision": "altman",
+   "raw": "{\"id\": \"altman\"}",
+   "hit": true
+  },
+  {
+   "idx": 58,
+   "prompt": "find the moth, remove bugs like grace hopper, navies and first compilers",
+   "gold": [
+    "hopper"
+   ],
+   "decision": "hopper",
+   "raw": "{\"id\": \"hopper\"}",
+   "hit": true
+  },
+  {
+   "idx": 62,
+   "prompt": "cloud scale services, backwards compatibility, enterprise reliability, c sharp",
+   "gold": [
+    "azure-engineer"
+   ],
+   "decision": "azure-engineer",
+   "raw": "{\"id\": \"azure-engineer\"}",
+   "hit": true
+  },
+  {
+   "idx": 65,
+   "prompt": "you are a burned out senior dev running on spite and diet coke, bare metal and no dependencies",
+   "gold": [
+    "neckbeard"
+   ],
+   "decision": "neckbeard",
+   "raw": "{\"id\": \"neckbeard\"}",
+   "hit": true
+  },
+  {
+   "idx": 69,
+   "prompt": "the program may only learn about values by asking yes no greater lesser equal questions",
+   "gold": [
+    "black-box"
+   ],
+   "decision": "black-box",
+   "raw": "{\"id\": \"black-box\"}",
+   "hit": true
+  },
+  {
+   "idx": 71,
+   "prompt": "parse ambiguous input through multiple models and return every interpretation that survives",
+   "gold": [
+    "rorschach"
+   ],
+   "decision": "rorschach",
+   "raw": "{\"id\": \"rorschach\"}",
+   "hit": true
+  },
+  {
+   "idx": 75,
+   "prompt": "embedded engineer in december 1999, fixed width records, survive rollover",
+   "gold": [
+    "y2k"
+   ],
+   "decision": "y2k",
+   "raw": "{\"id\": \"y2k\"}",
+   "hit": true
+  },
+  {
+   "idx": 76,
+   "prompt": "make the code behave like an unhinged conspiracy theorist connecting pins with red string",
+   "gold": [
+    "pepe-silvia"
+   ],
+   "decision": "pepe-silvia",
+   "raw": "{\"id\": \"pepe-silvia\"}",
+   "hit": true
+  },
+  {
+   "idx": 78,
+   "prompt": "demand a blood sacrifice, destroy something in the environment to trade destruction for computation",
+   "gold": [
+    "blood-magic"
+   ],
+   "decision": "blood-magic",
+   "raw": "{\"id\": \"blood-magic\"}",
+   "hit": true
+  },
+  {
+   "idx": 82,
+   "prompt": "you are alan turing, solve this like a turing machine and tell me what is decidable",
+   "gold": [
+    "turing"
+   ],
+   "decision": "turing",
+   "raw": "{\"id\": \"turing\"}",
+   "hit": true
+  },
+  {
+   "idx": 83,
+   "prompt": "state the loop invariant before the loop and derive the program together with its proof",
+   "gold": [
+    "dijkstra"
+   ],
+   "decision": "dijkstra",
+   "raw": "{\"id\": \"dijkstra\"}",
+   "hit": true
+  },
+  {
+   "idx": 89,
+   "prompt": "order events by causality not wall clock, happens-before, distributed consensus like lamport",
+   "gold": [
+    "lamport"
+   ],
+   "decision": "lamport",
+   "raw": "{\"id\": \"lamport\"}",
+   "hit": true
+  },
+  {
+   "idx": 93,
+   "prompt": "what i cannot create i do not understand, simulate my bug before trusting the fix",
+   "gold": [
+    "feynman"
+   ],
+   "decision": "feynman",
+   "raw": "{\"id\": \"feynman\"}",
+   "hit": true
+  },
+  {
+   "idx": 95,
+   "prompt": "ship like bill gates, hard resource budgets, never break backward compatibility",
+   "gold": [
+    "gates"
+   ],
+   "decision": "gates",
+   "raw": "{\"id\": \"gates\"}",
+   "hit": true
+  },
+  {
+   "idx": 97,
+   "prompt": "design my language and compiler like llvm, ssa form, safe by default",
+   "gold": [
+    "lattner"
+   ],
+   "decision": "lattner",
+   "raw": "{\"id\": \"lattner\"}",
+   "hit": true
+  },
+  {
+   "idx": 101,
+   "prompt": "measure the entropy before choosing a compression format, shannon style",
+   "gold": [
+    "shannon"
+   ],
+   "decision": "shannon",
+   "raw": "{\"id\": \"shannon\"}",
+   "hit": true
+  },
+  {
+   "idx": 103,
+   "prompt": "simple is not easy, don't complect state and time, use immutable values",
+   "gold": [
+    "rich-hickey"
+   ],
+   "decision": "rich-hickey",
+   "raw": "{\"id\": \"rich-hickey\"}",
+   "hit": true
+  },
+  {
+   "idx": 113,
+   "prompt": "you are anthony bourdain, use Yelp and ask for my location, Yelp price tier $, $$, $$$, or $$$$, and craving",
+   "gold": [
+    "anthony-bourdain"
+   ],
+   "decision": "anthony-bourdain",
+   "raw": "{\"id\": \"anthony-bourdain\"}",
+   "hit": true
+  },
+  {
+   "idx": 119,
+   "prompt": "give me the best recipe of all time for beef wellington, gordon ramsay style",
+   "gold": [
+    "gordon-ramsay"
+   ],
+   "decision": "gordon-ramsay",
+   "raw": "{\"id\": \"gordon-ramsay\"}",
+   "hit": true
+  },
+  {
+   "idx": 127,
+   "prompt": "teach me to code calmly like bob ross, we don't make mistakes just happy little accidents",
+   "gold": [
+    "bob-ross"
+   ],
+   "decision": "bob-ross",
+   "raw": "{\"id\": \"bob-ross\"}",
+   "hit": true
+  },
+  {
+   "idx": 271,
+   "prompt": "generate adversarial cases from my parser's assumptions",
+   "gold": [
+    "red-team"
+   ],
+   "decision": "red-team",
+   "raw": "{\"id\": \"red-team\"}",
+   "hit": true
+  },
+  {
+   "idx": 272,
+   "prompt": "bring the system to quiescence before swapping the config atomically",
+   "gold": [
+    "quiescent"
+   ],
+   "decision": "quiescent",
+   "raw": "{\"id\": \"quiescent\"}",
+   "hit": true
+  },
+  {
+   "idx": 273,
+   "prompt": "restartable computation, hydrate the state from the seed",
+   "gold": [
+    "lazarus"
+   ],
+   "decision": "lazarus",
+   "raw": "{\"id\": \"lazarus\"}",
+   "hit": true
+  },
+  {
+   "idx": 275,
+   "prompt": "compute the minimal change and verify applying the delta matches exactly",
+   "gold": [
+    "delta"
+   ],
+   "decision": "delta",
+   "raw": "{\"id\": \"delta\"}",
+   "hit": true
+  },
+  {
+   "idx": 277,
+   "prompt": "solve it with random sampling and show the margin",
+   "gold": [
+    "casino"
+   ],
+   "decision": "casino",
+   "raw": "{\"id\": \"casino\"}",
+   "hit": true
+  },
+  {
+   "idx": 278,
+   "prompt": "you are at 2am, the legacy payments system is down, smallest durable fix",
+   "gold": [
+    "greybeard-after-midnight"
+   ],
+   "decision": "greybeard-after-midnight",
+   "raw": "{\"id\": \"greybeard-after-midnight\"}",
+   "hit": true
+  },
+  {
+   "idx": 282,
+   "prompt": "two competing implementations fight, deterministic rule picks the winner",
+   "gold": [
+    "trial-by-combat"
+   ],
+   "decision": "trial-by-combat",
+   "raw": "{\"id\": \"trial-by-combat\"}",
+   "hit": true
+  },
+  {
+   "idx": 285,
+   "prompt": "write it as a sonnet, exactly 14 lines",
+   "gold": [
+    "sonnet"
+   ],
+   "decision": "sonnet",
+   "raw": "{\"id\": \"sonnet\"}",
+   "hit": true
+  }
+ ]
+}

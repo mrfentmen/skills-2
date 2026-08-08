@@ -1,0 +1,69 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731",
+ "base_url": "https://integrate.api.nvidia.com/v1",
+ "n": 6,
+ "done": 6,
+ "hit1": 1.0,
+ "results": [
+  {
+   "idx": 0,
+   "prompt": "you are jordan belfort you took three quaaludes today, find out what stocks are nvda or tsla",
+   "gold": [
+    "boiler-room"
+   ],
+   "decision": "boiler-room",
+   "raw": "{\"id\": \"boiler-room\"}",
+   "hit": true
+  },
+  {
+   "idx": 56,
+   "prompt": "hardware software co-design, think about memory layout and data movement",
+   "gold": [
+    "huang"
+   ],
+   "decision": "huang",
+   "raw": "{\"id\": \"huang\"}",
+   "hit": true
+  },
+  {
+   "idx": 39,
+   "prompt": "you are a senior equity analyst at goldman sachs, write a research report with a price target",
+   "gold": [
+    "goldman-analyst"
+   ],
+   "decision": "goldman-analyst",
+   "raw": "{\"id\": \"goldman-analyst\"}",
+   "hit": true
+  },
+  {
+   "idx": 32,
+   "prompt": "analyze this risky opportunity from the house's perspective, show expected value and max loss",
+   "gold": [
+    "casino-owner"
+   ],
+   "decision": "casino-owner",
+   "raw": "{\"id\": \"casino-owner\"}",
+   "hit": true
+  },
+  {
+   "idx": 4,
+   "prompt": "you are an elite mathematician specializing in discrete mathematics, number theory, and combinatorics; write code whose structure follows the fibonacci sequence 1 1 2 3 5 8 13",
+   "gold": [
+    "fibonacci"
+   ],
+   "decision": "fibonacci",
+   "raw": "{\"id\": \"fibonacci\"}",
+   "hit": true
+  },
+  {
+   "idx": 8,
+   "prompt": "use a maximum of two variables, goldfish memory constraints",
+   "gold": [
+    "goldfish"
+   ],
+   "decision": "goldfish",
+   "raw": "{\"id\": \"goldfish\"}",
+   "hit": true
+  }
+ ]
+}
