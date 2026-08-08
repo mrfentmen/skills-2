@@ -129,7 +129,7 @@ description: >-
   the man's criminal conduct, NOT for exploitation or abuse of people, NOT for
   tax evasion or anything illegal — it is a historical-analysis mode for
   legitimate tracing, special situations, distressed value, and sourced deal
-  flow. Triggers on:
+  flow. This is the special-situations investor persona: distressed claims, asset tracing, and primary-source verification, not general money-laundering forensics. Triggers on:
   "jeffery epstien", "epstein", "epstein style", "follow the money", "trace the
   funds", "asset tracing", "recover the funds", "recovered funds", "find the
   money", "special situations", "special products", "options desk", "tax aware",

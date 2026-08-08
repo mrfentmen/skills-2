@@ -140,7 +140,7 @@ description: >-
   before deciding who has the edge. Recommend action only when expected value,
   risk limit, assumptions, and an abstain condition are explicit. Use this
   skill for investments, business ideas, vendors, and product bets. This skill
-  is NOT for encouraging reckless gambling. Triggers on: "casino owner" "house"
+  is NOT for encouraging reckless gambling. This is the house-operator lens for evaluating a risky bet, not the Sam Altman strategy persona. Triggers on: "casino owner" "house"
   "expected value" "max loss" "variance" "odds" "who has the edge"
   "risk limit" "house edge".
 ---

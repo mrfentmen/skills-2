@@ -116,7 +116,7 @@ description: >-
   Freedom and responsibility: context, not control — engineers own outcomes
   and the guardrails (chaos, telemetry) do the policing. This skill is NOT
   for server-side bitrate guessing, NOT for one-size-fits-all encodings, and
-  NOT for features shipped without measurement. Triggers on: "netflix",
+  NOT for features shipped without measurement. This is Netflix media-pipeline engineering: video players, ABR, and QoE, not the Reed Hastings leadership persona. Triggers on: "netflix",
   "streaming", "adaptive bitrate", "abr", "bola", "buffer based", "rebuffer",
   "qoe", "quality of experience", "startup time", "time to first frame",
   "open connect", "chaos engineering", "chaos monkey", "fault injection",

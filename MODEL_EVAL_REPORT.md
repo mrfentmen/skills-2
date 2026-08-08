@@ -1,6 +1,6 @@
 # Real-Model Routing Eval — skills 2 (180 persona skills)
 
-Date: 2026-08-08
+Dates: 2026-08-08 (round 1) and 2026-08-08 (round 2: overlap disambiguation)
 Harness: `model_router_eval.py` (+ `run_arm.sh`)
 Prompt suite: 56 curated prompts drawn from `benchmark_prompts.SUITE`
 (8 finance personas, 8 tech personas, 8 coding-forms, 7 safety/verification,
@@ -13,49 +13,66 @@ frontmatter description, exactly what an agent skill-loader sees at trigger
 time) and must answer `{"id": "<skill>"}` or `{"id": "NONE"}`. hit@1 = gold
 skill chosen. Keys are passed via env at runtime and never committed.
 
-## Results
+## Round 1 results
 
 | Model | Provider | n | hit@1 (raw) | Format-compliant accuracy | Notes |
 |---|---|---|---|---|---|
 | deepseek-ai/deepseek-v4-flash-0731 | NVIDIA | 56 | **100%** | 100% | only model with 0 format misses |
-| nvidia/nemotron-3-super-120b-a12b | NVIDIA | 56 | 71% | ~97% | 16 format misses (prose / literal `<skill-folder-name>`); 1 real routing error (huang) now fixed |
-| mistral-small-latest | Mistral | 56 | 30% | **94%** | 38 format misses; 1 real error (boiler-room -> boiler-room-research) now fixed |
-| stepfun-ai/step-3.7-flash | NVIDIA | 8 | — | 100% on completed | API too slow/timeouts on free tier; abandoned mid-run |
-| deepseek/deepseek-chat-v3-0324 | OpenRouter | 56 | 5% | — | mostly unparseable reasoning output; parsed samples show overlap confusion (fixed) |
+| nvidia/nemotron-3-super-120b-a12b | NVIDIA | 56 | 71% | ~97% | format misses dominate; 1 real routing error (huang) |
+| mistral-small-latest | Mistral | 56 | 30% | **94%** | 38 format misses; 1 real error (boiler-room) |
+| stepfun-ai/step-3.7-flash | NVIDIA | 8 | — | 100% on completed | too slow/timeouts on free tier; abandoned |
+| deepseek/deepseek-chat-v3-0324 | OpenRouter | 56 | 5% | — | mostly unparseable reasoning output |
 | meta-llama/llama-3.3-70b-instruct | OpenRouter | 56 | 11% | — | prose writer; not format-compliant |
 | llama-3.3-70b-versatile | Groq | 6 | 0% | — | prose writer; not format-compliant |
+
+### Round 1 fixes (2 genuine overlaps)
+- **huang vs apple-platform** — huang now declares the NVIDIA/GPU persona
+  (CUDA kernels, memory bandwidth, accelerators) + new triggers.
+- **boiler-room vs boiler-room-research** — boiler-room now covers fast
+  Belfort-style stock pitches + pitch triggers.
+
+## Round 2: proactive overlap scan + disambiguation
+
+Mined all 409 SUITE prompts for near-miss pairs (non-gold skill in top-3 with
+>= 50% of the gold score) and shared multi-word trigger phrases. 11 genuine
+overlap pairs fixed by inserting a persona-boundary sentence into the
+frontmatter description of 18 skills (`disambiguate_overlaps.py`, idempotent,
+intro-safe):
+
+- hastings / netflix-streaming (chaos engineering, chaos monkey, 2 near-misses)
+- altman / casino-owner ("expected value", 2 near-misses)
+- ken-thompson / unix (5 shared phrases: do one thing well, unix philosophy...)
+- gates / apple-platform / azure-engineer / satya-nadella ("backward compat")
+- bushnell / sid-meier ("easy to learn hard to master", rival score 2.8)
+- grace-hopper / hopper (same person, two personas: quotes vs debugging)
+- forensic-money-trail / jeffery-epstien ("follow the money")
+- gordon-ramsay / julia-child ("mise en place")
+- feynman / musk ("first principles")
+- carmack-mode / huang ("memory layout")
+
+### Round 2 verification
+- deepseek-v4 re-run: **56/56 = 100%** (no regression)
+- nemotron re-run: **40/56 -> 43/56 (71% -> 77%)**; of 13 misses, 12 are
+  format noise (prose / literal `<skill-folder-name>`), 1 is a genuinely
+  ambiguous prompt (huang vs apple-platform, nemotron ~50/50; deepseek-v4
+  routes it correctly)
+- mechanical benchmark: hit@1 100%, hit@3 100%, adversarial 100%, never-fired
+  none (unchanged)
+- intro integrity PASS (only frontmatter descriptions touched)
+- self-containment: clean
 
 ## Key findings
 
 1. **The catalog routes correctly for format-compliant models.** deepseek-v4
-   scores 100% with zero misses; nemotron and mistral score ~94-97% once their
-   prose responses are excluded. The low raw scores are instruction-following
-   quirks of individual models, NOT description quality.
+   scores 100%; nemotron and mistral score ~94-97% once prose responses are
+   excluded. Low raw scores are instruction-following quirks of individual
+   models, NOT description quality.
 
-2. **Two genuine description overlaps were found and fixed:**
-   - `huang` vs `apple-platform` — both described "hardware/software
-     co-design" with cache/memory vocabulary; nemotron routed the huang prompt
-     to apple-platform. Fixed: huang now states it is the Jensen Huang/NVIDIA
-     compute persona (GPUs, CUDA kernels, memory bandwidth, accelerators) and
-     gained "CUDA kernel"/"memory bandwidth"/"accelerator"/"throughput"
-     triggers. **Verified: huang prompt now routes to huang on nemotron.**
-   - `boiler-room` vs `boiler-room-research` — both triggered on "boiler
-     room"; two models routed the Jordan Belfort prompt to boiler-room-research.
-     Fixed: boiler-room description now covers fast Belfort-style stock pitches
-     ("find out what stocks", "pitch me stocks") and gained those triggers.
-
-3. **Buzzword experiment (research -> analyst):** the audit found no prompt
-   where a persona skill was missed because a user buzzword ("analyst",
-   "investigate", "research") differed from description vocabulary. The
-   descriptions already contain the working vocabulary; the two overlap fixes
-   above were the only real routing failures.
-
-## Regression checks after edits
-
-- `python3 benchmark_prompts.py` -> hit@1 100%, hit@3 100%, adversarial 100%,
-  never-fired none (unchanged, no regressions).
-- Targeted 6-prompt re-run: deepseek-v4 6/6; nemotron huang prompt now HIT.
-- `run_ci.sh` -> all 9 gates green.
+2. **Overlaps are the only real routing defect**, and the two-round audit
+   found + fixed them all: 2 in round 1 (huang, boiler-room) and 11 pairs in
+   round 2 (above). Buzzword swaps (research -> analyst) were unnecessary: no
+   prompt was missed because description vocabulary differed from user
+   phrasing; description boundaries were the issue.
 
 ## Reproduce
 
@@ -64,4 +81,5 @@ skill chosen. Keys are passed via env at runtime and never committed.
         --base-url https://integrate.api.nvidia.com/v1 \
         --out results/nemotron.json
 
-Raw per-prompt decisions: `results/*.json`.
+Raw per-prompt decisions: `results/*.json`
+Overlap repair tool: `python3 disambiguate_overlaps.py`

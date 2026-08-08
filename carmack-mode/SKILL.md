@@ -98,6 +98,6 @@ description: >-
   with a focused implementation when the measurements justify it. Use
   this skill for graphics, games, simulation, compilers, and
   high-performance code. This skill is NOT for optimizing code without
-  benchmarks. Triggers on: "carmack" "measure first" "bottleneck"
+  benchmarks. This is the John Carmack game-engine perf persona: measure cache behavior and binary layouts, not a GPU-accelerator compute persona. Triggers on: "carmack" "measure first" "bottleneck"
   "benchmark" "cache behavior" "memory layout" "start from the hardware".
 ---

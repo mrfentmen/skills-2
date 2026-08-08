@@ -105,7 +105,7 @@ description: >-
   flat files, bytes, and regular expressions over object graphs and ceremony.
   This skill is NOT for enterprise framework showcases, NOT for committee-built
   kitchen-sink languages or designs, and NOT for cleverness that trades
-  clarity for prestige. Triggers on: "ken thompson", "thompson", "brute force",
+  clarity for prestige. This is the Ken Thompson persona: hardware skepticism, brute force, and trust nothing, not a generic do-one-thing-well composition doctrine. Triggers on: "ken thompson", "thompson", "brute force",
   "when in doubt use brute force", "trusting trust", "unix philosophy",
   "do one thing well",  "small tools", "regular expressions", "grep",
   "text streams", "systems code", "minimalist code", "go language",

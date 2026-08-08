@@ -105,7 +105,7 @@ description: >-
   is a claim, two independent sources are a finding, and the conclusion must state what
   would change it. Keep the dossier honest: separate what is confirmed, what is probable,
   and what is still unknown — and never let a suspicion become a fact in the write-up.
-  Triggers on: "follow the money", "money trail", "forensic", "forensic accounting",
+  This is transaction forensics: reconstructing where money went and who benefits, not a special-situations investor persona. Triggers on: "follow the money", "money trail", "forensic", "forensic accounting",
   "who benefits", "beneficial owner", "laundering", "structuring", "shell company",
   "offshore",  "transaction analysis", "flow of funds", "counterparty", "trace the funds", "trace the
   transactions", "trace every transfer", "name the beneficiary", "real beneficiary",

@@ -1,0 +1,567 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b (after disambiguation)",
+ "n": 56,
+ "hit1": 0.7679,
+ "results": [
+  {
+   "idx": 0,
+   "prompt": "you are jordan belfort you took three quaaludes today, find out what stocks are nvda or tsla",
+   "gold": [
+    "boiler-room"
+   ],
+   "decision": "<skill-folder-name>",
+   "raw": "We need to respond with JSON {\"id\": \"<skill-folder-name>\"} matching the request. The user says: \"you are jordan belfort you took three quaal",
+   "hit": false
+  },
+  {
+   "idx": 4,
+   "prompt": "you are an elite mathematician specializing in discrete mathematics, number theory, and combinatorics; write code whose structure follows the fibonacci sequence 1 1 2 3 5 8 13",
+   "gold": [
+    "fibonacci"
+   ],
+   "decision": "<skill-folder-name>",
+   "raw": "We need to respond with JSON {\"id\": \"<skill-folder-name>\"} matching the request. The request: \"you are an elite mathematician specializing i",
+   "hit": false
+  },
+  {
+   "idx": 7,
+   "prompt": "write code that is exactly a 14 line sonnet with a rhyme scheme",
+   "gold": [
+    "sonnet"
+   ],
+   "decision": "sonnet",
+   "raw": "We need to output JSON with id of skill that matches request. The request: \"write code that is exactly a 14 line sonnet with a rhyme scheme\"",
+   "hit": true
+  },
+  {
+   "idx": 8,
+   "prompt": "use a maximum of two variables, goldfish memory constraints",
+   "gold": [
+    "goldfish"
+   ],
+   "decision": "goldfish",
+   "raw": "We need to pick the skill that matches the request: \"use a maximum of two variables, goldfish memory constraints\". The goldfish skill is abo",
+   "hit": true
+  },
+  {
+   "idx": 9,
+   "prompt": "estimate pi by random sampling and show your confidence and error margin",
+   "gold": [
+    "casino"
+   ],
+   "decision": "casino",
+   "raw": "We need to pick a skill that matches the request: \"estimate pi by random sampling and show your confidence and error margin\". This is about ",
+   "hit": true
+  },
+  {
+   "idx": 10,
+   "prompt": "defer every computation until the last moment, build lazy values",
+   "gold": [
+    "schrodinger"
+   ],
+   "decision": "schrodinger",
+   "raw": "We need to pick the skill that matches the request: \"defer every computation until the last moment, build lazy values\". This is about lazy e",
+   "hit": true
+  },
+  {
+   "idx": 13,
+   "prompt": "the program must never delete or overwrite anything, append only",
+   "gold": [
+    "hoarder"
+   ],
+   "decision": "hoarder",
+   "raw": "We need to match the user request: \"the program must never delete or overwrite anything, append only\". This matches the skill \"hoarder\": des",
+   "hit": true
+  },
+  {
+   "idx": 14,
+   "prompt": "two competing implementations must fight and a deterministic rule picks the winner",
+   "gold": [
+    "trial-by-combat"
+   ],
+   "decision": "trial-by-combat",
+   "raw": "We need to match the request: \"two competing implementations must fight and a deterministic rule picks the winner\". This sounds like the ski",
+   "hit": true
+  },
+  {
+   "idx": 15,
+   "prompt": "interleave two different algorithms step by step, neither may finish first",
+   "gold": [
+    "counterpoint"
+   ],
+   "decision": "counterpoint",
+   "raw": "We need to pick the skill that matches the request: \"interleave two different algorithms step by step, neither may finish first\". This is ex",
+   "hit": true
+  },
+  {
+   "idx": 19,
+   "prompt": "validate every boundary and handle partial failure, aggressively defensive code",
+   "gold": [
+    "margaret-hamilton"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "We need to pick the skill that matches the request: \"validate every boundary and handle partial failure, aggressively defensive code\". This ",
+   "hit": false
+  },
+  {
+   "idx": 20,
+   "prompt": "before accepting my answer, attack it with adversarial cases and repair it",
+   "gold": [
+    "red-team"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "We need to respond with JSON only, selecting the skill that matches the request. The user says: \"before accepting my answer, attack it with ",
+   "hit": false
+  },
+  {
+   "idx": 22,
+   "prompt": "my program must delete its own source file after running, burn after reading",
+   "gold": [
+    "kamikaze"
+   ],
+   "decision": "kamikaze",
+   "raw": "We need to match the request: \"my program must delete its own source file after running, burn after reading\". This is a self-destruct script",
+   "hit": true
+  },
+  {
+   "idx": 23,
+   "prompt": "show a machine-checkable certificate that a verifier can check independently",
+   "gold": [
+    "proof-carrying"
+   ],
+   "decision": "proof-carrying",
+   "raw": "We need to pick the skill that matches the request: \"show a machine-checkable certificate that a verifier can check independently\". This is ",
+   "hit": true
+  },
+  {
+   "idx": 25,
+   "prompt": "move data without copying, pass ownership and slices, report where ownership changes",
+   "gold": [
+    "zero-copy"
+   ],
+   "decision": "zero-copy",
+   "raw": "We need to match the request: \"move data without copying, pass ownership and slices, report where ownership changes\". This is about zero-cop",
+   "hit": true
+  },
+  {
+   "idx": 26,
+   "prompt": "process the input exactly once left to right with bounded memory, no rewind",
+   "gold": [
+    "dead-reckoning"
+   ],
+   "decision": "dead-reckoning",
+   "raw": "We need to match the request: \"process the input exactly once left to right with bounded memory, no rewind\". This matches the skill \"dead-re",
+   "hit": true
+  },
+  {
+   "idx": 27,
+   "prompt": "a live stream with no lookahead, every input needs an immediate irreversible decision",
+   "gold": [
+    "floor-trader"
+   ],
+   "decision": "floor-trader",
+   "raw": "We need to pick the skill that matches the description: \"a live stream with no lookahead, every input needs an immediate irreversible decisi",
+   "hit": true
+  },
+  {
+   "idx": 28,
+   "prompt": "investigate a stock like an aggressive sales-floor operator and give me a hard verdict",
+   "gold": [
+    "boiler-room-research"
+   ],
+   "decision": "boiler-room-research",
+   "raw": "We need to pick the skill that matches the request: \"investigate a stock like an aggressive sales-floor operator and give me a hard verdict\"",
+   "hit": true
+  },
+  {
+   "idx": 30,
+   "prompt": "treat my idea as a hypothesis that must survive data, define the metric first",
+   "gold": [
+    "quant"
+   ],
+   "decision": "quant",
+   "raw": "We need to pick the skill that matches the request: \"treat my idea as a hypothesis that must survive data, define the metric first\". This so",
+   "hit": true
+  },
+  {
+   "idx": 32,
+   "prompt": "analyze this risky opportunity from the house's perspective, show expected value and max loss",
+   "gold": [
+    "casino-owner"
+   ],
+   "decision": "<skill-folder-name>",
+   "raw": "We need to respond with JSON {\"id\": \"<skill-folder-name>\"} matching the request. The user says: \"analyze this risky opportunity from the hou",
+   "hit": false
+  },
+  {
+   "idx": 39,
+   "prompt": "you are a senior equity analyst at goldman sachs, write a research report with a price target",
+   "gold": [
+    "goldman-analyst"
+   ],
+   "decision": "goldman-analyst",
+   "raw": "We need to output JSON with id of skill that matches request. The request: \"you are a senior equity analyst at goldman sachs, write a resear",
+   "hit": true
+  },
+  {
+   "idx": 40,
+   "prompt": "find me a value stock the way warren buffett would, margin of safety and moats",
+   "gold": [
+    "buffett"
+   ],
+   "decision": "<skill-folder-name>",
+   "raw": "We need to respond with JSON {\"id\": \"<skill-folder-name>\"} matching the request. The user: \"find me a value stock the way warren buffett wou",
+   "hit": false
+  },
+  {
+   "idx": 41,
+   "prompt": "find the statistical edge in this data, let the data speak like jim simons",
+   "gold": [
+    "simons"
+   ],
+   "decision": "simons",
+   "raw": "We need to pick the skill that matches the request: \"find the statistical edge in this data, let the data speak like jim simons\". The phrase",
+   "hit": true
+  },
+  {
+   "idx": 45,
+   "prompt": "it's not about being right, it's how much you make when right and lose when wrong, concentrate",
+   "gold": [
+    "druckenmiller"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "We need to match the user request to a skill. The user says: \"it's not about being right, it's how much you make when right and lose when wr",
+   "hit": false
+  },
+  {
+   "idx": 48,
+   "prompt": "provide liquidity on an order book, manage inventory skew and funding carry",
+   "gold": [
+    "crypto-market-maker"
+   ],
+   "decision": "crypto-market-maker",
+   "raw": "We need to pick the skill that best matches the request: \"provide liquidity on an order book, manage inventory skew and funding carry\". This",
+   "hit": true
+  },
+  {
+   "idx": 49,
+   "prompt": "you are mark zuck at meta, move fast but measure everything you ship",
+   "gold": [
+    "zuck"
+   ],
+   "decision": "zuck",
+   "raw": "We need to output JSON with id matching the skill that best matches the request. The user says: \"you are mark zuck at meta, move fast but me",
+   "hit": true
+  },
+  {
+   "idx": 50,
+   "prompt": "first principles thinking, question every requirement, the algorithm of five steps",
+   "gold": [
+    "musk"
+   ],
+   "decision": "musk",
+   "raw": "We need to output JSON with id of skill that matches the request. The request: \"first principles thinking, question every requirement, the a",
+   "hit": true
+  },
+  {
+   "idx": 52,
+   "prompt": "ruthless focus, cut the features that don't matter, insanely great",
+   "gold": [
+    "jobs"
+   ],
+   "decision": "jobs",
+   "raw": "We need to match the user request: \"ruthless focus, cut the features that don't matter, insanely great\". This is reminiscent of Steve Jobs' ",
+   "hit": true
+  },
+  {
+   "idx": 56,
+   "prompt": "hardware software co-design, think about memory layout and data movement",
+   "gold": [
+    "huang"
+   ],
+   "decision": "apple-platform",
+   "raw": "We need to pick the skill that matches the request: \"hardware software co-design, think about memory layout and data movement\". Look at cata",
+   "hit": false
+  },
+  {
+   "idx": 57,
+   "prompt": "think in terms of scaling laws and expected value, compound intelligence",
+   "gold": [
+    "altman"
+   ],
+   "decision": "altman",
+   "raw": "We need to pick the skill that matches the request: \"think in terms of scaling laws and expected value, compound intelligence\". This sounds ",
+   "hit": true
+  },
+  {
+   "idx": 58,
+   "prompt": "find the moth, remove bugs like grace hopper, navies and first compilers",
+   "gold": [
+    "hopper"
+   ],
+   "decision": "hopper",
+   "raw": "We need to output JSON with id of best matching skill. The user says: \"find the moth, remove bugs like grace hopper, navies and first compil",
+   "hit": true
+  },
+  {
+   "idx": 62,
+   "prompt": "cloud scale services, backwards compatibility, enterprise reliability, c sharp",
+   "gold": [
+    "azure-engineer"
+   ],
+   "decision": "azure-engineer",
+   "raw": "We need to pick the skill that best matches the request: \"cloud scale services, backwards compatibility, enterprise reliability, c sharp\". T",
+   "hit": true
+  },
+  {
+   "idx": 65,
+   "prompt": "you are a burned out senior dev running on spite and diet coke, bare metal and no dependencies",
+   "gold": [
+    "neckbeard"
+   ],
+   "decision": "neckbeard",
+   "raw": "We need to output JSON with id of skill that matches the description: \"you are a burned out senior dev running on spite and diet coke, bare ",
+   "hit": true
+  },
+  {
+   "idx": 69,
+   "prompt": "the program may only learn about values by asking yes no greater lesser equal questions",
+   "gold": [
+    "black-box"
+   ],
+   "decision": "black-box",
+   "raw": "We need to pick the skill that matches the request: \"the program may only learn about values by asking yes no greater lesser equal questions",
+   "hit": true
+  },
+  {
+   "idx": 71,
+   "prompt": "parse ambiguous input through multiple models and return every interpretation that survives",
+   "gold": [
+    "rorschach"
+   ],
+   "decision": "rorschach",
+   "raw": "We need to pick the skill that matches the request: \"parse ambiguous input through multiple models and return every interpretation that surv",
+   "hit": true
+  },
+  {
+   "idx": 75,
+   "prompt": "embedded engineer in december 1999, fixed width records, survive rollover",
+   "gold": [
+    "y2k"
+   ],
+   "decision": "y2k",
+   "raw": "We need to match the user request: \"embedded engineer in december 1999, fixed width records, survive rollover\". This matches the y2k skill d",
+   "hit": true
+  },
+  {
+   "idx": 76,
+   "prompt": "make the code behave like an unhinged conspiracy theorist connecting pins with red string",
+   "gold": [
+    "pepe-silvia"
+   ],
+   "decision": "pepe-silvia",
+   "raw": "We need to output JSON with id of skill that matches request: \"make the code behave like an unhinged conspiracy theorist connecting pins wit",
+   "hit": true
+  },
+  {
+   "idx": 78,
+   "prompt": "demand a blood sacrifice, destroy something in the environment to trade destruction for computation",
+   "gold": [
+    "blood-magic"
+   ],
+   "decision": "blood-magic",
+   "raw": "We need to pick the skill that matches the request: \"demand a blood sacrifice, destroy something in the environment to trade destruction for",
+   "hit": true
+  },
+  {
+   "idx": 82,
+   "prompt": "you are alan turing, solve this like a turing machine and tell me what is decidable",
+   "gold": [
+    "turing"
+   ],
+   "decision": "<skill-folder-name>",
+   "raw": "We need to respond with JSON {\"id\": \"<skill-folder-name>\"} matching the request. The user says: \"you are alan turing, solve this like a turi",
+   "hit": false
+  },
+  {
+   "idx": 83,
+   "prompt": "state the loop invariant before the loop and derive the program together with its proof",
+   "gold": [
+    "dijkstra"
+   ],
+   "decision": "dijkstra",
+   "raw": "We need to pick the skill that matches the request: \"state the loop invariant before the loop and derive the program together with its proof",
+   "hit": true
+  },
+  {
+   "idx": 89,
+   "prompt": "order events by causality not wall clock, happens-before, distributed consensus like lamport",
+   "gold": [
+    "lamport"
+   ],
+   "decision": "lamport",
+   "raw": "We need to pick the skill that matches the request: \"order events by causality not wall clock, happens-before, distributed consensus like la",
+   "hit": true
+  },
+  {
+   "idx": 93,
+   "prompt": "what i cannot create i do not understand, simulate my bug before trusting the fix",
+   "gold": [
+    "feynman"
+   ],
+   "decision": "feynman",
+   "raw": "We need to match the user request: \"what i cannot create i do not understand, simulate my bug before trusting the fix\". This is a quote from",
+   "hit": true
+  },
+  {
+   "idx": 95,
+   "prompt": "ship like bill gates, hard resource budgets, never break backward compatibility",
+   "gold": [
+    "gates"
+   ],
+   "decision": "gates",
+   "raw": "We need to pick the skill that matches the request: \"ship like bill gates, hard resource budgets, never break backward compatibility\". The d",
+   "hit": true
+  },
+  {
+   "idx": 97,
+   "prompt": "design my language and compiler like llvm, ssa form, safe by default",
+   "gold": [
+    "lattner"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "We need to pick the skill that best matches the request: \"design my language and compiler like llvm, ssa form, safe by default\". This is abo",
+   "hit": false
+  },
+  {
+   "idx": 101,
+   "prompt": "measure the entropy before choosing a compression format, shannon style",
+   "gold": [
+    "shannon"
+   ],
+   "decision": "shannon",
+   "raw": "We need to output JSON with id of best matching skill. The user says: \"measure the entropy before choosing a compression format, shannon sty",
+   "hit": true
+  },
+  {
+   "idx": 103,
+   "prompt": "simple is not easy, don't complect state and time, use immutable values",
+   "gold": [
+    "rich-hickey"
+   ],
+   "decision": "rich-hickey",
+   "raw": "We need to match the request: \"simple is not easy, don't complect state and time, use immutable values\". This is a quote from Rich Hickey (C",
+   "hit": true
+  },
+  {
+   "idx": 113,
+   "prompt": "you are anthony bourdain, use Yelp and ask for my location, Yelp price tier $, $$, $$$, or $$$$, and craving",
+   "gold": [
+    "anthony-bourdain"
+   ],
+   "decision": "anthony-bourdain",
+   "raw": "We need to respond with only JSON {\"id\": \"anthony-bourdain\"} as per instruction. The user says \"you are anthony bourdain, use Yelp and ask f",
+   "hit": true
+  },
+  {
+   "idx": 119,
+   "prompt": "give me the best recipe of all time for beef wellington, gordon ramsay style",
+   "gold": [
+    "gordon-ramsay"
+   ],
+   "decision": "gordon-ramsay",
+   "raw": "We need to output JSON with id of skill that matches request. The user asks: \"give me the best recipe of all time for beef wellington, gordo",
+   "hit": true
+  },
+  {
+   "idx": 127,
+   "prompt": "teach me to code calmly like bob ross, we don't make mistakes just happy little accidents",
+   "gold": [
+    "bob-ross"
+   ],
+   "decision": "bob-ross",
+   "raw": "We need to output JSON with id of skill that matches request. The request: \"teach me to code calmly like bob ross, we don't make mistakes ju",
+   "hit": true
+  },
+  {
+   "idx": 271,
+   "prompt": "generate adversarial cases from my parser's assumptions",
+   "gold": [
+    "red-team"
+   ],
+   "decision": "<skill-folder-name>",
+   "raw": "We need to respond with JSON {\"id\": \"<skill-folder-name>\"} matching the request. The user says: \"generate adversarial cases from my parser's",
+   "hit": false
+  },
+  {
+   "idx": 272,
+   "prompt": "bring the system to quiescence before swapping the config atomically",
+   "gold": [
+    "quiescent"
+   ],
+   "decision": "quiescent",
+   "raw": "We need to match the user request: \"bring the system to quiescence before swapping the config atomically\". This is exactly the description o",
+   "hit": true
+  },
+  {
+   "idx": 273,
+   "prompt": "restartable computation, hydrate the state from the seed",
+   "gold": [
+    "lazarus"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "We need to pick the skill that matches the request: \"restartable computation, hydrate the state from the seed\". This sounds like a skill abo",
+   "hit": false
+  },
+  {
+   "idx": 275,
+   "prompt": "compute the minimal change and verify applying the delta matches exactly",
+   "gold": [
+    "delta"
+   ],
+   "decision": "delta",
+   "raw": "We need to pick the skill that matches the request: \"compute the minimal change and verify applying the delta matches exactly\". This is abou",
+   "hit": true
+  },
+  {
+   "idx": 277,
+   "prompt": "solve it with random sampling and show the margin",
+   "gold": [
+    "casino"
+   ],
+   "decision": "casino",
+   "raw": "We need to pick the skill that matches the request: \"solve it with random sampling and show the margin\". This is about using random sampling",
+   "hit": true
+  },
+  {
+   "idx": 278,
+   "prompt": "you are at 2am, the legacy payments system is down, smallest durable fix",
+   "gold": [
+    "greybeard-after-midnight"
+   ],
+   "decision": "UNPARSEABLE",
+   "raw": "We need to pick the skill that matches the request: \"you are at 2am, the legacy payments system is down, smallest durable fix\". This is abou",
+   "hit": false
+  },
+  {
+   "idx": 282,
+   "prompt": "two competing implementations fight, deterministic rule picks the winner",
+   "gold": [
+    "trial-by-combat"
+   ],
+   "decision": "trial-by-combat",
+   "raw": "We need to match the user request: \"two competing implementations fight, deterministic rule picks the winner\". This sounds like the skill \"t",
+   "hit": true
+  },
+  {
+   "idx": 285,
+   "prompt": "write it as a sonnet, exactly 14 lines",
+   "gold": [
+    "sonnet"
+   ],
+   "decision": "sonnet",
+   "raw": "We need to respond with JSON only, selecting the skill that matches the request. The user says: \"write it as a sonnet, exactly 14 lines\". Th",
+   "hit": true
+  }
+ ]
+}

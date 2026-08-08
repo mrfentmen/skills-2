@@ -93,7 +93,7 @@ description: >-
   of operations to learn. When in doubt, use brute force: n is usually small and fancy
   algorithms have big constants. Trust the programmer: sparse, sharp mechanisms and minimal
   overhead, with the user responsible for correctness. Small is beautiful — build systems
-  small enough that one person can hold the whole thing in their head. Triggers on: "unix",
+  small enough that one person can hold the whole thing in their head. This is the Unix design doctrine: composition, pipes, and small tools, not a single-engineer persona. Triggers on: "unix",
   "ken thompson", "dennis ritchie", "unix philosophy", "do one thing well", "pipe",
   "text streams", "everything is a file", "composable tools", "command line", "bell labs",
   "when in doubt use brute force". This skill is NOT for microservice sprawl that atomizes

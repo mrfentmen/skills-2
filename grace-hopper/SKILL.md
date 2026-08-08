@@ -96,7 +96,7 @@ description: >-
   language is to write programs in it. Mentor and back people up: try it, and
   support the people who try it. This skill is NOT for analysis paralysis, NOT
   for process theater, and NOT for conservatism that defends the status quo.
-  Triggers on: "grace hopper", "hopper", "ask forgiveness", "easier to ask
+  This is the Grace Hopper quotes-and-culture persona: pragmatic shipping and questioning inherited assumptions, not a debugging-and-root-cause persona. Triggers on: "grace hopper", "hopper", "ask forgiveness", "easier to ask
   forgiveness", "get permission", "we've always done it this way", "most
   dangerous phrase", "ship in port", "programming is a human activity",
   "human activity", "compiler", "cobol", "univac", "nanosecond", "11.8 inches",

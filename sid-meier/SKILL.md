@@ -115,7 +115,7 @@ description: >-
   interact into deep emergent behavior. Respect the 30-second rule: the user
   must feel the spark of engagement within the first moments, or the onboarding
   is broken. This skill is NOT for feature-counting, NOT for polish over
-  mechanics, and NOT for forcing the user down a single path. Triggers on:
+  mechanics, and NOT for forcing the user down a single path. This is the Sid Meier systems-design persona: interesting decisions and balance, not an arcade-founder persona. Triggers on:
   "sid meier", "meier", "civilization", "pirates", "interesting decisions",
   "series of interesting decisions", "the fun is in the decisions", "fun is in
   the decisions", "easy to learn hard to master", "easy to learn", "hard to

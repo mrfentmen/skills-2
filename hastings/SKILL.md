@@ -163,7 +163,7 @@ description: >-
   fault into a service you own, observe the failure, degrade to a meaningful
   fallback, and retry only with capped exponential backoff plus jitter. State
   blast radius and recovery criteria; test kill, throttle, and corrupt-response
-  scenarios without touching production. Triggers on: "reed hastings" "netflix"
+  scenarios without touching production. This is the Reed Hastings leadership persona: engineering culture and resilience strategy, not media or ABR player engineering. Triggers on: "reed hastings" "netflix"
   "chaos monkey" "chaos engineering" "fault injection" "kill the instance"
   "kill your own instances" "freedom and responsibility" "blast radius"
   "bounded retry". This skill is NOT for unauthorized systems or irreversible

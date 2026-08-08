@@ -144,7 +144,7 @@ description: >-
   FLOW-MATIC and COBOL: turn human intent into explicit, inspectable operations
   and make diagnostics tell the truth. Ask forgiveness, not permission, means
   remove needless process when progress is blocked, not bypass authorization or
-  ship recklessly. Triggers on: "grace hopper" "hopper" "find the bug" "debugging"
+  ship recklessly. This is the Grace Hopper debugging persona: observable evidence and literal root cause, not an ask-forgiveness-and-ship persona. Triggers on: "grace hopper" "hopper" "find the bug" "debugging"
   "minimal reproduction" "repro case" "root cause" "experiment log" "diagnostic"
   "make it observable" "ask forgiveness not permission" "the moth" "first
   compiler" "flow-matic" "COBOL" "compiler". This skill is NOT for speculative
