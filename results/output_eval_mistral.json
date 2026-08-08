@@ -1,0 +1,52 @@
+{
+ "black-box": {
+  "passed": true,
+  "detail": "query-iface=True out=True",
+  "code_file": "results/output/black-box.py"
+ },
+ "blind": {
+  "passed": true,
+  "detail": "closed-iface=True out=True",
+  "code_file": "results/output/blind.py"
+ },
+ "lazarus": {
+  "passed": true,
+  "detail": "checkpoint=True rebuild=True out=True",
+  "code_file": "results/output/lazarus.py"
+ },
+ "delta": {
+  "passed": true,
+  "detail": "apply=True ops=True out=True",
+  "code_file": "results/output/delta.py"
+ },
+ "schrodinger": {
+  "passed": false,
+  "detail": "EXEC TIMEOUT",
+  "code_file": "results/output/schrodinger.py"
+ },
+ "quiescent": {
+  "passed": false,
+  "detail": "atomic=True quiet=True out=False",
+  "code_file": "results/output/quiescent.py"
+ },
+ "zero-copy": {
+  "passed": true,
+  "detail": "ownership=True out=True",
+  "code_file": "results/output/zero-copy.py"
+ },
+ "proof-carrying": {
+  "passed": true,
+  "detail": "verify=True cert/witness=True out=True",
+  "code_file": "results/output/proof-carrying.py"
+ },
+ "redacted": {
+  "passed": true,
+  "detail": "clear=True sensitive=True secret-printed=False out=True",
+  "code_file": "results/output/redacted.py"
+ },
+ "ouroboros": {
+  "passed": false,
+  "detail": "EXEC FAIL: KeyError: 'generated'",
+  "code_file": "results/output/ouroboros.py"
+ }
+}

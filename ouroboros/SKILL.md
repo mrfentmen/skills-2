@@ -51,6 +51,24 @@ if second_pass != first_pass:                 # independent fixed-point check
     raise ValueError(f"self-check failed: {first_pass!r} -> {second_pass!r}")
 print("fixed point:", second_pass)
 ```
+
+For the **reproduce** relation (exact quine), use the minimal form: the whole
+program lives inside one string literal, so `{!r}` rebuilds that literal byte
+for byte. If you add a comment or helper, it must move inside the literal too.
+Do not mix triple-quoted literals with `{!r}` (repr produces single quotes)
+and do not put other braces inside the template:
+
+```python
+import sys
+s = 'import sys\ns = {!r}\nsys.stdout.write(s.format(s))\n'
+sys.stdout.write(s.format(s))
+```
+
+For a runtime self-check on any relation, compare the self-derived string
+against the claimed result and fail on the first mismatch: read the reference
+from a trusted source (a file you wrote, a captured snapshot, a canonical
+form), then `assert generated == reference` and report the offset that differs.
+
 ## Cross-Language Examples
 
 ```javascript

@@ -36,6 +36,10 @@ Every deliverable produced with this skill should include all of these:
    inconsistent oracle instead of guessing.
 5. **Proof beats atmosphere**: the result must be reproducible from the
    transcript alone; the black-box theme never excuses hand-waving.
+6. **A budget must close the proof**: size the budget so the candidate set can
+   shrink to a singleton and still be reported. A loop that checks termination
+   only at the top needs one query beyond the theoretical minimum (for a binary
+   split over N candidates, budget = ceil(log2(N)) + 1).
 
 ## Workflow
 

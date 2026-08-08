@@ -31,7 +31,9 @@ Every deliverable produced with this skill should include:
 3. **Memoization is a contract**: repeated observation either recomputes by
    design or returns the cached value; never leave this accidental.
 4. **Short-circuit honestly**: `first`, `take`, and predicate queries must stop
-   upstream production as soon as their answer is determined.
+   upstream production as soon as their answer is determined. A `take(n)` that
+   ignores `n` and keeps producing is a lie: the bound must actually stop the
+   generator after n items.
 5. **Effects need a boundary**: defer pure work freely; for I/O or mutation,
    document ownership, failure, and retry semantics.
 

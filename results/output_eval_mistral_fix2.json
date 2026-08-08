@@ -1,0 +1,12 @@
+{
+ "schrodinger": {
+  "passed": true,
+  "detail": "lazy=True proof=True out=True",
+  "code_file": "results/output/schrodinger.py"
+ },
+ "ouroboros": {
+  "passed": true,
+  "detail": "quine stdout==source: True (src 53B, out 53B)",
+  "code_file": "results/output/ouroboros.py"
+ }
+}

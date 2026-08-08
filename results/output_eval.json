@@ -1,52 +1,27 @@
 {
- "goldfish": {
+ "lazarus": {
   "passed": true,
-  "detail": "no-accumulation + while + printed result",
-  "code_file": "results/output/goldfish.py"
+  "detail": "checkpoint=True rebuild=True out=True",
+  "code_file": "results/output/lazarus.py"
  },
- "sonnet": {
-  "passed": true,
-  "detail": "lines=14/14 out=True",
-  "code_file": "results/output/sonnet.py"
+ "black-box": {
+  "passed": false,
+  "detail": "EXEC FAIL: RuntimeError: query budget exhausted before determination",
+  "code_file": "results/output/black-box.py"
  },
- "vampire": {
-  "passed": true,
-  "detail": "while=True pop/del=True out=True",
-  "code_file": "results/output/vampire.py"
+ "blind": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError",
+  "code_file": "results/output/blind.py"
  },
- "hoarder": {
-  "passed": true,
-  "detail": "append=True no-del=True out=True",
-  "code_file": "results/output/hoarder.py"
+ "zero-copy": {
+  "passed": false,
+  "detail": "EXEC FAIL: ModuleNotFoundError: No module named 'memoryview'",
+  "code_file": "results/output/zero-copy.py"
  },
- "insomniac": {
-  "passed": true,
-  "detail": "no-sleep=True poll=True out=True",
-  "code_file": "results/output/insomniac.py"
- },
- "trial-by-combat": {
-  "passed": true,
-  "detail": "defs=5 winner/score=True out=True",
-  "code_file": "results/output/trial-by-combat.py"
- },
- "counterpoint": {
-  "passed": true,
-  "detail": "defs=3 step/next=True out=True",
-  "code_file": "results/output/counterpoint.py"
- },
- "casino": {
-  "passed": true,
-  "detail": "random=True seed=True interval=True out=True",
-  "code_file": "results/output/casino.py"
- },
- "dead-reckoning": {
-  "passed": true,
-  "detail": "no-sort/rewind=True count=True out=True",
-  "code_file": "results/output/dead-reckoning.py"
- },
- "doppelganger": {
-  "passed": true,
-  "detail": "defs=5 compare=True out=True",
-  "code_file": "results/output/doppelganger.py"
+ "ouroboros": {
+  "passed": false,
+  "detail": "quine stdout==source: False (src 145B, out 145B)",
+  "code_file": "results/output/ouroboros.py"
  }
 }

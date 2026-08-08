@@ -49,6 +49,8 @@ Every deliverable produced with this skill should include:
 5. Reopen only after the new state is valid; move deferred work to the queue and
    dispatch it through the ordinary path.
 6. On error, retain the old state and report that the system stayed closed.
+7. End with a runnable demonstration that exercises the phases (enqueue, drain,
+   commit, reopen) and prints the resulting state.
 
 ## Example Pattern
 

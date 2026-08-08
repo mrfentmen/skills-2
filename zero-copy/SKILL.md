@@ -31,6 +31,9 @@ Every deliverable produced with this skill should include:
 4. **Measure the path**: report allocations and bytes moved, not just attractive syntax.
 5. **Mutation is visible**: a write through the owner must have an intentional observer story.
 6. **Copy when correctness wins**: isolation and lifetime safety outrank the slogan.
+7. **Builtins are not modules**: `memoryview`, `bytearray`, `buffer`, and `bytes`
+   are built-in types, not importable modules. Never write `import memoryview`
+   or `import bytearray`; use them directly.
 
 ## Style Guidelines
 

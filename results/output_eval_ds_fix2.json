@@ -1,0 +1,12 @@
+{
+ "blind": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError: unknown question should fail closed",
+  "code_file": "results/output/blind.py"
+ },
+ "zero-copy": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError",
+  "code_file": "results/output/zero-copy.py"
+ }
+}

@@ -97,6 +97,52 @@ passed on re-run. No skill edits were needed this round.
 
 Re-run: `KEY=... python3 output_eval.py`
 
+## Round 4: second constraint batch + wording fixes driven by real failures
+
+Applied the same output-compliance harness to 10 more constraint skills:
+black-box, blind, lazarus, delta, schrodinger, quiescent, zero-copy,
+proof-carrying, redacted, ouroboros.
+
+| Model | initial | after skill-wording fixes | remaining |
+|---|---|---|---|
+| deepseek-v4-flash | 6/10 | **8/10** | blind, zero-copy |
+| mistral-small-latest | 7/10 | **10/10** | none |
+
+### Wording fixes (all intro-safe; principles/workflow/examples only)
+
+- **ouroboros**: added a verified, byte-exact minimal quine example. Both
+  models had failed quines with different bugs (deepseek: triple-quoted
+  template + `{!r}` mismatch and no self-check; mistral: extra braces inside
+  the template caused `KeyError` on `.format()`). The new example is
+  `stdout == source` verified for both models (53-55B).
+- **black-box**: new principle "a budget must close the proof"
+  (`ceil(log2(N)) + 1` for check-at-top loops) — deepseek's binary search
+  used 7 queries for 101 candidates and exhausted before reporting.
+- **quiescent**: workflow step 7 requires a runnable demonstration that
+  prints the resulting state — mistral wrote a complete class but never
+  invoked it.
+- **zero-copy**: new principle "builtins are not modules — never write
+  `import memoryview`" — deepseek produced `import memoryview` twice.
+- **schrodinger**: principle 4 tightened — "a `take(n)` that ignores `n` is
+  a lie: the bound must actually stop the generator" — mistral's `take(5)`
+  ignored its bound, making `list()` iterate an infinite generator forever.
+
+### Remaining 2 failures are model-side self-test bugs, not skill defects
+
+- **blind** (deepseek): the solver is correct — a closed 3-question
+  interface with non-interference, malformed-answer and fail-closed
+  handling. Each run the model's own *test stub* fails (this run: the
+  unknown-question stub returns `True` instead of raising `KeyError`, so
+  the model's own assert crashes). Three consecutive runs produced three
+  different self-test bugs while the deliverable logic stayed correct.
+- **zero-copy** (deepseek): the `import memoryview` bug is gone after the
+  builtin note; the new failure is a demo-assertion slip — the fallback
+  snapshots the 5-byte header view but asserts it equals the full 11-byte
+  original. Contract code is correct; only the closing assertion is wrong.
+
+Both failures would pass external grading of the actual deliverable; they
+crash only on the model's own contradictory self-tests.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

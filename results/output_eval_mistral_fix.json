@@ -1,0 +1,17 @@
+{
+ "schrodinger": {
+  "passed": false,
+  "detail": "EXEC TIMEOUT",
+  "code_file": "results/output/schrodinger.py"
+ },
+ "quiescent": {
+  "passed": true,
+  "detail": "atomic=True quiet=True out=True",
+  "code_file": "results/output/quiescent.py"
+ },
+ "ouroboros": {
+  "passed": false,
+  "detail": "quine stdout==source: False (src 94B, out 55B)",
+  "code_file": "results/output/ouroboros.py"
+ }
+}
