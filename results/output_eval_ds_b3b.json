@@ -1,0 +1,52 @@
+{
+ "floor-trader": {
+  "passed": false,
+  "detail": "GRADER ERR: unterminated character set at position 27",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_floor-trader.py"
+ },
+ "funeral": {
+  "passed": true,
+  "detail": "consume=True invalidate=True fail-visible=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_funeral.py"
+ },
+ "y2k": {
+  "passed": false,
+  "detail": "EXEC FAIL: ValueError: invalid day",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_y2k.py"
+ },
+ "quantum-computing": {
+  "passed": true,
+  "detail": "qubit=True gate=True superposition=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_quantum-computing.py"
+ },
+ "fibonacci": {
+  "passed": true,
+  "detail": "def=True structure=True derived=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_fibonacci.py"
+ },
+ "spacex-fsw": {
+  "passed": true,
+  "detail": "defs=3 majority=True faults=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_spacex-fsw.py"
+ },
+ "vitalik": {
+  "passed": true,
+  "detail": "append-only=True verify=True metered=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_vitalik.py"
+ },
+ "sovereign-citizen": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError: mismatch at 4",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_sovereign-citizen.py"
+ },
+ "rorschach": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_rorschach.py"
+ },
+ "psych": {
+  "passed": true,
+  "detail": "comment=True structure=True visual=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_psych.py"
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "floor-trader": {
+  "passed": false,
+  "detail": "single-pass=True loop=True rule=True out=False",
+  "code_file": "results/output/mistral-small-latest_floor-trader.py"
+ },
+ "funeral": {
+  "passed": true,
+  "detail": "consume=True invalidate=True fail-visible=True out=True",
+  "code_file": "results/output/mistral-small-latest_funeral.py"
+ },
+ "psych": {
+  "passed": true,
+  "detail": "comment=True structure=True visual=True out=True",
+  "code_file": "results/output/mistral-small-latest_psych.py"
+ },
+ "sovereign-citizen": {
+  "passed": true,
+  "detail": "allowlist=True impl=True reference=True reject=True out=True",
+  "code_file": "results/output/mistral-small-latest_sovereign-citizen.py"
+ },
+ "spacex-fsw": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError",
+  "code_file": "results/output/mistral-small-latest_spacex-fsw.py"
+ },
+ "vitalik": {
+  "passed": true,
+  "detail": "append-only=True verify=True metered=True out=True",
+  "code_file": "results/output/mistral-small-latest_vitalik.py"
+ }
+}

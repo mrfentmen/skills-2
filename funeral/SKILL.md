@@ -45,6 +45,8 @@ live` and `consumed -> consumed` are errors.
 4. Exercise success and failure paths; assert the handle is invalid afterward.
 5. In ownership-safe languages, let the compiler enforce moves; do not recreate
    aliases merely to make the example convenient.
+6. End with a runnable demonstration that prints the consumed value and the
+   observed failure for a double consume.
 
 ## Style Guidelines
 

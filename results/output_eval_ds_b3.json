@@ -1,0 +1,52 @@
+{
+ "floor-trader": {
+  "passed": false,
+  "detail": "GRADER ERR: missing ), unterminated subpattern at position 23",
+  "code_file": "results/output/floor-trader.py"
+ },
+ "funeral": {
+  "passed": true,
+  "detail": "consume=True invalidate=True fail-visible=True out=True",
+  "code_file": "results/output/funeral.py"
+ },
+ "y2k": {
+  "passed": false,
+  "detail": "EXEC FAIL: ValueError: invalid day",
+  "code_file": "results/output/y2k.py"
+ },
+ "quantum-computing": {
+  "passed": true,
+  "detail": "qubit=True gate=True superposition=True out=True",
+  "code_file": "results/output/quantum-computing.py"
+ },
+ "fibonacci": {
+  "passed": true,
+  "detail": "def=True structure=True derived=True out=True",
+  "code_file": "results/output/fibonacci.py"
+ },
+ "spacex-fsw": {
+  "passed": true,
+  "detail": "defs=3 majority=True faults=True out=True",
+  "code_file": "results/output/spacex-fsw.py"
+ },
+ "vitalik": {
+  "passed": false,
+  "detail": "EXEC FAIL: ValueError: entry cap exceeded",
+  "code_file": "results/output/vitalik.py"
+ },
+ "sovereign-citizen": {
+  "passed": true,
+  "detail": "allowlist=True impl=True reference=True reject=True out=True",
+  "code_file": "results/output/sovereign-citizen.py"
+ },
+ "rorschach": {
+  "passed": true,
+  "detail": "defs=3 interpret=True roundtrip=True survivors=True out=True",
+  "code_file": "results/output/rorschach.py"
+ },
+ "psych": {
+  "passed": true,
+  "detail": "comment=True structure=True visual=True out=True",
+  "code_file": "results/output/psych.py"
+ }
+}

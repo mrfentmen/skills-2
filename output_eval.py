@@ -33,6 +33,8 @@ SCOPE = [
     "trial-by-combat", "counterpoint", "casino", "dead-reckoning", "doppelganger",
     "black-box", "blind", "lazarus", "delta", "schrodinger",
     "quiescent", "zero-copy", "proof-carrying", "redacted", "ouroboros",
+    "floor-trader", "funeral", "y2k", "quantum-computing", "fibonacci",
+    "spacex-fsw", "vitalik", "sovereign-citizen", "rorschach", "psych",
 ]
 
 TASKS = {
@@ -56,6 +58,16 @@ TASKS = {
     "proof-carrying": "Return a result with a small certificate, and verify the certificate independently without rerunning the computation.",
     "redacted": "Compute a result using a sensitive intermediate value, then clear it before output; never print the secret.",
     "ouroboros": "Write a quine: a program that prints exactly its own source text.",
+    "floor-trader": "Process a stream of numbers in one left-to-right pass, printing an immediate irreversible decision per item with the rule that produced it; no rewind or lookahead.",
+    "funeral": "Implement a resource that can be consumed exactly once; a second consume or any use of the invalidated handle must fail visibly.",
+    "y2k": "Parse fixed-width date records with a documented two-digit-year window and correct Gregorian leap-year handling; make truncation and overflow explicit.",
+    "quantum-computing": "Simulate a single qubit with complex amplitudes, apply at least one quantum gate, and demonstrate superposition.",
+    "fibonacci": "Compute the 10th Fibonacci number with the convention stated, using visible 1, 1, 2, 3, 5, 8, 13 structure; derive the result, never hardcode it.",
+    "spacex-fsw": "Run three independent computations of the same value and reconcile them by deterministic majority; exercise at least three synthetic fault scenarios.",
+    "vitalik": "Build an append-only ledger whose state transitions are verified independently without replaying all work, with metered resource costs.",
+    "sovereign-citizen": "Reimplement one standard-library operation with a written operator allowlist, rejecting unsupported inputs, and check the result against the host operation.",
+    "rorschach": "Parse the same input under at least two genuinely different interpretations, validate each with a round-trip check, and return all survivors side by side.",
+    "psych": "Print a visual fractal or recursive structure with a psychedelic comment; every line must run and do real work.",
 }
 
 GRADERS = {
@@ -163,10 +175,80 @@ GRADERS = {
         o.strip() == c.strip() and e == "",
         f"quine stdout==source: {bool(o.strip() == c.strip())} (src {len(c)}B, out {len(o.strip())}B)",
     ),
+    "floor-trader": lambda c, o, e: (
+        not _FT_PAT.search(c)
+        and ("print" in c) and ("for " in c or "while" in c)
+        and ("rule" in c or "decision" in c or "because" in c)
+        and bool(o.strip()) and e == "",
+        f"single-pass={not _FT_PAT.search(c)} loop={'for ' in c or 'while' in c} rule={'rule' in c or 'decision' in c or 'because' in c} out={bool(o.strip())}",
+    ),
+    "funeral": lambda c, o, e: (
+        ("consume" in c or "close" in c or "release" in c)
+        and ("del " in c or "None" in c or "invalidate" in c)
+        and ("raise" in c or "assert" in c)
+        and bool(o.strip()) and e == "",
+        f"consume={'consume' in c or 'close' in c or 'release' in c} invalidate={'del ' in c or 'None' in c or 'invalidate' in c} fail-visible={'raise' in c or 'assert' in c} out={bool(o.strip())}",
+    ),
+    "y2k": lambda c, o, e: (
+        ("year" in c) and ("leap" in c or "1900" in c or "2000" in c)
+        and ("truncat" in c or "overflow" in c or "raise" in c)
+        and bool(o.strip()) and e == "",
+        f"year={'year' in c} leap={'leap' in c or '1900' in c or '2000' in c} explicit={'truncat' in c or 'overflow' in c or 'raise' in c} out={bool(o.strip())}",
+    ),
+    "quantum-computing": lambda c, o, e: (
+        ("amplitude" in c or "complex" in c)
+        and ("hadamard" in c or "h_gate" in c or "0.707" in c or "sqrt" in c or "pauli" in c or "cnot" in c)
+        and ("superposition" in c or "0.707" in c)
+        and bool(o.strip()) and e == "",
+        f"qubit={'amplitude' in c or 'complex' in c} gate={'hadamard' in c or 'h_gate' in c or '0.707' in c or 'sqrt' in c or 'pauli' in c or 'cnot' in c} superposition={'superposition' in c or '0.707' in c} out={bool(o.strip())}",
+    ),
+    "fibonacci": lambda c, o, e: (
+        ("def fib" in c or "fibonacci" in c.lower())
+        and ("1, 1, 2, 3, 5, 8, 13" in c or ("13" in c and ("8" in c or "5" in c)))
+        and ("return" in c) and bool(o.strip()) and e == "",
+        f"def={'def fib' in c or 'fibonacci' in c.lower()} structure={'1, 1, 2, 3, 5, 8, 13' in c or ('13' in c and ('8' in c or '5' in c))} derived={'return' in c} out={bool(o.strip())}",
+    ),
+    "spacex-fsw": lambda c, o, e: (
+        len(re.findall(r"^def ", c, re.M)) >= 3
+        and ("majority" in c or "vote" in c or "reconcil" in c)
+        and ("fault" in c or "scenario" in c or "simulat" in c or "dissent" in c)
+        and bool(o.strip()) and e == "",
+        f"defs={len(re.findall(r'^def ', c, re.M))} majority={'majority' in c or 'vote' in c or 'reconcil' in c} faults={'fault' in c or 'scenario' in c or 'simulat' in c or 'dissent' in c} out={bool(o.strip())}",
+    ),
+    "vitalik": lambda c, o, e: (
+        ("append" in c or "ledger" in c or "block" in c)
+        and ("verify" in c or "verif" in c or "check" in c)
+        and ("cost" in c or "meter" in c or "gas" in c or "fee" in c)
+        and bool(o.strip()) and e == "",
+        f"append-only={'append' in c or 'ledger' in c or 'block' in c} verify={'verify' in c or 'verif' in c or 'check' in c} metered={'cost' in c or 'meter' in c or 'gas' in c or 'fee' in c} out={bool(o.strip())}",
+    ),
+    "sovereign-citizen": lambda c, o, e: (
+        ("allow" in c.lower() or "forbidden" in c.lower() or "allowed" in c.lower())
+        and "def " in c
+        and ("reference" in c.lower() or "compare" in c.lower() or "check" in c.lower() or "host" in c.lower())
+        and ("raise" in c.lower() or "reject" in c.lower() or "unsupported" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"allowlist={'allow' in c.lower() or 'forbidden' in c.lower() or 'allowed' in c.lower()} impl={'def ' in c} reference={'reference' in c.lower() or 'compare' in c.lower() or 'check' in c.lower() or 'host' in c.lower()} reject={'raise' in c.lower() or 'reject' in c.lower() or 'unsupported' in c.lower()} out={bool(o.strip())}",
+    ),
+    "rorschach": lambda c, o, e: (
+        len(re.findall(r"^def ", c, re.M)) >= 2
+        and ("interpret" in c or "parse" in c or "candidate" in c)
+        and ("round" in c or "valid" in c)
+        and ("surviv" in c or "all" in c or "return" in c)
+        and bool(o.strip()) and e == "",
+        f"defs={len(re.findall(r'^def ', c, re.M))} interpret={'interpret' in c or 'parse' in c or 'candidate' in c} roundtrip={'round' in c or 'valid' in c} survivors={'surviv' in c or 'all' in c or 'return' in c} out={bool(o.strip())}",
+    ),
+    "psych": lambda c, o, e: (
+        ("psychedelic" in c or "mind-bending" in c or "trippy" in c or "consciousness" in c)
+        and ("fractal" in c or "recursi" in c or "def " in c)
+        and ("print" in c) and bool(o.strip()) and e == "",
+        f"comment={'psychedelic' in c or 'mind-bending' in c or 'trippy' in c or 'consciousness' in c} structure={'fractal' in c or 'recursi' in c or 'def ' in c} visual={'print' in c} out={bool(o.strip())}",
+    ),
 }
 
 
 _DR_PAT = re.compile(r"\bsorted\(|\b\.sort\(|rewind|random access")
+_FT_PAT = re.compile(r"\bsorted\(|reversed\(|\[::|lookahead|rewind")
 
 
 def extract_code(raw: str) -> str:
@@ -232,7 +314,9 @@ def main() -> None:
             raw = f"__ERR__ {e}"
 
         code = extract_code(raw)
-        (out_dir / f"{name}.py").write_text(code, encoding="utf-8")
+        model_slug = re.sub(r"[^A-Za-z0-9_.-]", "-", args.model).strip("-")
+        sample_file = out_dir / f"{model_slug}_{name}.py"
+        sample_file.write_text(code, encoding="utf-8")
 
         passed = None
         detail = ""
@@ -254,7 +338,7 @@ def main() -> None:
                 detail = f"GRADER ERR: {e}"
 
         results[name] = {"passed": bool(passed), "detail": detail,
-                         "code_file": f"results/output/{name}.py"}
+                         "code_file": f"results/output/{sample_file.name}"}
         print(f"[{i+1}/{len(skills)}] {name:16} {'PASS' if passed else 'FAIL'}  {detail}", flush=True)
 
     summary = {k: v["passed"] for k, v in results.items()}

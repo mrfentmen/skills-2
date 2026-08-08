@@ -1,0 +1,32 @@
+{
+ "ouroboros": {
+  "passed": false,
+  "detail": "EXEC FAIL: SyntaxError: unterminated string literal (detected at line 9)",
+  "code_file": "results/output/ouroboros.py"
+ },
+ "black-box": {
+  "passed": true,
+  "detail": "query-iface=True out=True",
+  "code_file": "results/output/black-box.py"
+ },
+ "quiescent": {
+  "passed": true,
+  "detail": "atomic=True quiet=True out=True",
+  "code_file": "results/output/quiescent.py"
+ },
+ "schrodinger": {
+  "passed": false,
+  "detail": "lazy=True proof=True out=False",
+  "code_file": "results/output/schrodinger.py"
+ },
+ "zero-copy": {
+  "passed": true,
+  "detail": "ownership=True out=True",
+  "code_file": "results/output/zero-copy.py"
+ },
+ "blind": {
+  "passed": false,
+  "detail": "closed-iface=True out=False",
+  "code_file": "results/output/blind.py"
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "schrodinger": {
+  "passed": true,
+  "detail": "lazy=True proof=True out=True",
+  "code_file": "results/output/nvidia-nemotron-3-super-120b-a12b_schrodinger.py"
+ },
+ "blind": {
+  "passed": true,
+  "detail": "closed-iface=True out=True",
+  "code_file": "results/output/nvidia-nemotron-3-super-120b-a12b_blind.py"
+ }
+}

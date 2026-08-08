@@ -1,0 +1,22 @@
+{
+ "floor-trader": {
+  "passed": true,
+  "detail": "single-pass=True loop=True rule=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_floor-trader.py"
+ },
+ "y2k": {
+  "passed": false,
+  "detail": "EXEC FAIL: ValueError: invalid day",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_y2k.py"
+ },
+ "sovereign-citizen": {
+  "passed": true,
+  "detail": "allowlist=True impl=True reference=True reject=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_sovereign-citizen.py"
+ },
+ "rorschach": {
+  "passed": true,
+  "detail": "defs=3 interpret=True roundtrip=True survivors=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_rorschach.py"
+ }
+}

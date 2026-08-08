@@ -46,6 +46,8 @@ Every deliverable produced with this skill should include:
    untouched.
 5. Test repeated observation, exceptions, cancellation, and infinite sources as
    appropriate to the policy.
+6. End with a runnable demonstration that forces exactly n items and prints the
+   observed values and the forced count.
 
 ## Style Guidelines
 

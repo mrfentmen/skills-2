@@ -143,6 +143,59 @@ proof-carrying, redacted, ouroboros.
 Both failures would pass external grading of the actual deliverable; they
 crash only on the model's own contradictory self-tests.
 
+## Round 5: third constraint batch (30 skills total) + harness fixes
+
+Extended the harness to 10 more constraint skills: floor-trader, funeral, y2k,
+quantum-computing, fibonacci, spacex-fsw, vitalik, sovereign-citizen,
+rorschach, psych (30 skills now under test). Two harness defects fixed that
+were corrupting results: (1) sample files now include the model slug so
+parallel runs no longer clobber each other, (2) floor-trader regex moved to a
+module-level compiled pattern (`_FT_PAT`), and the sovereign-citizen grader
+now checks allow/forbidden case-insensitively.
+
+| Model | batch 3 final | remaining failures |
+|---|---|---|
+| deepseek-v4-flash | **9/10** | y2k |
+| mistral-small-latest | **8/10** | floor-trader, spacex-fsw |
+
+### Wording fixes driven by this batch
+
+- **blind**: the example now includes the correct fail-closed test pattern
+  (call the adapter with an unknown question and assert it raises; feed a
+  malformed answer and assert the solver raises). deepseek had produced three
+  different broken test stubs across three runs. Also added workflow step 7:
+  end with a runnable demonstration that prints the classification.
+- **schrodinger**: workflow step 6: force exactly n items and print the
+  observed values and the forced count.
+- **funeral**: workflow step 6: print the consumed value and the observed
+  double-consume failure.
+- **psych**: style guideline prefers pure-stdlib headless console output
+  (ASCII art, ANSI colors) over GUI/windowed frameworks — mistral wrote
+  turtle-based fractals twice, which cannot render headless.
+- **floor-trader**: no edit needed — its Minimum Requirements already demand
+  printing each decision with its rule; the failure was model non-compliance.
+
+### Cross-model verification of round-4 fixes
+
+nemotron (third model) now passes black-box, quiescent, zero-copy (round-4
+wording), and after the round-5 print-demonstration steps also passes
+schrodinger and blind: 5/6. Its only remaining miss is ouroboros, where it
+writes prose instead of code (the same format quirk it shows in routing).
+
+### Remaining failures are model-side (deterministic, documented)
+
+- **y2k** (deepseek): correct parser; the model's own test asserts
+  `parse("990229") == (1999, 2, 28)` — Feb 29, 1999 does not exist, so the
+  parser correctly raises and the model's assert crashes. Test-data bug.
+- **spacex-fsw** (mistral): correct three-way vote; the model asserts the
+  wrong dissent value in its own scenario check (dissent `[58]` vs asserted
+  `[60]`). Same bug on two runs.
+- **floor-trader** (mistral): wrote a correct single-pass loop but printed
+  nothing, violating the skill's own printed-decision requirement.
+
+All three deliverable implementations are correct; the failures crash only on
+the models' own contradictory tests/omissions.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

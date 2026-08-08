@@ -420,6 +420,9 @@ Activate this skill only when the user explicitly requests psych, psychedelic, t
 - Write code that embodies **Algorithmic Psychedelia**; make the principle visible in structure and comments, not just claimed.
 - Write code that embodies **Esoteric Exploration**; make the principle visible in structure and comments, not just claimed.
 - Keep every example real and runnable: no mock, fake, or pseudo code; comments state the intent, not a fantasy.
+- Prefer pure-stdlib console output that runs headless (ASCII art, ANSI escape
+  colors, terminal graphics). Avoid GUI/windowed frameworks (turtle, tkinter,
+  matplotlib windows) that require a display.
 
 ## Cross-Language Examples
 
