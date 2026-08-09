@@ -55,6 +55,8 @@ SCOPE = [
     "musk", "altman", "hastings", "gordon-ramsay", "james-cameron",
     "hideo-kojima", "julia-child", "paul-graham", "nassim-taleb", "red-team",
     "richard-stallman", "sun-tzu", "walt-disney", "yukihiro-matsumoto", "lovelace",
+    "apple-platform", "aws-sde", "azure-engineer", "google-sre", "meta-senior-dev",
+    "the-last-employee", "greybeard-after-midnight", "netflix-streaming", "valve-time", "lisa-su",
 ]
 
 TASKS = {
@@ -188,6 +190,16 @@ TASKS = {
     "walt-disney": "Build a small feature the Disney way (e.g., a tiny scripted story engine that plays a scene automatically with no keyboard input, choices driven by embedded variables) and in comments document: (1) the dream: the ideal, unconstrained vision stated first, (2) the real: the concrete plan and architecture within constraints, (3) the critique: the failure modes and risks examined before shipping, (4) the plussing move: at least one improvement beyond the bare acceptance criteria, (5) the story test: how every element serves the user experience. Print the demo.",
     "yukihiro-matsumoto": "Design a small friendly API (e.g., a tiny task-list DSL) and in comments document: (1) a happiness pass: the API judged by how it feels to read and write, stated, (2) a human-first line: the syntax that reads like the whiteboard sketch, not the machine, (3) a fluency check: the internal consistency a fluent user can rely on, (4) a harmony note: how the feature fits the existing voice instead of adding a new one, (5) a kindness artifact: an error message or default that treats the user well. Print the API demo.",
     "lovelace": "Write a small mechanical computation (e.g., a tiny single-instruction interpreter) and in comments document: (1) a step table: the operation sequence with running state, checkable by hand, (2) a symbolic framing: what abstraction the computation manipulates, stated, (3) an origin claim check: a statement that the machine only executes ordered operations, (4) a looping/control trace: how each loop advances and where it stops, (5) a poetical note: the deeper relation between the machinery and the idea it expresses. Print the trace.",
+    "apple-platform": "Build a small typed API the Apple way (e.g., a tiny in-memory typed LRU cache with explicit failures) and in comments document: (1) a public API that reads clearly at the call site with failure explicit (throws/returns error, never silent), (2) a backward-compatibility commitment: deprecation path, ABI note, or shim for existing callers, (3) memory segregated by type: no untyped buffer aliasing a structured type, (4) a zero-regression performance budget stated for the change, (5) no abstraction that hides a real hardware cost: the cost is named and justified. Print the demo output.",
+    "aws-sde": "Build a small AWS-style service (e.g., a tiny rate-limited fetch API) and in comments document: (1) a working-backwards artifact: the customer problem stated BEFORE the API, (2) a contract-first interface: endpoints, payloads, and error states defined before logic, (3) a fitness function: an automated check that fails the build on drift, (4) the four golden signals instrumented (latency, traffic, errors, saturation), (5) a defensive-call plan: rate limit, validation, timeout, backoff with jitter, (6) a runbook line: every alarm maps to a remediation step. Print the demo output.",
+    "azure-engineer": "Build a small Azure-style service (e.g., a tiny retrying queue processor) and in comments document: (1) infrastructure/configuration expressed as code, not manual steps, (2) at least one paved-path choice: a documented standard pattern over a bespoke one, (3) retry policy with exponential backoff + jitter and a circuit breaker or stated overload plan, (4) strict null-safety and warnings-as-errors posture visible in the code, (5) a stated backward-compatibility commitment: existing callers keep working, (6) structured logging/telemetry on meaningful behaviors. Print the demo output.",
+    "google-sre": "Build a small reliability demo (e.g., a tiny availability tracker for a service) and in comments document: (1) a concrete SLO, time window, SLI, and error-budget calculation, (2) instrumentation feeding the SLI, (3) an explicit release/canary gate based on remaining budget, (4) graceful fallback and bounded retry with jitter, (5) a blameless postmortem finding converted into an automated regression check. Print the demo output.",
+    "meta-senior-dev": "Build a small production change the Meta way (e.g., a tiny refactored utility with a feature flag) and in comments document: (1) at least one stacked-diff-style decomposition: small dependent steps, not one mega-change, (2) a monorepo-style atomicity note: every caller of a changed API updated in the same change, (3) at least one feature flag / A-B gate with a stated rollback path, (4) fast feedback: code structured so static checking is incremental, not a full build, (5) a review-ready diff: small, focused, describable in under five minutes. Print the demo output.",
+    "the-last-employee": "Build a small boring-and-transparent system (e.g., a tiny user store with a versioned migration) and in comments document: (1) a transparent data model and a boring, documented interface, (2) a decision record for each major choice: reason, owner, rollback, removal condition, (3) a versioned, reversible migration with an explicit undo path, (4) useful diagnostics for success and failure, (5) a deletion path that removes only owned data and is tested. Print the demo output.",
+    "greybeard-after-midnight": "Build a small debugging story (e.g., reproduce and fix a tiny date-formatting bug) and in comments document: (1) a genuinely failing reproduction BEFORE the fix, (2) the smallest input plus observed and expected output, (3) the actual violated constraint/invariant, (4) the smallest durable fix and a passing regression check, (5) a named rejected rewrite and the evidence-based reason for rejecting it. Print the reproduction and the fix output.",
+    "netflix-streaming": "Build a small streaming logic demo (e.g., a tiny client-side ABR bitrate selector) and in comments document: (1) a client-side ABR rule: bitrate chosen from buffer occupancy, not server guesses, (2) a QoE metric set: startup time, rebuffering ratio, and delivered quality, (3) a chaos story: what is killed on purpose and how the system survives it, (4) a load-shedding order: what is sacrificed first under duress, (5) an experiment plan: how the change is A/B tested with statistical rigor. Print the demo output.",
+    "valve-time": "Design a small game feature (e.g., a tiny grappling-hook mechanic) and in comments document: (1) player fantasy, genre context, comparable mechanics, and technical risks, (2) a falsifiable fun hypothesis and the smallest experiment that could disprove it, (3) a playable prototype focused on the riskiest interaction, not a feature list, (4) a playtest plan with participants, task, observation, and decision gate, (5) cuts: what was deliberately excluded and why, (6) a decision based on observed player behavior, not designer enthusiasm. Print the design.",
+    "lisa-su": "Write a small product-leadership plan (e.g., for a tiny personal project or open-source tool) and in comments document: (1) a focus statement: the three pillars and what is deliberately NOT being built, (2) a roadmap commitment: what will be delivered, with honest risk instead of hype, (3) a next-5% pass: one measurable improvement past good enough, (4) a hardest-problem choice: the structural bottleneck chosen over the safe task, (5) a post-mortem line: the failure analyzed as data, with the better path stated. Print the plan.",
 }
 
 GRADERS = {
@@ -1084,6 +1096,79 @@ GRADERS = {
         ["ordered", "executes", "origin", "sequence"],
         ["loop", "advance", "stops", "control"],
         ["poet", "relation", "idea", "express"],
+    ], o, e),
+    "apple-platform": lambda c, o, e: _check_evidence(c, [
+        ["public api", "call site", "failure", "explicit", "throws"],
+        ["backward", "compat", "deprecat", "abi", "shim"],
+        ["memory", "segregat", "untyped", "buffer", "aliasing"],
+        ["performance budget", "zero-regression", "regression", "budget"],
+        ["hardware", "cost", "abstraction"],
+    ], o, e),
+    "aws-sde": lambda c, o, e: _check_evidence(c, [
+        ["working backward", "working-backward", "customer problem", "press release"],
+        ["contract", "endpoint", "payload", "error state"],
+        ["fitness function", "drift", "fails the build"],
+        ["latency", "traffic", "errors", "saturation", "golden signal"],
+        ["rate limit", "timeout", "backoff", "jitter", "validation"],
+        ["runbook", "alarm", "remediation"],
+    ], o, e, need=5),
+    "azure-engineer": lambda c, o, e: _check_evidence(c, [
+        ["infrastructure", "as code", "configuration"],
+        ["paved path", "standard pattern", "bespoke"],
+        ["exponential backoff", "jitter", "circuit breaker", "overload"],
+        ["null", "warnings-as-errors", "warnings as errors"],
+        ["backward", "compat", "existing caller"],
+        ["logging", "telemetry", "structured"],
+    ], o, e, need=5),
+    "google-sre": lambda c, o, e: _check_evidence(c, [
+        ["slo", "error budget", "time window", "sli"],
+        ["instrument", "metric", "feeding"],
+        ["canary", "release gate", "budget"],
+        ["fallback", "bounded retry", "jitter"],
+        ["postmortem", "post-mortem", "blameless", "regression"],
+    ], o, e),
+    "meta-senior-dev": lambda c, o, e: _check_evidence(c, [
+        ["stacked", "small step", "incremental", "decomposition"],
+        ["atomic", "monorepo", "same change", "caller"],
+        ["feature flag", "a/b", "rollback", "flag"],
+        ["fast feedback", "incremental", "static check"],
+        ["review", "focused", "small", "diff"],
+    ], o, e),
+    "the-last-employee": lambda c, o, e: _check_evidence(c, [
+        ["data model", "documented", "boring", "interface"],
+        ["decision record", "owner", "rollback", "removal"],
+        ["migration", "reversible", "undo", "version"],
+        ["diagnostic", "success", "failure"],
+        ["deletion", "delete", "owned data", "removes"],
+    ], o, e),
+    "greybeard-after-midnight": lambda c, o, e: _check_evidence(c, [
+        ["repro", "reproduction", "failing"],
+        ["smallest", "observed", "expected"],
+        ["violat", "constraint", "invariant"],
+        ["durable", "regression", "fix"],
+        ["reject", "rewrite", "evidence"],
+    ], o, e),
+    "netflix-streaming": lambda c, o, e: _check_evidence(c, [
+        ["abr", "bitrate", "buffer occupancy", "buffer"],
+        ["qoe", "startup", "rebuffer", "quality"],
+        ["chaos", "kill", "survive", "fault"],
+        ["load shedding", "load-shedding", "sacrifice", "shed"],
+        ["experiment", "a/b", "statistic", "p-value"],
+    ], o, e),
+    "valve-time": lambda c, o, e: _check_evidence(c, [
+        ["fantasy", "genre", "comparable", "risk"],
+        ["falsifiable", "hypothesis", "experiment", "disprove"],
+        ["prototype", "riskiest", "playable"],
+        ["playtest", "participant", "observation", "decision gate"],
+        ["cut", "excluded", "removed", "why"],
+        ["observed", "behavior", "enthusiasm"],
+    ], o, e, need=5),
+    "lisa-su": lambda c, o, e: _check_evidence(c, [
+        ["focus", "pillar", "not being built", "not built"],
+        ["roadmap", "honest", "risk", "hype"],
+        ["next 5%", "next-5%", "next five", "measurable"],
+        ["hardest", "bottleneck", "structural", "safe task"],
+        ["post-mortem", "postmortem", "analyzed as data", "failure"],
     ], o, e),
 }
 

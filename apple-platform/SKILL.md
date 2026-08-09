@@ -39,6 +39,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Memory handling names its intent: `type_segregated_pool`, `no_alias_buffer`
 - Performance budget stated per change: "// +0 allocations in hot path, baseline preserved"
 - Deprecation paths spelled out, not breaking changes shipped silently
+- Demo code is compact enough to complete in one pass (at most ~50 lines) and prints visible output: a truncated demo that prints nothing is a failed demo.
+- The demo prints to stdout only and keeps stderr empty: demonstrate a deprecation path with a printed note, never warnings.warn or the logging module.
 
 ```python
 # public API: reads clearly, failure explicit, zero regressions

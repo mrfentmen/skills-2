@@ -101,6 +101,8 @@ print({"slo": "99.9% success / 1,000,000 requests", "healthy": healthy, "spent":
 - Write code that embodies **Instrumentation is behavior**; make the principle visible in structure and comments, not just claimed.
 - Write code that embodies **Fallback is explicit**; make the principle visible in structure and comments, not just claimed.
 - Keep every example real and runnable: no mock, fake, or pseudo code; comments state the intent, not a fantasy.
+- The regression check must exercise the path it asserts: if the finding says fallback must be labeled degraded, force a dependency failure so the fallback path actually runs - an assert that passes only because the happy path was used is a false regression check.
+- The demo must finish in a couple of seconds: keep simulated request counts small (tens, not hundreds) and never use time.sleep to pace a loop - simulate latency with a pure computation or plain numbers.
 
 ## Cross-Language Examples
 

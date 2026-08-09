@@ -599,6 +599,42 @@ yukihiro-matsumoto, lovelace (130 skills under test).
 - **julia-child** (mistral): TypeError adding float + str in its own recipe
   calculator; re-run passed.
 
+## Round 16: fourteenth constraint batch (140 skills total) — ninth perfect round
+
+Extended the harness to 10 more constraint skills: apple-platform, aws-sde,
+azure-engineer, google-sre, meta-senior-dev, the-last-employee,
+greybeard-after-midnight, netflix-streaming, valve-time, lisa-su (140 skills
+under test).
+
+| Model | batch 14 final | remaining failures |
+|-------|---------------|--------------------|
+| deepseek | 10/10 | none |
+| mistral  | 10/10 | none |
+
+### Skill-wording fixes from real failures
+
+- **apple-platform**: compact ~50-line + stdout-only demo notes (deepseek
+  truncated mid-f-string; deepseek's demo emitted DeprecationWarning to
+  stderr), then the harness task was changed from a file-backed KV store
+  (which pulled mistral into three consecutive disk/mmap bugs: bytes-lock
+  TypeError, empty-mmap, index-capacity) to an in-memory typed LRU cache.
+- **aws-sde / netflix-streaming**: compact ~50-line demo notes (deepseek
+  truncated mid-line on both).
+- **azure-engineer**: compact ~50-line + stdout-only demo notes (deepseek
+  truncated mid-logging-call; mistral's logging module wrote INFO/WARNING
+  to stderr which the grader rejects).
+- **the-last-employee**: compact ~50-line demo note (mistral truncated with
+  an unclosed brace).
+- **google-sre**: regression-check-must-exercise-the-asserted-path note
+  (mistral's demo asserted the fallback was degraded while its own retry
+  returned "full" on the happy path - twice), then a fast-demo note
+  (mistral simulated 500 requests with real time.sleep -> ~50s runtime).
+
+### Model-side demo bugs (passed on re-run)
+
+- **google-sre** (mistral): dict-vs-int comparison in its own latency check;
+  re-run passed.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

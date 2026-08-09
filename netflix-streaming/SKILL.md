@@ -41,6 +41,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Chaos named: `# every deploy kills 1 instance; survivors must serve`
 - Load-shed order: `# shed: background telemetry -> recs -> THEN the video core`
 - Experiment declared: `# A/B: 50/50 on the ABR policy, Bayesian, 48h`
+- Demo code is compact enough to complete in one pass (at most ~50 lines) and prints visible output: a truncated demo that prints nothing is a failed demo.
 
 ```python
 def choose_bitrate(buffer_secs, ladder, low=5, high=15):

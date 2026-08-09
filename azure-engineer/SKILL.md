@@ -40,6 +40,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Strict nullability: `string?` vs `string`, no silent NREs
 - Async all the way down with cancellation tokens
 - Structured logs with semantic fields, not string interpolation
+- Demo code is compact enough to complete in one pass (at most ~50 lines) and prints visible output: a truncated demo that prints nothing is a failed demo.
+- The demo prints to stdout only: avoid the logging module (it writes to stderr) - build structured log lines as formatted strings and print them.
 
 ```python
 # paved path: standard retry + circuit breaker, config as code

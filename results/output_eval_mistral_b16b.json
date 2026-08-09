@@ -1,0 +1,27 @@
+{
+ "apple-platform": {
+  "passed": false,
+  "detail": "EXEC FAIL: ValueError: cannot mmap an empty file",
+  "code_file": "results/output/mistral-small-latest_apple-platform.py"
+ },
+ "aws-sde": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/mistral-small-latest_aws-sde.py"
+ },
+ "azure-engineer": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/mistral-small-latest_azure-engineer.py"
+ },
+ "google-sre": {
+  "passed": false,
+  "detail": "EXEC FAIL: TypeError: '<=' not supported between instances of 'dict' and 'int'",
+  "code_file": "results/output/mistral-small-latest_google-sre.py"
+ },
+ "the-last-employee": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_the-last-employee.py"
+ }
+}

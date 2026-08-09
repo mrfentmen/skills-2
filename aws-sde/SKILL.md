@@ -42,6 +42,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Fitness function named: `# fails the build if: any handler calls a DB directly`
 - Golden signals emitted: `# emit: latency_p50, traffic, errors, saturation`
 - Backoff explicit: `# retry: exp backoff, decorrelated jitter, cap 4s`
+- Demo code is compact enough to complete in one pass (at most ~50 lines) and prints visible output: a truncated demo that prints nothing is a failed demo.
 
 ```python
 import random

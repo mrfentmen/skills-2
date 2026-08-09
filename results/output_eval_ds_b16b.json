@@ -1,0 +1,27 @@
+{
+ "the-last-employee": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_the-last-employee.py"
+ },
+ "greybeard-after-midnight": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_greybeard-after-midnight.py"
+ },
+ "netflix-streaming": {
+  "passed": false,
+  "detail": "EXEC FAIL: SyntaxError: unterminated string literal (detected at line 185)",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_netflix-streaming.py"
+ },
+ "valve-time": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_valve-time.py"
+ },
+ "lisa-su": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_lisa-su.py"
+ }
+}

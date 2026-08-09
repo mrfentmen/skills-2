@@ -1,0 +1,42 @@
+{
+  "apple-platform": {
+    "passed": true,
+    "detail": "hits=4 out=True"
+  },
+  "aws-sde": {
+    "passed": true,
+    "detail": "hits=6 out=True"
+  },
+  "azure-engineer": {
+    "passed": true,
+    "detail": "hits=6 out=True"
+  },
+  "google-sre": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "meta-senior-dev": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "the-last-employee": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "greybeard-after-midnight": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "netflix-streaming": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "valve-time": {
+    "passed": true,
+    "detail": "hits=6 out=True"
+  },
+  "lisa-su": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  }
+}

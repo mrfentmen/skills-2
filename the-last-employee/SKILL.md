@@ -86,6 +86,7 @@ print({"db": db, "decision": {"reason": "transparent rename", "owner": "platform
 - Write code that embodies **Ownership is explicit**; make the principle visible in structure and comments, not just claimed.
 - Write code that embodies **Diagnostics explain action**; make the principle visible in structure and comments, not just claimed.
 - Keep every example real and runnable: no mock, fake, or pseudo code; comments state the intent, not a fantasy.
+- Demo code is compact enough to complete in one pass (at most ~50 lines) and prints visible output: a truncated demo that prints nothing is a failed demo.
 
 ## Cross-Language Examples
 

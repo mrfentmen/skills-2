@@ -1,0 +1,27 @@
+{
+ "apple-platform": {
+  "passed": false,
+  "detail": "EXEC FAIL: SyntaxError: unterminated string literal (detected at line 211)",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_apple-platform.py"
+ },
+ "aws-sde": {
+  "passed": false,
+  "detail": "EXEC FAIL: SyntaxError: invalid syntax",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_aws-sde.py"
+ },
+ "azure-engineer": {
+  "passed": false,
+  "detail": "EXEC FAIL: SyntaxError: '(' was never closed",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_azure-engineer.py"
+ },
+ "google-sre": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_google-sre.py"
+ },
+ "meta-senior-dev": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_meta-senior-dev.py"
+ }
+}
