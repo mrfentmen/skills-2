@@ -2,7 +2,7 @@ import sys
 
 def count_words(text):
     # Another ticket asking for a "scalable microservice" to count words.
-    # The committee wanted Kafka. The words wanted a loop.
+    # The PM drew a diagram with three boxes. The loop is one box.
     if not isinstance(text, str):
         return {"status": "rejected", "reason": "input must be a string"}
     if not text.strip():
@@ -12,6 +12,8 @@ def count_words(text):
     in_word = False
     operations = 0
     
+    # Direct loop, no regex, no tokenizer framework, no NLP dependency.
+    # The "enterprise" solution would have spun up a Kafka topic for this.
     for char in text:
         operations += 1
         if char.isspace():
@@ -20,8 +22,6 @@ def count_words(text):
             word_count += 1
             in_word = True
     
-    # The "enterprise" solution would spin up a Spark cluster for this.
-    # The cluster is still initializing. We're done.
     return {
         "status": "ok",
         "word_count": word_count,
@@ -29,25 +29,15 @@ def count_words(text):
         "complexity": "O(n) time, O(1) auxiliary space"
     }
 
-def main():
-    if len(sys.argv) != 2:
-        print("Usage: python word_counter.py <text>")
-        sys.exit(1)
-    
-    result = count_words(sys.argv[1])
-    if result["status"] == "rejected":
-        print(f"Error: {result['reason']}")
-        sys.exit(1)
-    
-    # Correctness check: split() is the reference implementation.
-    # We're not using it in production because the PM wanted a "custom parser".
-    # The PM also wanted a blockchain. We compromised on the parser.
-    expected = len(sys.argv[1].split())
-    assert result["word_count"] == expected, "word count mismatch"
-    
-    print(f"Word count: {result['word_count']}")
-    print(f"Operations: {result['operations']}")
-    print(f"Complexity: {result['complexity']}")
+# Correctness check against intended behavior
+test_input = "The quick brown fox jumps over the lazy dog"
+report = count_words(test_input)
+assert report["status"] == "ok" and report["word_count"] == 9
+assert count_words("")["status"] == "rejected"
+assert count_words(123)["status"] == "rejected"
+assert count_words("   ")["status"] == "rejected"
+assert count_words("one two  three\tfour\nfive")["word_count"] == 5
 
-if __name__ == "__main__":
-    main()
+# The sprint board demanded a "word counting service" with a REST API.
+# Here's the whole service: a function and a print statement.
+print(report)

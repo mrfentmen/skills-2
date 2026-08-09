@@ -1,0 +1,7 @@
+{
+ "fedora-hat-guy": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_fedora-hat-guy.py"
+ }
+}

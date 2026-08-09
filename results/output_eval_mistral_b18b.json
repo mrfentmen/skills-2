@@ -1,0 +1,7 @@
+{
+ "bushnell": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/mistral-small-latest_bushnell.py"
+ }
+}

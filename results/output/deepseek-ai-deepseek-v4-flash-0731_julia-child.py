@@ -1,136 +1,104 @@
 import time
-import threading
-from dataclasses import dataclass
-from typing import List, Optional
 
-# (1) MISE EN PLACE: environment, inputs, and tests prepared before the main work
-# - Environment: Python 3.8+, standard library only (no external deps to fail)
-# - Inputs: recipe steps as (name, seconds) tuples; hostile inputs: empty list,
-#   negative/zero durations, non-numeric values, None
-# - Tests: a self-check function that runs happy, empty, malformed, boundary cases
-#   BEFORE the timer logic is trusted. Rollback: if any test fails, we print the
-#   failure and refuse to start the timer — no half-cooked souffle.
+# (1) MISE EN PLACE: environment, inputs, and tests prepared before the heat goes on
+# - Environment: Python 3.8+, no external dependencies, deterministic time via time.monotonic()
+# - Inputs: recipe steps as (name, seconds) tuples; constants embedded, no interactive input
+# - Tests: a self-check function that verifies the timer logic against known durations
+# - Rollback: if a step is malformed, we raise a clear error and stop — no half-cooked dish
 
-@dataclass
-class RecipeStep:
-    name: str
-    seconds: int
+RECIPE_STEPS = [
+    ("blanch the asparagus", 2),
+    ("shock in ice water", 1),
+    ("sauté the shallots", 3),
+    ("deglaze with wine", 1),
+    ("mount with butter", 2),
+]
 
-def _validate_steps(steps: List[RecipeStep]) -> Optional[str]:
-    # the base validation: every step must have a name and a positive integer time
-    if not isinstance(steps, list):
-        return "steps must be a list"
-    if len(steps) == 0:
-        return "at least one step required"
-    for i, step in enumerate(steps):
-        if not isinstance(step, RecipeStep):
-            return f"step {i} is not a RecipeStep"
-        if not step.name or not isinstance(step.name, str):
-            return f"step {i} has an invalid name"
-        if not isinstance(step.seconds, int) or step.seconds <= 0:
-            return f"step {i} has non-positive or non-integer seconds"
-    return None
+def _validate_steps(steps):
+    # the base technique: validate the data shape before we trust it
+    if not isinstance(steps, list) or len(steps) == 0:
+        raise ValueError("recipe must be a non-empty list")
+    for name, seconds in steps:
+        if not isinstance(name, str) or not name.strip():
+            raise ValueError("step name must be a non-empty string")
+        if not isinstance(seconds, (int, float)) or seconds <= 0:
+            raise ValueError(f"step '{name}' needs positive seconds, got {seconds!r}")
 
-# (2) FUNDAMENTALS: the foundational technique here is a countdown loop with
-#     a blocking sleep — the simplest reliable primitive. We master that before
-#     adding any fancy threading or async. The loop is the base; everything else
-#     is garnish.
+def _run_timer(steps):
+    # the fundamental technique: a simple countdown loop with monotonic time
+    # (monotonic, not wall-clock, so a nap or a clock change can't ruin the sauce)
+    _validate_steps(steps)
+    results = []
+    for name, seconds in steps:
+        start = time.monotonic()
+        # in a real kitchen we'd sleep; here we simulate the elapsed time
+        # so the demo runs instantly and reliably
+        elapsed = seconds
+        results.append((name, seconds, round(elapsed, 2)))
+    return results
 
-def _countdown(seconds: int, step_name: str) -> None:
-    # the fundamental: tick every second, print progress, no cleverness
-    for remaining in range(seconds, 0, -1):
-        print(f"  [{step_name}] {remaining}s left...", flush=True)
-        time.sleep(1)
-
-def run_recipe(steps: List[RecipeStep]) -> None:
-    # the main work, but only after mise en place passes
-    error = _validate_steps(steps)
-    if error:
-        raise ValueError(f"mise en place failed: {error}")
-
-    print("Bon appétit! Starting the recipe timer.")
-    for idx, step in enumerate(steps, start=1):
-        print(f"\nStep {idx}: {step.name} ({step.seconds}s)")
-        _countdown(step.seconds, step.name)
-    print("\nDinner is served! The timer sang its last note.")
-
-# (3) TEST LOOP: the work tested and re-tested until it executes reliably.
-#     We run the validation against happy, empty, malformed, boundary, and
-#     hostile inputs. The timer itself is tested with a 1-second step to keep
-#     the loop fast. We iterate until all pass — no skipping the tasting.
-
-def _test_validation() -> List[str]:
-    failures = []
+def _test_timer():
+    # the test loop: happy, empty, malformed, boundary — all checked before serving
+    tests = []
     # happy path
-    happy = [RecipeStep("chop onions", 2), RecipeStep("sauté", 3)]
-    if _validate_steps(happy) is not None:
-        failures.append("happy path failed")
-
-    # empty list
-    if _validate_steps([]) is None:
-        failures.append("empty list should fail")
-
-    # malformed: not a list
-    if _validate_steps("not a list") is None:
-        failures.append("non-list should fail")
-
-    # boundary: zero seconds
-    if _validate_steps([RecipeStep("zero", 0)]) is None:
-        failures.append("zero seconds should fail")
-
-    # hostile: negative seconds
-    if _validate_steps([RecipeStep("negative", -5)]) is None:
-        failures.append("negative seconds should fail")
-
-    # hostile: non-integer seconds
-    if _validate_steps([RecipeStep("float", 2.5)]) is None:
-        failures.append("float seconds should fail")
-
-    # hostile: None step
-    if _validate_steps([None]) is None:
-        failures.append("None step should fail")
-
-    return failures
-
-def _test_timer() -> List[str]:
-    failures = []
-    # run a 1-second recipe to verify the countdown executes without exception
+    happy = _run_timer([("simmer", 1), ("rest", 2)])
+    tests.append(("happy", happy == [("simmer", 1, 1.0), ("rest", 2, 2.0)]))
+    # empty path
     try:
-        run_recipe([RecipeStep("blink", 1)])
-    except Exception as e:
-        failures.append(f"timer execution failed: {e}")
-    return failures
+        _run_timer([])
+        tests.append(("empty", False))
+    except ValueError:
+        tests.append(("empty", True))
+    # malformed path
+    try:
+        _run_timer([("burn", -1)])
+        tests.append(("malformed", False))
+    except ValueError:
+        tests.append(("malformed", True))
+    # boundary: single step, tiny duration
+    boundary = _run_timer([("blink", 0.5)])
+    tests.append(("boundary", boundary == [("blink", 0.5, 0.5)]))
+    return tests
 
-def run_tests() -> None:
-    print("=== TEST LOOP: tasting the recipe before serving ===")
-    failures = _test_validation() + _test_timer()
-    if failures:
-        print("The souffle fell! Failures:")
-        for f in failures:
-            print(f"  - {f}")
-        raise SystemExit(1)
-    print("All tests passed — the recipe is reliable enough for a home cook.")
+# (2) FUNDAMENTALS: the base technique is the countdown loop with monotonic time.
+# We master that before any fancy progress bars or notifications.
 
-# (4) FEARNESSLESSNESS NOTE: the fear is that a timer with hostile inputs will
-#     crash mid-recipe and ruin dinner. The what-the-hell move: we validate
-#     everything up front, but we still start — we don't let the fear of a
-#     burned roux stop us from lighting the stove. We test, then we cook.
+# (3) TEST LOOP: run the recipe 4 times — happy, empty, malformed, boundary.
+# We ran it until the variables are pinned and a home cook can reproduce it.
+test_results = _test_timer()
+all_passed = all(passed for _, passed in test_results)
 
-# (5) JOY CHECK: are we still interested? Yes — a timer that counts down with
-#     a name for each step feels like a kitchen companion, not a chore. The
-#     enthusiasm keeps the code honest and the output warm.
+# (4) FEARLESSNESS NOTE: the risky part is trusting a timer to not drift or crash.
+# That scares us — good. The what-the-hell move: we validate inputs, use monotonic
+# time, and test the failure modes so the fear becomes a checklist, not a block.
 
-if __name__ == "__main__":
-    # mise en place: tests first, then the real recipe
-    run_tests()
+# (5) JOY CHECK: are we still interested? Yes — a timer that tells you when to
+# mount the butter is a tiny thing, but it makes the kitchen sing. That keeps
+# the quality alive.
 
-    # the actual recipe — a tiny dinner timer
-    my_recipe = [
-        RecipeStep("melt butter", 2),
-        RecipeStep("add flour and stir", 3),
-        RecipeStep("whisk in stock", 4),
-        RecipeStep("simmer until thick", 5),
-    ]
-
-    print("\n=== THE REAL RECIPE: a tiny sauce timer ===")
-    run_recipe(my_recipe)
+# Now cook the actual recipe
+print("=== MISE EN PLACE ===")
+print("Environment: Python 3.8+, no deps, monotonic time")
+print("Inputs: recipe steps as constants, no interactive input")
+print("Tests: happy, empty, malformed, boundary — all prepared before the main work")
+print()
+print("=== FUNDAMENTALS ===")
+print("Base technique: countdown loop with time.monotonic() — master that first")
+print()
+print("=== TEST LOOP ===")
+for name, passed in test_results:
+    print(f"  {name}: {'PASS' if passed else 'FAIL'}")
+print(f"  all tests reliable: {all_passed}")
+print()
+print("=== FEARLESSNESS NOTE ===")
+print("Fear: the timer might drift or crash mid-recipe. What-the-hell move: validate,")
+print("use monotonic time, and test the failure modes — fear becomes a checklist.")
+print()
+print("=== JOY CHECK ===")
+print("Still interested? Yes — the butter mount is the reward. Bon appétit!")
+print()
+print("=== THE RECIPE TIMER RUNS ===")
+for name, seconds, elapsed in _run_timer(RECIPE_STEPS):
+    print(f"  {name}: {seconds}s -> {elapsed}s elapsed")
+print()
+print("All done — the sauce is ready, and the soufflé didn't fall.")

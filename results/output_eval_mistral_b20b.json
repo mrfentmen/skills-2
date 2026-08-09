@@ -1,0 +1,22 @@
+{
+ "bruce-wayne": {
+  "passed": false,
+  "detail": "EXEC FAIL: AttributeError: module 'secrets' has no attribute 'urlsafe_b64encode'",
+  "code_file": "results/output/mistral-small-latest_bruce-wayne.py"
+ },
+ "fedora-hat-guy": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError",
+  "code_file": "results/output/mistral-small-latest_fedora-hat-guy.py"
+ },
+ "noir": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_noir.py"
+ },
+ "god": {
+  "passed": false,
+  "detail": "EXEC FAIL: Usage: reverse <string>",
+  "code_file": "results/output/mistral-small-latest_god.py"
+ }
+}

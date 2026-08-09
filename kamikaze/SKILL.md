@@ -128,7 +128,10 @@ description: >-
   only its own verified source file after the real work succeeds. Require an
   explicit dry-run/armed mode, resolve the script path safely, refuse symlinks
   or unowned paths, print the result before deletion, and verify the file is
-  gone. Use this skill for controlled one-time scripts, not payloads. Triggers
+  gone. Use this skill for controlled one-time scripts, not payloads.
+  Demo note: the demo resolves the target path deterministically from a constant
+  in the file (never __file__ or argv, which are undefined when run as
+  `python3 -c`), performs no real deletion - only a dry-run print - and prints visible output. Triggers
   on: "kamikaze" "burn after reading" "one time use script" "self destruct"
   "self-delete" "self deletion". This skill is NOT for reusable libraries or
   code that needs to be executed twice.

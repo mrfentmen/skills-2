@@ -9,35 +9,24 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # measurement: profiled: the real trace shows the bottleneck is the shuffle, not the map
 # simplicity check: the user calls map(f).reduce(g); parallelism and retries are invisible
 
-def simulate_shard_query(shard_id, data_size=1000000):
-    # Simulate a shard query with occasional slow responses (p99 spike)
-    if random.random() < 0.01:  # 1% chance of a slow response
+def simulate_shard(i, data_size=1000000):
+    # Simulate a shard with some random latency spikes
+    time.sleep(random.expovariate(1.0) * 0.001)  # baseline ~1ms
+    if random.random() < 0.01:  # 1% chance of a 1s spike
         time.sleep(1.0)
     return sum(random.randint(0, 100) for _ in range(data_size))
 
-def fan_out_sum(shards, max_workers=100):
+def fan_out_sum(shard_count=100, data_size=1000000):
     start = time.time()
-    total = 0
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(simulate_shard_query, shard_id): shard_id for shard_id in range(shards)}
+    results = []
+    with ThreadPoolExecutor(max_workers=shard_count) as executor:
+        futures = {executor.submit(simulate_shard, i, data_size): i for i in range(shard_count)}
         for future in as_completed(futures):
-            total += future.result()
-    latency = time.time() - start
-    return total, latency
+            results.append(future.result())
+    elapsed = time.time() - start
+    total = sum(results)
+    return {"total": total, "elapsed": elapsed, "shard_count": shard_count}
 
-def tail_at_scale(p99_spike_percent, fan_out, replicas=3):
-    if not (0 <= p99_spike_percent <= 100) or fan_out <= 0 or replicas < 2:
-        return {"status": "invalid"}
-    prob_any_slow = 1 - (1 - p99_spike_percent / 100.0) ** fan_out
-    return {"status": "ok", "fan_out": fan_out, "p99_spike_percent": p99_spike_percent,
-            "prob_any_slow": round(prob_any_slow, 3), "replicas": replicas,
-            "recovery": "serve from another replica; degrade if quorum is unavailable"}
-
-# Run with 100 shards (fan-out 100)
-shards = 100
-total, latency = fan_out_sum(shards)
-tail_report = tail_at_scale(p99_spike_percent=1, fan_out=shards)
-
-print(f"Total sum: {total}")
-print(f"End-to-end latency: {latency:.3f}s")
-print(f"Tail analysis: {tail_report}")
+# Run with realistic load: 100 shards, 1M elements each
+report = fan_out_sum(shard_count=100, data_size=1000000)
+print(report)

@@ -40,6 +40,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Unproven: `# the intuition: the bottleneck is the coupling, not the language — exploring before the benchmark`
 - Give-up test: `# this idea is kept only while it beats the baseline on the held-out set — else it is dropped`
 - Risk line: `# what this enables: a cheaper phishing pipeline — the guardrails are named, not assumed`
+- Demo uses stdlib only: no sklearn, no torch, no third-party ML imports - demonstrate the learning idea with pure Python (small loops, plain math).
 
 ```python
 def give_up_test(idea, evidence):

@@ -1,0 +1,12 @@
+{
+ "bruce-wayne": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_bruce-wayne.py"
+ },
+ "fedora-hat-guy": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_fedora-hat-guy.py"
+ }
+}

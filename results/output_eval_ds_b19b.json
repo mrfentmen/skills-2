@@ -1,0 +1,27 @@
+{
+ "kamikaze": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_kamikaze.py"
+ },
+ "crypto-market-maker": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_crypto-market-maker.py"
+ },
+ "goldman-analyst": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_goldman-analyst.py"
+ },
+ "quant": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_quant.py"
+ },
+ "forensic-money-trail": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_forensic-money-trail.py"
+ }
+}

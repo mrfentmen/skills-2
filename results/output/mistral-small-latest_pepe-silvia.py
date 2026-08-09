@@ -1,51 +1,56 @@
-# ACTIVATING PEPE SILVIA CONSPIRACY ENGINE
-# THE STRING IS A TARGET, THE TRANSFORMATIONS ARE RED STRING PINS
-# EVERY PIN MUST BE NAMED, EVERY CONSTANT MUST HAVE A ROLE
+# ACTIVATE PEPE SILVIA CONSPIRACY ENGINE
+# THE RED STRING CONNECTS EVERY CHARACTER, THE PATTERN IS EVERYWHERE
 
-# PLAIN REFERENCE: FIRST CHARACTER OF THE STRING
-PLAIN_REFERENCE = "Pepe Silvia"[0]
+# Plain reference: round-trip identity
+original = "pepe silvia"
+plain_reference = original
 
-# MAGIC CONSTANTS: NAMED FOR THEIR CONSPIRACY ROLE
+# Magic constants: named for the conspiracy
 REVERSE_PIN = 1
-BITWISE_MASK = 0x7F
+BITWISE_MASK = 0xFF
 XOR_KEY = 0x55
 SHIFT_AMOUNT = 2
 
-# ORIGINAL STRING: THE FIRST TARGET
-original = "Pepe Silvia"
+# Evidence ledger starts empty; we will pin every transformation
+ledger = {}
 
-# FIRST HARMLESS TRANSFORMATION: REVERSE THE STRING (PIN 1)
+# FIRST TRANSFORMATION: reverse the string (harmless standard-library)
 reversed_str = original[::REVERSE_PIN]
+ledger["reversed_str"] = reversed_str
 
-# SECOND HARMLESS TRANSFORMATION: ROTATE EACH CHARACTER BY +1 (PIN 2)
-rotated_str = ''.join(chr((ord(c) + 1) % 128) for c in reversed_str)
+# SECOND TRANSFORMATION: swap case (harmless standard-library)
+case_swapped = reversed_str.swapcase()
+ledger["case_swapped"] = case_swapped
 
-# BOUNDED BITWISE OPERATION: XOR WITH MAGIC KEY THEN MASK
-xored = [ord(c) ^ XOR_KEY for c in rotated_str]
-masked = [b & BITWISE_MASK for b in xored]
-bitwise_result = ''.join(chr(b) for b in masked)
+# BOUNDED BITWISE BRIDGE: XOR each byte with a fixed key then mask
+bytes_swapped = case_swapped.encode("utf-8")
+xored_bytes = bytes(b ^ XOR_KEY & BITWISE_MASK for b in bytes_swapped)
+ledger["xored_bytes"] = xored_bytes
 
-# FINAL TRANSFORMATION: SHIFT LEFT BY MAGIC AMOUNT
-final_shifted = ''.join(chr(ord(c) << SHIFT_AMOUNT) for c in bitwise_result)
+# THIRD TRANSFORMATION: base64 encode (harmless standard-library)
+import base64
+b64_encoded = base64.b64encode(xored_bytes).decode("ascii")
+ledger["b64_encoded"] = b64_encoded
 
-# EVIDENCE LEDGER: EXPOSE ALL PINS FOR AUDIT
-ledger = {
-    "original": original,
-    "reversed_str": reversed_str,
-    "rotated_str": rotated_str,
-    "xored": xored,
-    "masked": masked,
-    "bitwise_result": bitwise_result,
-    "final_shifted": final_shifted,
-    "PLAIN_REFERENCE": PLAIN_REFERENCE,
-    "REVERSE_PIN": REVERSE_PIN,
-    "BITWISE_MASK": BITWISE_MASK,
-    "XOR_KEY": XOR_KEY,
-    "SHIFT_AMOUNT": SHIFT_AMOUNT
-}
+# INVERSE CHAIN: recover the original string exactly
+# Step 1: base64 decode
+xored_recovered = base64.b64decode(b64_encoded)
+ledger["xored_recovered"] = xored_recovered
 
-# CONSPIRACY CHECK: DOES THE FINAL RESULT MATCH THE PLAIN REFERENCE?
-assert final_shifted[0] == PLAIN_REFERENCE, "CONSPIRACY CHAIN DIVERGED! THE STRING WAS COMPROMISED!"
+# Step 2: undo XOR and mask
+bytes_recovered = bytes(b ^ XOR_KEY & BITWISE_MASK for b in xored_recovered)
+ledger["bytes_recovered"] = bytes_recovered
 
-# PRINT THE LEDGER TO THE CORKBOARD
+# Step 3: swap case back
+case_restored = bytes_recovered.decode("utf-8").swapcase()
+ledger["case_restored"] = case_restored
+
+# Step 4: reverse back
+original_recovered = case_restored[::REVERSE_PIN]
+ledger["original_recovered"] = original_recovered
+
+# FINAL CONSPIRACY CHECK: the recovered string must match the plain reference exactly
+assert original_recovered == plain_reference, "conspiracy chain diverged under red-string scrutiny"
+
+# Print the evidence ledger so the corkboard is visible to all
 print(ledger)

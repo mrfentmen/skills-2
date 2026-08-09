@@ -39,6 +39,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Capability table explicit: role -> set of actions, nothing implicit
 - Threat model named: `# threat: token theft -> re-verify at every sensitive action`
 - Secrets cited: `# vault: env var + rotation; never in source or logs`
+- Demo uses stdlib only: no third-party imports (no jwt, no requests) - sign/verify tokens with hmac or a simple stdlib approach.
+- Use hmac for signatures and keep the demo's base64 encoding via the base64 module: never call secrets.urlsafe_b64encode or secrets.urlsafe_b64decode (those do not exist on the secrets module - use base64.urlsafe_b64encode or hmac instead).
 
 ```python
 def fail_closed(role, action, token_valid):

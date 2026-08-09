@@ -1,0 +1,17 @@
+{
+ "bruce-wayne": {
+  "passed": false,
+  "detail": "EXEC TIMEOUT",
+  "code_file": "results/output/mistral-small-latest_bruce-wayne.py"
+ },
+ "fedora-hat-guy": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError",
+  "code_file": "results/output/mistral-small-latest_fedora-hat-guy.py"
+ },
+ "god": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_god.py"
+ }
+}

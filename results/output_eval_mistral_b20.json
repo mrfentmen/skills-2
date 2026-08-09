@@ -1,0 +1,38 @@
+{
+  "bruce-wayne": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "fedora-hat-guy": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "noir": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "peter-parker": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "jeffery-epstien": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "god": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "hopper": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "casino-owner": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "military-general": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  }
+}

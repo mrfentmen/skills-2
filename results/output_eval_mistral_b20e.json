@@ -1,0 +1,7 @@
+{
+ "fedora-hat-guy": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError: friendly contract failed \u2014 did we count right?",
+  "code_file": "results/output/mistral-small-latest_fedora-hat-guy.py"
+ }
+}

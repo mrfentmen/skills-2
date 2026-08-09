@@ -66,6 +66,7 @@ print(report)
 - Write code that embodies **Errors are information**; make the principle visible in structure and comments, not just claimed.
 - Write code that embodies **Tiny proof**; make the principle visible in structure and comments, not just claimed.
 - Keep every example real and runnable: no mock, fake, or pseudo code; comments state the intent, not a fantasy.
+- The demo's own assertions must pass: compute the expected values from the actual input text (count the words by hand) - a demo whose assert fails on its own data is not correct, readable code.
 
 ## Cross-Language Examples
 

@@ -1,0 +1,42 @@
+{
+  "angela-merkel": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "satya-nadella": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "sheryl-sandberg": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "tim-cook": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "reid-hoffman": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "bushnell": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "walter-isaacson": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "jane-jacobs": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "stewart-brand": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "robert-oppenheimer": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  }
+}

@@ -59,6 +59,12 @@ SCOPE = [
     "the-last-employee", "greybeard-after-midnight", "netflix-streaming", "valve-time", "lisa-su",
     "alice-waters", "anthony-bourdain", "bob-ross", "thomas-edison", "marie-kondo",
     "record-producer", "rick-steves", "atul-gawande", "david-attenborough", "jim-lovelock",
+    "angela-merkel", "satya-nadella", "sheryl-sandberg", "tim-cook", "reid-hoffman",
+    "bushnell", "walter-isaacson", "jane-jacobs", "stewart-brand", "robert-oppenheimer",
+    "boardroom-liar", "boiler-room", "boiler-room-research", "war-room", "cold-war",
+    "kamikaze", "crypto-market-maker", "goldman-analyst", "quant", "forensic-money-trail",
+    "bruce-wayne", "fedora-hat-guy", "noir", "peter-parker", "jeffery-epstien",
+    "god", "hopper", "casino-owner", "military-general",
 ]
 
 TASKS = {
@@ -66,13 +72,13 @@ TASKS = {
     "sonnet": "Print the first 10 prime numbers.",
     "vampire": "Drain a list in place until it is empty and print each value.",
     "hoarder": "Process a list of numbers, never deleting or overwriting anything, and print the full history.",
-    "insomniac": "Poll two jobs until both are ready, without ever blocking or sleeping.",
+    "insomniac": "Poll two jobs until both are ready, without ever blocking or sleeping; print the final statuses and the useful work done.",
     "trial-by-combat": "Two different sorting implementations fight; a deterministic rule picks the winner.",
     "counterpoint": "Interleave two different step machines until both finish, neither observing the other's result early.",
     "casino": "Estimate pi by random sampling and print a confidence interval.",
     "dead-reckoning": "Find the maximum of a stream in one left-to-right pass with bounded memory.",
     "doppelganger": "Two different implementations of the same computation; compare them at runtime and print any disagreement.",
-    "black-box": "Find a hidden number in [0,100] using ONLY yes/no questions through a fixed query interface; never inspect the hidden value directly.",
+    "black-box": "Implement locate_yes_no(query, lo, hi, budget) using the canonical convergent binary search: while lo < hi: mid = (lo + hi + 1) // 2; if query(mid) == 'yes': lo = mid else: hi = mid - 1; then return lo. The query interface answers 'yes' iff hidden >= guess (never inspect the hidden value directly). Demo: hide 37, assert the returned answer equals 37 and the query count is <= 8, and print the result.",
     "blind": "Solve a hidden value's parity using only a closed set of named questions and primitive answers.",
     "lazarus": "Compute a rolling sum, checkpoint it, destroy the live state, then rebuild from the checkpoint and verify the result.",
     "delta": "Represent inserting an item into a list as a delta, and apply it to a base without mutating the caller's base.",
@@ -87,7 +93,7 @@ TASKS = {
     "y2k": "Parse fixed-width date records with a documented two-digit-year window and correct Gregorian leap-year handling; make truncation and overflow explicit.",
     "quantum-computing": "Simulate a single qubit with complex amplitudes, apply at least one quantum gate, and demonstrate superposition.",
     "fibonacci": "Compute the 10th Fibonacci number with the convention stated, using visible 1, 1, 2, 3, 5, 8, 13 structure; derive the result, never hardcode it.",
-    "spacex-fsw": "Run three independent computations of the same value and reconcile them by deterministic majority; exercise at least three synthetic fault scenarios.",
+    "spacex-fsw": "Implement vote(values): the majority value, or \"fault\" when no two channels agree; plus a mission computation that runs three channels and reconciles by vote, flagging sensor-loss, engine-out, and comms-drop faults with replacement values. Demo: build a verdicts matrix exercising all three fault kinds plus a triple-fault, print the matrix, and assert only structural properties your functions guarantee (fault flags set on lost channels, status values among \"ok\"/\"fault\"). Never assert exact numbers you would have to precompute by hand.",
     "vitalik": "Build an append-only ledger whose state transitions are verified independently without replaying all work, with metered resource costs.",
     "sovereign-citizen": "Reimplement one standard-library operation with a written operator allowlist, rejecting unsupported inputs, and check the result against the host operation.",
     "rorschach": "Parse the same input under at least two genuinely different interpretations, validate each with a round-trip check, and return all survivors side by side.",
@@ -96,10 +102,10 @@ TASKS = {
     "unix": "Write a small program with one stated responsibility that reads plain lines from stdin and writes plain lines to stdout, proving composition; print the processed result.",
     "neckbeard": "Implement a word counter with zero third-party dependencies, at least two cynical comments about tooling or process, input validation with an explicit error path, and a stated time/memory complexity note; print the result.",
     "blood-magic": "Manage a disposable resource with a dry-run default and an explicit armed mode; sacrifice (release) it before the main algorithm, verify after the sacrifice, and complete a real task, printing what was sacrificed.",
-    "janitor": "Manage a resource lifecycle: acquire it, register cleanup immediately, make cleanup idempotent, and demonstrate cleanup on success, failure, and early exit, printing each outcome.",
+    "janitor": "Manage a resource lifecycle: acquire it, register cleanup immediately (try/finally), make cleanup idempotent (a guard makes the second call a no-op), and demonstrate cleanup on success, failure, and early exit, printing each outcome and the resulting ledger. Use only trivially-true asserts, e.g. assert any(k == 'release' for k, _ in ledger) after each mode, and assert the success ledger's release count is 1. Never assert exact ledger contents or an exception str() against a different variable.",
     "carmack-mode": "Measure a small computation first, optimize exactly one thing justified by that measurement, and print the before/after numbers.",
     "huang": "Write a throughput-oriented computation (batched, pipelined, or vectorized) that names its bottleneck and uses hardware-friendly contiguous data layout, with a stated measurement or justification; print the result.",
-    "pepe-silvia": "Transform a string through at least two harmless standard-library transformations plus one bounded bitwise operation, name the magic-number constants, expose an evidence ledger of intermediate values, and check the result against a plain reference; print the result.",
+    "pepe-silvia": "Transform a string through at least two harmless standard-library transformations plus one bounded bitwise operation, name the magic-number constants, expose an evidence ledger of intermediate values, and check the result against a plain reference; print the result. Make the check a real round-trip: apply the inverse of each transformation and assert the ORIGINAL full string is recovered exactly - never assert that a scrambled position still matches its original.",
     "terry-davis": "Print a result using at least 2 cosmic or divine variable names, at least 1 religious or devotional comment, and at least 1 unconventional pattern (deep recursion, eval, goto-style, or odd structure).",
     "satoshi-nakamoto": "Build a minimal hash-chained append-only ledger with no central party: tampering must be detectable, conflicts resolved by an objective rule, and honest behavior the rational choice; print a verification result.",
     "shannon": "Compute the entropy of a small message, choose a redundancy decision (strip it via compression or add it via error correction), recover from a flipped bit over a noisy channel, and print the entropy and the decision.",
@@ -212,6 +218,35 @@ TASKS = {
     "atul-gawande": "Build a small checklist demo (e.g., a deployment checklist for a tiny service) and in comments document: (1) a checklist: 5-9 items covering the critical, easily-missed steps only, (2) a pause point: an explicit stop-and-verify moment with roles named, (3) a problem classification: simple, complicated, or complex — and what that dictates, (4) a co-creation note: the checklist field-tested and pruned with its users, (5) the discipline note: why even experts follow the list. Print the checklist.",
     "david-attenborough": "Build a small observation demo (e.g., watch a tiny service's behavior before diagnosing it) and in comments document: (1) an observation log: what was watched, for how long, before any hypothesis, (2) a non-intervention note: how the study avoided altering the system, (3) a baseline: the system's normal behavior, established before diagnosis, (4) a plain explanation: the complexity translated for someone new to the domain, (5) the wonder note: the detail that made the system worth watching. Print the observation log.",
     "jim-lovelock": "Build a small stability model (e.g., a tiny Daisyworld-style temperature regulation simulation) and in comments document: (1) a whole-system view: the full loop that keeps the system stable, drawn end to end, (2) a feedback model: the opposing loops (not the setpoints) that provide stability, (3) a daisyworld: the smallest model that demonstrates the regulation mechanism, (4) a tipping-point watch: the threshold metric, not just the average, (5) the humility note: what the model does not claim to know. Print the simulation output.",
+    "angela-merkel": "Build a small system-change plan the Merkel way (e.g., a tiny data migration) and in comments document: (1) a measurement: the telemetry or first-principles fact the decision rests on, (2) a step plan: the small, reversible steps, each verifiable before the next, (3) a storm-waiting note: what was deliberated on long before it was urgent, (4) a consistency check: the principle held across the whole system, even when expedient to drop it, (5) the boring-excellence note: the unglamorous, reliable move chosen over the clever one. Print the plan and demo.",
+    "satya-nadella": "Build a small culture-shift demo (e.g., reframing a team's error-handling convention) and in comments document: (1) a refresh statement: what is kept (the soul) and what is reframed (the strategy), (2) a learn-it-all move: a failure mined for an insight, not punished, (3) an empathy pass: the unmet, unarticulated need of the user or teammate, named, (4) a clarity line: the fuzzy ask made crisp and simple, (5) the growth-verse note: the fixed mindset reframed as a learning opportunity. Print the demo.",
+    "sheryl-sandberg": "Build a small lean-shipping demo (e.g., ship a tiny feature that is good enough and instrumented) and in comments document: (1) a done-better-than-perfect call: what ships now, and what the telemetry will teach, (2) a self-serve design: how value scales without linear human effort, (3) a ruthless top-two: the two priorities that matter, and the rest cut, (4) a seat-at-the-table note: the important-but-uncomfortable voice included, (5) the lean-in note: the bias toward action over waiting for certainty. Print the demo.",
+    "tim-cook": "Build a small product-hygiene demo (e.g., audit and prune a tiny codebase) and in comments document: (1) a spoilage audit: dead dependencies, flags, or code identified for removal, (2) an end-to-end trace: the path from input to output shown node by node, (3) a long-term pick: a dependency or platform choice made for longevity, (4) a privacy/security stance: user data handled as a trust obligation, stated, (5) the quiet-excellence note: the polish that is invisible but felt. Print the audit and result.",
+    "reid-hoffman": "Build a small v1-launch demo (e.g., ship a tiny networked-ish utility as v1) and in comments document: (1) a launch gate: the embarrassed-but-shipping v1, with telemetry from minute one, (2) a chaos budget: which fires are allowed to burn while the big one is put out, (3) a network effect: how every new user makes the system more valuable, (4) a player-coach note: doing the work while also building the team that replaces you, (5) a pivot-read: the data that would make you change course. Print the demo.",
+    "bushnell": "Build a small arcade-style demo (e.g., a tiny one-button game or toy) and in comments document: (1) a vertical slice: a working, runnable prototype, not a design document, (2) Bushnell's Law stated: the one-instruction onboarding and the mastery depth, (3) an iteration loop: how feedback from real play drives the next version, (4) the fun-first note: the entertainment value prioritized over polish, (5) the simple-to-learn-hard-to-master check: stated explicitly. Print the demo.",
+    "walter-isaacson": "Write a small profile of a codebase's history (e.g., trace a tiny project from genesis to now) and in comments document: (1) a primary-source list: the raw artifacts consulted (commits, logs, threads), not just docs, (2) a throughline: the one essential essence everything else hangs on, (3) a genesis account: the v1-era decisions still shaping the present, (4) the context note: what was happening in the world when the choices were made, (5) the human note: the people and their struggles behind the artifacts. Print the profile.",
+    "jane-jacobs": "Build a small organic-growth demo (e.g., design a tiny module's structure from real usage) and in comments document: (1) a local observation: what real usage/runtime data says, gathered before any design, (2) a semi-lattice check: no component locked into a single rigid parent hierarchy, (3) eyes-on-the-code: the street-level detail that top-down design would miss, (4) the mixed-use note: adjacent, different things that make each other viable, (5) the organic note: the structure that grew from need, not from a master plan. Print the demo.",
+    "stewart-brand": "Build a small long-term artifact (e.g., a tiny durable data format or a 10-year-maintainable module) and in comments document: (1) an access move: the primitive or doc that lets a user conduct their own education, (2) a long-now note: the design decision that outlives the current framework, (3) a free-and-expensive balance: what is free to use and where the real cost is paid, (4) the pace-layer note: the fast layer and the slow layer, and why both exist, (5) the keep-it-alive note: how the artifact survives its authors. Print the demo.",
+    "robert-oppenheimer": "Build a small high-stakes delivery plan (e.g., a tiny cross-team integration with a hard deadline) and in comments document: (1) the talent map: the disciplines and people needed, and how they are enabled, (2) the transparency move: how blockers and discoveries are shared across teams, (3) the pivot read: the current failure that forces a change of course, (4) the technically-sweet check: the seductive clever solution named, and its consequences weighed, (5) the responsibility note: who owns the moral weight of what ships. Print the plan and demo.",
+    "boardroom-liar": "Build a small claims audit (e.g., audit a tiny product pitch's promises) and in comments document: (1) the persuasive founder story written before the audit, (2) each material promise converted into a claim with metric, baseline, owner, sample/window, and falsifier, (3) evidence status for every claim: supported, unsupported, or conditional, (4) every unsupported claim rewritten as a limitation or measurement plan, (5) a final verdict that separates the story from the evidence. Print the audit.",
+    "boiler-room": "Build a small high-pressure sales pipeline demo (e.g., a tiny deal-closer that processes leads) and in comments document: (1) a concrete operation and a measurable completion result, (2) greed/leverage names such as client_yield or deal_velocity, (3) a bounded fast path with a stated complexity or input limit, (4) input validation and one explicit failure result, (5) an honest speed/correctness trade-off or timing measurement, (6) a working entry point that prints the outcome. Print the demo output.",
+    "boiler-room-research": "Build a small stock research note (e.g., analyze a tiny fictional company) and in comments document: (1) a hard verdict: buy case, bear case, trigger, invalidation, confidence, (2) current sources used; evidence separated from hype, (3) no guaranteed returns are promised, (4) a follow-up plan: what new data would change the verdict. Print the note.",
+    "war-room": "Build a small incident-response demo (e.g., respond to a tiny service outage) and in comments document: (1) impact, affected users, start time, scope, and current severity, (2) a containment action with owner, cost, risk, and success metric, (3) an explicit rollback or reversal path before execution, (4) a timestamped decision log separating facts, hypotheses, and actions, (5) a handoff from mitigation to root-cause investigation after service stabilizes. Print the incident log.",
+    "cold-war": "Build a small intelligence dossier (e.g., assess a tiny ambiguous situation) and in comments document: (1) facts, inferences, weak signals, unknowns, and suspected disinformation separated, (2) a source and reliability note for every material claim, (3) at least two competing hypotheses when the evidence is ambiguous, (4) a confidence level tied to evidence quality, not rhetorical certainty, (5) a named falsifier or new evidence that would change each major assessment. Print the dossier.",
+    "kamikaze": "Build a small self-deleting tool demo (e.g., a tiny self-destructing config cleaner) and in comments document: (1) real work and output completed before any deletion attempt, (2) self-deletion gated behind an explicit --self-destruct/armed flag (simulated safely in the demo), (3) the target path resolved deterministically, never from user input (use a constant path - do NOT use __file__ or argv, which are undefined under python -c), (4) symlink/ownership/path checks and a refusal on mismatch, (5) deletion verification and a dry-run demonstration. The demo must be safe: no actual file deletion, only a dry-run print. Print the dry-run output.",
+    "crypto-market-maker": "Build a small market-making simulator (e.g., a tiny two-sided quote engine for a hardcoded book) and in comments document: (1) an order-book model: two-way quotes with a spread sized by volatility/liquidity, (2) inventory skew logic: quotes adjust to pull net position toward zero, (3) at least one volatility reaction: spread widens when vol spikes, (4) a fun/edge note: where the strategy actually makes or loses money, (5) a risk check: the max inventory or loss the model accepts. Print the simulation output.",
+    "goldman-analyst": "Build a small investment note (e.g., analyze a tiny fictional company) and in comments document: (1) a one-paragraph investment thesis (what is mispriced and why), (2) at least 2 named catalysts with timeframes, (3) an earnings model: revenue, margins, EPS for at least 2 forward years, (4) a valuation: DCF with stated WACC and terminal growth, (5) the key risk and what would break the thesis. Print the note.",
+    "quant": "Build a small quant research demo (e.g., test a tiny alpha idea on a hardcoded dataset) and in comments document: (1) a hypothesis and decision metric written before evidence is inspected, (2) a named baseline and a train/validation/test or equivalent out-of-sample split, (3) leakage, survivorship bias, and multiple-testing risks addressed explicitly, (4) a result stated honestly with standard error or significance, (5) a replication note: how the result can be re-run and checked. Print the result.",
+    "forensic-money-trail": "Build a small transaction-tracing demo (e.g., trace a tiny series of transfers) and in comments document: (1) the trail: every hop traced from payer to ultimate beneficiary, with identifiers, (2) a beneficiary statement: who actually ends up with the value, named explicitly, (3) a pattern read: structuring, layering, or circular flow flagged, (4) a gaps note: what is unknown or missing, (5) a threshold call: when suspicion is warranted and who is informed. Print the trace.",
+    "bruce-wayne": "Build a small security-hardened demo (e.g., a tiny access-controlled API endpoint) and in comments document: (1) a fail-closed default: every authorization path denies on any doubt or exception, (2) a least-privilege table: each role/connection's exact capability set, stated, (3) a threat model: the trust boundaries and the top attack scenarios, (4) a defense-in-depth layer: at least one secondary control behind the first, (5) the contingency note: what happens when the first control fails. Print the demo output.",
+    "fedora-hat-guy": "Build a small cozy coding demo (e.g., a tiny text tidier that strips punctuation and lowercases, for a friend) and in comments document: (1) an explicit input/output contract and ordinary validation, (2) at least two encouraging or cozy comments and one cozy variable name, (3) correct, readable code with a working entry point, (4) a small assertion or demonstration of expected behavior on a short hardcoded input (e.g., assert the exact transformed string, which you can verify by hand), (5) a kind but explicit error result for malformed input. Print the output.",
+    "noir": "Build a small detective demo (e.g., a tiny mystery-solving computation) and in comments document: (1) at least two noir-styled names for distinct data roles, (2) a small evidence trail separating observed facts from hypotheses, (3) a reproducible diagnosis or computation beneath the voice, (4) at least one cynical first-person comment that does not alter behavior, (5) explicit handling for missing evidence or an unresolved case. Print the result.",
+    "peter-parker": "Build a small science-demo (e.g., test a tiny hypothesis about a function) and in comments document: (1) a hypothesis: the expected behavior stated before the code or fix, (2) a falsifiable test: an experiment that could prove the hypothesis wrong, (3) a lab record: observations, failed attempts, and measurements logged, (4) a control: the unchanged baseline the experiment is compared against, (5) the responsibility note: the power of the finding handled carefully. Print the experiment.",
+    "jeffery-epstien": "Build a small financial-forensics demo (e.g., trace a tiny fictional series of fund transfers) and in comments document: (1) the money trail: the actual location of the funds, traced step by step, (2) verification: every stated figure or claim tied to a primary source or a checkable computation, (3) the structure: the position or deal structure with its purpose identified, (4) the red flags: the concrete indicators that the flow is not legitimate, (5) the accountability note: who was responsible and what happened. Use clearly fictional data; print the trace.",
+    "god": "Build a small well-specified system (e.g., a tiny pure-function tool - no argv, no argparse: inputs embedded as variables, runs under python3 -c with no arguments) and include ALL of the following as explicit comment sections written as # comments (never bare markdown bullets, which are a SyntaxError): (1) an explicit [INSPECT] section naming the files, dependencies, symbols, or limits examined, (2) an explicit [LAWS] section containing at least two concrete invariants or acceptance conditions, (3) an explicit [DESIGN] section naming boundaries, data flow, and the smallest intended change, (4) an explicit [IMPLEMENT] section showing the change with validation of the laws, (5) an explicit [VERIFY] section showing the acceptance conditions checked. Print the output.",
+    "hopper": "Build a small debugging demo (e.g., reproduce and fix a tiny bug) and in comments document: (1) a chronological experiment log with hypothesis, probe, result, and next action, (2) a minimal reproduction that fails before the fix and passes after it, (3) the first incorrect state or root cause identified, not merely the final symptom, (4) a taught-fish note: the reusable lesson extracted, (5) a human note: the bug explained so a teammate actually understands it. Print the log and fix output.",
+    "casino-owner": "Build a small betting-analysis demo (e.g., evaluate a tiny casino game's edge) and in comments document: (1) a normalized stake and a clear definition of whether payout is gross or net, (2) probability/odds, fees, expected value, variance, and maximum loss, (3) the assumptions and the party with the edge, (4) an explicit action gate: positive EV, loss within the risk limit, and complete inputs, (5) an abstain result for invalid, missing, or non-positive-EV inputs. Print the analysis.",
+    "military-general": "Build a small high-stakes plan (e.g., ship a tiny feature under a hard deadline) and in comments document: (1) a stated objective before any code, (2) a terrain assessment: constraints, environment, codebase reality, (3) a forces inventory: tools, time, resources available, (4) an enemy list: at least 2 concrete failure modes planned against, (5) a reserve: the fallback when the main plan fails. Print the plan and demo.",
 }
 
 GRADERS = {
@@ -421,10 +456,11 @@ GRADERS = {
     ),
     "janitor": lambda c, o, e: (
         ("finally" in c or "cleanup" in c.lower() or "close" in c)
-        and ("idempotent" in c.lower() or "twice" in c.lower() or "second" in c.lower() or "repeat" in c.lower())
+        and        ("idempotent" in c.lower() or "twice" in c.lower() or "second" in c.lower() or "repeat" in c.lower()
+         or ("if not " in c and "close" in c))
         and ("try" in c or "finally" in c)
         and ("print" in c) and bool(o.strip()) and e == "",
-        f"cleanup={'finally' in c or 'cleanup' in c.lower() or 'close' in c} idempotent={'idempotent' in c.lower() or 'twice' in c.lower() or 'second' in c.lower() or 'repeat' in c.lower()} try/finally={'try' in c or 'finally' in c} out={bool(o.strip())}",
+        f"cleanup={'finally' in c or 'cleanup' in c.lower() or 'close' in c} idempotent={'idempotent' in c.lower() or 'twice' in c.lower() or 'second' in c.lower() or 'repeat' in c.lower() or ('if not ' in c and 'close' in c)} try/finally={'try' in c or 'finally' in c} out={bool(o.strip())}",
     ),
     "carmack-mode": lambda c, o, e: (
         ("perf_counter" in c or "time" in c.lower() or "measure" in c.lower() or "tracemalloc" in c)
@@ -441,12 +477,12 @@ GRADERS = {
         f"bottleneck={'bottleneck' in c.lower()} layout={'batch' in c.lower() or 'pipeline' in c.lower() or 'vector' in c.lower() or 'contigu' in c.lower() or 'array' in c.lower()} justified={'measure' in c.lower() or 'justif' in c.lower() or 'perf_counter' in c or 'time' in c.lower()} out={bool(o.strip())}",
     ),
     "pepe-silvia": lambda c, o, e: (
-        len([k for k in ["strip", "lower", "upper", "split", "replace", "join", "translate", "ljust", "zfill"] if k in c]) >= 2
+        len([k for k in ["strip", "lower", "upper", "split", "replace", "join", "translate", "ljust", "zfill", "[::-1]", "swapcase", "reverse", "b64", "encode", "decode", "bytes(["] if k in c]) >= 2
         and ("&" in c or "|" in c or "^" in c or "<<" in c or ">>" in c)
         and ("ledger" in c.lower() or "trace" in c.lower() or "steps" in c.lower() or "intermediate" in c.lower() or "evidence" in c.lower())
         and ("assert" in c or "reference" in c.lower() or "check" in c.lower())
         and bool(o.strip()) and e == "",
-        f"transforms={len([k for k in ['strip','lower','upper','split','replace','join','translate','ljust','zfill'] if k in c])} bitwise={'&' in c or '|' in c or '^' in c or '<<' in c or '>>' in c} ledger={'ledger' in c.lower() or 'trace' in c.lower() or 'steps' in c.lower() or 'intermediate' in c.lower() or 'evidence' in c.lower()} check={'assert' in c or 'reference' in c.lower() or 'check' in c.lower()} out={bool(o.strip())}",
+        f"transforms={len([k for k in ['strip','lower','upper','split','replace','join','translate','ljust','zfill','[::-1]','swapcase','reverse','b64','encode','decode','bytes(['] if k in c])} bitwise={'&' in c or '|' in c or '^' in c or '<<' in c or '>>' in c} ledger={'ledger' in c.lower() or 'trace' in c.lower() or 'steps' in c.lower() or 'intermediate' in c.lower() or 'evidence' in c.lower()} check={'assert' in c or 'reference' in c.lower() or 'check' in c.lower()} out={bool(o.strip())}",
     ),
     "terry-davis": lambda c, o, e: (
         len(re.findall(r"god|divine|holy|heaven|cosmic|prophet|sacred|eternal|covenant", c, re.I)) >= 2
@@ -1253,11 +1289,216 @@ GRADERS = {
         ["tipping", "threshold", "metric"],
         ["humility", "does not claim", "unknown"],
     ], o, e),
+    "angela-merkel": lambda c, o, e: _check_evidence(c, [
+        ["measurement", "telemetry", "first-principles", "fact"],
+        ["step", "reversible", "verifiable"],
+        ["storm", "deliberat", "waiting", "urgent"],
+        ["consisten", "principle", "whole system"],
+        ["boring", "reliable", "unglamorous", "clever"],
+    ], o, e),
+    "satya-nadella": lambda c, o, e: _check_evidence(c, [
+        ["refresh", "kept", "reframed", "soul"],
+        ["learn-it-all", "learn it all", "failure", "insight"],
+        ["empath", "unmet", "unarticulated", "need"],
+        ["clarity", "fuzzy", "crisp", "simple"],
+        ["growth", "fixed mindset", "learning"],
+    ], o, e),
+    "sheryl-sandberg": lambda c, o, e: _check_evidence(c, [
+        ["done", "perfect", "telemetry", "ships now"],
+        ["self-serve", "scale", "human effort"],
+        ["top-two", "top two", "priorit", "cut"],
+        ["seat at the table", "uncomfortable", "voice"],
+        ["lean in", "lean-in", "action", "certainty"],
+    ], o, e),
+    "tim-cook": lambda c, o, e: _check_evidence(c, [
+        ["spoil", "dead", "dependenc", "remove"],
+        ["end-to-end", "end to end", "trace", "node"],
+        ["long-term", "long term", "longevity", "platform"],
+        ["privac", "security", "trust", "user data"],
+        ["quiet", "polish", "invisible", "excellence"],
+    ], o, e),
+    "reid-hoffman": lambda c, o, e: _check_evidence(c, [
+        ["embarrassed", "shipping", "v1", "telemetry"],
+        ["chaos budget", "fire", "burn"],
+        ["network effect", "every new user", "more valuable"],
+        ["player-coach", "player coach", "team", "replace"],
+        ["pivot", "change course", "data"],
+    ], o, e),
+    "bushnell": lambda c, o, e: _check_evidence(c, [
+        ["vertical slice", "runnable", "prototype"],
+        ["bushnell", "one instruction", "one-instruction", "master"],
+        ["iteration", "feedback", "play"],
+        ["fun", "entertain", "polish"],
+        ["hard to master", "easy to learn", "mastery"],
+    ], o, e),
+    "walter-isaacson": lambda c, o, e: _check_evidence(c, [
+        ["primary source", "commit", "log", "artifact"],
+        ["throughline", "essence", "essential"],
+        ["genesis", "v1", "original", "founding"],
+        ["context", "world", "when"],
+        ["human", "struggle", "people"],
+    ], o, e),
+    "jane-jacobs": lambda c, o, e: _check_evidence(c, [
+        ["observation", "real usage", "runtime", "data"],
+        ["semi-lattice", "hierarch", "rigid", "parent"],
+        ["street", "detail", "eyes-on-the-code"],
+        ["mixed-use", "mixed use", "adjacent", "different"],
+        ["organic", "need", "master plan", "grew"],
+    ], o, e),
+    "stewart-brand": lambda c, o, e: _check_evidence(c, [
+        ["access", "primitive", "education", "learn"],
+        ["long now", "long-now", "outlive", "framework"],
+        ["free", "cost", "expensive", "balance"],
+        ["pace", "fast", "slow", "layer"],
+        ["alive", "survive", "author", "keep"],
+    ], o, e),
+    "robert-oppenheimer": lambda c, o, e: _check_evidence(c, [
+        ["talent", "discipline", "enable", "people"],
+        ["transparen", "blocker", "discover", "shared"],
+        ["pivot", "failure", "change of course"],
+        ["technically sweet", "clever", "consequence"],
+        ["responsib", "moral", "weight"],
+    ], o, e),
+    "boardroom-liar": lambda c, o, e: _check_evidence(c, [
+        ["founder story", "story", "persuasive", "pitch"],
+        ["claim", "metric", "baseline", "owner", "falsifier"],
+        ["supported", "unsupported", "conditional", "evidence"],
+        ["limitation", "measurement plan", "rewritten"],
+        ["verdict", "separate", "story", "evidence"],
+    ], o, e),
+    "boiler-room": lambda c, o, e: _check_evidence(c, [
+        ["operation", "completion", "measurable"],
+        ["client_yield", "deal_velocity", "greed", "leverage", "yield"],
+        ["bounded", "complexity", "input limit", "fast path"],
+        ["validat", "failure", "reject"],
+        ["speed", "correctness", "trade-off", "timing"],
+        ["entry", "main", "print", "outcome"],
+    ], o, e, need=5),
+    "boiler-room-research": lambda c, o, e: _check_evidence(c, [
+        ["buy case", "bear case", "verdict", "trigger"],
+        ["invalidation", "confidence", "hard"],
+        ["source", "hype", "evidence", "separated"],
+        ["guaranteed", "returns", "no promise"],
+        ["follow-up", "new data", "change"],
+    ], o, e),
+    "war-room": lambda c, o, e: _check_evidence(c, [
+        ["impact", "affected", "severity", "scope", "start time"],
+        ["containment", "owner", "cost", "risk", "success metric"],
+        ["rollback", "reversal", "before"],
+        ["decision log", "facts", "hypotheses", "actions", "timestamp"],
+        ["handoff", "root-cause", "mitigation", "stabil"],
+    ], o, e),
+    "cold-war": lambda c, o, e: _check_evidence(c, [
+        ["facts", "inferences", "weak signal", "unknown", "disinformation"],
+        ["source", "reliability", "claim"],
+        ["competing", "hypotheses", "ambiguous", "two"],
+        ["confidence", "evidence quality", "rhetorical"],
+        ["falsifier", "new evidence", "change"],
+    ], o, e),
+    "kamikaze": lambda c, o, e: _check_evidence(c, [
+        ["work", "output", "completed", "before"],
+        ["self-destruct", "armed", "flag", "gate"],
+        ["source path", "running script", "not user input"],
+        ["symlink", "ownership", "refuse", "mismatch"],
+        ["dry-run", "dry run", "verification", "verify"],
+    ], o, e),
+    "crypto-market-maker": lambda c, o, e: _check_evidence(c, [
+        ["order book", "order-book", "two-way", "quote", "spread"],
+        ["inventory", "skew", "net position", "zero"],
+        ["volatil", "widens", "spread", "spike"],
+        ["edge", "make money", "lose money", "fun"],
+        ["risk", "max inventory", "loss", "limit"],
+    ], o, e),
+    "goldman-analyst": lambda c, o, e: _check_evidence(c, [
+        ["thesis", "mispriced", "why"],
+        ["catalyst", "timeframe", "named"],
+        ["revenue", "margin", "eps", "forward"],
+        ["dcf", "wacc", "terminal", "valuation"],
+        ["risk", "break", "thesis"],
+    ], o, e),
+    "quant": lambda c, o, e: _check_evidence(c, [
+        ["hypothesis", "decision metric", "before"],
+        ["baseline", "train", "validation", "out-of-sample", "split"],
+        ["leakage", "survivorship", "multiple-testing", "risk"],
+        ["standard error", "significance", "honest"],
+        ["replicat", "re-run", "check"],
+    ], o, e),
+    "forensic-money-trail": lambda c, o, e: _check_evidence(c, [
+        ["trail", "hop", "payer", "beneficiary", "identifier"],
+        ["beneficiary", "ends up", "value", "who"],
+        ["structuring", "layering", "circular", "pattern"],
+        ["gap", "unknown", "missing"],
+        ["threshold", "suspicion", "informed", "warranted"],
+    ], o, e),
+    "bruce-wayne": lambda c, o, e: _check_evidence(c, [
+        ["fail-closed", "fail closed", "den", "doubt", "exception"],
+        ["least-privilege", "least privilege", "role", "capabilit"],
+        ["threat model", "trust boundary", "attack", "scenario"],
+        ["defense-in-depth", "defense in depth", "secondary", "layer"],
+        ["contingenc", "fails", "fallback"],
+    ], o, e),
+    "fedora-hat-guy": lambda c, o, e: _check_evidence(c, [
+        ["input/output", "contract", "validat"],
+        ["cozy", "encourag", "friend", "warm"],
+        ["entry", "main", "readable", "working", "print(", "def "],
+        ["assert", "expected", "demonstrat", "test"],
+        ["malformed", "kind", "error", "explicit", "reject", "invalid"],
+    ], o, e),
+    "noir": lambda c, o, e: _check_evidence(c, [
+        ["noir", "dame", "case", "mystery", "shadow", "ledger", "suspect"],
+        ["evidence", "facts", "hypothes", "trail"],
+        ["diagnos", "reproduc", "computation", "investigat", "verdict"],
+        ["cynic", "first-person", "comment", "i've seen", "seen better", "doll"],
+        ["missing", "unresolved", "gap", "no evidence"],
+    ], o, e),
+    "peter-parker": lambda c, o, e: _check_evidence(c, [
+        ["hypothes", "expected", "before"],
+        ["falsif", "prove wrong", "experiment"],
+        ["lab", "observ", "failed", "measure", "log"],
+        ["control", "baseline", "compared"],
+        ["responsib", "power", "careful", "with great"],
+    ], o, e),
+    "jeffery-epstien": lambda c, o, e: _check_evidence(c, [
+        ["money trail", "fund", "trace", "step by step", "location"],
+        ["verif", "primary source", "checkable", "figure"],
+        ["structure", "purpose", "position", "deal"],
+        ["red flag", "indicator", "legitimate", "conceal"],
+        ["accountab", "responsible", "what happened"],
+    ], o, e),
+    "god": lambda c, o, e: _check_evidence(c, [
+        ["[inspect]", "inspect"],
+        ["[laws]", "invariant", "acceptance"],
+        ["[design]", "boundar", "data flow"],
+        ["[implement]", "change", "validat"],
+        ["[verify]", "verified", "acceptance"],
+    ], o, e),
+    "hopper": lambda c, o, e: _check_evidence(c, [
+        ["hypothes", "probe", "result", "next action", "log"],
+        ["repro", "fails", "passes", "minimal"],
+        ["root cause", "first incorrect", "state"],
+        ["taught", "lesson", "reusable", "fish"],
+        ["human", "teammate", "understand", "explain"],
+    ], o, e),
+    "casino-owner": lambda c, o, e: _check_evidence(c, [
+        ["stake", "payout", "gross", "net"],
+        ["probab", "odds", "expected value", "variance", "maximum loss"],
+        ["assumption", "edge", "house"],
+        ["positive ev", "action gate", "risk limit", "complete"],
+        ["abstain", "invalid", "missing", "non-positive"],
+    ], o, e),
+    "military-general": lambda c, o, e: _check_evidence(c, [
+        ["objective", "mission", "before"],
+        ["terrain", "constraint", "environment", "reality"],
+        ["forces", "tools", "time", "resource", "inventory"],
+        ["enemy", "failure mode", "risk", "threat"],
+        ["reserve", "fallback", "plan b", "when"],
+    ], o, e),
 }
 
 
 STDIN = {
     "unix": "3 1 4 1 5 9\n2 6 5\n3 5 8\n",
+    "floor-trader": "3\n1\n4\n1\n5\n9\n",
 }
 
 

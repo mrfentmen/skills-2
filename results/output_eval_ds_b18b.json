@@ -1,0 +1,27 @@
+{
+ "bushnell": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_bushnell.py"
+ },
+ "walter-isaacson": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_walter-isaacson.py"
+ },
+ "jane-jacobs": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_jane-jacobs.py"
+ },
+ "stewart-brand": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_stewart-brand.py"
+ },
+ "robert-oppenheimer": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_robert-oppenheimer.py"
+ }
+}

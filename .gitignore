@@ -1,3 +1,13 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# demo byproducts from running eval samples
+README copy.md
+demo.kv
+demo_*.json
+*.fa
+long_now_log.json
+tiny_kv_store.*
+user_data.csv
+results/output/demo_codebase/

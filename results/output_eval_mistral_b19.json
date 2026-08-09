@@ -1,0 +1,42 @@
+{
+  "boardroom-liar": {
+    "passed": true,
+    "detail": "hits=4 out=True"
+  },
+  "boiler-room": {
+    "passed": true,
+    "detail": "hits=6 out=True"
+  },
+  "boiler-room-research": {
+    "passed": true,
+    "detail": "hits=4 out=True"
+  },
+  "war-room": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "cold-war": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "kamikaze": {
+    "passed": true,
+    "detail": "hits=4 out=True"
+  },
+  "crypto-market-maker": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "goldman-analyst": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "quant": {
+    "passed": true,
+    "detail": "hits=4 out=True"
+  },
+  "forensic-money-trail": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  }
+}

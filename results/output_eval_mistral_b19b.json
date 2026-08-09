@@ -1,0 +1,12 @@
+{
+ "kamikaze": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/mistral-small-latest_kamikaze.py"
+ },
+ "quant": {
+  "passed": false,
+  "detail": "EXEC FAIL: statistics.StatisticsError: mean requires at least one data point",
+  "code_file": "results/output/mistral-small-latest_quant.py"
+ }
+}

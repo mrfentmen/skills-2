@@ -1,0 +1,27 @@
+{
+ "angela-merkel": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_angela-merkel.py"
+ },
+ "satya-nadella": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_satya-nadella.py"
+ },
+ "sheryl-sandberg": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_sheryl-sandberg.py"
+ },
+ "tim-cook": {
+  "passed": false,
+  "detail": "EXEC FAIL: TypeError: decoding to str: need a bytes-like object, tuple found",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_tim-cook.py"
+ },
+ "reid-hoffman": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_reid-hoffman.py"
+ }
+}
