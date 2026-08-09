@@ -1,0 +1,17 @@
+{
+ "lamport": {
+  "passed": false,
+  "detail": "hb=True wall-clock=False invariant=True init-next=True out=True",
+  "code_file": "results/output/mistral-small-latest_lamport.py"
+ },
+ "brian-kernighan": {
+  "passed": false,
+  "detail": "clarity=True modular=False correct=True out=True",
+  "code_file": "results/output/mistral-small-latest_brian-kernighan.py"
+ },
+ "edward-tufte": {
+  "passed": false,
+  "detail": "EXEC FAIL: NameError: name 'data_ink_ratio' is not defined",
+  "code_file": "results/output/mistral-small-latest_edward-tufte.py"
+ }
+}

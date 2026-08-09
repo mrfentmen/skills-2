@@ -1,0 +1,7 @@
+{
+ "feynman": {
+  "passed": true,
+  "detail": "recreate=True trace=True ice-water=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_feynman.py"
+ }
+}

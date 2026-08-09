@@ -39,6 +39,8 @@ SCOPE = [
     "carmack-mode", "huang", "pepe-silvia", "terry-davis", "satoshi-nakamoto",
     "shannon", "turing", "patterson", "desert-island", "jane-street",
     "sweeney", "vint-cerf", "oracle", "no-bullshit", "smoker",
+    "barbara-liskov", "dijkstra", "knuth", "lamport", "brian-kernighan",
+    "dennis-ritchie", "john-tukey", "edward-tufte", "feynman", "george-polya",
 ]
 
 TASKS = {
@@ -92,6 +94,16 @@ TASKS = {
     "oracle": "State a prediction for a coin-flip sequence with a confidence prior, define the observation that would falsify it, run a real probe, and print the updated judgment with uncertainty labeled.",
     "no-bullshit": "Inspect this small data set embedded in your program: [{\"service\": \"api\", \"status\": \"up\"}, {\"service\": \"db\", \"status\": \"down\"}, {\"service\": \"cache\", \"status\": \"up\"}]. Write a numbered plan, implement it, verify what you tested, state what remains unverified, and print the health report; never write 'this should work'.",
     "smoker": "Inspect a small computation first, implement it in direct first-person style with explicit comments, list what remains unverified, back every claim with a test you ran, and print the result.",
+    "barbara-liskov": "Implement a small type hierarchy (a base type and at least one subtype that is substitutable wherever the base is used): state the abstraction, the contract (pre/postconditions), and a history check showing the subtype cannot expose mutable internal state; print the demonstration result.",
+    "dijkstra": "Implement a small algorithm (e.g., binary search or a state machine): state explicit preconditions and postconditions before the code, write the loop invariant before each loop that uses one, justify every variable in a state-space note, and explain any trick in a transparency pass; print the result.",
+    "knuth": "Implement a small algorithm (e.g., sorting or text processing) with a literate explanation of the data model and algorithm alongside the code, named preconditions, postconditions, invariant, and termination argument, a working input-to-output example plus one edge case, and a complexity statement; print the result.",
+    "lamport": "Implement a small ordering system (e.g., two processes exchanging messages through a queue) with an explicit happens-before ordering rule that never uses wall-clock time, a written list of safety invariants before the concurrency code, and a named Init/Next state-machine statement; print the observed order.",
+    "brian-kernighan": "Take a small real routine (e.g., a date or word-count function), show a clarity pass that simplifies a dense or clever construct into plain statements, verify each function does one thing, and state correctness before any speed claim; print the result.",
+    "dennis-ritchie": "Implement a small tool (e.g., a line counter or byte filter) with a small core abstraction stated in a sentence, a trust note where the design assumes a competent programmer, and one explicit portability move; print the result.",
+    "john-tukey": "Analyze this data set embedded in the program: [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9]. Do an exploratory pass (quantiles, outliers) before any model, state the right question, report a robust summary (medians/quantiles, not just the mean), and note the limits; print the analysis.",
+    "edward-tufte": "Build a small text chart or table for this data set: [apples: 12, bananas: 8, cherries: 15]. Audit it: state the data-ink audit (what was erased and what each surviving mark carries), the integrity check (lie factor 1.0, honest axes, bars from zero), and a chartjunk pass (one decorative element removed or rejected); print the chart and the audit.",
+    "feynman": "Implement a small numeric routine (e.g., a square-root or sorting primitive): recreate the core primitive from scratch before using it, write out a trace of the state at each step, then inject one extreme boundary case (the ice-water test) and print the results.",
+    "george-polya": "Solve a small problem (e.g., a word or number puzzle): state the understanding (unknown, data, condition) before any code, name the plan strategy and a related problem it resembles, carry it out step by step, and look back to verify the solution; print the walkthrough and the result.",
 }
 
 GRADERS = {
@@ -416,6 +428,80 @@ GRADERS = {
         and ("i checked" in c.lower() or "i verified" in c.lower() or "i ran" in c.lower() or "i wrote" in c.lower() or "first-person" in c.lower())
         and bool(o.strip()) and e == "",
         f"inspect-first={'inspect' in c.lower() or 'checked' in c.lower() or 'read' in c.lower()} unverified={'unverified' in c.lower() or 'not verified' in c.lower() or 'not tested' in c.lower()} grounded={'assert' in c or 'test' in c.lower() or 'ran' in c.lower()} first-person={'i checked' in c.lower() or 'i verified' in c.lower() or 'i ran' in c.lower() or 'i wrote' in c.lower() or 'first-person' in c.lower()} out={bool(o.strip())}",
+    ),
+    "barbara-liskov": lambda c, o, e: (
+        ("substitutab" in c.lower() or "liskov" in c.lower() or "is-a" in c.lower())
+        and ("contract" in c.lower() or ("precondition" in c.lower() and "postcondition" in c.lower()))
+        and ("history" in c.lower() or "mutation" in c.lower() or "internal state" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"subst={"substitutab" in c.lower() or "liskov" in c.lower() or "is-a" in c.lower()} contract={"contract" in c.lower() or ("precondition" in c.lower() and "postcondition" in c.lower())} history={"history" in c.lower() or "mutation" in c.lower() or "internal state" in c.lower()} out={bool(o.strip())}",
+    ),
+    "dijkstra": lambda c, o, e: (
+        (("precondition" in c.lower() and "postcondition" in c.lower()) or ("requires" in c.lower() and "ensures" in c.lower()))
+        and "invariant" in c.lower()
+        and "state" in c.lower()
+        and ("transparen" in c.lower() or "clever" in c.lower() or "explain" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"pre/post={("precondition" in c.lower() and "postcondition" in c.lower()) or ("requires" in c.lower() and "ensures" in c.lower())} invariant={"invariant" in c.lower()} state={"state" in c.lower()} transparent={"transparen" in c.lower() or "clever" in c.lower() or "explain" in c.lower()} out={bool(o.strip())}",
+    ),
+    "knuth": lambda c, o, e: (
+        ("precondition" in c.lower() or "postcondition" in c.lower() or "invariant" in c.lower())
+        and "termination" in c.lower()
+        and "complexity" in c.lower()
+        and ("edge" in c.lower() or "boundary" in c.lower() or "corner" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"contract={"precondition" in c.lower() or "postcondition" in c.lower() or "invariant" in c.lower()} termination={"termination" in c.lower()} complexity={"complexity" in c.lower()} edge={"edge" in c.lower() or "boundary" in c.lower() or "corner" in c.lower()} out={bool(o.strip())}",
+    ),
+    "lamport": lambda c, o, e: (
+        ("happens-before" in c.lower() or "happens before" in c.lower())
+        and (("wall-clock" in c.lower() or "wall clock" in c.lower()) or ("logical" in c.lower() and "clock" in c.lower()) or ("happens-before" in c.lower() and "clock" in c.lower()))
+        and "invariant" in c.lower()
+        and ("init" in c.lower() and "next" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"hb={"happens-before" in c.lower() or "happens before" in c.lower()} wall-clock={("wall-clock" in c.lower() or "wall clock" in c.lower()) or ("logical" in c.lower() and "clock" in c.lower()) or ("happens-before" in c.lower() and "clock" in c.lower())} invariant={"invariant" in c.lower()} init-next={"init" in c.lower() and "next" in c.lower()} out={bool(o.strip())}",
+    ),
+    "brian-kernighan": lambda c, o, e: (
+        (("clarif" in c.lower() or "clarity" in c.lower() or "simplif" in c.lower() or "rewrote" in c.lower()) or ("clever version" in c.lower() and "plain version" in c.lower()))
+        and ("modular" in c.lower() or "one thing" in c.lower() or "one job" in c.lower() or "each function" in c.lower() or c.count("def ") >= 2)
+        and ("correct" in c.lower() or "right before" in c.lower() or "clear before" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"clarity={("clarif" in c.lower() or "clarity" in c.lower() or "simplif" in c.lower() or "rewrote" in c.lower()) or ("clever version" in c.lower() and "plain version" in c.lower())} modular={"modular" in c.lower() or "one thing" in c.lower() or "one job" in c.lower() or "each function" in c.lower() or c.count("def ") >= 2} correct={"correct" in c.lower() or "right before" in c.lower() or "clear before" in c.lower()} out={bool(o.strip())}",
+    ),
+    "dennis-ritchie": lambda c, o, e: (
+        ("core" in c.lower() or "essential" in c.lower())
+        and ("trust" in c.lower() or "competent" in c.lower() or "owns" in c.lower() or "owner" in c.lower() or "fence" in c.lower() or "assume" in c.lower())
+        and ("portab" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"core={"core" in c.lower() or "essential" in c.lower()} trust={"trust" in c.lower() or "competent" in c.lower() or "owns" in c.lower() or "owner" in c.lower() or "fence" in c.lower() or "assume" in c.lower()} portab={"portab" in c.lower()} out={bool(o.strip())}",
+    ),
+    "john-tukey": lambda c, o, e: (
+        ("explor" in c.lower() or "quantile" in c.lower() or "outlier" in c.lower())
+        and ("median" in c.lower() or "robust" in c.lower())
+        and "limit" in c.lower()
+        and bool(o.strip()) and e == "",
+        f"explore={"explor" in c.lower() or "quantile" in c.lower() or "outlier" in c.lower()} robust={"median" in c.lower() or "robust" in c.lower()} limit={"limit" in c.lower()} out={bool(o.strip())}",
+    ),
+    "edward-tufte": lambda c, o, e: (
+        ("data-ink" in c.lower() or "data ink" in c.lower() or "ink" in c.lower())
+        and ("lie factor" in c.lower() or "lie_factor" in c.lower() or "integrity" in c.lower())
+        and ("chartjunk" in c.lower() or "chart junk" in c.lower() or "junk" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"ink={"data-ink" in c.lower() or "data ink" in c.lower() or "ink" in c.lower()} integrity={"lie factor" in c.lower() or "lie_factor" in c.lower() or "integrity" in c.lower()} junk={"chartjunk" in c.lower() or "chart junk" in c.lower() or "junk" in c.lower()} out={bool(o.strip())}",
+    ),
+    "feynman": lambda c, o, e: (
+        ("recreate" in c.lower() or "from scratch" in c.lower() or "re-implement" in c.lower())
+        and ("trace" in c.lower() or "state" in c.lower())
+        and ("ice-water" in c.lower() or "ice water" in c.lower() or "boundary" in c.lower() or "extreme" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"recreate={"recreate" in c.lower() or "from scratch" in c.lower() or "re-implement" in c.lower()} trace={"trace" in c.lower() or "state" in c.lower()} ice-water={"ice-water" in c.lower() or "ice water" in c.lower() or "boundary" in c.lower() or "extreme" in c.lower()} out={bool(o.strip())}",
+    ),
+    "george-polya": lambda c, o, e: (
+        ("understand" in c.lower() or "unknown" in c.lower())
+        and ("plan" in c.lower() or "strategy" in c.lower())
+        and ("carry" in c.lower() or "step by step" in c.lower())
+        and ("look-back" in c.lower() or "look back" in c.lower() or "verify" in c.lower() or "check" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"understand={"understand" in c.lower() or "unknown" in c.lower()} plan={"plan" in c.lower() or "strategy" in c.lower()} carry={"carry" in c.lower() or "step by step" in c.lower()} look-back={"look-back" in c.lower() or "look back" in c.lower() or "verify" in c.lower() or "check" in c.lower()} out={bool(o.strip())}",
     ),
 }
 

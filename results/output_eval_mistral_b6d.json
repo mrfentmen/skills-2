@@ -1,0 +1,7 @@
+{
+ "edward-tufte": {
+  "passed": true,
+  "detail": "ink=True integrity=True junk=True out=True",
+  "code_file": "results/output/mistral-small-latest_edward-tufte.py"
+ }
+}

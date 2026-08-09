@@ -39,6 +39,12 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Chartjunk pass: `# rejected: the icon "duck" per series — it adds noise, not information`
 - Multiples: `# six sparklines, one scale, one row — the anomaly jumps out`
 - Context: `# compared to what? last quarter, same cohort, seasonally adjusted`
+- Stdlib-only rendering: never import a third-party plotting library
+  (matplotlib, seaborn, plotly); render text/ASCII charts — bars, sparklines,
+  multiples — with print(), so the demo runs anywhere
+- Self-contained demos: define every function the demo calls — never reference
+a helper from the examples (e.g., `data_ink_ratio`, `lie_factor`) without
+including its definition in the same file
 
 ```python
 def data_ink_ratio(marks, total_pixels):

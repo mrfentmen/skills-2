@@ -1,0 +1,12 @@
+{
+ "knuth": {
+  "passed": true,
+  "detail": "contract=True termination=True complexity=True edge=True out=True",
+  "code_file": "results/output/mistral-small-latest_knuth.py"
+ },
+ "edward-tufte": {
+  "passed": false,
+  "detail": "EXEC FAIL: NameError: name 'data_ink_ratio' is not defined",
+  "code_file": "results/output/mistral-small-latest_edward-tufte.py"
+ }
+}

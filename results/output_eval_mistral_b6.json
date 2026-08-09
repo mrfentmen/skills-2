@@ -1,0 +1,52 @@
+{
+ "barbara-liskov": {
+  "passed": true,
+  "detail": "subst=True contract=True history=True out=True",
+  "code_file": "results/output/mistral-small-latest_barbara-liskov.py"
+ },
+ "dijkstra": {
+  "passed": false,
+  "detail": "pre/post=False invariant=True state=True transparent=True out=True",
+  "code_file": "results/output/mistral-small-latest_dijkstra.py"
+ },
+ "knuth": {
+  "passed": false,
+  "detail": "contract=True termination=True complexity=False edge=True out=True",
+  "code_file": "results/output/mistral-small-latest_knuth.py"
+ },
+ "lamport": {
+  "passed": false,
+  "detail": "hb=True wall-clock=False invariant=True init-next=True out=True",
+  "code_file": "results/output/mistral-small-latest_lamport.py"
+ },
+ "brian-kernighan": {
+  "passed": false,
+  "detail": "clarity=False modular=False correct=False out=True",
+  "code_file": "results/output/mistral-small-latest_brian-kernighan.py"
+ },
+ "dennis-ritchie": {
+  "passed": false,
+  "detail": "core=True trust=False portab=True out=True",
+  "code_file": "results/output/mistral-small-latest_dennis-ritchie.py"
+ },
+ "john-tukey": {
+  "passed": true,
+  "detail": "explore=True robust=True limit=True out=True",
+  "code_file": "results/output/mistral-small-latest_john-tukey.py"
+ },
+ "edward-tufte": {
+  "passed": false,
+  "detail": "EXEC FAIL: ModuleNotFoundError: No module named 'matplotlib'",
+  "code_file": "results/output/mistral-small-latest_edward-tufte.py"
+ },
+ "feynman": {
+  "passed": true,
+  "detail": "recreate=True trace=True ice-water=True out=True",
+  "code_file": "results/output/mistral-small-latest_feynman.py"
+ },
+ "george-polya": {
+  "passed": true,
+  "detail": "understand=True plan=True carry=True look-back=True out=True",
+  "code_file": "results/output/mistral-small-latest_george-polya.py"
+ }
+}

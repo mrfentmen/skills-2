@@ -1,0 +1,52 @@
+{
+ "barbara-liskov": {
+  "passed": true,
+  "detail": "subst=True contract=True history=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_barbara-liskov.py"
+ },
+ "dijkstra": {
+  "passed": false,
+  "detail": "pre/post=False invariant=True state=True transparent=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_dijkstra.py"
+ },
+ "knuth": {
+  "passed": true,
+  "detail": "contract=True termination=True complexity=True edge=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_knuth.py"
+ },
+ "lamport": {
+  "passed": true,
+  "detail": "hb=True wall-clock=True invariant=True init-next=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_lamport.py"
+ },
+ "brian-kernighan": {
+  "passed": false,
+  "detail": "clarity=False modular=True correct=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_brian-kernighan.py"
+ },
+ "dennis-ritchie": {
+  "passed": false,
+  "detail": "core=True trust=False portab=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_dennis-ritchie.py"
+ },
+ "john-tukey": {
+  "passed": true,
+  "detail": "explore=True robust=True limit=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_john-tukey.py"
+ },
+ "edward-tufte": {
+  "passed": true,
+  "detail": "ink=True integrity=True junk=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_edward-tufte.py"
+ },
+ "feynman": {
+  "passed": false,
+  "detail": "EXEC TIMEOUT",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_feynman.py"
+ },
+ "george-polya": {
+  "passed": true,
+  "detail": "understand=True plan=True carry=True look-back=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_george-polya.py"
+ }
+}

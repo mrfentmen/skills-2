@@ -291,6 +291,49 @@ desert-island, jane-street, sweeney, vint-cerf, oracle, no-bullshit, smoker
   fix is warranted (overfitting to one model's test-logic bug would weaken
   the skill).
 
+## Round 8: sixth constraint batch (60 skills total) — first perfect round
+
+Extended the harness to 10 more constraint skills: barbara-liskov, dijkstra,
+knuth, lamport, brian-kernighan, dennis-ritchie, john-tukey, edward-tufte,
+feynman, george-polya (60 skills under test).
+
+| Model | batch 6 final | remaining failures |
+|---|---|---|
+| deepseek-v4-flash | **10/10** | none |
+| mistral-small-latest | **10/10** | none |
+
+### Grader fixes (5 too-literal checks, 0 skill blame)
+
+- **dijkstra**: pre/postconditions also accepted as the classical
+  `requires:` / `ensures:` contract vocabulary (deepseek wrote the contract
+  in the skill's spirit without the literal words).
+- **dennis-ritchie**: the trust note also accepted as "no safety fence",
+  "programmer owns the stream", "assume" (deepseek expressed the trust note
+  as ownership, not the word "trust").
+- **lamport**: the logical-ordering requirement accepts a logical clock
+  demonstrated as `happens-before` + `clock` (the skill's own parenthetical
+  defines logical ordering as happens-before; mistral never says "logical").
+- **brian-kernighan**: the clarity pass also accepts "clever version" /
+  "plain version" and the word "clarity" itself (deepseek wrote "clarity
+  pass"); modularity accepts two or more single-purpose named functions as
+  structural evidence.
+
+### Skill-wording fix from a real failure
+
+- **edward-tufte**: style guidelines now require stdlib-only rendering
+  (text/ASCII charts via print(); never matplotlib/seaborn/plotly) and
+  self-contained demos (define every helper the demo calls — mistral twice
+  called the example's `data_ink_ratio`/`lie_factor` without defining them).
+  After the note, mistral produced a correct text bar chart with audit lines.
+
+### Flaky model bugs that passed on re-run (not skill defects)
+
+- **feynman** (deepseek): first run's own ice-water test chose `x=1e300`;
+  Newton's method overflows (`guess^2 = inf`) and loops forever -> EXEC
+  TIMEOUT. Fresh run wrote a bounded trace and passed.
+- **knuth** (mistral): first run omitted the required complexity statement;
+  fresh run included it (complexity=True) and passed.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \
