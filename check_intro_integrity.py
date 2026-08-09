@@ -9,9 +9,9 @@ appending new identity lines is allowed; rewriting the original wording
 is flagged.
 
 Usage:  python3 check_intro_integrity.py [--baseline <commit>]
-Default baseline: aa19e34 (Round 7 tip, includes the owner's intentional
-intro edits to desert-island and jeffery-epstien made 2026-08-08 via the
-GitHub web UI). Set BASELINE_COMMIT to override.
+Default baseline: 8d5c11f (Round 8 tip, includes the owner's intentional
+intro edits to desert-island, jeffery-epstien, and goldfish made 2026-08-08
+via the GitHub web UI / local edits). Set BASELINE_COMMIT to override.
 """
 import subprocess
 import sys
@@ -19,7 +19,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 BASELINE = sys.argv[sys.argv.index("--baseline") + 1] if "--baseline" in sys.argv \
-    else "aa19e34"
+    else "8d5c11f"
 
 
 def get_blob(ref: str, path: str) -> str:
