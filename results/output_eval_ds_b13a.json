@@ -1,0 +1,27 @@
+{
+ "buffett": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_buffett.py"
+ },
+ "burry": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_burry.py"
+ },
+ "dalio": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_dalio.py"
+ },
+ "howard-marks": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_howard-marks.py"
+ },
+ "munger": {
+  "passed": false,
+  "detail": "EXEC FAIL: SyntaxError: '(' was never closed",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_munger.py"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "dalio": {
+  "passed": false,
+  "detail": "EXEC FAIL: IndentationError: expected an indented block after 'for' statement on line 125",
+  "code_file": "results/output/mistral-small-latest_dalio.py"
+ }
+}

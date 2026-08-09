@@ -1,0 +1,27 @@
+{
+ "tudor-jones": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_tudor-jones.py"
+ },
+ "soros": {
+  "passed": true,
+  "detail": "hits=7 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_soros.py"
+ },
+ "lynch": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_lynch.py"
+ },
+ "icahn": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_icahn.py"
+ },
+ "druckenmiller": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_druckenmiller.py"
+ }
+}

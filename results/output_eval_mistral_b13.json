@@ -1,0 +1,56 @@
+{
+  "skills": [
+    "buffett",
+    "burry",
+    "dalio",
+    "howard-marks",
+    "munger",
+    "tudor-jones",
+    "soros",
+    "lynch",
+    "icahn",
+    "druckenmiller"
+  ],
+  "results": {
+    "buffett": {
+      "pass": true,
+      "detail": "hits=5 out=True"
+    },
+    "burry": {
+      "pass": true,
+      "detail": "hits=5 out=True"
+    },
+    "dalio": {
+      "pass": true,
+      "detail": "hits=6 out=True"
+    },
+    "howard-marks": {
+      "pass": true,
+      "detail": "hits=5 out=True"
+    },
+    "munger": {
+      "pass": true,
+      "detail": "hits=5 out=True"
+    },
+    "tudor-jones": {
+      "pass": true,
+      "detail": "hits=5 out=True"
+    },
+    "soros": {
+      "pass": true,
+      "detail": "hits=7 out=True"
+    },
+    "lynch": {
+      "pass": true,
+      "detail": "hits=5 out=True"
+    },
+    "icahn": {
+      "pass": true,
+      "detail": "hits=5 out=True"
+    },
+    "druckenmiller": {
+      "pass": true,
+      "detail": "hits=5 out=True"
+    }
+  }
+}

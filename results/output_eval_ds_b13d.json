@@ -1,0 +1,7 @@
+{
+ "munger": {
+  "passed": false,
+  "detail": "EXEC FAIL: SyntaxError: '[' was never closed",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_munger.py"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "dalio": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/mistral-small-latest_dalio.py"
+ }
+}

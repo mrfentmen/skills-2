@@ -48,6 +48,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
+- Demo code must be stdlib-only (math / statistics / random / itertools only): no numpy, pandas, or scipy in any runnable example.
+- Demos run standalone with zero arguments and no interactive input: hardcode the sample data, compute, and print.
 - Regime tags on every decision: `regime = {growth: "above", inflation: "below"}`
 - Attribution split: `beta_contribution` vs `alpha_contribution` computed separately
 - Weights from inverse volatility, normalized to equal risk contribution

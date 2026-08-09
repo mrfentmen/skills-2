@@ -49,6 +49,8 @@ SCOPE = [
     "joy-buolamwini", "werner-heisenberg", "wozniak", "jony-ive", "susan-kare",
     "lattner", "stroustrup", "rich-hickey", "van-rossum", "torvalds",
     "kay", "miyamoto", "sid-meier", "satoru-iwata", "simons",
+    "buffett", "burry", "dalio", "howard-marks", "munger", "tudor-jones",
+    "soros", "lynch", "icahn", "druckenmiller",
 ]
 
 TASKS = {
@@ -152,6 +154,16 @@ TASKS = {
     "sid-meier": "Design a small game loop (e.g., a tiny resource-allocation game) and in comments document: (1) the decisions: the interesting choices the user makes, each with real trade-offs, (2) the feedback loop: how each choice echoes back visible acknowledgment, (3) the iteration note: what was prototyped, playtested, and cut, (4) the tuning move: a parameter doubled or halved, not fiddled by 10%, (5) the learn-master balance: the simple rule set that produces emergent depth. Print the game loop demo.",
     "satoru-iwata": "Build a small feature for a user (e.g., a tiny tool with a fun interface) and in comments document: (1) a fun check: the feature judged by the end user's felt experience, stated in their words, (2) a no-saying: the requested thing that seemed impossible, and the ingenuity that did it, (3) a rewrite call: an honest cost comparison of patching vs starting over, with a decision, (4) a tooling move: automation built so the human creative work is preserved, (5) a team shield: the person who made the mistake treated as the one to help, not blame. Print the result.",
     "simons": "Analyze a small embedded time series (e.g., [1,2,1,2,1,2,3,2,1,2,1,2]) and in comments document: (1) a signal discovered from data, not assumed from narrative (state the anomaly), (2) out-of-sample validation: the signal holds on data it was not fit on, (3) honest edge sizing: win rate, volume, and per-trade cost stated together, (4) no human override path: the model executes within stated risk limits, (5) slippage/latency/impact modeled explicitly in the edge calculation, (6) at least one signal-processing treatment (autocorrelation, filter, regime model). Print the analysis.",
+    "buffett": "Evaluate a small company example (hardcoded 10-year revenue/profit numbers) and in comments document: (1) a circle-of-competence verdict: in scope, or routed to the Too Hard pile with reason, (2) a moat check: ROIC (10-yr median >= 15%) and gross-margin stability across cycles, (3) owner earnings computed (not raw cash flow): NI + non-cash - maintenance capex +/- working capital, (4) intrinsic value with conservative terminal growth (<= long-run GDP), (5) a margin of safety stated (>= 25% discount required), (6) a punch-card note: why this beats every other idea you are not doing. Print the analysis and verdict.",
+    "burry": "Analyze a small distressed credit example (hardcoded bond terms with a covenant clause) and in comments document: (1) primary-source evidence: a specific contract, covenant, or filing clause cited, (2) the market-consensus view stated and the specific mispricing identified, (3) a defined-risk structure: downside capped (puts / protection), upside stated, (4) a survival plan: how the position weathers being early (sizing, patience, evidence), (5) a hard-evidence thesis document: why you will not capitulate, in writing. Print the analysis.",
+    "dalio": "Build a small portfolio analysis (hardcoded asset return series) and in comments document: (1) a regime classification (growth and inflation above/below expectations) before decisions, (2) alpha and beta tracked separately (attribution split explicit), (3) a risk-parity allocation: weights by inverse volatility, equal risk contribution, (4) at least 15 uncorrelated return streams or a stated diversification argument, (5) at least 1 historical shock scenario (e.g., 2008) run against the portfolio, (6) a radical-truth audit log: decision recorded with a postmortem hook on invalidation. Print the allocation and audit log.",
+    "howard-marks": "Write a small investment memo (hardcoded example market data) and in comments document: (1) a second-level pass: what the consensus is pricing in, and the hidden cost, (2) a risk-location note: where the risk actually is, especially where it is least perceived, (3) a preparation move: the system hardened for an outlier that cannot be predicted, (4) a temperature reading: where the current hype/fear cycle stands and what it implies, (5) a price-vs-value audit: the total cost of ownership of the proposed choice. Print the memo.",
+    "munger": "Design a small system sketch (e.g., a tiny payment service, at most ~40 lines, no comments longer than one line) and in comments document: (1) an inversion pass: the ways this system dies listed BEFORE any build, (2) a pre-mortem: a written failure story dated from the future, with guardrails for each failure, (3) an incentive audit: what the design actually rewards, not just what it intends, (4) a circle-of-competence statement: what is known, what is not, and how the gaps are vetted, (5) a simplicity check: every abstraction is justified or removed. Keep the demo short enough to complete in one pass; print the design and the death list.",
+    "tudor-jones": "Build a tiny trading simulator (hardcoded price series) and in comments document: (1) a hard daily loss limit that halts trading when breached, (2) a 5:1 risk-reward gate: no trade opens unless gain >= 5 * risk, (3) an anti-averaging rule: losers are never added to, (4) a tape-over-thesis rule: price action overrides the fundamental view, (5) a 200-day moving average defense line for macro positioning. Print the trade log.",
+    "soros": "Write a small reflexivity analysis (hardcoded example, e.g., a currency or credit feedback loop) and in comments document: (1) a stated prevailing bias: what the market or system currently believes, (2) a reflexive feedback model: belief -> action -> changed conditions -> revised belief, (3) at least one observable test that could support or falsify the proposed mechanism, (4) an asymmetry table with explicit upside, downside, and exposure limit, (5) a sizing rule that starts with a test position and specifies when to scale or cut to zero, (6) a thesis-invalidating exit condition, including what evidence triggers it, (7) a distinction between sourced historical fact, inference, and uncertainty. Print the analysis.",
+    "lynch": "Analyze a small stock example (hardcoded financials) and in comments document: (1) a what-you-know spark verified against fundamentals (product % of revenue), (2) the stock classified into one of the six categories with the matching questions, (3) a PEG ratio computed and interpreted (P/E / growth; <1.0 cheap, >1.5-2.0 priced in), (4) a two-minute story: the thesis stated simply enough to pass the rule, (5) an anti-diworsification stance: few names, all understood. Print the analysis.",
+    "icahn": "Write a small activist analysis of a company example (hardcoded balance sheet) and in comments document: (1) a value gap: the worth-vs-price spread quantified with the numbers that prove it, (2) a governance case: the misallocation or misalignment documented (cash, ROIC, comp), (3) a catalyst plan: the escalation path (letter, board seat, proxy threat) sequenced, (4) an exit/monitoring rule: what the thesis needs to keep working, stated, (5) the friend warning: the stance on management, explicit (they are not your friend). Print the analysis.",
+    "druckenmiller": "Write a small macro portfolio analysis (hardcoded market data) and in comments document: (1) an asymmetric-payoff statement: win rate, size when right, size when wrong, (2) a concentration cap: the book holds few high-conviction bets, not a 40-name spread, (3) a thesis-invalidation rule: the explicit condition that forces exit (not a price stop), (4) a press-winners rule: the condition that scales a position up 3-5x, (5) an 18-month-forward view: leading liquidity signals over trailing earnings. Print the analysis.",
 }
 
 GRADERS = {
@@ -833,6 +845,79 @@ GRADERS = {
         ["slippage", "latency", "impact"],
         ["autocorrel", "filter", "regime"],
     ], o, e, need=5),
+    "buffett": lambda c, o, e: _check_evidence(c, [
+        ["roic", "moat", "gross margin", "median"],
+        ["owner earnings", "maintenance capex", "non-cash", "working capital"],
+        ["intrinsic", "terminal growth", "dcf", "discount"],
+        ["margin of safety", "25%"],
+        ["punch card", "too hard", "circle of competence", "in scope"],
+    ], o, e),
+    "burry": lambda c, o, e: _check_evidence(c, [
+        ["covenant", "clause", "filing", "contract", "10-k"],
+        ["consensus", "mispric", "market view"],
+        ["downside", "cap", "puts", "protection", "upside"],
+        ["survive", "early", "sizing", "patience", "capitulat"],
+        ["thesis", "evidence", "capitulat"],
+    ], o, e),
+    "dalio": lambda c, o, e: _check_evidence(c, [
+        ["regime", "growth", "inflation"],
+        ["alpha", "beta", "attribution"],
+        ["risk parity", "inverse volatility", "risk contribution"],
+        ["uncorrelated", "diversif", "stream"],
+        ["shock", "scenario", "stress", "2008"],
+        ["audit", "postmortem", "radical truth", "decision"],
+    ], o, e, need=5),
+    "howard-marks": lambda c, o, e: _check_evidence(c, [
+        ["second-level", "second level", "consensus", "pricing in", "hidden"],
+        ["risk", "least perceived", "location"],
+        ["outlier", "prepar", "hardened", "tail"],
+        ["temperature", "hype", "fear", "cycle"],
+        ["price", "value", "cost of ownership"],
+    ], o, e),
+    "munger": lambda c, o, e: _check_evidence(c, [
+        ["inversion", "dies", "death", "reverse"],
+        ["pre-mortem", "premortem", "future", "guardrail"],
+        ["incentive", "rewards", "misaligned"],
+        ["circle of competence", "unknown", "gap"],
+        ["simplicity", "abstraction", "removed", "justified"],
+    ], o, e),
+    "tudor-jones": lambda c, o, e: _check_evidence(c, [
+        ["loss limit", "halt", "stop trading", "daily"],
+        ["5:1", "risk-reward", "5 * risk", "reward"],
+        ["averag", "adding", "loser"],
+        ["tape", "price action", "thesis", "override"],
+        ["200-day", "200 day", "moving average"],
+    ], o, e),
+    "soros": lambda c, o, e: _check_evidence(c, [
+        ["bias", "prevailing", "believe"],
+        ["reflex", "feedback", "revised belief"],
+        ["falsif", "test", "observable"],
+        ["asymmetry", "upside", "downside", "exposure"],
+        ["sizing", "test position", "scale", "cut to zero"],
+        ["invalidat", "exit", "evidence"],
+        ["fact", "inference", "uncertainty", "sourced"],
+    ], o, e, need=5),
+    "lynch": lambda c, o, e: _check_evidence(c, [
+        ["spark", "know", "revenue"],
+        ["category", "fast grower", "stalwart", "cyclical", "turnaround", "asset play", "slow grower"],
+        ["peg", "p/e", "growth"],
+        ["two-minute", "two minute", "story"],
+        ["diworsif", "few names", "concentrat", "understood"],
+    ], o, e),
+    "icahn": lambda c, o, e: _check_evidence(c, [
+        ["value gap", "worth", "price", "spread"],
+        ["governance", "misallocat", "roic", "comp", "cash"],
+        ["catalyst", "escalat", "board", "proxy", "letter"],
+        ["exit", "monitor", "thesis"],
+        ["friend", "management", "stance"],
+    ], o, e),
+    "druckenmiller": lambda c, o, e: _check_evidence(c, [
+        ["asymmetr", "win rate", "size when", "payoff"],
+        ["concentration", "high-conviction", "high conviction", "few"],
+        ["invalidat", "exit", "thesis"],
+        ["press", "scale", "3-5x", "3x", "5x", "winner"],
+        ["18-month", "18 month", "forward", "liquidity", "leading"],
+    ], o, e),
 }
 
 

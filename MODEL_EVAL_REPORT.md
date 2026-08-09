@@ -498,6 +498,41 @@ simons (100 skills under test).
   bytes with a positive-count loop. Three mistral runs: dynamic-flag bug ->
   read(-1) bug -> pass.
 
+## Round 13: eleventh constraint batch (110 skills total) — sixth perfect round
+
+Extended the harness to 10 more constraint skills: buffett, burry, dalio,
+howard-marks, munger, tudor-jones, soros, lynch, icahn, druckenmiller
+(110 skills under test). All ten are finance/investing personas with
+checkable methodological requirements.
+
+| Model | batch 11 final | remaining failures |
+|-------|---------------|--------------------|
+| deepseek | 10/10 | none |
+| mistral  | 10/10 | none |
+
+### Grader notes
+
+All 10 graders use evidence-group checks over the six-step methodology
+contracts (e.g., buffett: moat/ROIC + owner earnings + intrinsic value +
+margin of safety + punch card; soros: bias + reflexivity + falsifiable test
++ asymmetry + sizing + invalidation). No grader needed a too-literal
+broadening this round - the contracts mapped cleanly onto evidence groups.
+
+### Skill-wording fixes from real failures
+
+- **dalio**: stdlib-only demo note (mistral twice wrote numpy/pandas/scipy
+  portfolios; first run also truncated mid-loop -> IndentationError). After
+  the note it passes with math/statistics builtins and completes in one pass.
+- **munger**: self-contained + compact-demo notes (deepseek truncated three
+  times on the full payment-service demo: unclosed paren, undefined
+  TinyPaymentService, unclosed bracket; the ~40-line sketch constraint made
+  it complete in one pass).
+
+### Model-side demo bugs (passed on re-run)
+
+- **burry** (deepseek): demo assertion inconsistent with its own function
+  (AssertionError); re-run passed.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

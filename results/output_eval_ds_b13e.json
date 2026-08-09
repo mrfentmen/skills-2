@@ -1,0 +1,7 @@
+{
+ "munger": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_munger.py"
+ }
+}

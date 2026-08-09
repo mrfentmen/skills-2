@@ -35,6 +35,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
+- Self-contained and stdlib-only: the demo runs with only the Python standard library; never import numpy/scipy in a demo. Define every helper and class the demo calls - never call a function or class that is not defined in the same file, and keep the demo short enough to complete in one pass.
 - Failure modes listed first: `# dies when: cache evicts the only copy`
 - Pre-mortem comments: `# six months later this blew up because...`
 - Incentive noted at every interface: `# the easy path is also the safe path`
