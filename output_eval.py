@@ -43,6 +43,8 @@ SCOPE = [
     "dennis-ritchie", "john-tukey", "edward-tufte", "feynman", "george-polya",
     "anders-hejlsberg", "emmy-noether", "daniel-kahneman", "geoffrey-hinton", "barbara-mcclintock",
     "charles-darwin", "carl-sagan", "frank-lloyd-wright", "buckminster-fuller", "fred-rogers",
+    "katherine-johnson", "john-von-neumann", "jeff-dean", "demis-hassabis", "fei-fei-li",
+    "grace-hopper", "ken-thompson", "isaac-newton", "jane-goodall", "jennifer-doudna",
 ]
 
 TASKS = {
@@ -116,6 +118,16 @@ TASKS = {
     "frank-lloyd-wright": "Design a small module (e.g., a data store or a pipeline) and in comments document: (1) the union: structure and behavior shown as one design, not a sequence, (2) the site: the operational environment named and how the design grows from it, (3) the simplicity pass: what was left out and why the rest is essential, (4) the box destroyed: at least one rigid boundary opened into a clean interface, (5) the natural pattern: a resilient-system pattern borrowed from nature, named. Print the demo.",
     "buckminster-fuller": "Implement a small computation two ways (e.g., a word count or a sum) and show the same result with a measurable fraction of the resources. In comments document: (1) ephemeralization: the same result with a measurable fraction of the resources, (2) the whole-system view: how the change affects the closed system, not just the module, (3) the synergy note: the small components whose interlock carries the load, (4) the obsolete-maker: the clean model that renders the legacy anti-pattern obsolete, (5) the anticipatory fix: the systemic bottleneck fixed before it became critical. Print both results and the resource numbers.",
     "fred-rogers": "Teach a small concept (e.g., a for-loop or recursion) with a runnable demonstration. In comments document: (1) a patience move that gives the learner room to process, (2) a hard issue named calmly and without blaming the person, (3) a concrete runnable demonstration, not only an abstraction, (4) a precise non-alarming instruction that cannot be literally misread, (5) the honest issue and an actionable next step. Print the lesson output.",
+    "katherine-johnson": "Compute a small trajectory or numeric result (e.g., position under constant acceleration) and in comments document: (1) a count: the enumeration of every input, boundary, and path the computation touches, (2) an independent check: the answer re-derived by a different route, not just re-run, (3) a meaning check: what the numbers should be, stated before computing them, (4) a probe: an assumption challenged with a why/how/why-not, (5) a backup path: the degraded mode that still produces a usable answer. Print the result and the checks.",
+    "john-von-neumann": "Model a small game-shaped problem (e.g., a two-player coin or paper-scissors game) and in comments document: (1) the model: the mathematical construct that describes the situation, stated explicitly, (2) the payoff: the agents, strategies, and payoffs, (3) the parameter audit: each parameter justified, with the overfitting check applied, (4) the worst-case move: what the adversary can force, and how the design limits the damage, (5) the working check: the construct runs and produces its claimed output. Print the game result.",
+    "jeff-dean": "Implement a small fan-out computation (e.g., a sum over N simulated shards) and in comments document: (1) a failure statement: which parts are assumed unreliable, and how the whole stays reliable, (2) a locality move: where the computation is scheduled relative to its data, (3) a tail analysis: the fan-out and the worst-case percentile, not just the average, (4) a measurement: the profile under realistic load that justifies the change, (5) a simplicity check: the hard part hidden behind an abstraction, not exposed. Print the result and tail numbers.",
+    "demis-hassabis": "Implement a small learning or optimization experiment (e.g., a tiny hill-climb or table-learn) and in comments document: (1) a mechanism statement: the general principle the solution builds, not the one symptom it fixes, (2) a structure search: the constraint, manifold, or law that makes the problem tractable, (3) a hypothesis split: what the experiment distinguishes, win or lose, (4) a benchmark: the measured evidence the intuition was validated against, (5) a share note: how the artifact is released so the field compounds on it. Print the result.",
+    "fei-fei-li": "Analyze a small embedded dataset (e.g., [3,1,4,1,5,9,2,6,5,3,5]) and in comments document: (1) the data audit: the dataset's quality, scale, and representation examined before the model, (2) the served population: who the system serves, named explicitly, (3) the value check: the human values the system encodes, stated, (4) the curiosity line: the foundational question asked before the black-box heuristic, (5) the responsibility metric: the evaluation that includes dignity, safety, or fairness. Print the analysis.",
+    "grace-hopper": "Ship a small working tool (e.g., a byte counter or a debug helper) and in comments document: (1) a shipped artifact: working code or a working demo, not a plan for one, (2) a questioned assumption: at least one inherited practice explicitly challenged with a reason, (3) a human-first move: an abstraction or tool that removes low-level error for the user, (4) a concrete rendering: a hidden constraint (latency, size, cost) made visible and tangible, (5) a people note: who learns by doing, and who gets backed up when they try. Print the demo output.",
+    "ken-thompson": "Build a small pipeline of two tools connected by plain text or byte streams (e.g., a filter piped into a counter) and in comments document: (1) a brute-force-first statement: the straightforward solution tried before any clever one, (2) a trust decision: every dependency/toolchain choice justified as verified or avoided, (3) a subtraction pass: what could be thrown out, and what actually was, (4) small-tool decomposition: the work split into tools that each do one thing, (5) universal text/byte streams as the interface between those tools. Print the pipeline output.",
+    "isaac-newton": "Verify a small claim (e.g., a numeric or sorting property) step by step and in comments document: (1) a prior-work note: the audited thing you are standing on, named, (2) a no-hypothesis line: the conclusion tied to observed evidence, and what would falsify it, (3) a demonstration: the test or proof that would fail if the claim were false, (4) a step-by-step: the layer verified before the next was built, (5) a humility note: the unknown that limits the claim, stated plainly. Print the proof walkthrough.",
+    "jane-goodall": "Observe a small system (e.g., a list of timestamped events) and in comments document: (1) an observation plan: what you will watch, for how long, and in what conditions, (2) named individuals: at least one entity profiled as an individual with a known history, (3) a challenged assumption: a prevailing belief tested against observed evidence, (4) the evidence trail: observations recorded with timestamps and context, not vibes, (5) a patient-action note: a small, sustained effort that compounds over time. Print the field notes.",
+    "jennifer-doudna": "Run a small experiment with a control (e.g., two implementations compared on the same input) and in comments document: (1) a team move: the collaboration that makes the result stronger, named, (2) an observation pass: a structure, trace, or instrument that lets you SEE the mechanism, (3) a control: a clean baseline the result is compared against, (4) a reproduction note: how someone else could rerun the experiment and get the same result, (5) a responsibility line: the honest risk account for the powerful thing built. Print the experiment result.",
 }
 
 GRADERS = {
@@ -584,6 +596,77 @@ GRADERS = {
         ["runnable", "demonstrat", "concrete", "assert", "safe behavior", "unsafe behavior", "show both"],
         ["precise", "alarm", "misread", "instruction"],
         ["honest", "actionable", "next step"],
+    ], o, e),
+    "katherine-johnson": lambda c, o, e: _check_evidence(c, [
+        ["count", "enumerat"],
+        ["independent", "different route", "re-deriv", "second way"],
+        ["meaning", "should be", "expect", "predicted"],
+        ["probe", "assumption", "challenge", "why"],
+        ["backup", "degraded", "fallback", "degrade"],
+    ], o, e),
+    "john-von-neumann": lambda c, o, e: _check_evidence(c, [
+        ["model", "mathematical"],
+        ["payoff", "agent", "strateg"],
+        ["parameter", "overfit"],
+        ["worst-case", "worst case", "adversary", "adversarial"],
+        ["working check", "runs", "produce"],
+    ], o, e),
+    "jeff-dean": lambda c, o, e: _check_evidence(c, [
+        ["failure", "unreliable", "reliab"],
+        ["locality", "schedule", "closer to"],
+        ["tail", "percentile", "p99", "p95"],
+        ["measure", "profile", "benchmark"],
+        ["simplicity", "abstraction", "hidden"],
+    ], o, e),
+    "demis-hassabis": lambda c, o, e: _check_evidence(c, [
+        ["mechanism", "principle", "general"],
+        ["structure", "constraint", "manifold", "law"],
+        ["hypothesis", "distinguish", "win"],
+        ["benchmark", "measured", "validat"],
+        ["share", "release", "compound", "open"],
+    ], o, e),
+    "fei-fei-li": lambda c, o, e: _check_evidence(c, [
+        ["data audit", "quality", "scale", "represent"],
+        ["served", "population", "serve"],
+        ["value"],
+        ["curiosity", "foundational", "question"],
+        ["responsib", "fairness", "dignity", "safety"],
+    ], o, e),
+    "grace-hopper": lambda c, o, e: _check_evidence(c, [
+        ["ship", "working", "demo"],
+        ["question", "assumption", "challenge", "inherited", "always done", "we've always"],
+        ["human-first", "abstraction", "low-level", "removes error"],
+        ["latency", "size", "cost", "visible", "tangible", "constraint", "bytes"],
+        ["people", "learn", "backed up"],
+    ], o, e),
+    "ken-thompson": lambda c, o, e: _check_evidence(c, [
+        ["brute-force", "straightforward", "simple first", "simple version"],
+        ["trust", "verified", "avoided", "depend"],
+        ["subtraction", "throw", "removed", "cut"],
+        ["one thing", "small tool", "decompos", "single"],
+        ["stream", "byte", "text", "stdin", "stdout", "pipe"],
+    ], o, e),
+    "isaac-newton": lambda c, o, e: _check_evidence(c, [
+        ["prior", "standing on", "stood on", "built on"],
+        ["falsif", "evidence", "observed"],
+        ["demonstrat", "proof", "would fail"],
+        ["step-by-step", "layer", "verified"],
+        ["humility", "unknown", "limits"],
+    ], o, e),
+    "jane-goodall": lambda c, o, e: _check_evidence(c, [
+        ["observation", "watch", "plan"],
+        ["individual", "profile", "history"],
+        ["assumption", "challenge", "belief"],
+        ["evidence", "timestamp", "context", "trail"],
+        ["patient", "compounds", "sustained", "small"],
+        ["print", "runs", "working demo", "def ", "executable", "field notes"],
+    ], o, e, need=5),
+    "jennifer-doudna": lambda c, o, e: _check_evidence(c, [
+        ["team", "collaborat"],
+        ["see", "trace", "instrument", "mechanism", "observation"],
+        ["control", "baseline"],
+        ["reproduc", "rerun", "same result"],
+        ["responsib", "risk"],
     ], o, e),
 }
 

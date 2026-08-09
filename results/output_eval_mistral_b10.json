@@ -1,0 +1,52 @@
+{
+ "katherine-johnson": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_katherine-johnson.py"
+ },
+ "john-von-neumann": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_john-von-neumann.py"
+ },
+ "jeff-dean": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/mistral-small-latest_jeff-dean.py"
+ },
+ "demis-hassabis": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_demis-hassabis.py"
+ },
+ "fei-fei-li": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_fei-fei-li.py"
+ },
+ "grace-hopper": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_grace-hopper.py"
+ },
+ "ken-thompson": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_ken-thompson.py"
+ },
+ "isaac-newton": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/mistral-small-latest_isaac-newton.py"
+ },
+ "jane-goodall": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/mistral-small-latest_jane-goodall.py"
+ },
+ "jennifer-doudna": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/mistral-small-latest_jennifer-doudna.py"
+ }
+}

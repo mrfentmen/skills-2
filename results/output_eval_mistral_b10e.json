@@ -1,0 +1,7 @@
+{
+ "demis-hassabis": {
+  "passed": false,
+  "detail": "EXEC FAIL: NameError: name 'validate_intuition' is not defined",
+  "code_file": "results/output/mistral-small-latest_demis-hassabis.py"
+ }
+}

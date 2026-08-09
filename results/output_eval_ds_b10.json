@@ -1,0 +1,52 @@
+{
+ "katherine-johnson": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_katherine-johnson.py"
+ },
+ "john-von-neumann": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_john-von-neumann.py"
+ },
+ "jeff-dean": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_jeff-dean.py"
+ },
+ "demis-hassabis": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_demis-hassabis.py"
+ },
+ "fei-fei-li": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_fei-fei-li.py"
+ },
+ "grace-hopper": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_grace-hopper.py"
+ },
+ "ken-thompson": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_ken-thompson.py"
+ },
+ "isaac-newton": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_isaac-newton.py"
+ },
+ "jane-goodall": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_jane-goodall.py"
+ },
+ "jennifer-doudna": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_jennifer-doudna.py"
+ }
+}

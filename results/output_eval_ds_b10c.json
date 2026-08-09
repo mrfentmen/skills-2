@@ -1,0 +1,7 @@
+{
+ "jane-goodall": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_jane-goodall.py"
+ }
+}

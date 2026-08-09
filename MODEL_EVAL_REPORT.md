@@ -377,6 +377,55 @@ semantics (same pattern as round 8):
   `NameError` on exec. The skill text and evidence were fully compliant;
   fresh run imported it and passed.
 
+## Round 10: eighth constraint batch (80 skills total) — third perfect round
+
+Extended the harness to 10 more constraint skills: katherine-johnson,
+john-von-neumann, jeff-dean, demis-hassabis, fei-fei-li, grace-hopper,
+ken-thompson, isaac-newton, jane-goodall, jennifer-doudna (80 skills under
+test).
+
+| Model | batch 8 final | remaining failures |
+|---|---|---|
+| deepseek-v4-flash | **10/10** | none |
+| mistral-small-latest | **10/10** | none |
+
+### Grader fix (1 too-literal check, 0 skill blame)
+
+- **grace-hopper**: the questioned-assumption evidence accepts the quoted
+  "we've always done it this way" (the skill's own famous phrase) without the
+  literal word "assumption"; the concrete-rendering evidence accepts
+  "constraint" / byte-count statements ("one byte = one character in ASCII,
+  this text is 40 bytes long").
+
+### Skill-wording fixes from real failures
+
+- **jane-goodall**: added a sixth checkable requirement - "a working demo: the
+  field notes are produced by code that runs and prints them (a comment-only
+  essay does not satisfy this)" - deepseek wrote a comment-only field-notes
+  essay with zero executable code. After the requirement, both models print
+  computed field notes (grader threshold raised to 5-of-6).
+- **demis-hassabis**: style now requires stdlib-only self-contained
+experiments (never numpy/scipy/tensorflow; simulate the mechanism with
+builtins) AND "define every helper the demo calls - never call a function
+that is not defined in the same file" - mistral produced three different
+demo bugs across three runs (scipy import, numeric OverflowError divergence,
+undefined `validate_intuition` call). After the note it passed.
+- **jennifer-doudna**: style now requires stdlib-only self-contained
+experiments - mistral shelled out to external bioinformatics tools
+(RNAfold/NUPACK via subprocess), which do not exist on the host. After the
+note it passed with a simulated mechanism.
+
+### Model-side bugs that passed on re-run (not skill defects)
+
+- **jeff-dean** (deepseek): first demo simulated 100 shards x 3 replicas x 100
+  runs with a 1% 1-second-spike chance - expected ~300 seconds of sleeps, far
+  past the 30s harness timeout. Fresh run used a lighter profile and passed.
+- **isaac-newton** (mistral): own demo asserted `three == sorted(three)` on
+  `[3,1,2]` - asserts the input equals the output, which only holds for
+  already-sorted lists. Fresh run wrote the correct check and passed.
+- **jane-goodall** (mistral): used `random` without importing it. Fresh run
+  imported it and passed.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

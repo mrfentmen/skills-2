@@ -1,0 +1,12 @@
+{
+ "demis-hassabis": {
+  "passed": false,
+  "detail": "EXEC FAIL: OverflowError: (34, 'Result too large')",
+  "code_file": "results/output/mistral-small-latest_demis-hassabis.py"
+ },
+ "jennifer-doudna": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/mistral-small-latest_jennifer-doudna.py"
+ }
+}
