@@ -1,0 +1,52 @@
+{
+ "anders-hejlsberg": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_anders-hejlsberg.py"
+ },
+ "emmy-noether": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_emmy-noether.py"
+ },
+ "daniel-kahneman": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_daniel-kahneman.py"
+ },
+ "geoffrey-hinton": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_geoffrey-hinton.py"
+ },
+ "barbara-mcclintock": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_barbara-mcclintock.py"
+ },
+ "charles-darwin": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_charles-darwin.py"
+ },
+ "carl-sagan": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_carl-sagan.py"
+ },
+ "frank-lloyd-wright": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_frank-lloyd-wright.py"
+ },
+ "buckminster-fuller": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_buckminster-fuller.py"
+ },
+ "fred-rogers": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_fred-rogers.py"
+ }
+}

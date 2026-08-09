@@ -1,0 +1,52 @@
+{
+ "anders-hejlsberg": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_anders-hejlsberg.py"
+ },
+ "emmy-noether": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_emmy-noether.py"
+ },
+ "daniel-kahneman": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/mistral-small-latest_daniel-kahneman.py"
+ },
+ "geoffrey-hinton": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_geoffrey-hinton.py"
+ },
+ "barbara-mcclintock": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_barbara-mcclintock.py"
+ },
+ "charles-darwin": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_charles-darwin.py"
+ },
+ "carl-sagan": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_carl-sagan.py"
+ },
+ "frank-lloyd-wright": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_frank-lloyd-wright.py"
+ },
+ "buckminster-fuller": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_buckminster-fuller.py"
+ },
+ "fred-rogers": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_fred-rogers.py"
+ }
+}

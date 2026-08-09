@@ -334,6 +334,49 @@ feynman, george-polya (60 skills under test).
 - **knuth** (mistral): first run omitted the required complexity statement;
   fresh run included it (complexity=True) and passed.
 
+## Round 9: seventh constraint batch (70 skills total) — second perfect round
+
+Extended the harness to 10 more constraint skills: anders-hejlsberg,
+emmy-noether, daniel-kahneman, geoffrey-hinton, barbara-mcclintock,
+charles-darwin, carl-sagan, frank-lloyd-wright, buckminster-fuller,
+fred-rogers (70 skills under test). Added a shared evidence helper
+(`_evid` / `_check_evidence`) so the persona-process graders check whether
+each Minimum-Requirements bullet is documented in the code/comments, with a
+4-of-5 evidence threshold.
+
+| Model | batch 7 final | remaining failures |
+|---|---|---|
+| deepseek-v4-flash | **10/10** | none |
+| mistral-small-latest | **10/10** | none |
+
+### Grader fixes (6 too-literal checks, 0 skill blame)
+
+The persona-process skills state their checkable requirements in the skill's
+own vocabulary; the models consistently expressed the same idea in natural
+prose. All six failures were my keyword sets being narrower than the skill's
+semantics (same pattern as round 8):
+
+- **barbara-mcclintock**: the listening pass also accepts "we just hadn't
+  looked" / "the pattern was there" (both models described watching traces
+  before forming a hypothesis); the patience note accepts "took the week to
+  sit with the traces" / "3 days of traces".
+- **frank-lloyd-wright**: the union accepts "the schema is the behavior" /
+  "the whole and the parts determine each other"; the simplicity pass
+  accepts an explicit "removed: ..." enumeration ("three layers where one
+  file was enough", "left only the essential"); the natural pattern accepts
+  "borrowed from a tide pool" / "coral reef" / "self-healing loop".
+- **fred-rogers**: the calm hard-issue move accepts "the hard thing is that
+  loops can sometimes run one step too far"; the runnable-demonstration
+  accepts `assert`-driven safe/unsafe side-by-side demos ("we'll show both
+  the safe behavior and the unsafe behavior").
+
+### Flaky model bug that passed on re-run (not a skill defect)
+
+- **anders-hejlsberg** (mistral): first run used `Iterable` in `@overload`
+  type hints without importing it from `typing`/`collections.abc` ->
+  `NameError` on exec. The skill text and evidence were fully compliant;
+  fresh run imported it and passed.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

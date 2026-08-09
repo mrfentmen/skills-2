@@ -41,6 +41,8 @@ SCOPE = [
     "sweeney", "vint-cerf", "oracle", "no-bullshit", "smoker",
     "barbara-liskov", "dijkstra", "knuth", "lamport", "brian-kernighan",
     "dennis-ritchie", "john-tukey", "edward-tufte", "feynman", "george-polya",
+    "anders-hejlsberg", "emmy-noether", "daniel-kahneman", "geoffrey-hinton", "barbara-mcclintock",
+    "charles-darwin", "carl-sagan", "frank-lloyd-wright", "buckminster-fuller", "fred-rogers",
 ]
 
 TASKS = {
@@ -104,6 +106,16 @@ TASKS = {
     "edward-tufte": "Build a small text chart or table for this data set: [apples: 12, bananas: 8, cherries: 15]. Audit it: state the data-ink audit (what was erased and what each surviving mark carries), the integrity check (lie factor 1.0, honest axes, bars from zero), and a chartjunk pass (one decorative element removed or rejected); print the chart and the audit.",
     "feynman": "Implement a small numeric routine (e.g., a square-root or sorting primitive): recreate the core primitive from scratch before using it, write out a trace of the state at each step, then inject one extreme boundary case (the ice-water test) and print the results.",
     "george-polya": "Solve a small problem (e.g., a word or number puzzle): state the understanding (unknown, data, condition) before any code, name the plan strategy and a related problem it resembles, carry it out step by step, and look back to verify the solution; print the walkthrough and the result.",
+    "anders-hejlsberg": "Extend a small existing API (e.g., add an optional lazy variant of a sum or mean utility) so existing callers keep working unchanged. In comments, document: (1) ecosystem statement: what existing users keep working unchanged, (2) gradual path: how the addition is adopted incrementally, (3) evolution check: adding a member cannot silently change existing callers, (4) machinery audit: every mechanism justified by the ordinary path it serves, (5) tooling note: the editor/compiler experience considered. Print the demo result.",
+    "emmy-noether": "Implement a small computation (e.g., a stack or a counter) and in comments document: (1) the invariant named before the logic, (2) the symmetry or duality the design exploits, (3) the structural proof: why correct behavior follows from the structure, not a patch, (4) the boilerplate eliminated: one case where the abstraction made code disappear, (5) the conservation check: what is preserved and how the code protects it. Print the result.",
+    "daniel-kahneman": "Estimate and implement a small task (e.g., counting words in a string). In comments document: (1) the outside-view estimate: the base rate of similar work stated separately from the wish, (2) an anchor audit: the first number on the table named as an anchor, (3) a premortem: a written reason the plan fails, produced before work starts, (4) a missing-list: edge cases and error states nobody mentioned, enumerated, (5) a confidence check: what evidence would change the stated conclusion. Print the estimate and the actual result.",
+    "geoffrey-hinton": "Implement a small learn-don't-code move (e.g., a lookup table learned from data instead of hand-coded rules). In comments document: (1) the contrarian stand: the unfashionable idea pursued and why truth matters more than fashion, (2) the learn-don't-code move: where learning from data replaced hand-coded rules, (3) the unproven insight: the intuition explored before the proof, (4) the give-up test: the condition under which the idea would be abandoned, (5) the risk line: the harm the work could enable, named honestly. Print the result.",
+    "barbara-mcclintock": "Observe a small system across its full lifecycle (e.g., a list passing through several states) and in comments document: (1) the immersion: the full lifecycle observed, not a single snapshot, (2) the listening pass: what the system's own behavior revealed before any hypothesis, (3) the anomaly: a dismissed-as-noise signal taken seriously and checked, (4) the evidence stand: the observation that outranks the prevailing assumption, (5) the patience note: the time taken to look and what it surfaced. Print the observation.",
+    "charles-darwin": "Analyze a small embedded dataset (e.g., [3,1,4,1,5,9,2,6]) and in comments document: (1) the evidence base: accumulated data from multiple angles named before the conclusion, (2) the counter-evidence hunt: at least one fact that threatens the hypothesis, actively sought and logged, (3) the iteration: the theory refined across versions (the notebook habit), (4) the patience note: why the conclusion was not rushed and what waiting surfaced, (5) the humble delivery: the result presented with evidence, not rhetoric. Print the analysis.",
+    "carl-sagan": "Test a small claim (e.g., that a function sorts correctly). In comments document: (1) the claim stated: the assertion under test, explicit and falsifiable, (2) the evidence bar: what verification would confirm it, stated before testing, (3) the baloney check: at least two kit tools applied (independent confirmation, Occam, multiple hypotheses), (4) the balance note: the openness kept and the scrutiny applied, (5) the plain explanation: the idea rendered for a layperson with the wonder intact. Print the test result.",
+    "frank-lloyd-wright": "Design a small module (e.g., a data store or a pipeline) and in comments document: (1) the union: structure and behavior shown as one design, not a sequence, (2) the site: the operational environment named and how the design grows from it, (3) the simplicity pass: what was left out and why the rest is essential, (4) the box destroyed: at least one rigid boundary opened into a clean interface, (5) the natural pattern: a resilient-system pattern borrowed from nature, named. Print the demo.",
+    "buckminster-fuller": "Implement a small computation two ways (e.g., a word count or a sum) and show the same result with a measurable fraction of the resources. In comments document: (1) ephemeralization: the same result with a measurable fraction of the resources, (2) the whole-system view: how the change affects the closed system, not just the module, (3) the synergy note: the small components whose interlock carries the load, (4) the obsolete-maker: the clean model that renders the legacy anti-pattern obsolete, (5) the anticipatory fix: the systemic bottleneck fixed before it became critical. Print both results and the resource numbers.",
+    "fred-rogers": "Teach a small concept (e.g., a for-loop or recursion) with a runnable demonstration. In comments document: (1) a patience move that gives the learner room to process, (2) a hard issue named calmly and without blaming the person, (3) a concrete runnable demonstration, not only an abstraction, (4) a precise non-alarming instruction that cannot be literally misread, (5) the honest issue and an actionable next step. Print the lesson output.",
 }
 
 GRADERS = {
@@ -503,6 +515,76 @@ GRADERS = {
         and bool(o.strip()) and e == "",
         f"understand={"understand" in c.lower() or "unknown" in c.lower()} plan={"plan" in c.lower() or "strategy" in c.lower()} carry={"carry" in c.lower() or "step by step" in c.lower()} look-back={"look-back" in c.lower() or "look back" in c.lower() or "verify" in c.lower() or "check" in c.lower()} out={bool(o.strip())}",
     ),
+    "anders-hejlsberg": lambda c, o, e: _check_evidence(c, [
+        ["ecosystem", "existing users", "backward compat"],
+        ["gradual", "increment", "adopt"],
+        ["evolution", "silently", "caller"],
+        ["machinery", "mechanism", "justif"],
+        ["tooling", "editor", "compiler", "ide"],
+    ], o, e),
+    "emmy-noether": lambda c, o, e: _check_evidence(c, [
+        ["invariant"],
+        ["symmetr", "duality", "dual", "transform"],
+        ["proof", "structure", "structural"],
+        ["boilerplate", "disappear", "eliminat", "abstract"],
+        ["conserv", "preserv"],
+    ], o, e),
+    "daniel-kahneman": lambda c, o, e: _check_evidence(c, [
+        ["base rate", "outside view", "reference class"],
+        ["anchor"],
+        ["premortem", "pre-mortem", "fails"],
+        ["missing", "edge case", "unmentioned"],
+        ["confiden", "evidence would change"],
+    ], o, e),
+    "geoffrey-hinton": lambda c, o, e: _check_evidence(c, [
+        ["contrarian", "unfashionable"],
+        ["learn", "data"],
+        ["unproven", "intuition", "insight"],
+        ["abandon", "give-up", "give up"],
+        ["risk", "harm"],
+    ], o, e),
+    "barbara-mcclintock": lambda c, o, e: _check_evidence(c, [
+        ["lifecycle", "full cycle", "immersion", "observe", "teardown"],
+        ["listen", "reveal", "behavior", "hadn't looked", "not looked", "pattern"],
+        ["anomal", "noise", "dismissed"],
+        ["evidence", "assumption", "outrank", "the log says"],
+        ["patience", "time to look", "took time", "took the", "days of", "week"],
+    ], o, e),
+    "charles-darwin": lambda c, o, e: _check_evidence(c, [
+        ["evidence"],
+        ["counter", "threaten"],
+        ["iterat", "version", "notebook", "refin"],
+        ["patience", "not rushed", "wait"],
+        ["humble", "rhetoric", "evidence not"],
+    ], o, e),
+    "carl-sagan": lambda c, o, e: _check_evidence(c, [
+        ["claim", "falsif", "assertion"],
+        ["evidence bar", "confirm", "verif"],
+        ["independent", "occam", "hypothes"],
+        ["balance", "open", "scrutiny"],
+        ["layperson", "plain", "wonder"],
+    ], o, e),
+    "frank-lloyd-wright": lambda c, o, e: _check_evidence(c, [
+        ["union", "one design", "behavior", "whole and the parts"],
+        ["site", "environment", "grows from", "constraint"],
+        ["simplicity", "left out", "essential", "removed", "left only", "enough"],
+        ["box", "boundary", "interface", "destroy", "wall"],
+        ["nature", "natural", "resilien", "tide pool", "coral", "borrowed", "self-healing"],
+    ], o, e),
+    "buckminster-fuller": lambda c, o, e: _check_evidence(c, [
+        ["ephemeral", "fraction", "fewer resources"],
+        ["whole", "closed system"],
+        ["synergy", "interlock", "component"],
+        ["obsolete", "legacy"],
+        ["anticipat", "bottleneck", "before"],
+    ], o, e),
+    "fred-rogers": lambda c, o, e: _check_evidence(c, [
+        ["patience", "quiet moment", "room to process"],
+        ["calm", "blam", "hard thing", "difficult", "hard issue", "not your fault"],
+        ["runnable", "demonstrat", "concrete", "assert", "safe behavior", "unsafe behavior", "show both"],
+        ["precise", "alarm", "misread", "instruction"],
+        ["honest", "actionable", "next step"],
+    ], o, e),
 }
 
 
@@ -514,6 +596,18 @@ STDIN = {
 _DR_PAT = re.compile(r"\bsorted\(|\b\.sort\(|rewind|random access")
 _FT_PAT = re.compile(r"\bsorted\(|reversed\(|\[::|lookahead|rewind")
 _NO_NET_PAT = re.compile("urllib|socket|requests|http|ftplib|smtplib|subprocess|os\\.system|pathlib\\.Path\\(\\s*['\"]/")
+
+
+def _evid(c: str, groups) -> int:
+    """Count how many evidence groups have at least one hit in the code."""
+    low = c.lower()
+    return sum(1 for g in groups if any(n in low for n in g))
+
+
+def _check_evidence(c: str, groups, o: str, e: str, need: int = 4):
+    hits = _evid(c, groups)
+    ok = hits >= need and bool(o.strip()) and e == ""
+    return ok, f"hits={hits} out={bool(o.strip())}"
 
 
 def extract_code(raw: str) -> str:
