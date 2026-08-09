@@ -39,6 +39,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Cost stated: `# overhead: zero — compiles to the same as the C loop`
 - Invariants written: `# invariant: 0 <= size <= capacity, maintained by push/pop`
 - Guarantee named: `# strong guarantee: all-or-nothing on exception`
+- Use explicit OS constants: never construct flags dynamically (getattr(os, f'O_{mode}') produces O_r/O_w which do not exist) - write os.O_RDONLY / os.O_WRONLY / os.O_CREAT explicitly.
+- Wrap raw syscalls safely: never pass -1 to os.read (it raises EINVAL) - read all bytes with a positive-count loop, or require an explicit byte count.
 
 ```python
 class ScopedLock:

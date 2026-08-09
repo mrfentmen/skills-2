@@ -1,0 +1,12 @@
+{
+ "stroustrup": {
+  "passed": false,
+  "detail": "EXEC FAIL: OSError: [Errno 22] Invalid argument",
+  "code_file": "results/output/mistral-small-latest_stroustrup.py"
+ },
+ "miyamoto": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_miyamoto.py"
+ }
+}

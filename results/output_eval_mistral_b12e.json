@@ -1,0 +1,7 @@
+{
+ "stroustrup": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_stroustrup.py"
+ }
+}

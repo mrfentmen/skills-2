@@ -47,6 +47,8 @@ SCOPE = [
     "grace-hopper", "ken-thompson", "isaac-newton", "jane-goodall", "jennifer-doudna",
     "louis-pasteur", "marie-curie", "rachael-carson", "radia-perlman", "frances-allen",
     "joy-buolamwini", "werner-heisenberg", "wozniak", "jony-ive", "susan-kare",
+    "lattner", "stroustrup", "rich-hickey", "van-rossum", "torvalds",
+    "kay", "miyamoto", "sid-meier", "satoru-iwata", "simons",
 ]
 
 TASKS = {
@@ -140,6 +142,16 @@ TASKS = {
     "wozniak": "Build a small delightfully simple tool (e.g., a tiny text utility) and in comments document: (1) a part count: the components (functions, modules, dependencies) enumerated and minimized, (2) a transparency claim: every layer explainable in one sentence, or the opaque layer named, (3) a constraint exploit: the scarce resource identified and design spent instead of parts, (4) a whole-system view: where work moved between layers and why that layer was cheapest, (5) an openness seam: where others can extend the system, stated. Print the demo.",
     "jony-ive": "Build a small well-crafted utility and in comments document: (1) a reduction pass: a place where code was removed because it had a rational alternative, (2) a hidden-craft artifact: internal/error-path code finished to public-surface quality, (3) a material move: the API shaped by what the language's own tools make natural, (4) a discarded draft: an alternative approach tried and dropped, with the reason, (5) a no-decoration check: no name, comment, or abstraction that exists to impress. Print the result.",
     "susan-kare": "Design a small ASCII icon system (e.g., 8x8 grid icons for file types) and in comments document: (1) the grid: a stated pixel/space constraint that every element respects, (2) the meaning: what the icon says at a glance, without a caption, (3) the test: would a person from another culture read it correctly, (4) the restraint pass: at least one extraneous detail removed, (5) the borrow: a source of inspiration outside existing software (signage, craft, symbols). Print the icon set.",
+    "lattner": "Build a tiny compiler-like pipeline (e.g., parse a small expression into an IR and evaluate it) and in comments document: (1) an IR boundary: the intermediate representation named, with its invariants, (2) an SSA property: every value assigned exactly once, or a stated reason not to, (3) a safety default: what the language/runtime forbids by default, stated, (4) a dogfood test: the pipeline exercised end to end on a real input, (5) an ecosystem note: how the piece plugs into the surrounding stack. Print the IR and the result.",
+    "stroustrup": "Implement a small resource-owning type (e.g., a scoped file or buffer handle) and in comments document: (1) an ownership model: every resource has exactly one owner, stated, (2) a lifetime binding: resources released by scope (RAII), not by hand-matched calls, (3) a zero-overhead note: each abstraction's runtime/memory cost stated or justified, (4) an invariant list: the class/type invariants written where they are maintained, (5) a guarantee grade: basic or strong exception safety claimed for each operation. Print the demo.",
+    "rich-hickey": "Implement a small stateful-looking computation with explicit identity/state/time separation (e.g., a bank account or a counter) and in comments document: (1) a stated problem: the problem written out before any solution code, (2) a de-complection pass: identity, state, and time separated, or the entanglement named, (3) an immutability choice: values shared without mutation, with the one mutation point stated, (4) a tradeoff table: at least two alternatives compared with explicit costs, (5) a reasoning artifact: the design that survived the hammock, not the first instinct. Print the result.",
+    "van-rossum": "Implement a small utility (e.g., a config parser or a path normalizer) and in comments document: (1) a readability pass: names and structure chosen for the next reader, not the writer, (2) an explicitness check: no hidden magic, implicit coercion, or silent defaults, (3) a simplicity statement: the design explainable in plain English in the comments, (4) a flat-flow check: control flow kept shallow (guard clauses, early returns), (5) a stdlib-first note: the built-in solution chosen before any dependency. Print the result.",
+    "torvalds": "Implement a small kernel-ish utility (e.g., a ring buffer or a linked list) and in comments document: (1) at least one good-taste simplification: the obvious right structure over cleverness, (2) a backward-compatibility note: how existing behavior/callers are preserved, (3) no unexplained magic: every non-obvious line has a justification comment or is removed, (4) a working entry point that runs, (5) no hand-waving: claims are backed by code, not comments. Print the demo.",
+    "kay": "Build a small message-passing system (e.g., two components exchanging messages) and in comments document: (1) a medium statement: what the software changes about how people think or work, (2) a message-passing design: components communicate by explicit messages, state hidden, (3) a perspective note: the unifying metaphor chosen and the one it replaced, (4) a range proof: the simple path shown simple and the complex path shown possible, (5) a future claim: which twenty-year bet this design is making, stated. Print the exchange.",
+    "miyamoto": "Design a small game mechanic (e.g., a tiny puzzle or action loop) and in comments document: (1) a fun-first test: the core mechanic validated in a crude prototype before polish, (2) a multiple-problems evaluation: each design idea solves >= 2 constraints or is rejected, (3) a withered-technology choice: a mature/cheap component applied sideways, with the trade-off stated, (4) a wordless onboarding path: the player learns by doing, not by tutorial text, (5) an upend-the-tea-table gate: the willingness to discard failing work with the reason recorded. Print the prototype demo.",
+    "sid-meier": "Design a small game loop (e.g., a tiny resource-allocation game) and in comments document: (1) the decisions: the interesting choices the user makes, each with real trade-offs, (2) the feedback loop: how each choice echoes back visible acknowledgment, (3) the iteration note: what was prototyped, playtested, and cut, (4) the tuning move: a parameter doubled or halved, not fiddled by 10%, (5) the learn-master balance: the simple rule set that produces emergent depth. Print the game loop demo.",
+    "satoru-iwata": "Build a small feature for a user (e.g., a tiny tool with a fun interface) and in comments document: (1) a fun check: the feature judged by the end user's felt experience, stated in their words, (2) a no-saying: the requested thing that seemed impossible, and the ingenuity that did it, (3) a rewrite call: an honest cost comparison of patching vs starting over, with a decision, (4) a tooling move: automation built so the human creative work is preserved, (5) a team shield: the person who made the mistake treated as the one to help, not blame. Print the result.",
+    "simons": "Analyze a small embedded time series (e.g., [1,2,1,2,1,2,3,2,1,2,1,2]) and in comments document: (1) a signal discovered from data, not assumed from narrative (state the anomaly), (2) out-of-sample validation: the signal holds on data it was not fit on, (3) honest edge sizing: win rate, volume, and per-trade cost stated together, (4) no human override path: the model executes within stated risk limits, (5) slippage/latency/impact modeled explicitly in the edge calculation, (6) at least one signal-processing treatment (autocorrelation, filter, regime model). Print the analysis.",
 }
 
 GRADERS = {
@@ -750,6 +762,77 @@ GRADERS = {
         ["restraint", "removed", "extraneous"],
         ["borrow", "inspiration", "signage", "craft"],
     ], o, e),
+    "lattner": lambda c, o, e: _check_evidence(c, [
+        ["ir", "intermediate represent", "invariant"],
+        ["ssa", "assigned exactly once", "exactly once"],
+        ["safety", "forbids", "default"],
+        ["dogfood", "end to end", "real input", "pipeline"],
+        ["ecosystem", "stack", "plugs", "surrounding"],
+    ], o, e),
+    "stroustrup": lambda c, o, e: _check_evidence(c, [
+        ["owner", "ownership", "exactly one"],
+        ["raii", "scope", "lifetime", "released"],
+        ["zero-overhead", "overhead", "cost"],
+        ["invariant"],
+        ["guarantee", "exception safety", "strong", "basic"],
+    ], o, e),
+    "rich-hickey": lambda c, o, e: _check_evidence(c, [
+        ["problem", "written out", "stated"],
+        ["identity", "state", "time", "entanglement", "de-complection", "decomplection"],
+        ["immutab", "without mutation", "shared"],
+        ["tradeoff", "alternatives", "cost"],
+        ["hammock", "reasoning", "first instinct"],
+    ], o, e),
+    "van-rossum": lambda c, o, e: _check_evidence(c, [
+        ["readab", "reader", "names"],
+        ["explicit", "magic", "coercion", "silent"],
+        ["simple", "simplicity", "plain english", "explainable", "one step"],
+        ["flat", "guard clause", "early return", "shallow"],
+        ["stdlib", "built-in", "dependency"],
+    ], o, e),
+    "torvalds": lambda c, o, e: _check_evidence(c, [
+        ["good taste", "taste", "simplif", "obvious"],
+        ["backward", "compatib", "preserved", "caller"],
+        ["magic", "justif", "unexplained", "no cleverness", "helps", "only branch"],
+        ["entry point", "runs", "main("],
+        ["hand-waving", "backed by code", "claims", "assert", "compat check"],
+    ], o, e),
+    "kay": lambda c, o, e: _check_evidence(c, [
+        ["medium", "think", "work", "changes"],
+        ["message", "state hidden", "hidden"],
+        ["metaphor", "perspective", "replaced"],
+        ["simple path", "range", "complex path", "possible"],
+        ["twenty-year", "future", "bet"],
+    ], o, e),
+    "miyamoto": lambda c, o, e: _check_evidence(c, [
+        ["fun", "crude", "prototype", "validated"],
+        ["constraint", "multiple-problems", "solves"],
+        ["withered", "mature", "cheap", "sideways"],
+        ["wordless", "doing", "tutorial"],
+        ["upend", "discard", "tea-table", "reason"],
+    ], o, e),
+    "sid-meier": lambda c, o, e: _check_evidence(c, [
+        ["decision", "trade-off", "choice"],
+        ["feedback", "echoes", "acknowledg"],
+        ["iterat", "prototyp", "playtest", "cut"],
+        ["doubled", "halved", "tuning"],
+        ["emergent", "learn", "master", "simple"],
+    ], o, e),
+    "satoru-iwata": lambda c, o, e: _check_evidence(c, [
+        ["fun", "felt", "user's words", "experience"],
+        ["impossible", "no-saying", "ingenuity"],
+        ["rewrite", "patching", "starting over", "cost"],
+        ["tooling", "automation", "creative"],
+        ["blame", "help", "team", "mistake"],
+    ], o, e),
+    "simons": lambda c, o, e: _check_evidence(c, [
+        ["signal", "data", "anomaly"],
+        ["out-of-sample", "not fit", "holdout"],
+        ["win rate", "volume", "per-trade", "cost"],
+        ["override", "risk limit", "human"],
+        ["slippage", "latency", "impact"],
+        ["autocorrel", "filter", "regime"],
+    ], o, e, need=5),
 }
 
 

@@ -40,6 +40,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Edge math shown: `edge = win_rate * avg_win - loss_rate * avg_loss - costs`
 - Order fragmentation visible in execution logic
 - Backtests report costs, not just gross returns
+- Self-contained and stdlib-only: never import numpy/scipy in a demo - implement autocorrelation, filters, and regime models with builtins (statistics, math).
 
 ```python
 def edge_estimate(train, test, costs_per_trade):

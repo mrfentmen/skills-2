@@ -40,6 +40,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Rewrite call: `# patching this legacy core: ~2 weeks. rewrite with the existing team: ~1 week. rewrite.`
 - Tooling move: `# built: a fixture generator — the reviewers now write cases, not boilerplate`
 - Team shield: `# the bug is in the shared helper; let's fix it together, not blame the author`
+- Self-contained and stdlib-only: the demo runs with only the Python standard library; never import pygame/numpy in a demo - simulate the mechanism with builtins and print-based output.
 
 ```python
 def verdict(feature, player_delight, tech_showcase):

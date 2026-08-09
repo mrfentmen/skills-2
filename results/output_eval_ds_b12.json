@@ -1,0 +1,52 @@
+{
+ "lattner": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_lattner.py"
+ },
+ "stroustrup": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_stroustrup.py"
+ },
+ "rich-hickey": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_rich-hickey.py"
+ },
+ "van-rossum": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_van-rossum.py"
+ },
+ "torvalds": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_torvalds.py"
+ },
+ "kay": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_kay.py"
+ },
+ "miyamoto": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_miyamoto.py"
+ },
+ "sid-meier": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_sid-meier.py"
+ },
+ "satoru-iwata": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_satoru-iwata.py"
+ },
+ "simons": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_simons.py"
+ }
+}

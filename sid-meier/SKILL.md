@@ -40,6 +40,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Cut note: `# prototyped 5 config flows, kept 2, cut 3 — they failed the interest test`
 - Tuning: `# the retry cap was 8; the test said boring — halved to 4 and the tension returned`
 - Learn-master: `# 3 rules to learn, 40 interactions that emerge — depth without a manual`
+- The demo runs with zero interactive input: never call input() - script the player's choices as variables embedded in the file.
 
 ```python
 def interesting_decision(options):

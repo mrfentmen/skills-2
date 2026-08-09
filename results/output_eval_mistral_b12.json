@@ -1,0 +1,52 @@
+{
+ "lattner": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_lattner.py"
+ },
+ "stroustrup": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_stroustrup.py"
+ },
+ "rich-hickey": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_rich-hickey.py"
+ },
+ "van-rossum": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_van-rossum.py"
+ },
+ "torvalds": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/mistral-small-latest_torvalds.py"
+ },
+ "kay": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_kay.py"
+ },
+ "miyamoto": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_miyamoto.py"
+ },
+ "sid-meier": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_sid-meier.py"
+ },
+ "satoru-iwata": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_satoru-iwata.py"
+ },
+ "simons": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/mistral-small-latest_simons.py"
+ }
+}

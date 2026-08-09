@@ -1,0 +1,27 @@
+{
+ "stroustrup": {
+  "passed": false,
+  "detail": "EXEC FAIL: AttributeError: module 'os' has no attribute 'O_w'",
+  "code_file": "results/output/mistral-small-latest_stroustrup.py"
+ },
+ "miyamoto": {
+  "passed": false,
+  "detail": "EXEC FAIL: EOFError: EOF when reading a line",
+  "code_file": "results/output/mistral-small-latest_miyamoto.py"
+ },
+ "sid-meier": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_sid-meier.py"
+ },
+ "satoru-iwata": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_satoru-iwata.py"
+ },
+ "simons": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/mistral-small-latest_simons.py"
+ }
+}

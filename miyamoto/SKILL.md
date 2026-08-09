@@ -38,6 +38,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Every idea evaluated on problems solved: `solves = [power, buffer, legibility]`
 - Withered-tech trade-offs explicit: what mature component, what we save
 - Onboarding proven wordlessly: no tutorial text in the first screen
+- Self-contained and stdlib-only: the demo runs with only the Python standard library; never import pygame/turtle in a demo - simulate the mechanic with builtins and print-based output.
+- The demo runs with zero interactive input: never call input() - script the player's moves as variables embedded in the file.
 
 ```python
 def multiple_problems(idea, problems_solved):

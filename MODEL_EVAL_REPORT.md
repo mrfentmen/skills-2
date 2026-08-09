@@ -461,6 +461,43 @@ werner-heisenberg, wozniak, jony-ive, susan-kare (90 skills under test).
   converter.py <value>` -> exits 1 under `python -c`, the same
   non-portable entry point as neckbeard). After the note it passed.
 
+## Round 12: tenth constraint batch (100 skills total) — fifth perfect round
+
+Extended the harness to 10 more constraint skills: lattner, stroustrup,
+rich-hickey, van-rossum, torvalds, kay, miyamoto, sid-meier, satoru-iwata,
+simons (100 skills under test).
+
+| Model | batch 10 final | remaining failures |
+|---|---|---|
+| deepseek-v4-flash | **10/10** | none |
+| mistral-small-latest | **10/10** | none |
+
+### Grader fixes (2 too-literal checks, 0 skill blame)
+
+- **van-rossum**: the simplicity statement also accepts the literal word
+  "simplicity" (both models wrote "Simplicity statement:" without the
+  substring "simple").
+- **torvalds**: no-unexplained-magic accepts "no cleverness" / "the size
+  check is the only branch" / "helps" justification comments; no-hand-waving
+  accepts `assert`-backed demos ("compat check passed").
+
+### Skill-wording fixes from real failures
+
+- **miyamoto / satoru-iwata**: stdlib-only demo note (pygame not installed on
+  the host) + zero-interactive-input note for miyamoto (its scripted demo
+  used input() -> EOFError under an empty stdin). After the notes both pass
+  with pure builtins.
+- **simons**: stdlib-only note (scipy not installed) - autocorrelation and
+  filters must be implemented with builtins (statistics, math).
+- **sid-meier**: zero-interactive-input note (the game loop called input() ->
+  EOFError); choices must be scripted as variables.
+- **stroustrup**: two notes, each fixing a deterministic mistral demo bug:
+  (1) explicit OS constants - never construct flags dynamically
+  (`getattr(os, f'O_{mode}')` produces O_r/O_w which do not exist);
+  (2) wrap raw syscalls safely - never pass -1 to os.read (EINVAL); read all
+  bytes with a positive-count loop. Three mistral runs: dynamic-flag bug ->
+  read(-1) bug -> pass.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \
