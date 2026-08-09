@@ -533,6 +533,38 @@ broadening this round - the contracts mapped cleanly onto evidence groups.
 - **burry** (deepseek): demo assertion inconsistent with its own function
   (AssertionError); re-run passed.
 
+## Round 14: twelfth constraint batch (120 skills total) — seventh perfect round
+
+Extended the harness to 10 more constraint skills: cathie-wood, gates, jobs,
+bezo, zuck, musk, altman, hastings, gordon-ramsay, james-cameron (120 skills
+under test).
+
+| Model | batch 12 final | remaining failures |
+|-------|---------------|--------------------|
+| deepseek | 10/10 | none |
+| mistral  | 10/10 | none |
+
+### Skill-wording fixes from real failures
+
+- **bezo**: zero-argument + self-terminating demo notes (deepseek wrote a
+  blocking ThreadingHTTPServer -> TIMEOUT; mistral wrote an argv-gated
+  order-status CLI -> error response).
+- **musk**: zero-argument + self-terminating notes, then the harness task
+  itself was changed from a file-watcher (which pulls toward daemon
+  semantics) to a log-analysis pipeline - mistral's watcher looped
+  `while True` forever across two runs despite the note.
+- **jobs**: in-memory/tempfile demo note (mistral's todo store required a
+  todos.json in the working directory -> RuntimeError from any CWD).
+- **james-cameron**: compact ~50-line demo note (deepseek's stdlib renderer
+  truncated mid-module, printing nothing).
+- **hastings**: corrupt-responses-must-be-detected note (deepseek's demo
+  returned a corrupt payload as healthy but asserted degraded - twice).
+
+### Model-side demo bugs (passed on re-run)
+
+- **gates** (deepseek): configparser strict-mode DuplicateOptionError from
+  its own 10k-key stress test; re-run passed.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

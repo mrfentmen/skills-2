@@ -34,6 +34,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
+- Demo code runs standalone with zero arguments and no interactive input: hardcode the sample data, compute, and print.
+- Demos terminate on their own: no infinite watch/daemon loop - if the demo polls, it runs a bounded number of cycles (e.g., 2 simulated change events), prints, and exits.
 - Comments challenge the brief: "// why does the caller need this? because PM guessed"
 - Delete-first mindset visible in code: dead paths removed, not commented out
 - Minimal dependency surface; hand-rolled where it's cheaper

@@ -1,0 +1,27 @@
+{
+ "gates": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_gates.py"
+ },
+ "bezo": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_bezo.py"
+ },
+ "hastings": {
+  "passed": false,
+  "detail": "EXEC FAIL: AssertionError",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_hastings.py"
+ },
+ "musk": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_musk.py"
+ },
+ "james-cameron": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_james-cameron.py"
+ }
+}

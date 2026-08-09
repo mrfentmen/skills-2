@@ -1,0 +1,56 @@
+{
+  "skills": [
+    "cathie-wood",
+    "gates",
+    "jobs",
+    "bezo",
+    "zuck",
+    "musk",
+    "altman",
+    "hastings",
+    "gordon-ramsay",
+    "james-cameron"
+  ],
+  "results": {
+    "cathie-wood": {
+      "pass": true,
+      "detail": "hits=4 out=True"
+    },
+    "gates": {
+      "pass": true,
+      "detail": "hits=4 out=True"
+    },
+    "jobs": {
+      "pass": true,
+      "detail": "hits=4 out=True"
+    },
+    "bezo": {
+      "pass": true,
+      "detail": "hits=4 out=True"
+    },
+    "zuck": {
+      "pass": true,
+      "detail": "hits=5 out=True"
+    },
+    "musk": {
+      "pass": true,
+      "detail": "hits=4 out=True"
+    },
+    "altman": {
+      "pass": true,
+      "detail": "hits=6 out=True"
+    },
+    "hastings": {
+      "pass": true,
+      "detail": "hits=6 out=True"
+    },
+    "gordon-ramsay": {
+      "pass": true,
+      "detail": "hits=5 out=True"
+    },
+    "james-cameron": {
+      "pass": true,
+      "detail": "hits=4 out=True"
+    }
+  }
+}

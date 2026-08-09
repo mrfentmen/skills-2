@@ -47,6 +47,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
+- Demo code keeps state in memory (or a tempfile): never depend on files in the working directory existing or being writable - a demo run must work from any directory.
 - Naming that reads like a spec: `the_one_way`, `result`, `final_deliverable`
 - Comments explain *why it must be this way*: "// users never see this; keep it invisible"
 - Explicit removal of dead ideas — deleted code, not commented-out code

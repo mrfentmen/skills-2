@@ -35,6 +35,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
+- Demo code is compact enough to complete in one pass (at most ~50 lines) and prints visible output: a truncated demo that prints nothing is a failed demo.
 - Ridiculous goal: `# target: real-time reprojection on a laptop — nothing on the shelf does it`
 - Gap inventory: `# stdlib lacks X; the two libs that do it are unmaintained; build the seam`
 - Prototype: `# proof first: the 200-line spike that renders 10k points at 60fps`

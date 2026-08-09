@@ -87,6 +87,8 @@ print(matrix)
 
 ## Style Guidelines
 
+- Corrupt responses must be detected, not trusted: validate the payload and degrade to the fallback like any other fault - a demo that returns a corrupt payload as healthy fails its own contract.
+
 - Write code that embodies **Faults are test cases**; make the principle visible in structure and comments, not just claimed.
 - Write code that embodies **Partial service beats a 500**; make the principle visible in structure and comments, not just claimed.
 - Write code that embodies **Retry is bounded**; make the principle visible in structure and comments, not just claimed.

@@ -51,6 +51,8 @@ SCOPE = [
     "kay", "miyamoto", "sid-meier", "satoru-iwata", "simons",
     "buffett", "burry", "dalio", "howard-marks", "munger", "tudor-jones",
     "soros", "lynch", "icahn", "druckenmiller",
+    "cathie-wood", "gates", "jobs", "bezo", "zuck",
+    "musk", "altman", "hastings", "gordon-ramsay", "james-cameron",
 ]
 
 TASKS = {
@@ -164,6 +166,16 @@ TASKS = {
     "lynch": "Analyze a small stock example (hardcoded financials) and in comments document: (1) a what-you-know spark verified against fundamentals (product % of revenue), (2) the stock classified into one of the six categories with the matching questions, (3) a PEG ratio computed and interpreted (P/E / growth; <1.0 cheap, >1.5-2.0 priced in), (4) a two-minute story: the thesis stated simply enough to pass the rule, (5) an anti-diworsification stance: few names, all understood. Print the analysis.",
     "icahn": "Write a small activist analysis of a company example (hardcoded balance sheet) and in comments document: (1) a value gap: the worth-vs-price spread quantified with the numbers that prove it, (2) a governance case: the misallocation or misalignment documented (cash, ROIC, comp), (3) a catalyst plan: the escalation path (letter, board seat, proxy threat) sequenced, (4) an exit/monitoring rule: what the thesis needs to keep working, stated, (5) the friend warning: the stance on management, explicit (they are not your friend). Print the analysis.",
     "druckenmiller": "Write a small macro portfolio analysis (hardcoded market data) and in comments document: (1) an asymmetric-payoff statement: win rate, size when right, size when wrong, (2) a concentration cap: the book holds few high-conviction bets, not a 40-name spread, (3) a thesis-invalidation rule: the explicit condition that forces exit (not a price stop), (4) a press-winners rule: the condition that scales a position up 3-5x, (5) an 18-month-forward view: leading liquidity signals over trailing earnings. Print the analysis.",
+    "cathie-wood": "Build a small disruptive-tech investment model (hardcoded example: EV battery cost decline) and in comments document: (1) a Wright's Law cost curve: cost-per-doubling and the crossing point that unlocks the S-curve, (2) a 5-year TAM model with a stated 15% CAGR hurdle, (3) a six-axis scoring table (people, execution, moat, product, risk, valuation), (4) a stated early-not-wrong position: why the drawdown is the entry, not the exit, (5) a long-horizon note: the model evaluates 5-year windows only, no quarter-to-quarter trading logic. Print the model output.",
+    "gates": "Write a small legacy-compatible tool (e.g., a config parser that must keep old behavior) and in comments document: (1) a budget statement: memory / time / dependency limits, written before code, (2) a reuse decision: what was adapted instead of built, and why that was the easy way, (3) a compat contract: the legacy behavior preserved, with its deprecation path, (4) a scope cut: what was deliberately left out of v1, stated, (5) a paranoia check: the critical path stress-tested under adverse conditions. Print the output.",
+    "jobs": "Build a small polished tool (e.g., a tiny todo store with file persistence) and in comments document: (1) at least 1 feature explicitly cut or scoped out, with the reason stated, (2) no half-finished abstraction: every abstraction used is used everywhere it should be, (3) polished edge behavior: empty states, errors, and boundaries handled, (4) a final result that works end to end with no TODO ship later, (5) nothing shipped good enough when inevitable was achievable. Print the demo output.",
+    "bezo": "Build a small customer-facing service (e.g., a tiny order-status API) and in comments document: (1) a customer-facing statement of what the code does for the user (before code), (2) no dependency that lacks a stated justification (frugality), (3) at least 1 failure-mode handling: a component that fails without killing the system, (4) a working entry point that runs, (5) an interface describable in a page or two (no sprawling API surface). Print the output.",
+    "zuck": "Build a small feature with a metric (e.g., a link-shortener with a counter) and in comments document: (1) a defined success metric for the feature before writing code, (2) at least 1 instrumentation point (counter, log line, or metric), (3) a stated rollback path (flag, version, or revert plan), (4) code that ships in one small, reversible step, (5) no untested guess-and-pray behavior: each change has a measurable expected effect. Print the output.",
+    "musk": "Build a small thing that does more with less (e.g., a tiny log-analysis pipeline that processes a hardcoded log string, using only stdlib, no loops that never end - the demo must print and exit) and in comments document: (1) every requirement explicitly questioned or justified (inline why comments), (2) at least 1 part of the naive solution deleted or simplified, with the reason stated, (3) a working implementation that does more with less (fewer deps, less code, less cost), (4) honest trade-off notes: what was sacrificed and why it is acceptable, (5) no vaporware: every claimed capability actually runs. Print the output.",
+    "altman": "Write a small startup-decision evaluator (hardcoded example opportunity) and in comments document: (1) expected value: probability, payoff, cost, and value of the bet, (2) explicit maximum-loss and rollback/reversibility gate, (3) one measurable moat hypothesis: data, distribution, or unit economics, (4) a compounding metric and a deadline/window, (5) a cut list for distractions that do not serve the strategy, (6) working code that returns bet, reject, or measure-more. Print the decision.",
+    "hastings": "Build a small resilient service (e.g., a tiny rate-limited fetcher) and in comments document: (1) a named fault-injection hook with bounded blast radius, (2) meaningful graceful degradation under that fault, (3) capped exponential retry with deterministic/testable jitter, (4) no single point of failure in the demonstrated path, (5) a failure matrix exercising kill, throttle, and corrupt-response cases, (6) recovery/stop criteria and diagnostics. Print the test output.",
+    "gordon-ramsay": "Write a small recipe execution planner (hardcoded example: roast chicken) and in comments document: (1) a mise en place list: every ingredient with amounts, before any cooking step, (2) precise technique: exact heat, timing, and internal temperature where they matter, (3) the seasoning rule: salt/seasoning layered through the cook, with a tasting note, (4) the ruin points: the 2-3 moments where most people wreck the dish, called out, (5) a rest step: proteins rested with a reason, never skipped. Print the plan.",
+    "james-cameron": "Build a small ambitious prototype (e.g., a tiny renderer using only stdlib) and in comments document: (1) a ridiculous goal: the target beyond current tooling, stated explicitly, (2) a gap inventory: which existing tools fail, and precisely how, (3) a prototype: the hard part built and stress-tested before the full build, (4) a decoupling: the core logic separated from the presentation layer, (5) a feedback note: what was learned while building and modified back into the design. Print the output.",
 }
 
 GRADERS = {
@@ -917,6 +929,78 @@ GRADERS = {
         ["invalidat", "exit", "thesis"],
         ["press", "scale", "3-5x", "3x", "5x", "winner"],
         ["18-month", "18 month", "forward", "liquidity", "leading"],
+    ], o, e),
+    "cathie-wood": lambda c, o, e: _check_evidence(c, [
+        ["wright", "cost-per-doubling", "doubling", "s-curve", "s curve"],
+        ["tam", "cagr", "15%", "5-year", "5 year"],
+        ["six-axis", "six axis", "people", "execution", "moat", "valuation"],
+        ["early", "drawdown", "entry", "exit"],
+        ["quarter", "5-year window", "long-horizon", "long horizon"],
+    ], o, e),
+    "gates": lambda c, o, e: _check_evidence(c, [
+        ["budget", "memory", "limit", "dependency"],
+        ["reuse", "adapted", "instead of built", "build"],
+        ["compat", "legacy", "deprecat", "preserved"],
+        ["scope cut", "left out", "out of v1", "deliberately"],
+        ["paranoia", "stress", "adverse", "critical path"],
+    ], o, e),
+    "jobs": lambda c, o, e: _check_evidence(c, [
+        ["cut", "scoped out", "deferred", "dropped"],
+        ["abstraction", "everywhere", "consistent"],
+        ["empty", "error", "boundar", "edge"],
+        ["todo", "end to end", "complete"],
+        ["good enough", "inevitable", "polish"],
+    ], o, e),
+    "bezo": lambda c, o, e: _check_evidence(c, [
+        ["customer", "user", "does for"],
+        ["frugal", "dependency", "justification", "stdlib"],
+        ["fail", "graceful", "degrad", "isolat"],
+        ["entry", "run", "main"],
+        ["interface", "page", "surface", "api"],
+    ], o, e),
+    "zuck": lambda c, o, e: _check_evidence(c, [
+        ["metric", "success", "measure"],
+        ["instrument", "counter", "log", "track"],
+        ["rollback", "flag", "revert", "version"],
+        ["small", "step", "reversible", "ship"],
+        ["expected effect", "measur", "test", "predict"],
+    ], o, e),
+    "musk": lambda c, o, e: _check_evidence(c, [
+        ["why", "question", "justif", "requirement"],
+        ["deleted", "simplif", "removed", "naive"],
+        ["less", "stdlib", "fewer", "small"],
+        ["trade-off", "tradeoff", "sacrific", "acceptable"],
+        ["vaporware", "run", "works", "claim"],
+    ], o, e),
+    "altman": lambda c, o, e: _check_evidence(c, [
+        ["expected value", "probability", "payoff", "value"],
+        ["maximum-loss", "max loss", "rollback", "reversib"],
+        ["moat", "data", "distribution", "unit economics"],
+        ["compounding", "deadline", "window", "metric"],
+        ["cut", "distraction", "strategy"],
+        ["bet", "reject", "measure-more", "measure more"],
+    ], o, e, need=5),
+    "hastings": lambda c, o, e: _check_evidence(c, [
+        ["fault-injection", "fault injection", "inject", "blast radius"],
+        ["graceful", "degrad", "fallback"],
+        ["exponential", "retry", "jitter", "backoff"],
+        ["single point", "spof", "redundan"],
+        ["kill", "throttle", "corrupt", "matrix"],
+        ["recovery", "stop", "diagnos", "criteria"],
+    ], o, e, need=5),
+    "gordon-ramsay": lambda c, o, e: _check_evidence(c, [
+        ["mise en place", "ingredient", "amount", "prep"],
+        ["heat", "timing", "temperature", "internal", "exact"],
+        ["salt", "season", "tasting"],
+        ["ruin", "wreck", "mistake", "call out"],
+        ["rest", "rested", "carryover", "never skipped"],
+    ], o, e),
+    "james-cameron": lambda c, o, e: _check_evidence(c, [
+        ["ridiculous", "goal", "beyond", "impossible"],
+        ["gap", "tool", "fail", "inventory"],
+        ["prototype", "stress", "hard part", "test"],
+        ["decoupl", "separated", "presentation", "core"],
+        ["feedback", "learned", "modified", "design"],
     ], o, e),
 }
 

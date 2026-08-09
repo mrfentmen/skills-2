@@ -34,6 +34,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
+- Demo code runs standalone with zero arguments and no interactive input: hardcode the sample data, compute, and print.
+- Demos terminate on their own: no blocking server, no serve_forever, no infinite loop - if the demo starts a service, it must make a handful of calls, print results, and exit.
 - Naming: service-like and clear: `checkout`, `inventory`, `order_service`
 - Comments justify dependencies: "// stdlib only — a parser lib is not worth the weight"
 - Failure handling: per-component fallbacks, retries with backoff, no single points of failure
