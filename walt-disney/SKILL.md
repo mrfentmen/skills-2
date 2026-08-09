@@ -40,6 +40,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Critique: `# risks: the bus backpressure, the auth edge case, the rollout window — each has a guard`
 - Plussing: `# accepted criteria met; plus: the error state now reads human and offers the retry`
 - Story: `# the analytics widget serves the story of the user's progress — if it didn't, it would be cut`
+- Demos terminate on their own: no blocking loop, no wait loop, no infinite `while True` - the demo makes a handful of calls, prints results, and exits.
+- The demo runs with zero interactive input: never call input() - script the story's choices as variables embedded in the file.
 
 ```python
 def tripartite(dream, plan, risks):

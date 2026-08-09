@@ -1,0 +1,32 @@
+{
+ "hideo-kojima": {
+  "passed": false,
+  "detail": "EXEC FAIL: SyntaxError: closing parenthesis '}' does not match opening parenthesis '('",
+  "code_file": "results/output/mistral-small-latest_hideo-kojima.py"
+ },
+ "julia-child": {
+  "passed": false,
+  "detail": "EXEC FAIL: TypeError: unsupported operand type(s) for +: 'float' and 'str'",
+  "code_file": "results/output/mistral-small-latest_julia-child.py"
+ },
+ "paul-graham": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_paul-graham.py"
+ },
+ "richard-stallman": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/mistral-small-latest_richard-stallman.py"
+ },
+ "walt-disney": {
+  "passed": false,
+  "detail": "EXEC FAIL: SyntaxError: invalid syntax",
+  "code_file": "results/output/mistral-small-latest_walt-disney.py"
+ },
+ "red-team": {
+  "passed": false,
+  "detail": "EXEC FAIL: SyntaxError: '[' was never closed",
+  "code_file": "results/output/mistral-small-latest_red-team.py"
+ }
+}

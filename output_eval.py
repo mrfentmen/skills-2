@@ -53,6 +53,8 @@ SCOPE = [
     "soros", "lynch", "icahn", "druckenmiller",
     "cathie-wood", "gates", "jobs", "bezo", "zuck",
     "musk", "altman", "hastings", "gordon-ramsay", "james-cameron",
+    "hideo-kojima", "julia-child", "paul-graham", "nassim-taleb", "red-team",
+    "richard-stallman", "sun-tzu", "walt-disney", "yukihiro-matsumoto", "lovelace",
 ]
 
 TASKS = {
@@ -176,6 +178,16 @@ TASKS = {
     "hastings": "Build a small resilient service (e.g., a tiny rate-limited fetcher) and in comments document: (1) a named fault-injection hook with bounded blast radius, (2) meaningful graceful degradation under that fault, (3) capped exponential retry with deterministic/testable jitter, (4) no single point of failure in the demonstrated path, (5) a failure matrix exercising kill, throttle, and corrupt-response cases, (6) recovery/stop criteria and diagnostics. Print the test output.",
     "gordon-ramsay": "Write a small recipe execution planner (hardcoded example: roast chicken) and in comments document: (1) a mise en place list: every ingredient with amounts, before any cooking step, (2) precise technique: exact heat, timing, and internal temperature where they matter, (3) the seasoning rule: salt/seasoning layered through the cook, with a tasting note, (4) the ruin points: the 2-3 moments where most people wreck the dish, called out, (5) a rest step: proteins rested with a reason, never skipped. Print the plan.",
     "james-cameron": "Build a small ambitious prototype (e.g., a tiny renderer using only stdlib) and in comments document: (1) a ridiculous goal: the target beyond current tooling, stated explicitly, (2) a gap inventory: which existing tools fail, and precisely how, (3) a prototype: the hard part built and stress-tested before the full build, (4) a decoupling: the core logic separated from the presentation layer, (5) a feedback note: what was learned while building and modified back into the design. Print the output.",
+    "hideo-kojima": "Design a small game mechanic (e.g., a tiny stealth puzzle) and in comments document: (1) a theme-mechanics link: the core mechanic that makes the user FEEL the theme, (2) a constraint inversion: a limitation that became a defining feature, stated explicitly, (3) a subversion: the expected pattern the design deliberately breaks, and why, (4) a micro-detail: one small interaction given obsessive attention, (5) a connection system: how users find and share meaning through the design. Print the prototype demo.",
+    "julia-child": "Build a small thing the joyful way (e.g., a tiny recipe timer) and in comments document: (1) the mise en place: environment, inputs, and tests prepared before the main work, (2) the fundamentals: the foundational technique named and applied first, (3) the test loop: the work tested and re-tested until it executes reliably, (4) the fearlessness note: the fear named and the what-the-hell move taken, (5) the joy check: the enthusiasm that keeps the work alive. Print the output.",
+    "paul-graham": "Write a small launch plan for a tiny product (e.g., a niche CLI tool) and in comments document: (1) a user statement: who the first users are and what they explicitly asked for, (2) a non-scalable move: one manual, unscalable action that delights a first user, (3) a launch gate: the quantum of utility at which the thing ships, stated upfront, (4) a narrow focus: the smallest market/core the launch is contained to, (5) a redesign pass: early work that was rebuilt after talking to users. Print the plan and a demo.",
+    "nassim-taleb": "Write a small robust-design analysis (hardcoded example, e.g., a portfolio or system) and in comments document: (1) a tail statement: the worst realistic case, stated with its probability shape, (2) a barbell allocation: what is conservatively redundant vs what is isolated experiment, (3) a convexity move: errors cheap and local, successes free to scale, (4) a via-negativa item: a dependency or feature removed because it was a liability, (5) a skin-in-the-game note: who is exposed to the outcome. Print the analysis.",
+    "red-team": "Red-team a small function (e.g., a tiny date parser) and in comments document: (1) an assumption inventory with the consequence if each assumption fails, (2) adversarial cases generated from the inventory, not only a fixed hand list, (3) an explicit oracle, invariant, or expected behavior for comparison, (4) a diagnostic naming input, expected result, actual result, and violated assumption, (5) a repair or rejection decision backed by evidence, (6) a scope and authorization boundary for the test. Print the adversarial report.",
+    "richard-stallman": "Build a small free-software-style tool (e.g., a tiny text utility) and in comments document: (1) the freedom audit: which of the four freedoms the design preserves or violates, (2) the source note: the source is available and unobfuscated in its preferred form, (3) the control line: who controls the program, and how that is guaranteed, (4) the copyleft move: the license (or equivalent) that keeps freedoms intact downstream, (5) the anti-lockdown note: no mechanism that restricts user modification. Print the output.",
+    "sun-tzu": "Design a small system strategically (e.g., a tiny service) and in comments document: (1) the reconnaissance: the system's own weaknesses AND the adversary's, stated before any move, (2) the position: the design choice that makes a class of defeat impossible, (3) the without-fighting move: at least one failure eliminated by structure rather than handled by code, (4) the seize read: the opportunity in the current crisis or bottleneck, named, (5) the victory definition: what winning looks like before work starts. Print the design.",
+    "walt-disney": "Build a small feature the Disney way (e.g., a tiny scripted story engine that plays a scene automatically with no keyboard input, choices driven by embedded variables) and in comments document: (1) the dream: the ideal, unconstrained vision stated first, (2) the real: the concrete plan and architecture within constraints, (3) the critique: the failure modes and risks examined before shipping, (4) the plussing move: at least one improvement beyond the bare acceptance criteria, (5) the story test: how every element serves the user experience. Print the demo.",
+    "yukihiro-matsumoto": "Design a small friendly API (e.g., a tiny task-list DSL) and in comments document: (1) a happiness pass: the API judged by how it feels to read and write, stated, (2) a human-first line: the syntax that reads like the whiteboard sketch, not the machine, (3) a fluency check: the internal consistency a fluent user can rely on, (4) a harmony note: how the feature fits the existing voice instead of adding a new one, (5) a kindness artifact: an error message or default that treats the user well. Print the API demo.",
+    "lovelace": "Write a small mechanical computation (e.g., a tiny single-instruction interpreter) and in comments document: (1) a step table: the operation sequence with running state, checkable by hand, (2) a symbolic framing: what abstraction the computation manipulates, stated, (3) an origin claim check: a statement that the machine only executes ordered operations, (4) a looping/control trace: how each loop advances and where it stops, (5) a poetical note: the deeper relation between the machinery and the idea it expresses. Print the trace.",
 }
 
 GRADERS = {
@@ -1001,6 +1013,77 @@ GRADERS = {
         ["prototype", "stress", "hard part", "test"],
         ["decoupl", "separated", "presentation", "core"],
         ["feedback", "learned", "modified", "design"],
+    ], o, e),
+    "hideo-kojima": lambda c, o, e: _check_evidence(c, [
+        ["theme", "mechanic", "feel"],
+        ["constraint", "inversion", "limitation", "feature"],
+        ["subvers", "breaks", "expected", "pattern"],
+        ["micro", "detail", "obsessive", "attention"],
+        ["connect", "share", "meaning"],
+    ], o, e),
+    "julia-child": lambda c, o, e: _check_evidence(c, [
+        ["mise en place", "prepared", "setup", "inputs"],
+        ["fundamental", "technique", "basics", "foundation"],
+        ["test", "re-test", "retest", "reliable", "loop"],
+        ["fear", "fearless", "what-the-hell", "what the hell", "risk"],
+        ["joy", "fun", "enthusiasm", "delight"],
+    ], o, e),
+    "paul-graham": lambda c, o, e: _check_evidence(c, [
+        ["first user", "asked for", "user statement", "requested"],
+        ["manual", "unscalable", "non-scalable", "delight"],
+        ["launch", "ship", "quantum", "gate"],
+        ["narrow", "smallest", "niche", "core", "focus"],
+        ["redesign", "rebuilt", "talked", "users"],
+    ], o, e),
+    "nassim-taleb": lambda c, o, e: _check_evidence(c, [
+        ["tail", "worst", "probability", "fat"],
+        ["barbell", "redundan", "experiment", "conservative"],
+        ["convex", "cheap", "local", "scale"],
+        ["via negativa", "via-negativa", "removed", "liability"],
+        ["skin", "exposed", "outcome", "stake"],
+    ], o, e),
+    "red-team": lambda c, o, e: _check_evidence(c, [
+        ["assumption", "consequence", "inventory"],
+        ["adversarial", "generated", "edge", "cases"],
+        ["oracle", "invariant", "expected"],
+        ["diagnos", "expected result", "actual", "violated"],
+        ["repair", "reject", "evidence", "decision"],
+        ["scope", "authorization", "boundary"],
+    ], o, e, need=5),
+    "richard-stallman": lambda c, o, e: _check_evidence(c, [
+        ["freedom", "audit", "four freedoms", "preserves"],
+        ["source", "available", "unobfuscated", "preferred"],
+        ["control", "who", "guaranteed"],
+        ["copyleft", "license", "downstream", "gpl"],
+        ["lockdown", "drm", "tivoiz", "restrict"],
+    ], o, e),
+    "sun-tzu": lambda c, o, e: _check_evidence(c, [
+        ["recon", "weakness", "adversary", "enemy"],
+        ["position", "impossible", "defeat"],
+        ["without-fighting", "without fighting", "structure", "eliminat"],
+        ["seize", "opportunity", "crisis", "bottleneck"],
+        ["victory", "win", "defined"],
+    ], o, e),
+    "walt-disney": lambda c, o, e: _check_evidence(c, [
+        ["dream", "vision", "ideal"],
+        ["concrete", "plan", "architecture", "real"],
+        ["critique", "failure", "risk", "examined"],
+        ["pluss", "improve", "beyond"],
+        ["story", "user experience", "experience", "serve"],
+    ], o, e),
+    "yukihiro-matsumoto": lambda c, o, e: _check_evidence(c, [
+        ["happiness", "feel", "read", "write"],
+        ["human", "whiteboard", "reads like", "natural"],
+        ["fluenc", "consistent", "rely"],
+        ["harmony", "voice", "fits", "existing"],
+        ["kind", "error", "message", "help"],
+    ], o, e),
+    "lovelace": lambda c, o, e: _check_evidence(c, [
+        ["step table", "state", "trace", "operation"],
+        ["symbolic", "abstraction", "manipulates", "framing"],
+        ["ordered", "executes", "origin", "sequence"],
+        ["loop", "advance", "stops", "control"],
+        ["poet", "relation", "idea", "express"],
     ], o, e),
 }
 

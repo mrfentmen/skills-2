@@ -1,0 +1,27 @@
+{
+ "hideo-kojima": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_hideo-kojima.py"
+ },
+ "julia-child": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_julia-child.py"
+ },
+ "paul-graham": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_paul-graham.py"
+ },
+ "nassim-taleb": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_nassim-taleb.py"
+ },
+ "red-team": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_red-team.py"
+ }
+}

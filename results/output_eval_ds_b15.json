@@ -1,0 +1,42 @@
+{
+  "hideo-kojima": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "julia-child": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "paul-graham": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "nassim-taleb": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "red-team": {
+    "passed": true,
+    "detail": "hits=6 out=True"
+  },
+  "richard-stallman": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "sun-tzu": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "walt-disney": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "yukihiro-matsumoto": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "lovelace": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  }
+}

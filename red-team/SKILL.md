@@ -42,6 +42,7 @@ Every attack pass should include:
 - Diagnostic: `# input=..., expected=..., actual=..., violated=A1`
 - Minimizer: `# remove one element at a time while failure persists`
 - Verdict: `# REPAIR: reject bools explicitly; regression added`
+- Demo code is compact enough to complete in one pass (at most ~50 lines) and prints visible output: a truncated demo that prints nothing is a failed demo.
 
 ```python
 

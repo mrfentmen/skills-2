@@ -565,6 +565,40 @@ under test).
 - **gates** (deepseek): configparser strict-mode DuplicateOptionError from
   its own 10k-key stress test; re-run passed.
 
+## Round 15: thirteenth constraint batch (130 skills total) — eighth perfect round
+
+Extended the harness to 10 more constraint skills: hideo-kojima, julia-child,
+paul-graham, nassim-taleb, red-team, richard-stallman, sun-tzu, walt-disney,
+yukihiro-matsumoto, lovelace (130 skills under test).
+
+| Model | batch 13 final | remaining failures |
+|-------|---------------|--------------------|
+| deepseek | 10/10 | none |
+| mistral  | 10/10 | none |
+
+### Skill-wording fixes from real failures
+
+- **walt-disney**: self-terminating + zero-interactive-input demo notes, then
+  the harness task was changed from "a tiny interactive story" (which pulls
+  toward input() loops) to "a scripted story engine" - deepseek then wrote
+  an input() story loop twice and mistral an infinite wait loop.
+- **hideo-kojima**: zero-interactive-input + self-terminating demo notes
+  (mistral's stealth-puzzle simulation looped `while True` with time.sleep
+  pacing -> TIMEOUT; its earlier attempt broke on an f-string syntax error).
+- **julia-child**: zero-interactive-input demo note (mistral's timer asked
+  `input("Enter time: ")` -> EOFError).
+- **paul-graham**: zero-argument demo note (mistral's log-table CLI required
+  `--file` argv -> usage exit).
+- **richard-stallman**: zero-argument demo note (deepseek's argparse CLI
+  printed usage and exited; mistral's wordcount required `sys.argv[1]`).
+- **red-team**: compact ~50-line demo note (mistral truncated mid-generator
+  twice, leaving a permanently unclosed bracket).
+
+### Model-side demo bugs (passed on re-run)
+
+- **julia-child** (mistral): TypeError adding float + str in its own recipe
+  calculator; re-run passed.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

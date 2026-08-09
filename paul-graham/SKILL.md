@@ -39,6 +39,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - The non-scalable move explicit: `# manual: onboard them by hand today`
 - Launch gate stated: `# ships when: it works end-to-end for one real user`
 - Every feature justified against a real request, or cut
+- The demo runs with zero argv: no argparse, no sys.argv, no command-line flags - data lives in variables or stdin, and it runs under `python3 -c` with no arguments.
 
 ```python
 def launch(feature, users):

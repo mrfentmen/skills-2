@@ -53,6 +53,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Test loop: `# ran the recipe 4 times: twice it burned, twice it sang — the variables are now pinned`
 - Fearlessness: `# the risky refactor scares us — good. that is the what-the-hell moment`
 - Joy check: `# are we still interested in this? if not, the quality will follow the interest down`
+- The demo runs with zero interactive input: never call input() - script the recipe's variables as constants embedded in the file.
 
 ```python
 def mise_en_place(prepared, required):

@@ -1,0 +1,27 @@
+{
+ "richard-stallman": {
+  "passed": false,
+  "detail": "hits=5 out=False",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_richard-stallman.py"
+ },
+ "sun-tzu": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_sun-tzu.py"
+ },
+ "walt-disney": {
+  "passed": false,
+  "detail": "EXEC TIMEOUT",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_walt-disney.py"
+ },
+ "yukihiro-matsumoto": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_yukihiro-matsumoto.py"
+ },
+ "lovelace": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_lovelace.py"
+ }
+}

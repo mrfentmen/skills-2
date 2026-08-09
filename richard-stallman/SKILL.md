@@ -40,6 +40,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Source note: `# preferred form: the .py and the Makefile, not a minified blob`
 - Copyleft move: `# GPL-3.0-or-later: downstream forks must keep the four freedoms`
 - Lockdown pass: `# rejected: the "phone-home" license check — it makes the program control the user`
+- The demo runs with zero argv: no argparse, no sys.argv, no command-line flags - data lives in variables or stdin, and it runs under `python3 -c` with no arguments.
 
 ```python
 def freedom_audit(has_source, can_modify, can_share, can_redistribute_modified):

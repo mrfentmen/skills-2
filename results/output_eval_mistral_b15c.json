@@ -1,0 +1,17 @@
+{
+ "walt-disney": {
+  "passed": false,
+  "detail": "EXEC TIMEOUT",
+  "code_file": "results/output/mistral-small-latest_walt-disney.py"
+ },
+ "red-team": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/mistral-small-latest_red-team.py"
+ },
+ "julia-child": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_julia-child.py"
+ }
+}

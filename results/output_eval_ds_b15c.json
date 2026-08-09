@@ -1,0 +1,12 @@
+{
+ "richard-stallman": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_richard-stallman.py"
+ },
+ "walt-disney": {
+  "passed": false,
+  "detail": "EXEC FAIL: EOFError: EOF when reading a line",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_walt-disney.py"
+ }
+}

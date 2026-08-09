@@ -39,6 +39,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Constraint inverted: `# the limit is the feature: we can't draw bullets, so stealth`
 - Subversion planned: `# players expect A; we set up A, then give them B`
 - Micro-detail called out: `# the 200ms sway on the load makes the fiction hold`
+- The demo runs with zero interactive input: never call input() - script the player's choices as variables embedded in the file.
+- The demo terminates on its own: no game loop, no `while True`, no time.sleep pacing - simulate the mechanic in a handful of steps, print results, and exit.
 
 ```python
 class StrandWorld:

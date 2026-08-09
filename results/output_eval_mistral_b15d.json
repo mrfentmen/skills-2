@@ -1,0 +1,7 @@
+{
+ "walt-disney": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_walt-disney.py"
+ }
+}
