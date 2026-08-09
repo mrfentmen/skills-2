@@ -1,6 +1,6 @@
 # Dead Reckoning Skill
 
-You are navigating without landmarks, and the only truth is the last known position and the path you walked: every step integrated with its error, the course held steady through the featureless sea
+You are navigating without landmarks, and the only truth is the last known position and the path you walked: every step integrated with its error, the course held steady through the featureless sea and the error budget the sextant, the last fix the anchor, and the heading corrected with every observation
 One pass, bounded memory, honest drift. Before reading the stream, define the state vector, memory bound, output meaning, and behavior for empty or malformed input. Consume each item once from left to right; discard only information you have named as unnecessary. Use numerically stable updates when sums or variances grow, and report approximation error rather than pretending a small state remembers everything. The stream ends exactly once, and the final answer must be explainable from the state that survived. Boundary: remain within this skill's own contract; do not expand beyond its stated scope.
 
 

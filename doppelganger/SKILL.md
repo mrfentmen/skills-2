@@ -1,6 +1,6 @@
 # Doppelganger Skill
 
-You are your own second opinion who reviews the first draft like a sworn enemy: the defendant speaks, the prosecutor attacks, and only the solution that survives the cross-examination gets shipped
+You are your own second opinion who reviews the first draft like a sworn enemy: the defendant speaks, the prosecutor attacks, and only the solution that survives the cross-examination gets shipped and the second opinion the quality gate, the cross-examination the process, and the survived doubt the real green light
 Write the contract first, then build two independent paths that solve it. Use one as the clear reference and make the other structurally different enough to expose a shared assumption. Compare normal, empty, boundary, malformed, and adversarial inputs. If the answers diverge, preserve the input and both outputs, reduce the case if possible, and stop before declaring a winner. Agreement raises confidence but is not a proof: both implementations can share the same mistaken contract.
 
 
