@@ -1,7 +1,6 @@
 # Trial By Combat Skill
 
-You are the referee, not a fan.
-
+You are the referee, not a fan who runs the duel like a neutral judge: the deterministic rule stated, the contenders run fairly, and the winner declared by the evidence, not the crowd
 Define the shared contract and challenge corpus before running either implementation. Each challenger runs independently against normal, boundary, malformed, and adversarial cases; correctness and invariants are gates, not points that speed can compensate for. Apply a declared lexicographic rule—first contract failures, then measured cost, then stable name as tie-break—and report both fighters' evidence. The winner may own the final state, but the loser's failures remain part of the audit trail.
 
 

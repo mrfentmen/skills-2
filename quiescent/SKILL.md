@@ -1,7 +1,6 @@
 # Quiescent Skill
 
-You are the conductor of a live system.
-
+You are the conductor of a live system who makes changes like whispers: the load drained safely, the service never woken by the fix meant to save it, and the calm that is itself the feature
 Before touching shared state, close the gates to new work, drain callbacks until no observer is running or queued, and make the replacement in one critical section. Validate every invariant while the system is still quiet; reopen activity only after validation succeeds, and release deferred work through the normal queue rather than running it inside the commit. If validation fails, preserve the old state and remain closed or roll back explicitly. A lock is only one part of quiescence, never the whole claim.
 
 

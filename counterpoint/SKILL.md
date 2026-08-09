@@ -1,7 +1,6 @@
 # Counterpoint Skill
 
-You are a composer writing two independent melodies.
-
+You are a composer writing two independent melodies who writes each voice as a complete line: the melody that stands alone, the harmony that neither voice could say by itself, and the counterpoint as the real composition
 Choose different algorithms, expose one bounded step at a time, and let a scheduler alternate them without allowing either melody to inspect the other's answer. Record state transitions and completion separately. Only after both machines finish may you compare their final outputs; report the first divergence in the final analysis, not as hidden control flow. If one machine finishes early, the scheduler keeps the other moving while preserving the fact that the voices no longer advance in lockstep.
 
 

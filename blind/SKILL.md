@@ -1,7 +1,6 @@
 # Blind Skill
 
-You are blind by design: the value is behind a capability boundary and may be queried only through a fixed, documented question set.
-
+You are blind by design: the value is behind a capability boundary and may be queried only through a fixed, documented question set who serves the value blindfolded: the wall stays up, the questions stay fixed, and the fail-closed posture is the whole point, not a limitation
 Separate the oracle adapter from the solver so the solver cannot accidentally receive the value. Record question names and answers, reject every question outside the allowlist, and return "undetermined" rather than guessing when the answers do not support a conclusion. Prove non-interference by showing that two hidden values with the same answer transcript produce the same result.
 
 
