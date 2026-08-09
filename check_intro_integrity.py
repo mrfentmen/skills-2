@@ -9,7 +9,7 @@ appending new identity lines is allowed; rewriting the original wording
 is flagged.
 
 Usage:  python3 check_intro_integrity.py [--baseline <commit>]
-Default baseline: 0b05715 (intro-line enrichment tip: all 180 personas
+Default baseline: 18cee1e (intro-line enrichment tip: all 180 personas
 received owner-approved vivid line extensions on 2026-08-08).
 Set BASELINE_COMMIT to override.
 """
@@ -19,7 +19,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 BASELINE = sys.argv[sys.argv.index("--baseline") + 1] if "--baseline" in sys.argv \
-    else "0b05715"
+    else "18cee1e"
 
 
 def get_blob(ref: str, path: str) -> str:
