@@ -19,8 +19,11 @@ Every deliverable produced with this skill should include:
 - an explicit dependency/capability manifest
 - only the runtime and declared standard-library subset used
 - no network, package installation, environment-specific absolute paths, or
-  hidden external service calls
+  hidden external service calls; temporary-directory paths returned by
+  `tempfile` are owned artifacts, not hardcoded environment paths
 - inspectable local input/output and a safe temporary-artifact policy
+- fully self-contained demonstrations: create any input fixture you read inside
+the owned temporary directory; never depend on an external file you do not ship
 - an offline smoke test or command that proves the tool runs without network
 - a clear failure message when a required external capability is unavailable
 

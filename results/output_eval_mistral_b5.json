@@ -1,0 +1,52 @@
+{
+ "shannon": {
+  "passed": true,
+  "detail": "entropy=True redundancy=True channel=True out=True",
+  "code_file": "results/output/mistral-small-latest_shannon.py"
+ },
+ "turing": {
+  "passed": true,
+  "detail": "states=True code-as-data=True decidability=True out=True",
+  "code_file": "results/output/mistral-small-latest_turing.py"
+ },
+ "patterson": {
+  "passed": true,
+  "detail": "measure=True amdahl=True common-case=True out=True",
+  "code_file": "results/output/mistral-small-latest_patterson.py"
+ },
+ "desert-island": {
+  "passed": false,
+  "detail": "GRADER ERR: missing ), unterminated subpattern at position 82",
+  "code_file": "results/output/mistral-small-latest_desert-island.py"
+ },
+ "jane-street": {
+  "passed": true,
+  "detail": "types=True incremental=True concurrency=True out=True",
+  "code_file": "results/output/mistral-small-latest_jane-street.py"
+ },
+ "sweeney": {
+  "passed": true,
+  "detail": "budget=True layout=True timing=True out=True",
+  "code_file": "results/output/mistral-small-latest_sweeney.py"
+ },
+ "vint-cerf": {
+  "passed": true,
+  "detail": "contract=True waist=True failure=True out=True",
+  "code_file": "results/output/mistral-small-latest_vint-cerf.py"
+ },
+ "oracle": {
+  "passed": true,
+  "detail": "prediction=True falsifier=True probe=True uncertainty=True out=True",
+  "code_file": "results/output/mistral-small-latest_oracle.py"
+ },
+ "no-bullshit": {
+  "passed": false,
+  "detail": "EXEC FAIL: FileNotFoundError: Expected data file not found at data.json",
+  "code_file": "results/output/mistral-small-latest_no-bullshit.py"
+ },
+ "smoker": {
+  "passed": false,
+  "detail": "inspect-first=True unverified=True grounded=True first-person=True out=True",
+  "code_file": "results/output/mistral-small-latest_smoker.py"
+ }
+}

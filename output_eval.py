@@ -37,6 +37,8 @@ SCOPE = [
     "spacex-fsw", "vitalik", "sovereign-citizen", "rorschach", "psych",
     "margaret-hamilton", "unix", "neckbeard", "blood-magic", "janitor",
     "carmack-mode", "huang", "pepe-silvia", "terry-davis", "satoshi-nakamoto",
+    "shannon", "turing", "patterson", "desert-island", "jane-street",
+    "sweeney", "vint-cerf", "oracle", "no-bullshit", "smoker",
 ]
 
 TASKS = {
@@ -80,6 +82,16 @@ TASKS = {
     "pepe-silvia": "Transform a string through at least two harmless standard-library transformations plus one bounded bitwise operation, name the magic-number constants, expose an evidence ledger of intermediate values, and check the result against a plain reference; print the result.",
     "terry-davis": "Print a result using at least 2 cosmic or divine variable names, at least 1 religious or devotional comment, and at least 1 unconventional pattern (deep recursion, eval, goto-style, or odd structure).",
     "satoshi-nakamoto": "Build a minimal hash-chained append-only ledger with no central party: tampering must be detectable, conflicts resolved by an objective rule, and honest behavior the rational choice; print a verification result.",
+    "shannon": "Compute the entropy of a small message, choose a redundancy decision (strip it via compression or add it via error correction), recover from a flipped bit over a noisy channel, and print the entropy and the decision.",
+    "turing": "Implement a small state machine with explicit states and transitions, and make it interpret a tiny instruction string as code-as-data; print the trace and a decidability note.",
+    "patterson": "Measure a small computation to find its bottleneck with data, state the Amdahl fraction the change touches, optimize only the common case, and print before/after numbers.",
+    "desert-island": "Write a program that declares its dependency manifest, uses only the standard library, reads a local file safely with a temporary-artifact policy, and prints the result without network or absolute paths.",
+    "jane-street": "Model a small money/order domain with distinct types so illegal states are unrepresentable, recompute only dependent results on change, and print the result with an explicit concurrency note.",
+    "sweeney": "Process a batch of entities in a contiguous data-oriented layout, enforce a hard frame budget (16.6ms or 8.3ms) with an explicit gate, and print wall-clock timing.",
+    "vint-cerf": "Define a tiny packet protocol with an explicit contract (fields, framing, states), name the narrow stable core, handle a slow or lossy link explicitly, and print a simulated exchange.",
+    "oracle": "State a prediction for a coin-flip sequence with a confidence prior, define the observation that would falsify it, run a real probe, and print the updated judgment with uncertainty labeled.",
+    "no-bullshit": "Inspect this small data set embedded in your program: [{\"service\": \"api\", \"status\": \"up\"}, {\"service\": \"db\", \"status\": \"down\"}, {\"service\": \"cache\", \"status\": \"up\"}]. Write a numbered plan, implement it, verify what you tested, state what remains unverified, and print the health report; never write 'this should work'.",
+    "smoker": "Inspect a small computation first, implement it in direct first-person style with explicit comments, list what remains unverified, back every claim with a test you ran, and print the result.",
 }
 
 GRADERS = {
@@ -331,6 +343,80 @@ GRADERS = {
         and bool(o.strip()) and e == "",
         f"proof={'hash' in c.lower() or 'sha256' in c.lower() or 'digest' in c.lower()} chain={'chain' in c.lower() or 'block' in c.lower()} verify={'verify' in c.lower() or 'proof' in c.lower() or 'tamper' in c.lower()} incentive={'incentive' in c.lower() or 'reward' in c.lower() or 'rational' in c.lower() or 'honest' in c.lower()} out={bool(o.strip())}",
     ),
+    "shannon": lambda c, o, e: (
+        ("entropy" in c.lower() or "log2" in c or "log(2" in c)
+        and ("redundan" in c.lower() or "compress" in c.lower() or "parity" in c.lower() or "hamming" in c.lower() or "encode" in c.lower())
+        and ("flip" in c.lower() or "corrupt" in c.lower() or "noise" in c.lower() or "channel" in c.lower() or "bit" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"entropy={'entropy' in c.lower() or 'log2' in c or 'log(2' in c} redundancy={'redundan' in c.lower() or 'compress' in c.lower() or 'parity' in c.lower() or 'hamming' in c.lower() or 'encode' in c.lower()} channel={'flip' in c.lower() or 'corrupt' in c.lower() or 'noise' in c.lower() or 'channel' in c.lower() or 'bit' in c.lower()} out={bool(o.strip())}",
+    ),
+    "turing": lambda c, o, e: (
+        ("state" in c.lower() and ("transition" in c.lower() or "delta" in c.lower() or "table" in c.lower()))
+        and ("interpret" in c.lower() or "instruction" in c.lower() or "code" in c.lower() or "parse" in c.lower() or "exec" in c.lower())
+        and ("decidab" in c.lower() or "halts" in c.lower() or "terminat" in c.lower() or "bound" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"states={'state' in c.lower() and ('transition' in c.lower() or 'delta' in c.lower() or 'table' in c.lower())} code-as-data={'interpret' in c.lower() or 'instruction' in c.lower() or 'code' in c.lower() or 'parse' in c.lower() or 'exec' in c.lower()} decidability={'decidab' in c.lower() or 'halts' in c.lower() or 'terminat' in c.lower() or 'bound' in c.lower()} out={bool(o.strip())}",
+    ),
+    "patterson": lambda c, o, e: (
+        ("perf_counter" in c or "time" in c.lower() or "profile" in c.lower() or "measure" in c.lower())
+        and ("amdahl" in c.lower() or "fraction" in c.lower() or "serial" in c.lower() or "parallel" in c.lower())
+        and ("common" in c.lower() or "hot path" in c.lower() or "fast path" in c.lower() or "optimize" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"measure={'perf_counter' in c or 'time' in c.lower() or 'profile' in c.lower() or 'measure' in c.lower()} amdahl={'amdahl' in c.lower() or 'fraction' in c.lower() or 'serial' in c.lower() or 'parallel' in c.lower()} common-case={'common' in c.lower() or 'hot path' in c.lower() or 'fast path' in c.lower() or 'optimize' in c.lower()} out={bool(o.strip())}",
+    ),
+    "desert-island": lambda c, o, e: (
+        ("manifest" in c.lower() or "dependenc" in c.lower() or "stdlib" in c.lower() or "import " in c)
+        and not _NO_NET_PAT.search(c)
+        and ("tempfile" in c or "temp" in c.lower() or "with open" in c or "NamedTemporary" in c)
+        and bool(o.strip()) and e == "",
+        f"manifest={'manifest' in c.lower() or 'dependenc' in c.lower() or 'stdlib' in c.lower() or 'import ' in c} no-network={not bool(_NO_NET_PAT.search(c))} temp-policy={'tempfile' in c or 'temp' in c.lower() or 'with open' in c or 'NamedTemporary' in c} out={bool(o.strip())}",
+    ),
+    "jane-street": lambda c, o, e: (
+        ("class " in c and ("dataclass" in c or "typing" in c or "namedtuple" in c.lower() or "enum" in c.lower() or "newtype" in c.lower() or "type " in c))
+        and ("recompute" in c.lower() or "incremental" in c.lower() or "depend" in c.lower() or "cache" in c.lower() or "reuse" in c.lower())
+        and ("lock" in c or "thread" in c.lower() or "concurren" in c.lower() or "race" in c.lower() or "atomic" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"types={'class ' in c and ('dataclass' in c or 'typing' in c or 'namedtuple' in c.lower() or 'enum' in c.lower() or 'newtype' in c.lower() or 'type ' in c)} incremental={'recompute' in c.lower() or 'incremental' in c.lower() or 'depend' in c.lower() or 'cache' in c.lower() or 'reuse' in c.lower()} concurrency={'lock' in c or 'thread' in c.lower() or 'concurren' in c.lower() or 'race' in c.lower() or 'atomic' in c.lower()} out={bool(o.strip())}",
+    ),
+    "sweeney": lambda c, o, e: (
+        ("16.6" in c or "8.3" in c or "budget" in c.lower() or "frame" in c.lower())
+        and ("contigu" in c.lower() or "array" in c.lower() or "struct" in c.lower() or "layout" in c.lower() or "of arrays" in c.lower())
+        and ("perf_counter" in c or "time" in c.lower() or "wall" in c.lower() or "elapsed" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"budget={'16.6' in c or '8.3' in c or 'budget' in c.lower() or 'frame' in c.lower()} layout={'contigu' in c.lower() or 'array' in c.lower() or 'struct' in c.lower() or 'layout' in c.lower() or 'of arrays' in c.lower()} timing={'perf_counter' in c or 'time' in c.lower() or 'wall' in c.lower() or 'elapsed' in c.lower()} out={bool(o.strip())}",
+    ),
+    "vint-cerf": lambda c, o, e: (
+        ("contract" in c.lower() or "protocol" in c.lower() or "frame" in c.lower() or "header" in c.lower() or "packet" in c.lower())
+        and ("core" in c.lower() or "waist" in c.lower() or "minimal" in c.lower() or "narrow" in c.lower())
+        and ("fail" in c.lower() or "loss" in c.lower() or "timeout" in c.lower() or "retry" in c.lower() or "slow" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"contract={'contract' in c.lower() or 'protocol' in c.lower() or 'frame' in c.lower() or 'header' in c.lower() or 'packet' in c.lower()} waist={'core' in c.lower() or 'waist' in c.lower() or 'minimal' in c.lower() or 'narrow' in c.lower()} failure={'fail' in c.lower() or 'loss' in c.lower() or 'timeout' in c.lower() or 'retry' in c.lower() or 'slow' in c.lower()} out={bool(o.strip())}",
+    ),
+    "oracle": lambda c, o, e: (
+        ("predict" in c.lower() or "prior" in c.lower() or "confidence" in c.lower())
+        and ("falsif" in c.lower() or "reject" in c.lower() or "change" in c.lower())
+        and ("random" in c or "sample" in c.lower() or "probe" in c.lower() or "flip" in c.lower())
+        and ("uncertain" in c.lower() or "confidence" in c.lower() or "interval" in c.lower() or "updated" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"prediction={'predict' in c.lower() or 'prior' in c.lower() or 'confidence' in c.lower()} falsifier={'falsif' in c.lower() or 'reject' in c.lower() or 'change' in c.lower()} probe={'random' in c or 'sample' in c.lower() or 'probe' in c.lower() or 'flip' in c.lower()} uncertainty={'uncertain' in c.lower() or 'confidence' in c.lower() or 'interval' in c.lower() or 'updated' in c.lower()} out={bool(o.strip())}",
+    ),
+    "no-bullshit": lambda c, o, e: (
+        ("inspect" in c.lower() or "check" in c.lower() or "read" in c.lower())
+        and ("step 1" in c.lower() or "step 2" in c.lower() or "plan" in c.lower() or "1." in c)
+        and ("verif" in c.lower() or "test" in c.lower() or "assert" in c)
+        and ("unverified" in c.lower() or "not tested" in c.lower() or "not verified" in c.lower())
+        and "should work" not in c.lower()
+        and bool(o.strip()) and e == "",
+        f"inspect={'inspect' in c.lower() or 'check' in c.lower() or 'read' in c.lower()} plan={'step 1' in c.lower() or 'step 2' in c.lower() or 'plan' in c.lower() or '1.' in c} verify={'verif' in c.lower() or 'test' in c.lower() or 'assert' in c} unverified={'unverified' in c.lower() or 'not tested' in c.lower() or 'not verified' in c.lower()} no-should-work={'should work' not in c.lower()} out={bool(o.strip())}",
+    ),
+    "smoker": lambda c, o, e: (
+        ("inspect" in c.lower() or "checked" in c.lower() or "read" in c.lower())
+        and ("unverified" in c.lower() or "not verified" in c.lower() or "not tested" in c.lower())
+        and ("assert" in c or "test" in c.lower() or "ran" in c.lower())
+        and ("i checked" in c.lower() or "i verified" in c.lower() or "i ran" in c.lower() or "i wrote" in c.lower() or "first-person" in c.lower())
+        and bool(o.strip()) and e == "",
+        f"inspect-first={'inspect' in c.lower() or 'checked' in c.lower() or 'read' in c.lower()} unverified={'unverified' in c.lower() or 'not verified' in c.lower() or 'not tested' in c.lower()} grounded={'assert' in c or 'test' in c.lower() or 'ran' in c.lower()} first-person={'i checked' in c.lower() or 'i verified' in c.lower() or 'i ran' in c.lower() or 'i wrote' in c.lower() or 'first-person' in c.lower()} out={bool(o.strip())}",
+    ),
 }
 
 
@@ -341,6 +427,7 @@ STDIN = {
 
 _DR_PAT = re.compile(r"\bsorted\(|\b\.sort\(|rewind|random access")
 _FT_PAT = re.compile(r"\bsorted\(|reversed\(|\[::|lookahead|rewind")
+_NO_NET_PAT = re.compile("urllib|socket|requests|http|ftplib|smtplib|subprocess|os\\.system|pathlib\\.Path\\(\\s*['\"]/")
 
 
 def extract_code(raw: str) -> str:
@@ -419,6 +506,9 @@ def main() -> None:
                 r = subprocess.run([sys.executable, "-c", code],
                                    input=STDIN.get(name, ""),
                                    capture_output=True, text=True, timeout=30)
+                # unittest success banners land on stderr; they are not failures.
+                if r.returncode == 0 and "Ran " in r.stderr and "OK" in r.stderr and "FAILED" not in r.stderr:
+                    r.stderr = ""
                 passed, detail = GRADERS[name](code, r.stdout, r.stderr)
                 if r.returncode != 0:
                     passed = False

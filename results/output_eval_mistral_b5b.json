@@ -1,0 +1,7 @@
+{
+ "no-bullshit": {
+  "passed": true,
+  "detail": "inspect=True plan=True verify=True unverified=True no-should-work=True out=True",
+  "code_file": "results/output/mistral-small-latest_no-bullshit.py"
+ }
+}

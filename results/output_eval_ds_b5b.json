@@ -1,0 +1,17 @@
+{
+ "patterson": {
+  "passed": true,
+  "detail": "measure=True amdahl=True common-case=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_patterson.py"
+ },
+ "jane-street": {
+  "passed": true,
+  "detail": "types=True incremental=True concurrency=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_jane-street.py"
+ },
+ "no-bullshit": {
+  "passed": true,
+  "detail": "inspect=True plan=True verify=True unverified=True no-should-work=True out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_no-bullshit.py"
+ }
+}

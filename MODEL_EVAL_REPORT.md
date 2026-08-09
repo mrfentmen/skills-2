@@ -243,6 +243,54 @@ support so unix can prove composition by actually reading a piped stream.
 - **terry-davis** (mistral): three runs, three code shapes, all exit
   nonzero despite the checkable exit-0 requirement (deepseek complies).
 
+## Round 7: fifth constraint batch (50 skills total)
+
+Extended the harness to 10 more constraint skills: shannon, turing, patterson,
+desert-island, jane-street, sweeney, vint-cerf, oracle, no-bullshit, smoker
+(50 skills under test).
+
+| Model | batch 5 final | remaining failures |
+|---|---|---|
+| deepseek-v4-flash | **9/10** | desert-island |
+| mistral-small-latest | **10/10** | none (first perfect arm) |
+
+### Harness fixes (3 grader bugs, 0 skill blame)
+
+- **desert-island grader**: the no-network regex had an unterminated char
+  class (f-string double-escaping) — both arms "failed" with GRADER ERR before
+  execution. Replaced with a module-level compiled `_NO_NET_PAT`.
+- **no-bullshit**: the task demanded inspecting an external `data.json` the
+  harness never provides. The data set is now embedded in the task text.
+- **smoker**: the model's own unittest writes its "Ran N tests... OK" banner
+  to stderr, tripping the `stderr == ""` check despite perfect output.
+  Success banners are now ignored.
+
+### Skill-wording fixes from real failures
+
+- **patterson**: Amdahl serial fraction must be strictly between 0 and 1 —
+  the model wrote `touched = 1.0`, making `1/(1-f)` divide by zero.
+- **jane-street**: lock guidance — hold a lock at one level only (a locked
+  method must not call another method taking the same lock) or use a
+  reentrant lock. The model deadlocked itself re-acquiring a plain
+  `threading.Lock` inside a locked method.
+- **desert-island**: (1) demos must be fully self-contained — create any
+  input fixture inside the owned temp dir, never depend on an external file;
+  (2) `tempfile`-returned absolute paths are owned artifacts, not hardcoded
+  environment paths. Across three runs the model went from reading a
+  nonexistent external file -> asserting temp paths are not absolute -> fully
+  compliant; each wording fix measurably improved compliance.
+
+### Remaining failure is model-side (deterministic, documented)
+
+- **desert-island** (deepseek): the third sample is fully compliant
+  (self-contained fixture, owned temp artifacts, capability contract) but its
+  own "permission error" self-test reads a *directory* path — the program's
+  own `Path.is_file()` guard raises `FileNotFoundError` (not
+  `IsADirectoryError`), so the model's `except IsADirectoryError` never fires
+  and the exception propagates before the print. mistral passes; no wording
+  fix is warranted (overfitting to one model's test-logic bug would weaken
+  the skill).
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

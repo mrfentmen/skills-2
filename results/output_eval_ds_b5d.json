@@ -1,0 +1,7 @@
+{
+ "desert-island": {
+  "passed": false,
+  "detail": "EXEC FAIL: FileNotFoundError: Input file not found: /var/folders/ch/p48g6v953j9dsrxqqh3wh8_",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_desert-island.py"
+ }
+}

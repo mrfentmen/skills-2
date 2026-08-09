@@ -18,7 +18,7 @@ Every deliverable produced with this skill should be gradeable. You must include
 ALL of the following so a reviewer can check them without judgment calls:
 
 - a measurement pass: the bottleneck identified with data (profiler, benchmark, equation)
-- an Amdahl analysis: the fraction of work the change touches, stated before optimizing
+- an Amdahl analysis: the fraction of work the change touches (a real number strictly between 0 and 1; at 1.0 the ceiling 1/(1-f) is undefined, so never claim 1.0), stated before optimizing
 - a common-case optimization: the hot path made fast, the rare path left simple
 - a simple-interface design: uniform operations over special cases
 - a re-measurement: the before/after numbers shown

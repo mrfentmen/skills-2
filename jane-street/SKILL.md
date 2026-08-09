@@ -19,7 +19,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 - a type-driven domain: illegal states unrepresentable (currencies, IDs, states as distinct types)
 - an incremental update path: only dependent results recompute on change
-- a concurrency story: effects explicit, race conditions unrepresentable or provably absent
+- a concurrency story: effects explicit, race conditions unrepresentable or provably absent (if you use a lock, hold it at one level only: a locked method must not call another method that takes the same lock, or use a reentrant lock)
 - an evidence-over-ego review note: design claims backed by measurements or tests
 - a fast-iteration tool: incremental build/check in seconds, not minutes
 
