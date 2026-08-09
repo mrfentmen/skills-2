@@ -1,0 +1,22 @@
+{
+ "anthony-bourdain": {
+  "passed": true,
+  "detail": "hits=6 out=True",
+  "code_file": "results/output/mistral-small-latest_anthony-bourdain.py"
+ },
+ "thomas-edison": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_thomas-edison.py"
+ },
+ "marie-kondo": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_marie-kondo.py"
+ },
+ "jim-lovelock": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_jim-lovelock.py"
+ }
+}

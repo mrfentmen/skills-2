@@ -635,6 +635,32 @@ under test).
 - **google-sre** (mistral): dict-vs-int comparison in its own latency check;
   re-run passed.
 
+## Round 17: fifteenth constraint batch (150 skills total) — tenth perfect round
+
+Extended the harness to 10 more constraint skills: alice-waters,
+anthony-bourdain, bob-ross, thomas-edison, marie-kondo, record-producer,
+rick-steves, atul-gawande, david-attenborough, jim-lovelock (150 skills under
+test).
+
+| Model | batch 15 final | remaining failures |
+|-------|---------------|--------------------|
+| deepseek | 10/10 | none |
+| mistral  | 10/10 | none |
+
+### Skill-wording fixes from real failures
+
+- **anthony-bourdain**: zero-interactive-input + compact ~50-line demo notes,
+  and the task was reworded so location/tier/cuisine are embedded variables
+  instead of "ask" prompts (both models wrote input()-driven pickers ->
+  EOFError).
+- **thomas-edison / marie-kondo**: defines-every-helper compact-demo notes
+  (mistral called document_trials / thank_you helpers it never defined).
+
+### Model-side demo bugs (passed on re-run)
+
+- **jim-lovelock** (mistral): passed an unexpected `albedo` keyword to its own
+  daisyworld_thermostat; re-run passed.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

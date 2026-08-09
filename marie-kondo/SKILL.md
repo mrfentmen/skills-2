@@ -38,6 +38,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - The question asked per item: `# spark joy? clean name? tested? needed? simple?`
 - Thank-you commits visible: `# commit: thank you, legacy_auth, for serving since 2019`
 - Safety stated: `# removed 3 dead helpers -- full test suite still green`
+- Demo code is compact enough to complete in one pass (at most ~50 lines) and defines every helper it calls: a truncated demo that references a missing function is a failed demo.
 
 ```python
 def spark_joy_audit(items):

@@ -57,6 +57,8 @@ SCOPE = [
     "richard-stallman", "sun-tzu", "walt-disney", "yukihiro-matsumoto", "lovelace",
     "apple-platform", "aws-sde", "azure-engineer", "google-sre", "meta-senior-dev",
     "the-last-employee", "greybeard-after-midnight", "netflix-streaming", "valve-time", "lisa-su",
+    "alice-waters", "anthony-bourdain", "bob-ross", "thomas-edison", "marie-kondo",
+    "record-producer", "rick-steves", "atul-gawande", "david-attenborough", "jim-lovelock",
 ]
 
 TASKS = {
@@ -200,6 +202,16 @@ TASKS = {
     "netflix-streaming": "Build a small streaming logic demo (e.g., a tiny client-side ABR bitrate selector) and in comments document: (1) a client-side ABR rule: bitrate chosen from buffer occupancy, not server guesses, (2) a QoE metric set: startup time, rebuffering ratio, and delivered quality, (3) a chaos story: what is killed on purpose and how the system survives it, (4) a load-shedding order: what is sacrificed first under duress, (5) an experiment plan: how the change is A/B tested with statistical rigor. Print the demo output.",
     "valve-time": "Design a small game feature (e.g., a tiny grappling-hook mechanic) and in comments document: (1) player fantasy, genre context, comparable mechanics, and technical risks, (2) a falsifiable fun hypothesis and the smallest experiment that could disprove it, (3) a playable prototype focused on the riskiest interaction, not a feature list, (4) a playtest plan with participants, task, observation, and decision gate, (5) cuts: what was deliberately excluded and why, (6) a decision based on observed player behavior, not designer enthusiasm. Print the design.",
     "lisa-su": "Write a small product-leadership plan (e.g., for a tiny personal project or open-source tool) and in comments document: (1) a focus statement: the three pillars and what is deliberately NOT being built, (2) a roadmap commitment: what will be delivered, with honest risk instead of hype, (3) a next-5% pass: one measurable improvement past good enough, (4) a hardest-problem choice: the structural bottleneck chosen over the safe task, (5) a post-mortem line: the failure analyzed as data, with the better path stated. Print the plan.",
+    "alice-waters": "Build a small thing the seasonal way (e.g., a tiny meal-planner that picks dishes from a hardcoded local ingredient list) and in comments document: (1) the ingredient audit: the raw materials (data, dependencies, primitives) named and their source known, (2) the minimal-interference pass: at least one layer of needless abstraction removed, (3) the market read: the design adapted to the actual constraints, not a rigid template, (4) the source footprint: dependencies and overhead kept small and named, (5) the taste check: the result judged on whether it serves the user, not the structure. Print the output.",
+    "anthony-bourdain": "Build a small restaurant-picker (e.g., a tiny local-food finder) and in comments document: (1) the location the user is in: ZIP, neighborhood, city, or coordinates, embedded as a variable, (2) exactly one price tier (single or double dollar signs), embedded as a variable, (3) the food or cuisine the user wants, embedded as a variable, (4) search/filter a hardcoded local list using location, cuisine, and the price tier, (5) show the listing name, address, rating, review count, and returned price tier when available, (6) explain why each pick fits the request. The demo runs with zero interactive input (never call input() - script the user's answers as variables); use a hardcoded in-file list (no network calls); print the picks.",
+    "bob-ross": "Build a small learning aid the Bob Ross way (e.g., a tiny code-review feedback generator) and in comments document: (1) a reframe: at least one error restated as a happy accident with a concrete fix, (2) a layered breakdown: the task split into undercoat / core / polish steps, (3) a momentum note: a quick progress win shown early so the learner isn't frozen, (4) a growth message: feedback that praises effort, never labels the person, (5) a calm voice: no-mistake-shaming language throughout. Print the feedback.",
+    "thomas-edison": "Build a small experiment story (e.g., debug why a tiny function is slow and fix it) and in comments document: (1) the documented trials: what was tried, measured, and discarded (an audit trail), (2) the isolated variable: one factor tested with everything else held constant, (3) the root cause: the actual cause found, not a lazy patch, (4) the iteration: a variant built, measured, and compared, (5) the unglamorous note: the dull, necessary work that made the result real. Print the experiment log.",
+    "marie-kondo": "Build a small decluttering demo (e.g., tidy a messy toy module) and in comments document: (1) a category pass: code gathered by logical category, not by file path, (2) the order honored: easy wins first, the legacy core last, (3) a spark-joy audit: every kept/removed item justified by the spark-joy question, (4) a thank-you note: the removed item's contribution acknowledged before deletion, (5) the tidiness verdict: the result stays tidy because it has a home. Print the result.",
+    "record-producer": "Design a small game-feel analysis (e.g., the first minute and core loop of a tiny game) and in comments document: (1) a timestamped first-minute and core-loop audit, (2) pacing, friction, feedback, audio/visual signals, and disengagement risk, (3) a felt-experience hypothesis tied to a specific change, (4) a small playtest with observable metrics, sample, pass criteria, and stop condition, (5) a recommendation that can be rejected if the metrics do not improve. Print the analysis.",
+    "rick-steves": "Build a small trip planner (e.g., a 3-day itinerary for one city from a hardcoded local list) and in comments document: (1) the four questions asked: destination, duration, budget, interests — before any plan, (2) a back-door pick: at least one underrated alternative to an overrun hotspot, named, (3) a pace check: the itinerary sized to the days, with transit time accounted for, (4) a budget line: per-day cost estimated and summed, (5) a backup: what to skip if energy runs low. Print the itinerary.",
+    "atul-gawande": "Build a small checklist demo (e.g., a deployment checklist for a tiny service) and in comments document: (1) a checklist: 5-9 items covering the critical, easily-missed steps only, (2) a pause point: an explicit stop-and-verify moment with roles named, (3) a problem classification: simple, complicated, or complex — and what that dictates, (4) a co-creation note: the checklist field-tested and pruned with its users, (5) the discipline note: why even experts follow the list. Print the checklist.",
+    "david-attenborough": "Build a small observation demo (e.g., watch a tiny service's behavior before diagnosing it) and in comments document: (1) an observation log: what was watched, for how long, before any hypothesis, (2) a non-intervention note: how the study avoided altering the system, (3) a baseline: the system's normal behavior, established before diagnosis, (4) a plain explanation: the complexity translated for someone new to the domain, (5) the wonder note: the detail that made the system worth watching. Print the observation log.",
+    "jim-lovelock": "Build a small stability model (e.g., a tiny Daisyworld-style temperature regulation simulation) and in comments document: (1) a whole-system view: the full loop that keeps the system stable, drawn end to end, (2) a feedback model: the opposing loops (not the setpoints) that provide stability, (3) a daisyworld: the smallest model that demonstrates the regulation mechanism, (4) a tipping-point watch: the threshold metric, not just the average, (5) the humility note: what the model does not claim to know. Print the simulation output.",
 }
 
 GRADERS = {
@@ -1169,6 +1181,77 @@ GRADERS = {
         ["next 5%", "next-5%", "next five", "measurable"],
         ["hardest", "bottleneck", "structural", "safe task"],
         ["post-mortem", "postmortem", "analyzed as data", "failure"],
+    ], o, e),
+    "alice-waters": lambda c, o, e: _check_evidence(c, [
+        ["ingredient", "raw material", "source", "audit"],
+        ["minimal", "abstraction", "remove", "interference"],
+        ["market", "constraint", "adapt", "template"],
+        ["footprint", "dependenc", "overhead", "small"],
+        ["taste", "serves", "user", "season"],
+    ], o, e),
+    "anthony-bourdain": lambda c, o, e: _check_evidence(c, [
+        ["location", "zip", "neighborhood", "city", "coordinates"],
+        ["price tier", "tier", "$$", "budget"],
+        ["cuisine", "food", "what the user wants"],
+        ["filter", "search", "match"],
+        ["name", "address", "rating", "review"],
+        ["why", "explain", "fits", "reason"],
+    ], o, e, need=5),
+    "bob-ross": lambda c, o, e: _check_evidence(c, [
+        ["happy accident", "reframe", "accident"],
+        ["undercoat", "core", "polish", "layer"],
+        ["momentum", "quick win", "progress", "early"],
+        ["growth", "effort", "praise", "never"] ,
+        ["calm", "mistake", "shame", "gentle"],
+    ], o, e),
+    "thomas-edison": lambda c, o, e: _check_evidence(c, [
+        ["trial", "measured", "discarded", "audit trail"],
+        ["isolated", "variable", "held constant"],
+        ["root cause", "actual cause", "patch"],
+        ["iterat", "variant", "compared"],
+        ["unglamorous", "dull", "necessary", "grind"],
+    ], o, e),
+    "marie-kondo": lambda c, o, e: _check_evidence(c, [
+        ["categor", "logical", "by purpose", "gathered"],
+        ["easy win", "order", "legacy", "last"],
+        ["spark joy", "spark-joy", "joy", "justified"],
+        ["thank", "acknowledged", "contribution"],
+        ["tid", "home", "stays"],
+    ], o, e),
+    "record-producer": lambda c, o, e: _check_evidence(c, [
+        ["first-minute", "first minute", "core loop", "timestamp"],
+        ["pacing", "friction", "feedback", "signal", "disengagement"],
+        ["hypothesis", "felt", "specific change"],
+        ["playtest", "metric", "sample", "stop condition"],
+        ["reject", "recommendation", "improve"],
+    ], o, e),
+    "rick-steves": lambda c, o, e: _check_evidence(c, [
+        ["destination", "duration", "budget", "interests"],
+        ["back-door", "back door", "underrated", "alternative"],
+        ["pace", "transit", "days", "itinerary"],
+        ["per-day", "per day", "cost", "budget line"],
+        ["backup", "skip", "energy"],
+    ], o, e),
+    "atul-gawande": lambda c, o, e: _check_evidence(c, [
+        ["checklist", "5-9", "easily-missed", "critical"],
+        ["pause", "stop-and-verify", "verify"],
+        ["simple", "complicated", "complex", "classif"],
+        ["field-test", "pruned", "co-creation", "users"],
+        ["discipline", "expert", "follow"],
+    ], o, e),
+    "david-attenborough": lambda c, o, e: _check_evidence(c, [
+        ["observation", "watched", "before"],
+        ["non-intervention", "altering", "observe"],
+        ["baseline", "normal", "established"],
+        ["plain", "translate", "new", "explain"],
+        ["wonder", "detail", "worth watching"],
+    ], o, e),
+    "jim-lovelock": lambda c, o, e: _check_evidence(c, [
+        ["whole-system", "whole system", "loop", "end to end"],
+        ["feedback", "opposing", "stability", "negative"],
+        ["daisyworld", "smallest model", "regulation"],
+        ["tipping", "threshold", "metric"],
+        ["humility", "does not claim", "unknown"],
     ], o, e),
 }
 

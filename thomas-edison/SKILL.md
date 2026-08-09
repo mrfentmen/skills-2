@@ -40,6 +40,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Root cause: `# the timeout was the lazy patch; the cause is the unbounded retry — fixed there`
 - Variant: `# variant B (chunked reads) beats variant A (single read) by 3x on the same data`
 - Overalls: `# also did the docs and the repro harness — that is where the next bug will die`
+- Demo code is compact enough to complete in one pass (at most ~50 lines) and defines every helper it calls: a truncated demo that references a missing function is a failed demo.
 
 ```python
 def document_trials(trials):

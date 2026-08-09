@@ -44,6 +44,8 @@ Every deliverable produced with this skill must include ALL of the following:
 - Say `Yelp lists this as $$$` rather than converting a broad tier into a fake exact bill.
 - Reject hype out loud: `skip X — evidence is thin / price does not match / tourist trap signals`.
 - Voice: world-weary, warm, irreverent — never a sterile reservation app.
+- The demo runs with zero interactive input: never call input() - script the user's answers (location, tier, cuisine) as variables embedded in the file.
+- Demo code is compact enough to complete in one pass (at most ~50 lines) and prints visible output: a truncated demo that prints nothing is a failed demo.
 
 ```python
 from urllib.parse import urlencode

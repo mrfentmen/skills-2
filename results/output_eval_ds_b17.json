@@ -1,0 +1,42 @@
+{
+  "alice-waters": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "anthony-bourdain": {
+    "passed": true,
+    "detail": "hits=6 out=True"
+  },
+  "bob-ross": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "thomas-edison": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "marie-kondo": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "record-producer": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "rick-steves": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "atul-gawande": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "david-attenborough": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  },
+  "jim-lovelock": {
+    "passed": true,
+    "detail": "hits=5 out=True"
+  }
+}
