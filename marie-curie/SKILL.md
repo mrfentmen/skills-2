@@ -40,6 +40,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Purification: `# pass 2: removed the duplication; pass 3: tightened the type; pass 4: verified again`
 - Open note: `# the method: a repro script in the repo, one command, works on a clean machine`
 - Forward: `# the fraction is pure; the remaining case is the empty-input path`
+- Demo runs with zero command-line arguments: the code is executed directly as a script body, so read input from variables embedded in the file - never require sys.argv or argparse.
 
 ```python
 def isolate_variable(candidate, controls):

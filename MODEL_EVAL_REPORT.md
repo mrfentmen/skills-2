@@ -426,6 +426,41 @@ note it passed with a simulated mechanism.
 - **jane-goodall** (mistral): used `random` without importing it. Fresh run
   imported it and passed.
 
+## Round 11: ninth constraint batch (90 skills total) — fourth perfect round
+
+Extended the harness to 10 more constraint skills: louis-pasteur, marie-curie,
+rachael-carson, radia-perlman, frances-allen, joy-buolamwini,
+werner-heisenberg, wozniak, jony-ive, susan-kare (90 skills under test).
+
+| Model | batch 9 final | remaining failures |
+|---|---|---|
+| deepseek-v4-flash | **10/10** | none |
+| mistral-small-latest | **10/10** | none |
+
+### Grader fixes (2 too-literal checks, 0 skill blame)
+
+- **wozniak**: the part-count evidence accepts the skill's own phrasing
+  ("parts: 2 functions, 0 deps, 1 file"); the transparency claim accepts
+  "no hidden layers" / "the whole sort is this loop"; the openness seam
+  accepts "extension point".
+- **werner-heisenberg**: the method-statement evidence accepts "measured
+  with 1000 warm-up runs" / "measurement runs" / `perf_counter` (mistral
+  stated the method without the literal word "method").
+
+### Skill-wording fixes from real failures
+
+- **frances-allen**: style now requires stdlib-only self-contained demos and
+  small benchmarks (never numpy/torch; no 10M-element arrays, no
+  multiprocessing pools) - mistral wrote a numpy + Pool(4) benchmark over a
+  10M-element array that timed out. After the note it passed with pure
+  builtins.
+- **marie-curie**: style now requires demos to run with zero command-line
+  arguments ("the code is executed directly as a script body, so read input
+  from variables embedded in the file - never require sys.argv or
+  argparse") - mistral twice wrote an argv-driven CLI (`usage: python
+  converter.py <value>` -> exits 1 under `python -c`, the same
+  non-portable entry point as neckbeard). After the note it passed.
+
 ## Reproduce
 
     KEY=... python3 model_router_eval.py \

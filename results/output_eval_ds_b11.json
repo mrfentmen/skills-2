@@ -1,0 +1,52 @@
+{
+ "louis-pasteur": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_louis-pasteur.py"
+ },
+ "marie-curie": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_marie-curie.py"
+ },
+ "rachael-carson": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_rachael-carson.py"
+ },
+ "radia-perlman": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_radia-perlman.py"
+ },
+ "frances-allen": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_frances-allen.py"
+ },
+ "joy-buolamwini": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_joy-buolamwini.py"
+ },
+ "werner-heisenberg": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_werner-heisenberg.py"
+ },
+ "wozniak": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_wozniak.py"
+ },
+ "jony-ive": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_jony-ive.py"
+ },
+ "susan-kare": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/deepseek-ai-deepseek-v4-flash-0731_susan-kare.py"
+ }
+}

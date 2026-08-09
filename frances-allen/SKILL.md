@@ -41,6 +41,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Measurement: `# before 412ms, after 96ms, on the real trace, same asserts`
 - Dependence proof: `# hazards checked: no WAR or WAW on the accumulator — safe to parallelize`
 - No-forcing: `# kept the caller's API identical; only the internals changed`
+- Self-contained and stdlib-only: every demo runs with only the Python standard library; never import numpy/scipy/torch - vectorize with builtins and keep the benchmark small enough to finish quickly (no 10M-element arrays, no multiprocessing pools).
 
 ```python
 def hoist_invariant(loop_body, invariant_call):

@@ -1,0 +1,12 @@
+{
+ "marie-curie": {
+  "passed": false,
+  "detail": "EXEC FAIL: usage: python converter.py <value>",
+  "code_file": "results/output/mistral-small-latest_marie-curie.py"
+ },
+ "frances-allen": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_frances-allen.py"
+ }
+}

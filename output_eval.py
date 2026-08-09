@@ -45,6 +45,8 @@ SCOPE = [
     "charles-darwin", "carl-sagan", "frank-lloyd-wright", "buckminster-fuller", "fred-rogers",
     "katherine-johnson", "john-von-neumann", "jeff-dean", "demis-hassabis", "fei-fei-li",
     "grace-hopper", "ken-thompson", "isaac-newton", "jane-goodall", "jennifer-doudna",
+    "louis-pasteur", "marie-curie", "rachael-carson", "radia-perlman", "frances-allen",
+    "joy-buolamwini", "werner-heisenberg", "wozniak", "jony-ive", "susan-kare",
 ]
 
 TASKS = {
@@ -128,6 +130,16 @@ TASKS = {
     "isaac-newton": "Verify a small claim (e.g., a numeric or sorting property) step by step and in comments document: (1) a prior-work note: the audited thing you are standing on, named, (2) a no-hypothesis line: the conclusion tied to observed evidence, and what would falsify it, (3) a demonstration: the test or proof that would fail if the claim were false, (4) a step-by-step: the layer verified before the next was built, (5) a humility note: the unknown that limits the claim, stated plainly. Print the proof walkthrough.",
     "jane-goodall": "Observe a small system (e.g., a list of timestamped events) and in comments document: (1) an observation plan: what you will watch, for how long, and in what conditions, (2) named individuals: at least one entity profiled as an individual with a known history, (3) a challenged assumption: a prevailing belief tested against observed evidence, (4) the evidence trail: observations recorded with timestamps and context, not vibes, (5) a patient-action note: a small, sustained effort that compounds over time. Print the field notes.",
     "jennifer-doudna": "Run a small experiment with a control (e.g., two implementations compared on the same input) and in comments document: (1) a team move: the collaboration that makes the result stronger, named, (2) an observation pass: a structure, trace, or instrument that lets you SEE the mechanism, (3) a control: a clean baseline the result is compared against, (4) a reproduction note: how someone else could rerun the experiment and get the same result, (5) a responsibility line: the honest risk account for the powerful thing built. Print the experiment result.",
+    "louis-pasteur": "Investigate a small anomaly (e.g., a function returning a wrong value on one input) and in comments document: (1) the preparation: the fundamentals mastered before the anomaly is interpreted, (2) the isolation: one variable changed, everything else held constant, (3) the control: a baseline the result is compared against, (4) the small-detail pass: the tiny cause treated with full seriousness, (5) the prevention move: the failure prevented by structure rather than patched after. Print the investigation and the fix.",
+    "marie-curie": "Implement a small computation (e.g., a numeric converter) and in comments document: (1) the measurement: exact inputs, traces, and reproduction steps recorded first, (2) the isolation: at least one variable isolated and tested on its own, (3) the purification: an iterative refinement pass, not a one-pass rewrite, (4) the open note: the method documented so another person can reproduce it, (5) the forward step: the remaining edge case or gap named after the win. Print the result.",
+    "rachael-carson": "Make a small change to a mini system (e.g., a data-processing pipeline) and in comments document: (1) the web map: the data flow and downstream consumers traced before the change, (2) the sourced claim: every assertion linked to an issue, benchmark, or log, (3) the biocide check: no broad catch-all, global state, or silent monkey-patch, (4) the stewardship note: who cannot speak (users, devices, future maintainers) and how the design protects them, (5) the restraint line: one casual-destruction pattern identified and refused. Print the result.",
+    "radia-perlman": "Design a small self-healing loop or protocol (e.g., a ring that detects and recovers from a broken link) and in comments document: (1) a grandmother test: the design explained in one plain paragraph a non-expert can repeat, (2) a zero-config check: what works out of the box with nothing configured, (3) a self-stabilization proof: how the system returns to health after an anomaly clears, (4) a simplicity reduction: the problem reduced to its graph/state essence, (5) a knob audit: every knob justified, with proof any setting stays safe. Print the demo.",
+    "frances-allen": "Take a small computation and optimize it safely (e.g., vectorize a loop or parallelize an independent map) and in comments document: (1) a flow graph: the program drawn as blocks and edges before any tuning, (2) a safe transformation: one optimization applied, with why it preserves meaning, (3) a measurement: the before/after number that justifies the change, (4) a dependence proof: hazards checked before any parallelism is shipped, (5) a no-forcing note: the optimization that works on the code as written. Print the before/after numbers.",
+    "joy-buolamwini": "Analyze a small decision system over an embedded dataset (e.g., a simple classifier over a list of records) and in comments document: (1) a gaze statement: whose priorities the system encodes, named explicitly, (2) an intersectional audit: error rates broken down by intersecting identity groups, (3) a data balance check: the evaluation set's composition vs the served population, (4) an accountability note: the disclosure and audit step before deployment, (5) a recourse path: how a person failed by the system contests the outcome. Print the audit.",
+    "werner-heisenberg": "Measure a small computation (e.g., time a function under profiling) and in comments document: (1) the method stated: how the measurement was made, alongside the result, (2) the trade-off named: which conjugate pair cannot both be exact, and the chosen balance, (3) the probe audit: how observation disturbs the system and how it is accounted for, (4) the bounds given: confidence interval, error bounds, or staleness, never a bare single point, (5) the boundary map: where the model is valid and where it is not. Print the measurement.",
+    "wozniak": "Build a small delightfully simple tool (e.g., a tiny text utility) and in comments document: (1) a part count: the components (functions, modules, dependencies) enumerated and minimized, (2) a transparency claim: every layer explainable in one sentence, or the opaque layer named, (3) a constraint exploit: the scarce resource identified and design spent instead of parts, (4) a whole-system view: where work moved between layers and why that layer was cheapest, (5) an openness seam: where others can extend the system, stated. Print the demo.",
+    "jony-ive": "Build a small well-crafted utility and in comments document: (1) a reduction pass: a place where code was removed because it had a rational alternative, (2) a hidden-craft artifact: internal/error-path code finished to public-surface quality, (3) a material move: the API shaped by what the language's own tools make natural, (4) a discarded draft: an alternative approach tried and dropped, with the reason, (5) a no-decoration check: no name, comment, or abstraction that exists to impress. Print the result.",
+    "susan-kare": "Design a small ASCII icon system (e.g., 8x8 grid icons for file types) and in comments document: (1) the grid: a stated pixel/space constraint that every element respects, (2) the meaning: what the icon says at a glance, without a caption, (3) the test: would a person from another culture read it correctly, (4) the restraint pass: at least one extraneous detail removed, (5) the borrow: a source of inspiration outside existing software (signage, craft, symbols). Print the icon set.",
 }
 
 GRADERS = {
@@ -667,6 +679,76 @@ GRADERS = {
         ["control", "baseline"],
         ["reproduc", "rerun", "same result"],
         ["responsib", "risk"],
+    ], o, e),
+    "louis-pasteur": lambda c, o, e: _check_evidence(c, [
+        ["prepar", "fundamental", "mastered"],
+        ["isolat", "one variable", "held constant", "constant"],
+        ["control", "baseline"],
+        ["small-detail", "small detail", "tiny cause", "serious"],
+        ["prevent", "structure", "patched"],
+    ], o, e),
+    "marie-curie": lambda c, o, e: _check_evidence(c, [
+        ["measure", "trace", "reproduction", "recorded"],
+        ["isolat", "on its own", "alone"],
+        ["purif", "refin", "iterat"],
+        ["reproduc", "document", "open note"],
+        ["forward", "remaining", "edge case", "gap"],
+    ], o, e),
+    "rachael-carson": lambda c, o, e: _check_evidence(c, [
+        ["web map", "downstream", "data flow", "traced"],
+        ["sourced", "linked", "benchmark", "log"],
+        ["biocide", "catch-all", "global state", "monkey-patch"],
+        ["steward", "cannot speak", "protect"],
+        ["restraint", "refused", "casual"],
+    ], o, e),
+    "radia-perlman": lambda c, o, e: _check_evidence(c, [
+        ["grandmother", "plain paragraph", "non-expert", "repeat"],
+        ["zero-config", "out of the box", "nothing configured"],
+        ["self-stabil", "returns to health", "anomaly clears", "recovers"],
+        ["simplicity", "graph", "state essence"],
+        ["knob", "justified", "safe"],
+    ], o, e),
+    "frances-allen": lambda c, o, e: _check_evidence(c, [
+        ["flow graph", "blocks", "edges"],
+        ["safe", "preserves", "transformation"],
+        ["measure", "before/after", "before and after", "baseline"],
+        ["depend", "hazard", "parallel"],
+        ["forcing", "as written", "no-forcing"],
+    ], o, e),
+    "joy-buolamwini": lambda c, o, e: _check_evidence(c, [
+        ["gaze", "priorit", "encodes"],
+        ["intersectional", "identity", "error rate"],
+        ["balance", "composition", "served"],
+        ["accountab", "disclosure", "audit"],
+        ["recourse", "contest", "appeal"],
+    ], o, e),
+    "werner-heisenberg": lambda c, o, e: _check_evidence(c, [
+        ["method", "how the", "made", "measured with", "warm-up", "measurement runs", "perf_counter"],
+        ["trade-off", "conjugate", "balance"],
+        ["probe", "disturb", "account"],
+        ["bounds", "confidence", "interval", "staleness"],
+        ["boundary", "valid", "where"],
+    ], o, e),
+    "wozniak": lambda c, o, e: _check_evidence(c, [
+        ["part count", "component", "minimized", "enumerat", "parts:", "functions", "deps", "file"],
+        ["transparency", "explainable", "one sentence", "no hidden", "hidden layers", "whole"],
+        ["constraint", "scarce", "exploit"],
+        ["whole-system", "layer", "cheapest", "moved"],
+        ["openness", "extend", "extension", "seam"],
+    ], o, e),
+    "jony-ive": lambda c, o, e: _check_evidence(c, [
+        ["reduction", "removed", "rational"],
+        ["hidden-craft", "error path", "error-path", "internal", "polished"],
+        ["material", "natural", "shaped"],
+        ["discarded", "dropped", "alternative", "draft"],
+        ["decoration", "impress"],
+    ], o, e),
+    "susan-kare": lambda c, o, e: _check_evidence(c, [
+        ["grid", "pixel", "constraint"],
+        ["meaning", "at a glance", "caption"],
+        ["another culture", "culture", "read it"],
+        ["restraint", "removed", "extraneous"],
+        ["borrow", "inspiration", "signage", "craft"],
     ], o, e),
 }
 

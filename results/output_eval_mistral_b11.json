@@ -1,0 +1,52 @@
+{
+ "louis-pasteur": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_louis-pasteur.py"
+ },
+ "marie-curie": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_marie-curie.py"
+ },
+ "rachael-carson": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_rachael-carson.py"
+ },
+ "radia-perlman": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_radia-perlman.py"
+ },
+ "frances-allen": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_frances-allen.py"
+ },
+ "joy-buolamwini": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_joy-buolamwini.py"
+ },
+ "werner-heisenberg": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_werner-heisenberg.py"
+ },
+ "wozniak": {
+  "passed": true,
+  "detail": "hits=4 out=True",
+  "code_file": "results/output/mistral-small-latest_wozniak.py"
+ },
+ "jony-ive": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_jony-ive.py"
+ },
+ "susan-kare": {
+  "passed": true,
+  "detail": "hits=5 out=True",
+  "code_file": "results/output/mistral-small-latest_susan-kare.py"
+ }
+}
