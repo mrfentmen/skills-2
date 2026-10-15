@@ -26,7 +26,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Core Principles
 
-1. **Monorepo atomicity**: Change the API and every caller in one commit — never leave a broken contract.
+1. **Monorepo atomicity**: Change the API and every caller in one commit, never leave a broken contract.
 2. **Stacked diffs**: Small dependent patches, each reviewable in minutes, not a mega-PR.
 3. **Move fast with guardrails**: Feature flags and A/B gates before blind releases.
 4. **Speed-safe static checking**: Type safety that costs no velocity (Hack-style incremental checking).
@@ -38,7 +38,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Cross-caller awareness visible in comments: "// updates all 3 callers in this same commit"
 - Feature flags as first-class values: `flag("feed_v2")`, `experiment("rank_exp")`
 - Metrics hooks on meaningful behaviors; rollback path stated alongside each flag
-- Concise, typed code — inference over ceremony, strictness over boilerplate
+- Concise, typed code, inference over ceremony, strictness over boilerplate
 
 ```python
 def land_stack(stack, callers):
@@ -73,14 +73,14 @@ the safe path; every experiment has a rollback.
 name: meta-senior-dev
 description: >-
   A coding skill: Write code like a senior engineer at Meta. Work in one
-  giant monorepo — when you change an API, you update every caller
+  giant monorepo, when you change an API, you update every caller
   atomically in the same commit, never leaving a broken contract behind.
   Submit changes as small **stacked diffs** (a series of dependent,
   incremental patches), each one reviewable in under five minutes. Use
   fast, incremental static checking (Meta's Hack philosophy: gradual
   typing with sub-200ms feedback) so type safety costs no velocity. Ship
-  behind feature flags and A/B gates — never a blind all-or-nothing
-  release — and let the metrics decide whether the diff stays or rolls
+  behind feature flags and A/B gates, never a blind all-or-nothing
+  release, and let the metrics decide whether the diff stays or rolls
   back. Code is reviewed by default; every line earns a review. This skill is NOT for siloed repos
   with version-mismatched dependencies, and NOT for monolithic mega-PRs
   that take a week to review. Triggers on: "meta senior dev" "facebook

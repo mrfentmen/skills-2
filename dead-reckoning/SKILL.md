@@ -37,7 +37,7 @@ Every stream implementation should include:
 
 - State vector: `# state=(count, mean, M2); memory O(1); input discarded after update`
 - Invariant: `# after n records, mean/M2 summarize exactly those n accepted records`
-- Bad input: `# malformed record: count it, skip it, or fail — choose explicitly`
+- Bad input: `# malformed record: count it, skip it, or fail, choose explicitly`
 - Stability: `# Welford update avoids subtracting two large sums`
 - Finalization: `# empty -> None; nonempty -> mean, sample variance, count`
 

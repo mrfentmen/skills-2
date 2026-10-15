@@ -35,12 +35,12 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
-- Measurement: `# measured: 4 runs, exact inputs saved, stack trace pinned — no guessing`
-- Isolation: `# isolated the retry loop from the queue — the leak follows the loop, not the queue`
+- Measurement: `# measured: 4 runs, exact inputs saved, stack trace pinned, no guessing`
+- Isolation: `# isolated the retry loop from the queue, the leak follows the loop, not the queue`
 - Purification: `# pass 2: removed the duplication; pass 3: tightened the type; pass 4: verified again`
 - Open note: `# the method: a repro script in the repo, one command, works on a clean machine`
 - Forward: `# the fraction is pure; the remaining case is the empty-input path`
-- Demo runs with zero command-line arguments: the code is executed directly as a script body, so read input from variables embedded in the file - never require sys.argv or argparse.
+- Demo runs with zero command-line arguments: the code is executed directly as a script body, so read input from variables embedded in the file, never require sys.argv or argparse.
 
 ```python
 def isolate_variable(candidate, controls):
@@ -62,7 +62,7 @@ print(purify([{"value": -1}, {"value": 3}, {"value": 0}, {"value": 5}], 3))
 ```
 ## Cross-Language Examples
 
-The same discipline, in real code, in other languages — measure, isolate, purify, share:
+The same discipline, in real code, in other languages, measure, isolate, purify, share:
 
 ```javascript
 // measure first: exact inputs before any hypothesis
@@ -83,10 +83,10 @@ fn main() {
 
 "Nothing to fear" is about understanding, never about recklessness: working
 with genuinely hazardous systems (radiation, chemicals, security-sensitive
-data) requires real safeguards, not brave exposure — the courage is in the
+data) requires real safeguards, not brave exposure, the courage is in the
 rigor, not the risk-taking. Open science means sharing methods and findings,
 never sharing sensitive or personal data irresponsibly. Meticulous measurement
-must never become an excuse for analysis paralysis — measure enough to act,
+must never become an excuse for analysis paralysis, measure enough to act,
 then act.
 
 ---
@@ -95,21 +95,21 @@ description: >-
   Do rigorous work the way Marie Curie isolated radium: measure everything,
   purify through iteration, and share the method openly. "Nothing in life is to
   be feared, it is only to be understood. Now is the time to understand more,
-  so that we may fear less" — face the unknown by rendering it transparent:
+  so that we may fear less", face the unknown by rendering it transparent:
   instrument, isolate variables, and map the system instead of guessing or
   panicking at a scary bug. Measure meticulously: Curie weighed, logged, and
-  recorded every fraction — her lab notebooks are still radioactive — so keep
+  recorded every fraction, her lab notebooks are still radioactive, so keep
   exact inputs, traces, and reproduction steps as first-class artifacts.
   Purify through iteration: she extracted decigrams of radium from tons of ore
-  by thousands of fractional crystallizations — refine code, data, and design
+  by thousands of fractional crystallizations, refine code, data, and design
   through successive, verifiable passes (dissolve, re-precipitate, sort) rather
   than one heroic rewrite. Progress is neither swift nor easy: "I was taught
-  that the way of progress is neither swift nor easy" — patient sustained
+  that the way of progress is neither swift nor easy", patient sustained
   effort beats silver bullets. Share the method: the Curies never patented
-  radium, believing knowledge belongs to humanity — document reasoning,
+  radium, believing knowledge belongs to humanity, document reasoning,
   publish reproducible methods, and contribute openly. Keep moving forward:
   "one never notices what has been done; one can only see what remains to be
-  done" — after the win, look at the remaining edge cases. This skill is NOT
+  done", after the win, look at the remaining edge cases. This skill is NOT
   for guesswork, NOT for heroic one-pass rewrites, and NOT for hoarding
   methods. Triggers on: "marie curie", "curie", "radium", "polonium",
   "fractional crystallization", "purify", "purification", "purity through

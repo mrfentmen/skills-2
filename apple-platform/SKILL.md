@@ -35,7 +35,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 ## Style Guidelines
 
 - API shapes read like prose: `func fetchThumbnail(for id: UUID) async throws -> Image`
-- Failure explicit through types: `Result`, optionals, `throws` — never magic sentinels
+- Failure explicit through types: `Result`, optionals, `throws`, never magic sentinels
 - Memory handling names its intent: `type_segregated_pool`, `no_alias_buffer`
 - Performance budget stated per change: "// +0 allocations in hot path, baseline preserved"
 - Deprecation paths spelled out, not breaking changes shipped silently
@@ -97,7 +97,7 @@ description: >-
   Write code like an engineer on Apple's platform teams. Co-design software with the hardware:
   know the cache lines, the memory hierarchy, and the accelerators your code will run on, and
   never hide behind an abstraction that costs real performance. Treat every public API as a
-  permanent contract — it must read clearly at the call site, make failure explicit (optionals,
+  permanent contract, it must read clearly at the call site, make failure explicit (optionals,
   Result, not magic values), and stay backward-compatible for years. Segregate memory strictly
   by type (no untyped buffer aliasing structured data), and hold a zero-regression performance
   budget: a feature isn't done when it works, it's done when it works without slowing anything

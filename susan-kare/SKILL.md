@@ -35,7 +35,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
-- Grid stated: `# 16x16 grid, 1px stroke — every pixel justified`
+- Grid stated: `# 16x16 grid, 1px stroke, every pixel justified`
 - Meaning test: `# what does this say at a glance? "save", not "floppy disk c. 1995"`
 - Culture check: `# is a mailbox-from-another-culture still readable? if not, use the tray metaphor`
 - Restraint pass: `# dropped the drop shadow, the gradient, and the third color`
@@ -54,7 +54,7 @@ print(icon_ok(save_icon, caption_required=True))
 ```
 ## Cross-Language Examples
 
-The same discipline, in real code, in other languages — grid, meaning, restraint:
+The same discipline, in real code, in other languages, grid, meaning, restraint:
 
 ```javascript
 // the road-sign test: a real 8x8 grid, counted pixel by pixel
@@ -82,7 +82,7 @@ fn main() {
 ## Safety
 
 Simplicity must never mean unreadable or inaccessible: high contrast and
-clear semantics are requirements, not opinions — an icon that relies on
+clear semantics are requirements, not opinions, an icon that relies on
 color alone fails users with color-vision deficiency. "Culture-independent"
 means tested against real diverse users, not assumed. Restraint is a design
 discipline, never an excuse for excluding clarity, labels where needed, or
@@ -92,17 +92,17 @@ accessibility metadata.
 name: susan-kare
 description: >-
   Design interfaces and icons the way Susan Kare designed the original Macintosh:
-  "great icons are like good road signs — instantly readable, even at a glance,
+  "great icons are like good road signs, instantly readable, even at a glance,
   and understandable to people from other cultures." Work pixel by pixel on a
   strict grid (the original Mac was a 32x32 bitmap) so every pixel has to earn
   its place. A good icon is more like a road sign than a detailed illustration:
   simple, meaningful, immediately recognizable, and free of extraneous detail.
-  Borrow from the wider world — Kare drew on her art-history background,
+  Borrow from the wider world, Kare drew on her art-history background,
   mosaics, needlepoint, and symbol reference books rather than copying existing
-  software. Restraint is the discipline: "meaningful, memorable, clear" — a stop
+  software. Restraint is the discipline: "meaningful, memorable, clear", a stop
   sign never needs a redesign every two years, and neither should a well-made
   interface element. Optimize legibility under harsh constraints: monochrome
-  bitmaps, 16 colors, low resolution — every constraint is a chance to simplify,
+  bitmaps, 16 colors, low resolution, every constraint is a chance to simplify,
   not a reason to clutter. This skill is NOT for decoration, NOT for trend
   churn, and NOT for icons that need a caption to explain them. Triggers on:
   "susan kare", "kare", "icon", "icons", "icon design", "road sign", "traffic

@@ -35,9 +35,9 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
-- Core stated in one sentence: `# core: a byte, an address, a loop — everything else is sugar`
-- Trust visible: `# no safety fence here; the programmer owns the index — and that is the point`
-- Machinery honest: `# this is what the machine does: load, add, store — no hidden framework`
+- Core stated in one sentence: `# core: a byte, an address, a loop, everything else is sugar`
+- Trust visible: `# no safety fence here; the programmer owns the index, and that is the point`
+- Machinery honest: `# this is what the machine does: load, add, store, no hidden framework`
 - Portability note: `# one change per platform, not one fork per platform`
 - Insight line: `# what does this teach? the allocator pattern, not just a faster sort`
 
@@ -55,7 +55,7 @@ print(trust_the_programmer([10, 20, 30]))
 ```
 ## Cross-Language Examples
 
-The same discipline, in real code, in other languages — small, honest, portable:
+The same discipline, in real code, in other languages, small, honest, portable:
 
 ```javascript
 // keep it in your head: no framework, one visible loop
@@ -76,7 +76,7 @@ fn main() {
 "Trust the programmer" is a design philosophy about competence and freedom, not
 a license to be careless: memory safety, bounds, and correctness still matter,
 and a small core must still define its edge cases precisely. "No unnecessary
-restrictions" means no arbitrary fences — it never means skipping validation
+restrictions" means no arbitrary fences, it never means skipping validation
 where the machine or the user can genuinely be harmed. Portability is a goal,
 not an excuse for undefined behavior on another platform.
 
@@ -85,18 +85,18 @@ name: dennis-ritchie
 description: >-
   Design languages and systems the way Dennis Ritchie designed C and Unix:
   small core, trust the programmer, get out of the way. C was built to be "a
-  language that is simple enough that I could keep it in my head" — a small,
+  language that is simple enough that I could keep it in my head", a small,
   portable core with no unnecessary restrictions, because the people using it
   are competent and do not need to be fenced in. Learn by doing: "the only way
-  to learn a new programming language is by writing programs in it" — the tool
+  to learn a new programming language is by writing programs in it", the tool
   is mastered through real use, not ceremony. Write for portability: C was
   designed so a program could move between machines with minimal change, and
   Unix was built so that "what we wanted to preserve was not just a good
   environment in which to do programming, but a system around which fellowship
-  could form" — the system serves the community of people building with it.
+  could form", the system serves the community of people building with it.
   Keep the machinery visible and honest: no magic layers hiding what the
   machine does. And remember the point of it all: "the purpose of computing is
-  insight, not numbers" (with R.W. Hamming) — the code exists to produce
+  insight, not numbers" (with R.W. Hamming), the code exists to produce
   understanding, not busywork. Work with low ego and high collaboration: share
   the tool, invite contribution, and let the design prove itself in use. This
   skill is NOT for enterprise ceremony, NOT for abstraction that hides the

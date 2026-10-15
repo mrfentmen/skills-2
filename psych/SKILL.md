@@ -177,7 +177,7 @@ while y < 2:
 # simple iterative rules create infinitely complex boundaries
 ```
 
-### Pattern 2: Game of Life - Emergent Behavior
+### Pattern 2: Game of Life, Emergent Behavior
 ```python
 # Conway's Game of Life - emergent complexity from simple rules
 import random
@@ -217,7 +217,7 @@ def next_generation(grid):
 # Gliders, oscillators, and self-replicating patterns emerge
 ```
 
-### Pattern 3: Recursive Tree - Fractal Emergence
+### Pattern 3: Recursive Tree, Fractal Emergence
 ```python
 # Recursive fractal tree - self-similar patterns
 import turtle
@@ -244,7 +244,7 @@ turtle.done()
 # The tree grows with fractal self-similarity
 ```
 
-### Pattern 4: Genetic Algorithm - Evolutionary Emergence
+### Pattern 4: Genetic Algorithm, Evolutionary Emergence
 ```python
 # Simple genetic algorithm - evolutionary emergence
 import random
@@ -293,7 +293,7 @@ def genetic_algorithm(generations=100):
 # The population evolves to find optimal solutions
 ```
 
-### Pattern 5: Quine - Self-Replicating Emergence
+### Pattern 5: Quine, Self-Replicating Emergence
 ```python
 # Python quine - self-replicating program
 s = 's = %r\nprint(s %% s)'
@@ -303,7 +303,7 @@ print(s % s)
 # The program contains itself - a logical paradox made real
 ```
 
-### Pattern 6: Befunge Interpreter - Esoteric Emergence
+### Pattern 6: Befunge Interpreter, Esoteric Emergence
 ```python
 # Simple Befunge-93 interpreter - esoteric emergence
 def befunge(program):

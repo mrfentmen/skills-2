@@ -29,14 +29,14 @@ ALL of the following so a reviewer can check them without judgment calls:
 3. **Iterate under pressure**: when the design fails, pivot the whole effort fast.
 4. **Name the technical sweetness**: acknowledge the seduction, then weigh the consequences.
 5. **Own the moral weight**: the maker bears intimate responsibility for the artifact.
-6. **Dry realism**: neither blind optimism nor easy despair — see the world as it is.
+6. **Dry realism**: neither blind optimism nor easy despair, see the world as it is.
 
 ## Style Guidelines
 
-- Talent map: `# need: a systems dev, a security engineer, a domain expert — and someone who argues with all three`
-- Transparency: `# weekly colloquium: every team names its blocker and its discovery — no silos, no surprises`
+- Talent map: `# need: a systems dev, a security engineer, a domain expert, and someone who argues with all three`
+- Transparency: `# weekly colloquium: every team names its blocker and its discovery, no silos, no surprises`
 - Pivot read: `# the queue design failed under load; we pivot to the sharded path now, not next quarter`
-- Sweetness check: `# the clever compression is technically sweet — and it breaks the data contract for the partner`
+- Sweetness check: `# the clever compression is technically sweet, and it breaks the data contract for the partner`
 - Accountability: `# we shipped the rate-limit change; we own the support impact it causes, and the fix`
 
 ```python
@@ -62,7 +62,7 @@ print(weigh_technical_sweetness("clever compression", "breaks the partner contra
 ```
 ## Cross-Language Examples
 
-The same discipline, in real code, in other languages — gather, open, iterate, own it:
+The same discipline, in real code, in other languages, gather, open, iterate, own it:
 
 ```javascript
 // the transparency move: every module reports its blocker, nobody hides
@@ -83,7 +83,7 @@ fn main() {
 ## Safety
 
 "Gather brilliance" is about enabling talent, never about tolerating abuse,
-harassment, or recklessness — a brilliant person who endangers the team or
+harassment, or recklessness, a brilliant person who endangers the team or
 the users is a liability, not a prize. Naming the technical sweetness must
 lead to real consequence analysis, not to the romantic fatalism of "it was
 inevitable": the maker's responsibility is to decide, to limit harm, and to
@@ -98,17 +98,17 @@ description: >-
   transparency, iterate fast under a hard deadline, and never forget the moral
   weight of what you build. Oppenheimer ran a laboratory of thousands of
   physicists, chemists, engineers, and military staff on a compressed wartime
-  schedule — not by command-and-control, but by informal seminars and open
+  schedule, not by command-and-control, but by informal seminars and open
   cross-pollination where every division shared its blockers and discoveries,
   while he kept absolute oversight at the bottlenecks. "I would rather have a
   brilliant person who is a bit of a problem than a mediocre person who is no
-  problem" — value disruptive talent over frictionless compliance. Rapid
+  problem", value disruptive talent over frictionless compliance. Rapid
   iteration: when the gun-type design failed, he pivoted the entire lab to the
-  implosion method — a masterclass in changing course under existential
+  implosion method, a masterclass in changing course under existential
   pressure. "When you see something that is technically sweet, you go ahead
-  and do it" — name the seduction of the clever technical problem, and then
+  and do it", name the seduction of the clever technical problem, and then
   remember its consequences: "in some sort of crude sense... the physicists
-  have known sin; and this is a knowledge which they cannot lose" — the maker
+  have known sin; and this is a knowledge which they cannot lose", the maker
   bears intimate responsibility for what the artifact does in the world.
   Dry realism about human ambition: he saw both the power and the peril of
   what science builds. This skill is NOT for heroic cowboy coding, NOT for

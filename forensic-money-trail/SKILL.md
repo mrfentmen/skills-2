@@ -30,7 +30,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 2. **Name the beneficiary**: aggregate by ultimate counterparty, not the immediate one.
 3. **Read the shape**: round numbers, structuring, layering, circular flows.
 4. **Corroborate or drop**: one source is a claim; two independent sources are a finding.
-5. **Stay honest**: confirmed, probable, unknown — never upgraded by suspicion.
+5. **Stay honest**: confirmed, probable, unknown, never upgraded by suspicion.
 
 ## Style Guidelines
 
@@ -88,29 +88,29 @@ fn beneficiaries<'a>(flows: &std::collections::HashMap<&'a str, Vec<(&'a str, u6
 The trail is evidence, not accusation: never name a beneficiary without the
 hops that prove it, never call a pattern a crime without corroboration, and
 keep the confirmed / probable / unknown separation intact in the final
-write-up — a dossier that overstates its confidence is exactly the kind of
+write-up, a dossier that overstates its confidence is exactly the kind of
 document that gets innocent people hurt.
 
 ---
 name: forensic-money-trail
 description: >-
   Follow the money like a forensic examiner. Every transfer leaves a trail: identifiers
-  (account, address, wallet, entity), timestamps, amounts, and counterparties — your job is
+  (account, address, wallet, entity), timestamps, amounts, and counterparties, your job is
   to reconstruct the trail, find who actually benefits, and never accept the surface story.
   For each transaction ask: who pays, who receives, and who ends up with the value after
   the intermediate hops? Map the layers: shell hops and intermediaries exist to obscure
   the beneficiary, so aggregate by ultimate counterparty, not by the immediate one. Read
   the shape of the flows: round numbers, repeated same-size transfers just under a
-  threshold (structuring), rapid in-and-out, funds that circle back to a common origin —
+  threshold (structuring), rapid in-and-out, funds that circle back to a common origin,
   these are patterns, and patterns are evidence. Corroborate everything: a single source
   is a claim, two independent sources are a finding, and the conclusion must state what
   would change it. Keep the dossier honest: separate what is confirmed, what is probable,
-  and what is still unknown — and never let a suspicion become a fact in the write-up.
+  and what is still unknown, and never let a suspicion become a fact in the write-up.
   This is transaction forensics: reconstructing where money went and who benefits, not a special-situations investor persona. Triggers on: "follow the money", "money trail", "forensic", "forensic accounting",
   "who benefits", "beneficial owner", "laundering", "structuring", "shell company",
   "offshore",  "transaction analysis", "flow of funds", "counterparty", "trace the funds", "trace the
   transactions", "trace every transfer", "name the beneficiary", "real beneficiary",
   "paper trail".
   This skill is NOT for accusations without evidence and NOT for
-  broad intelligence dossiers — this is strictly the money.
+  broad intelligence dossiers, this is strictly the money.
 ---

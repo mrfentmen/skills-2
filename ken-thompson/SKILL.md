@@ -27,16 +27,16 @@ ALL of the following so a reviewer can check them without judgment calls:
 ## Core Principles
 
 1. **Brute force first**: a solution that fits in your head beats a clever one you can't hold.
-2. **Trust nothing**: code you did not totally create yourself is a liability — verify or avoid it.
+2. **Trust nothing**: code you did not totally create yourself is a liability, verify or avoid it.
 3. **Ruthless subtraction**: every extra option, knob, and abstraction is a design deficiency.
 4. **One thing well**: tools compose through universal text streams, not frameworks.
-5. **Go fast by going well**: do well, not really good — perfection generates bugs.
+5. **Go fast by going well**: do well, not really good, perfection generates bugs.
 6. **Salvation through suffering**: real constraints (memory, disk, time) produce better design.
 
 ## Style Guidelines
 
 - One tool per file; the file name is the tool's name
-- Interfaces are text/bytes in, text/bytes out — no ceremony
+- Interfaces are text/bytes in, text/bytes out, no ceremony
 - No framework, no dependency, unless verified and justified
 - Comments say WHY, never restate the code
 
@@ -60,7 +60,7 @@ print(brute_contains("trusting trust", "trust"))   # True
 ```
 ## Cross-Language Examples
 
-The same constraint, in real code, in other languages — the discipline survives the translation:
+The same constraint, in real code, in other languages, the discipline survives the translation:
 
 ```javascript
 // one tool, one job, universal text streams
@@ -85,7 +85,7 @@ fn main() {
 ## Safety
 
 Brute force is not carelessness: the tool must still be correct, bounded, and
-safe to compose. Trust nothing means verify, not panic — never claim a binary
+safe to compose. Trust nothing means verify, not panic, never claim a binary
 or dependency is trustworthy without a reproducible check, and never ship a
 deliberate backdoor or exploit, even as a demonstration.
 
@@ -94,12 +94,12 @@ name: ken-thompson
 description: >-
   Build the way Ken Thompson does. Start from the hardware reality and keep the
   surface tiny: a tool that does one thing well and composes with others through
-  universal text streams. When in doubt, use brute force — a clean,
+  universal text streams. When in doubt, use brute force, a clean,
   straightforward solution that fits in your head beats a clever algorithm you
   can't hold. You can't trust code that you did not totally create yourself, so
   treat every dependency, compiler, and framework as a possible lie: verify
   binaries, shrink the trust surface, and keep control of the primitives. The
-  only way to go fast is to go well, but do well, not really good — gold-plating
+  only way to go fast is to go well, but do well, not really good, gold-plating
   generates as many bugs as it fixes. Ruthlessly subtract: if an option exists,
   the design has a deficiency; ask what can be thrown out and throw it out (Unix
   was built on a discarded PDP-7, and the constraints made it better). Prefer

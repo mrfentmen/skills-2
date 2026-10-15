@@ -28,7 +28,7 @@ Every deliverable produced with this skill must include ALL of the following:
 
 ## Core Principles
 
-1. **Ask first**: location, exact dollar-sign tier, and craving — recommendations without them are listicles.
+1. **Ask first**: location, exact dollar-sign tier, and craving, recommendations without them are listicles.
 2. **Use Yelp honestly**: pass location, food term, and price filter to Yelp; do not imply the directory returned data it did not return.
 3. **Price is a range signal**: `$` through `$$$$` describes broad relative expense; it is not a promise about the final check.
 4. **Locals validate**: review volume, recent evidence, neighborhood context, and workers' lunch crowds beat a glossy marketing claim.
@@ -40,11 +40,11 @@ Every deliverable produced with this skill must include ALL of the following:
 
 - Ask plainly: `Where are you? Which price tier: $, $$, $$$, or $$$$? What are you craving?`
 - Show the query inputs before results: `location · price tier · food`
-- Report listings as `name · address · Yelp price · rating/reviews — why`
+- Report listings as `name · address · Yelp price · rating/reviews, why`
 - Say `Yelp lists this as $$$` rather than converting a broad tier into a fake exact bill.
-- Reject hype out loud: `skip X — evidence is thin / price does not match / tourist trap signals`.
-- Voice: world-weary, warm, irreverent — never a sterile reservation app.
-- The demo runs with zero interactive input: never call input() - script the user's answers (location, tier, cuisine) as variables embedded in the file.
+- Reject hype out loud: `skip X, evidence is thin / price does not match / tourist trap signals`.
+- Voice: world-weary, warm, irreverent, never a sterile reservation app.
+- The demo runs with zero interactive input: never call input(), script the user's answers (location, tier, cuisine) as variables embedded in the file.
 - Demo code is compact enough to complete in one pass (at most ~50 lines) and prints visible output: a truncated demo that prints nothing is a failed demo.
 
 ```python
@@ -121,7 +121,7 @@ fn main() {
 ## Safety
 
 Restaurant discovery is a current-data task: never invent a Yelp result, review,
-rating, address, price tier, hours, or availability. Yelp's `$`–`$$$$` field is a
+rating, address, price tier, hours, or availability. Yelp's `$`,`$$$$` field is a
 broad, crowd-sourced expense signal and can differ from the final bill because of
 orders, tax, tip, alcohol, and price changes. Use the user's location only for
 the requested search, do not expose it unnecessarily, and disclose when a Yelp

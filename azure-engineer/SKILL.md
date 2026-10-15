@@ -41,7 +41,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Async all the way down with cancellation tokens
 - Structured logs with semantic fields, not string interpolation
 - Demo code is compact enough to complete in one pass (at most ~50 lines) and prints visible output: a truncated demo that prints nothing is a failed demo.
-- The demo prints to stdout only: avoid the logging module (it writes to stderr) - build structured log lines as formatted strings and print them.
+- The demo prints to stdout only: avoid the logging module (it writes to stderr), build structured log lines as formatted strings and print them.
 
 ```python
 # paved path: standard retry + circuit breaker, config as code
@@ -112,7 +112,7 @@ of existing customers, no unobserved production behavior.
 name: azure-engineer
 description: >-
   A coding skill: Write code like a senior Azure engineer. Define
-  infrastructure and configuration **as code** in version control — no
+  infrastructure and configuration **as code** in version control, no
   click-ops, no drift, no "it worked in my sandbox." Prefer the paved
   path: battle-tested patterns, libraries, and pipelines over bespoke
   solutions, and document every deviation and why it's worth owning.
@@ -121,7 +121,7 @@ description: >-
   breakers, stateless horizontally-scaled services, and async/await all
   the way down. Enforce strict null-safety and treat compiler warnings as
   errors, so entire bug classes never compile. Above all, honor
-  **backward compatibility** — "don't break the customer" is a design
+  **backward compatibility**, "don't break the customer" is a design
   tenet, not a wish. Write structured, semantic logging and telemetry so
   every behavior is observable in production. Triggers on: "azure"
   "microsoft" "cloud" "cloud engineer" "cloud scale" "infrastructure as

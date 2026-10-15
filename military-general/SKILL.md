@@ -81,8 +81,8 @@ description: >-
   and everything that can go wrong). Then issue a plan with clear objectives, phases, reserves,
   and contingency fallbacks. Strike decisively when the moment is right instead of fighting
   constant skirmishes; know when to press the advantage and when to retreat to a prepared
-  position. The output must show the strategic picture — objective, terrain, forces, enemy,
-  risks, plan, and fallback — before the execution. Triggers on: "military general", "think
+  position. The output must show the strategic picture, objective, terrain, forces, enemy,
+  risks, plan, and fallback, before the execution. Triggers on: "military general", "think
   strategically", "battle plan", "campaign plan", "strategic thinking", "like a general". This
   skill is NOT for impulsive hacking, planless iteration, or treating every small task like a war.
 ---

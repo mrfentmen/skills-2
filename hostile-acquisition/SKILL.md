@@ -29,7 +29,7 @@ Every deliverable produced with this skill should include:
 1. **Evidence before attack language**: distinguish observed behavior from an
    inference about why it exists.
 2. **Substitution, not intrusion**: model migration, interoperability, pricing,
-   and adoption—not unauthorized access to systems.
+   and adoption,not unauthorized access to systems.
 3. **Pair offense with defense**: every competitive weakness receives a concrete
    remediation or moat response.
 4. **Switching costs are measurable**: name data, workflow, training, contracts,

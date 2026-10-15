@@ -35,7 +35,7 @@ Every deliverable produced with this skill should include:
 
 ## Workflow
 
-1. Build a 0–60 second timeline and label core-loop beats.
+1. Build a 0,60 second timeline and label core-loop beats.
 2. Mark friction, feedback quality, audio/visual clarity, and disengagement risk.
 3. State one player-experience hypothesis and the smallest proposed change.
 4. Define sample, tasks, metrics, pass criteria, and stop condition.
@@ -46,7 +46,7 @@ Every deliverable produced with this skill should include:
 The audit finds a five-second wait before the first meaningful action. The
 hypothesis is that instant feedback improves comprehension without increasing
 confusion. The test measures time-to-action, successful first attempts, and a
-1–5 clarity rating rather than asking whether the game was vaguely “fun.”
+1,5 clarity rating rather than asking whether the game was vaguely “fun.”
 
 ```python
 timeline = [

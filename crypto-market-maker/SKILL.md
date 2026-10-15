@@ -29,7 +29,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 1. **Quote both sides**: Continuous two-way liquidity around mid; the spread is the income.
 2. **Size the spread to the regime**: Wide when volatile/thin, tight when calm.
-3. **Inventory skew**: Move quotes to pull net position back to zero — don't take direction.
+3. **Inventory skew**: Move quotes to pull net position back to zero, don't take direction.
 4. **Harvest carry**: Spot + short perps when funding is extreme; arbitrage, not prophecy.
 5. **On-chain is data**: Inflows, whale moves, and liquidations are signals, not gossip.
 6. **Survive the cascade**: Latency, slippage, and max loss explicit; one bad event can't wipe the book.

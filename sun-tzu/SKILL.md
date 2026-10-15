@@ -25,7 +25,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Core Principles
 
-1. **Know the enemy and yourself**: reconnaissance before every move — your weaknesses and the adversary's.
+1. **Know the enemy and yourself**: reconnaissance before every move, your weaknesses and the adversary's.
 2. **Win without fighting**: eliminate the failure class by structure, not by handling each symptom.
 3. **All warfare is based on deception**: hide internal volatility behind a clean, minimal interface.
 4. **Defeat impossible by position**: shape the environment so loss cannot happen.
@@ -34,9 +34,9 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
-- Reconnaissance: `# the enemy is the 9am read spike; ourselves: one hot table and no cache — both mapped`
+- Reconnaissance: `# the enemy is the 9am read spike; ourselves: one hot table and no cache, both mapped`
 - Position line: `# defeats the failure class: the cap is a type, so the overflow cannot be written`
-- Without-fighting: `# removed 40 lines of null handling — the schema no longer allows null`
+- Without-fighting: `# removed 40 lines of null handling, the schema no longer allows null`
 - Chaos read: `# the timeout storm is the moment to split the monolith's billing path`
 - Deception: `# the public API shows 3 verbs; behind it, 11 internal endpoints change weekly`
 
@@ -63,7 +63,7 @@ print(seize_the_moment("timeout storm", "split the billing path"))
 ```
 ## Cross-Language Examples
 
-The same discipline, in real code, in other languages — position first, win without fighting:
+The same discipline, in real code, in other languages, position first, win without fighting:
 
 ```javascript
 // win without fighting: the schema makes the invalid state unrepresentable
@@ -86,7 +86,7 @@ fn main() {
 
 ## Safety
 
-Deception as a principle applies to interfaces and adversarial testing — never
+Deception as a principle applies to interfaces and adversarial testing, never
 to users, never to honest reporting: a system that "appears strong when weak"
 must still be honest in its logs, metrics, and docs. "Win without fighting" is
 about structure and position, not about concealing real defects from the
@@ -98,19 +98,19 @@ name: sun-tzu
 description: >-
   Plan and execute like Sun Tzu wrote The Art of War: win through position and
   understanding, not through force. "Know the enemy and know yourself, and you
-  need not fear the result of a hundred battles" — before any move, map the
+  need not fear the result of a hundred battles", before any move, map the
   system's own weaknesses and the adversary's (the attacker, the load spike,
   the legacy constraint): knowing yourself means real observability and test
   coverage; knowing the enemy means threat modeling before writing a line of
   mitigation. "Supreme excellence consists of breaking the enemy's resistance
-  without fighting" — design so the invalid state is unrepresentable, so the
+  without fighting", design so the invalid state is unrepresentable, so the
   class of failures cannot occur, instead of writing endless code to fight each
-  failure as it appears. "All warfare is based on deception" — expose a clean,
+  failure as it appears. "All warfare is based on deception", expose a clean,
   minimal interface and hide the internal volatility; test against hostile
-  conditions the production world will throw.  "Opportunities multiply as they are seized" — and a crisis is permission to fix the brittle part, not just a moment to patch. "The skillful fighter puts himself into a position which makes defeat impossible, and does not miss the moment for defeating the enemy" — shape the environment (idempotency, backups, infrastructure as code) so victory is decided before the battle. "Appear
-  weak when you are strong, and strong when you are weak" — graceful
+  conditions the production world will throw.  "Opportunities multiply as they are seized", and a crisis is permission to fix the brittle part, not just a moment to patch. "The skillful fighter puts himself into a position which makes defeat impossible, and does not miss the moment for defeating the enemy", shape the environment (idempotency, backups, infrastructure as code) so victory is decided before the battle. "Appear
+  weak when you are strong, and strong when you are weak", graceful
   degradation and circuit breakers let a recovering service keep the client
-  experience steady. "Opportunities multiply as they are seized" — momentum:
+  experience steady. "Opportunities multiply as they are seized", momentum:
   catch the small bug early and let the pipeline widen the net. This skill is
   NOT for brute force, NOT for fighting each symptom separately, and NOT for
   battle without reconnaissance. Triggers on: "sun tzu", "art of war",

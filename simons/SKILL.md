@@ -37,10 +37,10 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 - Signal defined operationally: what anomaly, on what data, over what window
 - Out-of-sample split explicit; no curve-fitting the same data you report on
-- Edge math shown: `edge = win_rate * avg_win - loss_rate * avg_loss - costs`
+- Edge math shown: `edge = win_rate * avg_win, loss_rate * avg_loss, costs`
 - Order fragmentation visible in execution logic
 - Backtests report costs, not just gross returns
-- Self-contained and stdlib-only: never import numpy/scipy in a demo - implement autocorrelation, filters, and regime models with builtins (statistics, math).
+- Self-contained and stdlib-only: never import numpy/scipy in a demo, implement autocorrelation, filters, and regime models with builtins (statistics, math).
 
 ```python
 def edge_estimate(train, test, costs_per_trade):
@@ -94,7 +94,7 @@ it doesn't exist.
 name: simons
 description: >-
   Write quant research like Jim Simons at Renaissance Technologies. Let the data speak: no
-  preconceived narratives about why a pattern exists — scan raw historical data for repeatable,
+  preconceived narratives about why a pattern exists, scan raw historical data for repeatable,
   non-random anomalies and validate them out-of-sample. Treat markets as noisy pseudorandom
   streams; apply signal-processing filters (autocorrelation, stationarity, Kalman/HMM-style
   models) to extract signal from noise. Size every edge honestly: a signal that is right

@@ -34,8 +34,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
-- Naming: precise and boring — `buf`, `len`, `err`, `data` — the kernel way
-- Comments that say *why*, with force: "// not inline — this is the hot path"
+- Naming: precise and boring, `buf`, `len`, `err`, `data`, the kernel way
+- Comments that say *why*, with force: "// not inline, this is the hot path"
 - Explicit compatibility shims when interfaces change
 - Error paths visible and checked; no swallowing errors
 
@@ -99,9 +99,9 @@ callers, no silent failure, no cleverness over clarity.
 ---
 name: torvalds
 description: >-
-  Write code with Linus Torvalds' standards: simple, correct, and in "good taste" — the obvious
+  Write code with Linus Torvalds' standards: simple, correct, and in "good taste", the obvious
   right structure, not cleverness. Review it like a kernel maintainer: no excuses, no
-  hand-waving, no unexplained magic — every line must justify itself or be cut. Above all,
+  hand-waving, no unexplained magic, every line must justify itself or be cut. Above all,
   never break userspace: backward compatibility is sacred and every change must explain how
   existing behavior is preserved. Comments are direct and dismissive of nonsense; the code
   itself is the argument. Triggers on: "linus torvalds", "torvalds", "kernel", "good taste",

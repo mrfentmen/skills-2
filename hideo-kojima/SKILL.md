@@ -39,8 +39,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Constraint inverted: `# the limit is the feature: we can't draw bullets, so stealth`
 - Subversion planned: `# players expect A; we set up A, then give them B`
 - Micro-detail called out: `# the 200ms sway on the load makes the fiction hold`
-- The demo runs with zero interactive input: never call input() - script the player's choices as variables embedded in the file.
-- The demo terminates on its own: no game loop, no `while True`, no time.sleep pacing - simulate the mechanic in a handful of steps, print results, and exit.
+- The demo runs with zero interactive input: never call input(), script the player's choices as variables embedded in the file.
+- The demo terminates on its own: no game loop, no `while True`, no time.sleep pacing, simulate the mechanic in a handful of steps, print results, and exit.
 
 ```python
 class StrandWorld:
@@ -66,7 +66,7 @@ print(world.likes)                          # {'p1': 1} — the unseen thanks
 ```
 ## Cross-Language Examples
 
-The same constraint, in real code, in other languages — the discipline survives the translation:
+The same constraint, in real code, in other languages, the discipline survives the translation:
 
 ```javascript
 // asynchronous empathy: leave a rope, a stranger crosses it, you get likes
@@ -103,16 +103,16 @@ become excuses for shipping broken behavior.
 ---
 name: hideo-kojima
 description: >-
-  Design the way Hideo Kojima designs. Put the player inside the story — the
+  Design the way Hideo Kojima designs. Put the player inside the story, the
   system itself should make them feel the theme: the mechanics are the
   narrative, not the cutscenes (Death Stranding makes you physically carry the
   weight of its story). Weaponize constraints: when the system says no, turn
-  the limitation into the defining feature — stealth itself was born because
+  the limitation into the defining feature, stealth itself was born because
   the MSX2 could not draw enough bullets, and 90% of what is considered
   impossible is in fact possible. Subvert expectations deliberately: use
   familiar patterns to earn trust, then pivot to something the user never saw
   coming, and never give them merely what they asked for. Obsess over the
-  micro-details — the soul of the experience lives in the small interactions
+  micro-details, the soul of the experience lives in the small interactions
   others would ship past. Design for connection: build asynchronous systems
   where strangers help each other without ever meeting, and the thanks are
   felt. Pace like a film: tension, then decompression, then tension again.

@@ -34,7 +34,7 @@ Every deliverable produced with this skill should include:
 3. **Last use is explicit**: name the line after which each sensitive field is
    cleared, and never include it in diagnostics.
 4. **Aggregates over records**: retain counts, categories, or tokens needed for
-   the answer—not the raw subjects that produced them.
+   the answer,not the raw subjects that produced them.
 5. **Honest erasure claims**: clearing a mutable container limits application
    retention but does not promise secure physical memory wiping.
 

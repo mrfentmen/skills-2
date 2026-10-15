@@ -38,7 +38,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Preparation: `# the anomaly read clearly because we already knew the retry math cold`
 - Isolation: `# changed only the index; schema, query, and data held constant`
 - Control: `# baseline: the old path at 100ms; the new path at 40ms on the same input`
-- Small detail: `# the one-line off-by-one on the page bound — that is the infinitely small, and it is the cause`
+- Small detail: `# the one-line off-by-one on the page bound, that is the infinitely small, and it is the cause`
 - Prevention: `# added the invariant to the type so the invalid state cannot be written at all`
 
 ```python
@@ -63,7 +63,7 @@ print(infinitely_small("off-by-one on the page bound", "the whole report is empt
 ```
 ## Cross-Language Examples
 
-The same discipline, in real code, in other languages — prepare, isolate, control:
+The same discipline, in real code, in other languages, prepare, isolate, control:
 
 ```javascript
 // the control: the result only means something against a baseline
@@ -83,11 +83,11 @@ fn main() {
 ## Safety
 
 "Prevention over patching" must never become an excuse for shipping
-untested code — the prevention is the testing, the types, and the analysis,
+untested code, the prevention is the testing, the types, and the analysis,
 not an absence of verification. Isolation and controls are methods of
 honesty, never of hiding an effect from the people who depend on the result.
 The "infinitely small" seriousness applies to security and safety details as
-much as correctness — and proving claims with evidence never licenses
+much as correctness, and proving claims with evidence never licenses
 experiments on people without consent.
 
 ---
@@ -96,22 +96,22 @@ description: >-
   Do scientific work the way Louis Pasteur proved germ theory: prepare
   relentlessly, run controlled experiments, and let the infinitely small matter.
   "Chance favors only the prepared mind" (Dans les champs de l'observation le
-  hasard ne favorise que les esprits préparés) — the lucky discovery only lands
+  hasard ne favorise que les esprits préparés), the lucky discovery only lands
   for the person who has mastered the underlying mechanics well enough to
   recognize it; prepare the fundamentals so you can read the anomaly. Isolate
   variables like the swan-neck flask: Pasteur boiled broth in a curved-neck
-  flask so air entered but dust and spores were trapped — prove which single
+  flask so air entered but dust and spores were trapped, prove which single
   factor matters by excluding the others, never changing multiple variables at
   once. Keep a control: his public anthrax trial vaccinated one group and left
-  a control group — 100% of the vaccinated survived, 100% of the controls died;
+  a control group, 100% of the vaccinated survived, 100% of the controls died;
   every claim needs a baseline to compare against. "The role of the infinitely
   small in nature is infinitely great" (le rôle des infiniment petits dans la
-  nature est infiniment grand) — the tiny bug, the one-line error, the small
+  nature est infiniment grand), the tiny bug, the one-line error, the small
   leak causes system-wide collapse; treat micro-details with absolute
   seriousness. Prevent rather than patch: "when meditating over a disease, I
   never think of finding a remedy for it, but instead a means of preventing
-  it" — static analysis, strict types, and tests beat production fires.
-  "Science knows no country, because knowledge belongs to humanity" — share
+  it", static analysis, strict types, and tests beat production fires.
+  "Science knows no country, because knowledge belongs to humanity", share
   the method openly. Prove controversial claims with evidence: Pasteur risked
   his reputation on germ theory against miasma theory and won with
   experiments, not rhetoric. This skill is NOT for cargo-cult guessing, NOT

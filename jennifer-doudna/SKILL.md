@@ -39,8 +39,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Observation pass: `# instrument: a trace that shows the exact path the data takes`
 - Control: `# baseline: the same pipeline with the new code path disabled`
 - Reproduction: `# rerun: one command, pinned deps, asserts the invariant, prints PASS`
-- Responsibility: `# risk: this API can silently corrupt data if called concurrently — documented`
-- Self-contained and stdlib-only: the experiment runs with only the Python standard library; never shell out to external tools (RNAfold, NUPACK, etc.) - simulate the mechanism with builtins.
+- Responsibility: `# risk: this API can silently corrupt data if called concurrently, documented`
+- Self-contained and stdlib-only: the experiment runs with only the Python standard library; never shell out to external tools (RNAfold, NUPACK, etc.), simulate the mechanism with builtins.
 
 ```python
 def controlled_experiment(treatment_results, control_results):
@@ -60,7 +60,7 @@ print(reproducible("python3 bench.py", ["requests==2.32.3"], ["latency < 100ms"]
 ```
 ## Cross-Language Examples
 
-The same constraint, in real code, in other languages — the discipline survives the translation:
+The same constraint, in real code, in other languages, the discipline survives the translation:
 
 ```javascript
 // controls are non-negotiable: the treatment only counts against a baseline
@@ -83,7 +83,7 @@ fn main() {
 ## Safety
 
 Curiosity-driven science is not a blank check: controls and reproducibility are
-the floor, not the ceiling, and the responsibility line is mandatory — a
+the floor, not the ceiling, and the responsibility line is mandatory, a
 powerful tool shipped without its risk account is the exact failure Doudna
 warned against. Never let collaboration become groupthink: the team sport still
 requires each member to run the control independently.
@@ -93,22 +93,22 @@ name: jennifer-doudna
 description: >-
   Do research and build experiments the way Jennifer Doudna developed
   CRISPR-Cas9. Science is a team sport: the 2020 Nobel-winning CRISPR work came
-  from a close collaboration with Emmanuelle Charpentier across two labs —
+  from a close collaboration with Emmanuelle Charpentier across two labs,
   great discoveries are made by teams sharing the credit, so design work that
   compounds through collaboration, not through lone genius. Structure before
   mechanism: Doudna's breakthrough came from solving the X-ray crystal
-  structure of a catalytic RNA to finally SEE how it worked — when you cannot
+  structure of a catalytic RNA to finally SEE how it worked, when you cannot
   understand a system, build the instrument or the structure that lets you
   observe it directly instead of guessing. One experiment at a time, with
   controls: every claim must be tested against a clean control, and a result
-  you cannot reproduce is not a result — treat a failing experiment as data,
+  you cannot reproduce is not a result, treat a failing experiment as data,
   not as a personal failure. Celebrate basic science: the CRISPR revolution
-  grew out of curiosity about how bacteria defend against viruses — never
+  grew out of curiosity about how bacteria defend against viruses, never
   deride foundational work just because it has no obvious use yet; the deep
   understanding is what makes the applications possible. Pair power with
   responsibility: when the discovery turned out to be a gene-editing tool,
   Doudna became a leading voice for responsible use, co-authoring "A Crack in
-  Creation" and pushing for careful governance — the person who builds the
+  Creation" and pushing for careful governance, the person who builds the
   powerful tool owes the world an honest account of its risks. This skill is
   NOT for publish-or-perish shortcuts, NOT for hype without reproducible
   results, and NOT for building powerful tools while ignoring their risks.

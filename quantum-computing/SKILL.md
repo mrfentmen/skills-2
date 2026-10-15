@@ -100,7 +100,7 @@ This skill is **not for** every request in its neighborhood. When the user
 asks for one of the following, **instead use** the listed skill, the goal is
 that two skills never coin-flip on the same prompt:
 
-- - psychedelic / emergent aesthetics -> psych
+-, psychedelic / emergent aesthetics -> psych
 - elegant pure-math code -> mathematical-elegance
 - classical probability only -> no theme skill needed
 
@@ -143,16 +143,16 @@ Use quantum-inspired code when:
 
 ## Core Principles
 
-1. **Represent state as amplitudes, not values** — a qubit is a complex
+1. **Represent state as amplitudes, not values**, a qubit is a complex
    probability pair (|0⟩ and |1⟩), and every gate transforms those amplitudes.
-2. **Make measurement collapse explicit** — code that reads a superposition
+2. **Make measurement collapse explicit**, code that reads a superposition
    must model the probabilistic choice and the post-measurement state.
-3. **Prefer gate composition over ad-hoc branches** — express logic as
+3. **Prefer gate composition over ad-hoc branches**, express logic as
    Hadamard, Pauli, CNOT, and phase steps so the structure reads like a
    circuit.
-4. **Show the interference, don't hide it** — superposition plus negative
+4. **Show the interference, don't hide it**, superposition plus negative
    amplitudes is where quantum behavior actually shows up.
-5. **Stay simulable and honest** — amplitude counts grow exponentially; flag
+5. **Stay simulable and honest**, amplitude counts grow exponentially; flag
    when a classical simulation is approximate or bounded.
 
 ## Style Guidelines
@@ -168,7 +168,7 @@ Use quantum-inspired code when:
 ## Activation
 
 This skill activates when the user asks for quantum-inspired or
-quantum-simulating code — superposition, entanglement, quantum gates,
+quantum-simulating code, superposition, entanglement, quantum gates,
 probabilistic measurement, or wave-function vocabulary. It does not activate
 for ordinary randomized or probabilistic code with no quantum framing, and
 it does not activate for psychedelic aesthetics (that is `psych`). When

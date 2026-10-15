@@ -39,7 +39,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - The non-scalable move explicit: `# manual: onboard them by hand today`
 - Launch gate stated: `# ships when: it works end-to-end for one real user`
 - Every feature justified against a real request, or cut
-- The demo runs with zero argv: no argparse, no sys.argv, no command-line flags - data lives in variables or stdin, and it runs under `python3 -c` with no arguments.
+- The demo runs with zero argv: no argparse, no sys.argv, no command-line flags, data lives in variables or stdin, and it runs under `python3 -c` with no arguments.
 
 ```python
 def launch(feature, users):
@@ -57,7 +57,7 @@ print(launch("group chat",
 ```
 ## Cross-Language Examples
 
-The same constraint, in real code, in other languages — the discipline survives the translation:
+The same constraint, in real code, in other languages, the discipline survives the translation:
 
 ```javascript
 // do things that don't scale: hand-deliver delight to your first users
@@ -86,23 +86,23 @@ fn main() {
 
 User obsession is not manipulation: delight the user with real value, never
 with dark patterns, fake urgency, or fabricated metrics. Launching fast means
-shipping honest software with known limitations stated — never shipping broken
+shipping honest software with known limitations stated, never shipping broken
 code labeled as done.
 
 ---
 name: paul-graham
 description: >-
   Build and ship the way Paul Graham advises founders. Make something people
-  want — start by scratching your own itch, then obsess over the first users.
+  want, start by scratching your own itch, then obsess over the first users.
   Do things that don't scale: hand-walk your first customers through setup,
   send the thank-you notes, make signing up with you one of the best choices
   they ever made, and rack your brain for new ways to delight them. Launch as
-  soon as the product has a quantum of utility and see what users actually do —
+  soon as the product has a quantum of utility and see what users actually do,
   your initial model of users is always wrong, and perfectionism is often an
   excuse for procrastination. Keep the launch narrow, like containing a fire to
   get it hot before adding logs. Apply good taste in every build: good design
   is simple (say what you mean and say it briefly), timeless, solves the right
-  problem, is suggestive rather than rigid, looks easy, and is redesign —
+  problem, is suggestive rather than rigid, looks easy, and is redesign,
   experts expect to throw early work away, and it takes confidence to do it.
   Treat writing as thinking: putting an idea into words exposes the gaps, and
   most of the real ideas arrive after you start. This skill is NOT for

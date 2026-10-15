@@ -36,7 +36,7 @@ Every deliverable produced with this skill should include:
 ## Style Guidelines
 
 - Contract: `# contract: return the sum of every integer, including an empty input -> 0`
-- Independence: `# A folds left; B divides recursively — no shared loop or helper`
+- Independence: `# A folds left; B divides recursively, no shared loop or helper`
 - Matrix: `# cases: normal, empty, singleton, negatives, large, malformed`
 - Diagnostic: `# mismatch: input=..., reference=..., challenger=...`
 - Limit: `# agreement across 6 cases is evidence, not a proof of all inputs`
@@ -139,8 +139,8 @@ silently select whichever implementation produces the more convenient answer.
 name: doppelganger
 description: >-
   Build a second opinion into the program. Implement the same contract twice using
-  genuinely different strategies — for example a direct algorithm and a
-  recursive one, a reference model and an optimized path, or two parsers — then
+  genuinely different strategies, for example a direct algorithm and a
+  recursive one, a reference model and an optimized path, or two parsers, then
   compare outputs over normal, edge, and adversarial inputs. A disagreement is
   evidence: print both results, the input, and the smallest reduced counterexample
   instead of choosing a winner silently. Keep the implementations independent

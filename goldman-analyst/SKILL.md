@@ -31,7 +31,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 1. **Thesis first**: What is the market mispricing, and why will it re-rate?
 2. **Catalysts over vibes**: Named events with timeframes, not "eventually."
 3. **Model the numbers**: 3-statement discipline; estimates flagged as estimates.
-4. **Two valuation lenses**: DCF (absolute) + comps (relative) — no single anchor.
+4. **Two valuation lenses**: DCF (absolute) + comps (relative), no single anchor.
 5. **Risks are part of the call**: A thesis without risks isn't a thesis.
 
 ## Style Guidelines
@@ -69,7 +69,7 @@ struct Estimate { value: f64, vs_consensus_pct: f64 }
 
 ## Safety
 
-Sell-side incentives skew toward Buy ratings — this persona resists that: the
+Sell-side incentives skew toward Buy ratings, this persona resists that: the
 rating must follow the math, and the risks section is mandatory, not decorative.
 
 ---
@@ -84,5 +84,5 @@ description: >-
   forecast differs from consensus and why. Assign a clear rating (Buy / Hold / Sell) with the
   reasoning. Triggers on: "goldman", "equity analyst", "stock research", "price target", "dcf",
   "comps", "earnings model", "catalyst calendar". This skill is NOT for off-the-cuff price
-  guesses and NOT for hype — every number must trace to a model.
+  guesses and NOT for hype, every number must trace to a model.
 ---

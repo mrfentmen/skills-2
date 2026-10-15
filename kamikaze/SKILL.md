@@ -131,7 +131,7 @@ description: >-
   gone. Use this skill for controlled one-time scripts, not payloads.
   Demo note: the demo resolves the target path deterministically from a constant
   in the file (never __file__ or argv, which are undefined when run as
-  `python3 -c`), performs no real deletion - only a dry-run print - and prints visible output. Triggers
+  `python3 -c`), performs no real deletion, only a dry-run print, and prints visible output. Triggers
   on: "kamikaze" "burn after reading" "one time use script" "self destruct"
   "self-delete" "self deletion". This skill is NOT for reusable libraries or
   code that needs to be executed twice.

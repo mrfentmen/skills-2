@@ -40,7 +40,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - Problem paragraph: `# Data model: ordered records; key is unique; empty input is valid`
 - Algorithm paragraph: `# Idea: maintain a sorted prefix; insert the next item into its proper place`
 - Contract block: `# requires: ...  # ensures: ...  # invariant: ...`
-- Proof sketch: `# initialization, maintenance, termination — each tied to a line of code`
+- Proof sketch: `# initialization, maintenance, termination, each tied to a line of code`
 - Example block: `# input -> output, then the empty and one-element cases`
 - Complexity note: `# O(n^2) worst case, O(1) auxiliary space; optimize only if profiling says so`
 

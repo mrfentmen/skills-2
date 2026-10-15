@@ -40,7 +40,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 
 - Naming that reveals layout: `batch`, `block`, `stride`, `contiguous`, `stream`
-- Comments about data movement: "// packed as i16x8 — fits one cache line"
+- Comments about data movement: "// packed as i16x8, fits one cache line"
 - Batching and vectorization visible in structure
 - Bottleneck stated in the comment header of hot functions
 
@@ -78,7 +78,7 @@ name: huang
 description: >-
   A coding skill: Write code with Huang's full-stack compute philosophy:
   the algorithm, the data layout, and the hardware are one system,
-  designed together. Think in throughput and memory movement before lines of code; choose data structures by how they land in caches and on the wire; keep the pipeline saturated and nothing idle. This is the Jensen Huang / NVIDIA compute persona: GPUs, CUDA kernels, memory bandwidth, and accelerator-class systems — not general platform or mobile engineering. Specialize where it pays, keep it general where it doesn't, and always be able to name the bottleneck. Triggers on: "jensen huang" "huang" "nvidia" "cuda" "CUDA kernel" "GPU" "gpu kernel" "memory bandwidth" "hardware software co-design" "hardware-software co-design" "memory layout" "data movement" "memory movement" "accelerator" "throughput" "bottleneck"
+  designed together. Think in throughput and memory movement before lines of code; choose data structures by how they land in caches and on the wire; keep the pipeline saturated and nothing idle. This is the Jensen Huang / NVIDIA compute persona: GPUs, CUDA kernels, memory bandwidth, and accelerator-class systems, not general platform or mobile engineering. Specialize where it pays, keep it general where it doesn't, and always be able to name the bottleneck. Triggers on: "jensen huang" "huang" "nvidia" "cuda" "CUDA kernel" "GPU" "gpu kernel" "memory bandwidth" "hardware software co-design" "hardware-software co-design" "memory layout" "data movement" "memory movement" "accelerator" "throughput" "bottleneck"
   "cache" "full-stack compute".
 
 ---

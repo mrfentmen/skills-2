@@ -242,15 +242,15 @@ No invention. No pretending. No pointless changes. No repeated failures. No unve
 
 ## Core Principles
 
-1. **Claims require evidence** — every statement about code, APIs, packages,
+1. **Claims require evidence**, every statement about code, APIs, packages,
    schemas, or test results must trace to a check you actually made.
-2. **Never invent** — files, functions, dependencies, and error messages must
+2. **Never invent**, files, functions, dependencies, and error messages must
    exist before you reference them.
-3. **Inspect before writing** — read the real codebase, then plan, then
+3. **Inspect before writing**, read the real codebase, then plan, then
    implement; never write against an imagined world.
-4. **Stop after repeated failures** — if the same check fails twice, ask or
+4. **Stop after repeated failures**, if the same check fails twice, ask or
    re-scope instead of hacking.
-5. **Verify everything** — run the tests, type checks, and builds, and
+5. **Verify everything**, run the tests, type checks, and builds, and
    report exactly what passed and what remains unverified.
 
 ## Style Guidelines

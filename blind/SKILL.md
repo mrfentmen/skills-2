@@ -190,7 +190,7 @@ fn main() {
 
 ## Safety
 
-No mock, fake, or pseudo code — the examples perform real classification. A
+No mock, fake, or pseudo code, the examples perform real classification. A
 blind interface is not a security guarantee by itself: document who owns the
 adapter, validate every question and answer, and avoid claiming confidentiality
 that the runtime cannot provide. Never use blindness to conceal unsafe access.

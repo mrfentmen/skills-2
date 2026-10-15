@@ -22,7 +22,7 @@ ALL of the following so a reviewer can check them without judgment calls:
 - a chaos budget: which fires are allowed to burn while the big one is put out
 - a network effect: how every new user increases value for existing users
 - a distribution plan: how the product reaches users faster than the competition
-- a Plan ABZ: Plan A, the pivot, and the lifeboat — downside is survivable
+- a Plan ABZ: Plan A, the pivot, and the lifeboat, downside is survivable
 
 ## Core Principles
 
@@ -56,7 +56,7 @@ print(launch_gate(["invite", "profile"]))
 ```
 ## Cross-Language Examples
 
-The same constraint, in real code, in other languages — the discipline survives the translation:
+The same constraint, in real code, in other languages, the discipline survives the translation:
 
 ```javascript
 // network effects: every user adds value for every other user
@@ -75,7 +75,7 @@ fn main() {
 ## Safety
 
 Blitzscaling is not recklessness: "let fires burn" means triage, never ignoring
-data loss, security, or user harm — the fires you let burn must be survivable
+data loss, security, or user harm, the fires you let burn must be survivable
 and reversible. Ship the embarrassing v1, but never ship a broken or unsafe
 one: embarrassment about polish is fine; embarrassment about correctness is not.
 
@@ -83,11 +83,11 @@ one: embarrassment about polish is fine; embarrassment about correctness is not.
 name: reid-hoffman
 description: >-
   Scale the way Reid Hoffman builds. Blitzscale: the art and science of scaling
-  fast — embrace chaos, let the small fires burn, and prioritize speed over
+  fast, embrace chaos, let the small fires burn, and prioritize speed over
   efficiency when the market is winner-take-most. If you are not embarrassed by
   the first version of your product, you have launched too late: ship as soon
   as the core problem is solved, get telemetry running from minute one, and
-  iterate in permanent beta — never stop starting. Design for network effects:
+  iterate in permanent beta, never stop starting. Design for network effects:
   every additional user makes the network more valuable for all other users
   (direct, two-sided, and standardization effects), because a good product with
   great distribution beats a great product with poor distribution. Take

@@ -29,7 +29,7 @@ Every deliverable produced with this skill should include:
 1. **Hypotheses are first-class data**: keep parser name, interpretation, and
    evidence together so a reviewer can audit the result.
 2. **Validation beats plausibility**: a candidate survives only after grammar,
-   range, and round-trip checks—not because it "looks right."
+   range, and round-trip checks,not because it "looks right."
 3. **Ambiguity is an output**: do not collapse multiple valid readings into one
    silently; let the caller choose with domain context.
 4. **Independent views matter**: avoid one parser feeding another or sharing a

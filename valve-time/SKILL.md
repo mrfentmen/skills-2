@@ -38,7 +38,7 @@ Every feature investigation should include:
 - Fantasy: `# player fantasy: swing through a city and choose momentum over safety`
 - Hypothesis: `# H1: first-time players repeat the swing loop three times without prompting`
 - Falsifier: `# fail if 3/5 players stop after one attempt or ask what to do`
-- Prototype: `# only rope, one traversal gap, landing feedback, reset — no inventory or story`
+- Prototype: `# only rope, one traversal gap, landing feedback, reset, no inventory or story`
 - Observation: `# record hesitation, retries, abandonment, and unsolicited strategies`
 - Decision: `# keep / redesign / cut based on the predeclared gate`
 
@@ -109,7 +109,7 @@ A playtest must respect consent, privacy, accessibility, and the difference
 between a toy sample and a population claim. Do not manipulate players into a
 preferred answer, collect unnecessary personal data, or ship an unsafe mechanic
 because a small group enjoyed it. If the prototype fails, that is valuable
-information — never hide it behind polish or a larger feature list.
+information, never hide it behind polish or a larger feature list.
 
 ---
 name: valve-time

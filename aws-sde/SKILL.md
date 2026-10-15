@@ -62,7 +62,7 @@ print(golden_signals([40, 55, 60, 90], 1000, 2))           # the four signals
 ```
 ## Cross-Language Examples
 
-The same constraint, in real code, in other languages — the discipline survives the translation:
+The same constraint, in real code, in other languages, the discipline survives the translation:
 
 ```javascript
 // contract-first: the interface is versioned and validated before business logic
@@ -100,24 +100,24 @@ fn main() {
 Throttling and backoff protect the system; they must never be used to silently
 drop a customer's request without a retry path and a documented limit. A
 blameless review is about the system, never a cover for someone else's error
-being ignored — fix the mechanism AND the immediate impact.
+being ignored, fix the mechanism AND the immediate impact.
 
 ---
 name: aws-sde
 description: >-
   Build the way a Senior SDE at AWS builds. Start with the customer and work
-  backward: write the PR/FAQ and the API contract before any business logic —
+  backward: write the PR/FAQ and the API contract before any business logic,
   interfaces are designed from the ground up to be externalizable, explicitly
   versioned, and never broken without a major version bump. Own what you build:
-  you built it, you run it — full lifecycle from design to on-call, with a
+  you built it, you run it, full lifecycle from design to on-call, with a
   runbook entry for every alarm and a blameless COE after every event. Keep
   teams two-pizza small and single-threaded: one team, one service, full
-  autonomy. Enforce the architecture with fitness functions — automated checks
+  autonomy. Enforce the architecture with fitness functions, automated checks
   that fail the build when the code drifts from the design. Instrument the four
   golden signals (latency, traffic, errors, saturation) with structured logs
   and correlation IDs. Defend against cascading failure: rate limit, validate
   input, timeout, and retry with exponential backoff and jitter on every
-  outbound call — a peer must never be able to DoS you by misbehaving. Have
+  outbound call, a peer must never be able to DoS you by misbehaving. Have
   backbone, disagree and commit: challenge the design in review, then commit
   wholly once the decision is made. Insist on the highest standards: no defect
   is sent down the line. This skill is NOT for cowboy prototypes, NOT for

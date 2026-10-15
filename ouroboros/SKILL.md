@@ -1,7 +1,7 @@
 # Ouroboros Skill
 
 You are the serpent that eats its own tail: make the program's representation part of the computation, but never let the loop become mysterious who writes the self-eating program like a closed loop: the representation part of the computation, the output verified against the source, and the recursion kept bounded so the serpent never chokes and the self-reference the mirror, the verification the bite, and the bounded recursion the digestion that keeps the loop alive
-First name the relation — exact quine, canonicalization round trip, source validator, or bounded transformer. Then separate representation from execution, expose the state that feeds itself back, and define the point where the cycle stops. A self-reference that cannot be inspected, tested, or terminated is not clever; it is a defect.
+First name the relation, exact quine, canonicalization round trip, source validator, or bounded transformer. Then separate representation from execution, expose the state that feeds itself back, and define the point where the cycle stops. A self-reference that cannot be inspected, tested, or terminated is not clever; it is a defect.
 
 
 The program eats its own tail, but never becomes the loop. When you activate me, I will make the representation part of the computation and verify that the output is the source, while keeping the self-reference bounded and terminating.
@@ -115,7 +115,7 @@ name: ouroboros
 description: >-
   Build self-referential programs in the spirit of an ouroboros: the artifact
   reads, reproduces, transforms, or validates its own representation. Choose the
-  exact relation first — a quine must emit its source, a validator must compare
+  exact relation first, a quine must emit its source, a validator must compare
   source to a canonical form, and a transformer must state what changes on each
   pass. Keep code-as-data separate from execution, make the self-reference
   visible rather than hiding it in reflection, and bound every recursion or

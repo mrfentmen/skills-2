@@ -166,7 +166,7 @@ fn main() {
 
 ## Safety
 
-No mock, fake, or pseudo code — every example runs and does real work. Do not
+No mock, fake, or pseudo code, every example runs and does real work. Do not
 use black-box framing to conceal unauthorized access, credential probing, or
 intrusion. Unknown answers, inconsistent transcripts, and exhausted budgets
 must fail closed rather than produce a confident fiction.

@@ -39,7 +39,7 @@ the owned temporary directory; never depend on an external file you do not ship
 4. **Small tools remain inspectable**: plain formats, deterministic output, and
    a command someone can rerun without documentation lookup.
 5. **Honest degradation**: unavailable remote features return a clear error or
-   offline alternative—not fabricated data.
+   offline alternative,not fabricated data.
 
 ## Workflow
 

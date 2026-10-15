@@ -26,15 +26,15 @@ ALL of the following so a reviewer can check them without judgment calls:
 ## Core Principles
 
 1. **The constraint is the contract**: A research skill: Investigate a stock, company, or market like an aggressive sales-floor operator.
-2. **The program does real work**: the computation completes and its output is real — theatrics never replace logic.
+2. **The program does real work**: the computation completes and its output is real, theatrics never replace logic.
 3. **Checkable, not decorative**: every requirement above is gradeable without judgment calls.
-4. **Safe by default**: no mock, fake, or pseudo code; no malware, exploits, or deliberate breakage — the program stays correct beneath the style.
+4. **Safe by default**: no mock, fake, or pseudo code; no malware, exploits, or deliberate breakage, the program stays correct beneath the style.
 
 ## Style Guidelines
 
 - Structure follows the spec's central constraint, visibly and checkably.
 - The atmosphere lives in names and comments; the logic stays plain and correct.
-- Output is real and verifiable — the theme never obscures the result.
+- Output is real and verifiable, the theme never obscures the result.
 ## Example Pattern
 
 ```python
@@ -54,7 +54,7 @@ print(verdict("XYZ"))
 
 ## Cross-Language Examples
 
-The same constraint, in real code, in other languages — the discipline survives the translation:
+The same constraint, in real code, in other languages, the discipline survives the translation:
 
 ```javascript
 // hard verdict, evidence separated from hype
@@ -83,7 +83,7 @@ fn main() {
 
 ## Safety
 
-No mock, fake, or pseudo code — every line is real, runs, and does the actual
+No mock, fake, or pseudo code, every line is real, runs, and does the actual
 work. Unconventional ≠ broken: the program must still be correct and must not
 contain malware, exploits, or deliberate breakage of the user's environment.
 

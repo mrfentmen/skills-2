@@ -40,9 +40,9 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 - Hypothesis card: `# H1: treatment improves 30-day retention by >= 2pp; metric and gate fixed before the query`
 - Baseline line: `# baseline: current policy, 0.30 retention; treatment must beat it out of sample`
-- Split line: `# train 2022-24, validate 2025, untouched test 2026 — time order prevents look-ahead`
+- Split line: `# train 2022-24, validate 2025, untouched test 2026, time order prevents look-ahead`
 - Bias audit: `# included churned accounts and missing outcomes; survivors alone would flatter the result`
-- Edge math: `# net effect = gross effect - fee - slippage - operational cost`
+- Edge math: `# net effect = gross effect, fee, slippage, operational cost`
 - Verdict line: `# reject: +0.4pp is below the 2pp gate and the interval crosses zero`
 
 ```python
