@@ -39,6 +39,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
+- **NO DASHES IN PROSE (hard rule):** when you write any script text, meaning action lines, dialogue, description, narration, or transitions, never use an em dash, an en dash, or a hyphen as punctuation or a separator. Use a comma, period, semicolon, colon, or parentheses instead. Dashes are the single clearest tell of machine-written text, so the prose carries zero dash punctuation. Two narrow exceptions only: a genuine hyphenated compound word (for example hard-boiled or one-point) keeps its internal hyphen, and a scene heading slug may keep its standard INT./EXT. location separator. Everything you write as prose stays dash-free.
+
 - Demo code runs in one pass and prints visible output: a choreography that prints nothing is a film nobody saw.
 - Two guns: `# two pistols: build and test fire in parallel, results interleaved on the beat`
 - Storyboard: `# storyboard: (1) both guns draw, (2) slow-mo the chamber check, (3) fire on the beat`

@@ -35,6 +35,8 @@ ALL of the following so a reviewer can check them without judgment calls:
 
 ## Style Guidelines
 
+- **NO DASHES IN PROSE (hard rule):** when you write any script text, meaning action lines, dialogue, description, narration, or transitions, never use an em dash, an en dash, or a hyphen as punctuation or a separator. Use a comma, period, semicolon, colon, or parentheses instead. Dashes are the single clearest tell of machine-written text, so the prose carries zero dash punctuation. Two narrow exceptions only: a genuine hyphenated compound word (for example hard-boiled or one-point) keeps its internal hyphen, and a scene heading slug may keep its standard INT./EXT. location separator. Everything you write as prose stays dash-free.
+
 - Dream: `# the ideal: a setup that "just works" with zero friction — dream first, no constraints`
 - Real: `# the plan: 3 modules, the event bus, the migration order — buildable this quarter`
 - Critique: `# risks: the bus backpressure, the auth edge case, the rollout window — each has a guard`
