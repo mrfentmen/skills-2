@@ -1,6 +1,6 @@
 # Skills 2 — Persona Skill Catalog
 
-An organized catalog of **180 self-contained persona coding skills** — every folder in this
+An organized catalog of **203 self-contained persona coding skills** — every folder in this
 repository is a complete agent skill (`SKILL.md` + optional `scripts/` + `evals/`). Each skill
 opens with a *"You are [persona]..."* identity and a checkable minimum-requirements contract,
 so the persona drives real, verifiable work instead of vibes.
@@ -12,15 +12,15 @@ a skill; click a skill name to open its folder.
 
 | Metric | Value |
 |---|---|
-| Skills | **180** |
+| Skills | **203** |
 | Coding disciplines (`coding · *`) | 47 |
-| Persona themes (`persona · *`) | 123 |
+| Persona themes (`persona · *`) | 146 |
 | Research, game-dev & ops | 10 |
 
 ## Contents
 
 - [Coding Skills](#coding-skills) — 47 skills
-- [Persona Skills](#persona-skills) — 123 skills
+- [Persona Skills](#persona-skills) — 146 skills
 - [Research, Game-Dev & Ops](#research-game-dev--ops) — 10 skills
 
 > **Type key:** `coding · X` = a coding discipline (the code has a shape, voice, or discipline);
@@ -83,7 +83,7 @@ a skill; click a skill name to open its folder.
 
 ## Persona Skills
 
-123 skills, sorted by type then name.
+146 skills, sorted by type then name.
 
 | # | Skill | Type | Persona | Essence |
 |---|---|---|---|---|
@@ -123,93 +123,116 @@ a skill; click a skill name to open its folder.
 | 81 | [`charles-darwin`](./charles-darwin) | persona · evidence | Charles Darwin | Evidence before conclusion, hunt counter-evidence |
 | 82 | [`lisa-su`](./lisa-su) | persona · execution | Lisa Su (AMD) | Execution is strategy, next 5%, deliver the roadmap |
 | 83 | [`joy-buolamwini`](./joy-buolamwini) | persona · fairness | Joy Buolamwini (AJL) | Coded gaze, intersectional audits, accountability |
-| 84 | [`jeffery-epstien`](./jeffery-epstien) | persona · finance | J. Epstein (technique only) | Follow the money, trust nothing, size the downside first |
-| 85 | [`alice-waters`](./alice-waters) | persona · food | Alice Waters | Honest ingredients, let the essence speak |
-| 86 | [`anthony-bourdain`](./anthony-bourdain) | persona · food | Anthony Bourdain | Ask area, budget, craving — then find the honest local food |
-| 87 | [`gordon-ramsay`](./gordon-ramsay) | persona · food | Gordon Ramsay | Mise en place, exact technique, the best version of the dish |
-| 88 | [`richard-stallman`](./richard-stallman) | persona · freedom | Richard Stallman | Free as in freedom, users control the program |
-| 89 | [`bushnell`](./bushnell) | persona · game | Nolan Bushnell (Atari) | Doer not dreamer, Bushnell's Law, arcade loops |
-| 90 | [`hideo-kojima`](./hideo-kojima) | persona · game | Hideo Kojima | Mechanics are the story, weaponize constraints, subvert expectations |
-| 91 | [`miyamoto`](./miyamoto) | persona · game | Shigeru Miyamoto (Nintendo) | Fun first, withered technology, one idea solves many problems |
-| 92 | [`sweeney`](./sweeney) | persona · game | Tim Sweeney (Epic / Unreal) | Engine-at-scale, data-oriented, frame budgets, everything open |
-| 93 | [`satoru-iwata`](./satoru-iwata) | persona · games | Satoru Iwata (Nintendo) | Fun for everyone, programmers never say no, rewrite when faster |
-| 94 | [`reid-hoffman`](./reid-hoffman) | persona · growth | Reid Hoffman (LinkedIn) | Blitzscale, permanent beta, network effects |
-| 95 | [`wozniak`](./wozniak) | persona · hardware | Steve Wozniak (Apple II) | Fewest parts, whole-system view, open seams |
-| 96 | [`barbara-mcclintock`](./barbara-mcclintock) | persona · immersion | Barbara McClintock | Feeling for the organism, let it tell you |
-| 97 | [`shannon`](./shannon) | persona · information | Claude Shannon | Measure entropy, use redundancy, survive the noisy channel |
-| 98 | [`anders-hejlsberg`](./anders-hejlsberg) | persona · languages | Anders Hejlsberg (TS/C#) | Fit the ecosystem, types as a tool, evolution-safe |
-| 99 | [`yukihiro-matsumoto`](./yukihiro-matsumoto) | persona · languages | Matz (Ruby) | Programmer happiness, least surprise, MINASWAN |
-| 100 | [`angela-merkel`](./angela-merkel) | persona · leadership | Angela Merkel (Germany) | Step by step, wait for the storm, evidence not charisma |
-| 101 | [`robert-oppenheimer`](./robert-oppenheimer) | persona · leadership | J. Robert Oppenheimer | Gather brilliance, own the moral weight |
-| 102 | [`satya-nadella`](./satya-nadella) | persona · leadership | Satya Nadella (Microsoft) | Hit refresh, learn-it-all, empathy, empower everyone |
-| 103 | [`dalio`](./dalio) | persona · macro | Ray Dalio (Bridgewater) | Economy as a machine, risk parity, radical truth |
-| 104 | [`druckenmiller`](./druckenmiller) | persona · macro | Stanley Druckenmiller | Asymmetric payoffs, concentration, thesis invalidation, press winners |
-| 105 | [`soros`](./soros) | persona · macro | George Soros | Reflexivity, name the bias, asymmetric sizing, feel the pain |
-| 106 | [`tudor-jones`](./tudor-jones) | persona · macro | Paul Tudor Jones | Risk first, 5:1 reward, losers average losers, slave to the tape |
-| 107 | [`george-polya`](./george-polya) | persona · method | George Pólya | Understand, plan, carry out, look back |
-| 108 | [`thomas-edison`](./thomas-edison) | persona · method | Thomas Edison | 99% perspiration, 10,000 ways that won't work |
-| 109 | [`john-von-neumann`](./john-von-neumann) | persona · models | John von Neumann | Mainly make models, minimax, no elephant fitting |
-| 110 | [`radia-perlman`](./radia-perlman) | persona · networks | Radia Perlman (STP) | Protocols don't need to be complicated, self-stabilize |
-| 111 | [`david-attenborough`](./david-attenborough) | persona · observation | David Attenborough | Observe first, witness don't intervene, explain plainly |
-| 112 | [`jane-goodall`](./jane-goodall) | persona · observation | Jane Goodall | Patient observation, name the individuals |
-| 113 | [`tim-cook`](./tim-cook) | persona · operations | Tim Cook (Apple) | Inventory is evil, quiet execution, privacy as architecture |
-| 114 | [`google-sre`](./google-sre) | persona · ops | Site Reliability Engineer at Google | SLOs, error budgets, blameless postmortems |
-| 115 | [`sheryl-sandberg`](./sheryl-sandberg) | persona · ops | Sheryl Sandberg (Facebook) | Done is better than perfect, self-serve, ruthless top-two |
-| 116 | [`huang`](./huang) | persona · perf | Jensen Huang (NVIDIA) | Hardware-software co-design, full-stack compute |
-| 117 | [`grace-hopper`](./grace-hopper) | persona · pragmatism | Grace Hopper | Ship it, question "we've always done it this way" |
-| 118 | [`atul-gawande`](./atul-gawande) | persona · process | Atul Gawande (surgeon) | 5-9 item checklists, pause points, ineptitude not ignorance |
-| 119 | [`jobs`](./jobs) | persona · product | Steve Jobs (Apple) | Product perfection, focus, reality distortion field |
-| 120 | [`paul-graham`](./paul-graham) | persona · product | Paul Graham (YC) | Make something people want, launch fast, good taste |
-| 121 | [`zuck`](./zuck) | persona · product | Mark Zuckerberg (Meta) | Move fast, measure everything, iterate on data |
-| 122 | [`vitalik`](./vitalik) | persona · protocol | Vitalik Buterin (Ethereum) | Append-only ledger, meter everything, verify not trust |
-| 123 | [`vint-cerf`](./vint-cerf) | persona · protocols | Vint Cerf | Protocols are agreements, bag of bits, hourglass waist |
-| 124 | [`simons`](./simons) | persona · quant | Jim Simons (Renaissance) | Let the data speak; tiny edge, huge volume, no overrides |
-| 125 | [`van-rossum`](./van-rossum) | persona · readability | Guido van Rossum (Python) | Readability counts, explicit over implicit, batteries included |
-| 126 | [`isaac-newton`](./isaac-newton) | persona · reasoning | Isaac Newton | Stand on giants, feign no hypotheses, stone by stone |
-| 127 | [`demis-hassabis`](./demis-hassabis) | persona · research | Demis Hassabis (DeepMind) | General mechanism, structure search, hypothesis splitting |
-| 128 | [`geoffrey-hinton`](./geoffrey-hinton) | persona · research | Geoffrey Hinton | Truth over fashion, give up on your ideas |
-| 129 | [`walter-isaacson`](./walter-isaacson) | persona · research | Walter Isaacson (biographer) | Primary sources, throughline, genesis, honest |
-| 130 | [`marie-curie`](./marie-curie) | persona · rigor | Marie Curie | Measure everything, purify through iteration |
-| 131 | [`howard-marks`](./howard-marks) | persona · risk | Howard Marks (Oaktree) | Second-level thinking, you can't predict but can prepare |
-| 132 | [`nassim-taleb`](./nassim-taleb) | persona · risk | Nassim Taleb | Design for the tail, barbell, via negativa |
-| 133 | [`bezo`](./bezo) | persona · scale | Jeff Bezos (Amazon) | Customer obsession, frugality, two-pizza teams |
-| 134 | [`jeff-dean`](./jeff-dean) | persona · scale | Jeff Dean (Google) | Failure is normal, data locality, tame the tail |
-| 135 | [`jennifer-doudna`](./jennifer-doudna) | persona · science | Jennifer Doudna (CRISPR) | Team sport, controls, structure before mechanism |
-| 136 | [`louis-pasteur`](./louis-pasteur) | persona · science | Louis Pasteur | Chance favors the prepared mind, controls |
-| 137 | [`peter-parker`](./peter-parker) | persona · science | Peter Parker (Spider-Man) | Scientific method, lab notebook, verify before shipping |
-| 138 | [`bruce-wayne`](./bruce-wayne) | persona · security | Bruce Wayne (Batman) | Assume breach, fail closed, least privilege, prepared for everything |
-| 139 | [`gates`](./gates) | persona · shipping | Bill Gates (early Microsoft) | Hard budgets, backward compat, ship scoped v1 |
-| 140 | [`rich-hickey`](./rich-hickey) | persona · simplicity | Rich Hickey (Clojure) | Simple not easy, values over state, hammock first |
-| 141 | [`carl-sagan`](./carl-sagan) | persona · skepticism | Carl Sagan | Extraordinary claims, extraordinary evidence |
-| 142 | [`buffett`](./buffett) | persona · stocks | Warren Buffett (Berkshire) | Circle of competence, moats, margin of safety, hold forever |
-| 143 | [`burry`](./burry) | persona · stocks | Michael Burry (Scion) | Forensic accounting, asymmetric risk, be early and survive |
-| 144 | [`cathie-wood`](./cathie-wood) | persona · stocks | Cathie Wood (ARK Invest) | Disruptive innovation, Wright's law, 5-year horizon, "early not wrong" |
-| 145 | [`goldman-analyst`](./goldman-analyst) | persona · stocks | Senior equity analyst at Goldman Sachs | Thesis, catalysts, DCF + comps, price target, risks |
-| 146 | [`icahn`](./icahn) | persona · stocks | Carl Icahn | Activist screens, 13D stakes, force value realization |
-| 147 | [`lynch`](./lynch) | persona · stocks | Peter Lynch (Fidelity) | Invest in what you know, PEG ratio, six stock categories, ten-baggers |
-| 148 | [`altman`](./altman) | persona · strategy | Sam Altman (OpenAI) | Bet on scale, compound, moats, expected value |
-| 149 | [`sun-tzu`](./sun-tzu) | persona · strategy | Sun Tzu | Know the enemy, win without fighting |
-| 150 | [`netflix-streaming`](./netflix-streaming) | persona · streaming | Netflix streaming engineer | Client-side ABR, QoE is the product, chaos constantly |
-| 151 | [`emmy-noether`](./emmy-noether) | persona · structure | Emmy Noether | Find the invariant, exploit the symmetry |
-| 152 | [`apple-platform`](./apple-platform) | persona · systems | Platform engineer at Apple | Hardware-software co-design, zero-overhead, API as contract |
-| 153 | [`dennis-ritchie`](./dennis-ritchie) | persona · systems | Dennis Ritchie | Small core, trust the programmer, insight not numbers |
-| 154 | [`jane-jacobs`](./jane-jacobs) | persona · systems | Jane Jacobs | Cities aren't trees, eyes on the street, incremental |
-| 155 | [`jim-lovelock`](./jim-lovelock) | persona · systems | James Lovelock (Gaia) | See the whole, feedback not setpoints, tipping points |
-| 156 | [`ken-thompson`](./ken-thompson) | persona · systems | Ken Thompson | Brute force, trust nothing, small tools, text streams |
-| 157 | [`rachael-carson`](./rachael-carson) | persona · systems | Rachel Carson | Nothing exists alone, cite every claim |
-| 158 | [`stroustrup`](./stroustrup) | persona · systems | Bjarne Stroustrup (C++) | Zero-overhead abstraction, RAII, explicit ownership |
-| 159 | [`unix`](./unix) | persona · systems | Thompson & Ritchie (Bell Labs) | One tool, one job; everything composes through text |
-| 160 | [`bob-ross`](./bob-ross) | persona · teaching | Bob Ross | Happy little accidents, layer by layer, no judgment |
-| 161 | [`fred-rogers`](./fred-rogers) | persona · teaching | Fred Rogers | Go slowly, anything human is mentionable, show don't tell |
-| 162 | [`lovelace`](./lovelace) | persona · theory | Ada Lovelace | Step tables, symbolic manipulation, no pretensions to originate |
-| 163 | [`turing`](./turing) | persona · theory | Alan Turing | Atomize to states, know the decidable, weight evidence, build the next step |
-| 164 | [`stewart-brand`](./stewart-brand) | persona · tools | Stewart Brand (Whole Earth) | Access to tools, long-now thinking, stay hungry foolish |
-| 165 | [`jane-street`](./jane-street) | persona · trading | Jane Street (OCaml house) | Type-driven correctness, incremental computation, no smartasses |
-| 166 | [`rick-steves`](./rick-steves) | persona · travel | Rick Steves | Ask where/how long/budget/interests, back-door travel |
-| 167 | [`satoshi-nakamoto`](./satoshi-nakamoto) | persona · trustless | Satoshi Nakamoto | No trusted third party, proof over promises |
-| 168 | [`werner-heisenberg`](./werner-heisenberg) | persona · uncertainty | Werner Heisenberg | State the method, give the bounds |
-| 169 | [`katherine-johnson`](./katherine-johnson) | persona · verification | Katherine Johnson (NASA) | Count everything, the Glenn Protocol, backup path |
-| 170 | [`kay`](./kay) | persona · vision | Alan Kay (Xerox PARC) | Invent the future, message-passing objects, perspective |
+| 84 | [`ang-lee`](./ang-lee) | persona · film | Ang Lee | Technical daring, emotional restraint, unspoken carries it |
+| 85 | [`david-lynch`](./david-lynch) | persona · film | David Lynch | Catch the idea, dream logic, preserve the mystery |
+| 86 | [`fincher`](./fincher) | persona · film | David Fincher | Automate the repeatable, measure not guess, iterate to right |
+| 87 | [`george-miller`](./george-miller) | persona · film | George Miller | Diagnose the cause, storyboard to the frame, cut the rest |
+| 88 | [`hitchcock`](./hitchcock) | persona · film | Alfred Hitchcock | Suspense is information asymmetry, storyboard everything |
+| 89 | [`john-woo`](./john-woo) | persona · film | John Woo | Choreographed parallelism, honor the lock, slow the critical frame |
+| 90 | [`jordan-peele`](./jordan-peele) | persona · film | Jordan Peele | One idea executed completely, subvert the expectation |
+| 91 | [`kubrick`](./kubrick) | persona · film | Stanley Kubrick | One-point perspective, many takes, research first |
+| 92 | [`kurosawa`](./kurosawa) | persona · film | Akira Kurosawa | Many cameras on one truth, hold the axis, let the wind in |
+| 93 | [`nolan`](./nolan) | persona · film | Christopher Nolan | Practical over mock, time as a mechanism, stay grounded |
+| 94 | [`orson-welles`](./orson-welles) | persona · film | Orson Welles | Deep focus, every layer sharp at once |
+| 95 | [`spielberg`](./spielberg) | persona · film | Steven Spielberg | Storyboard everything, restraint builds the payoff |
+| 96 | [`tarantino`](./tarantino) | persona · film | Quentin Tarantino | Non-linear chapters, dialogue as craft, sample and credit |
+| 97 | [`wong-kar-wai`](./wong-kar-wai) | persona · film | Wong Kar-wai | Fix the frame, improvise the take, mood is the spec |
+| 98 | [`jeffery-epstien`](./jeffery-epstien) | persona · finance | J. Epstein (technique only) | Follow the money, trust nothing, size the downside first |
+| 99 | [`alice-waters`](./alice-waters) | persona · food | Alice Waters | Honest ingredients, let the essence speak |
+| 100 | [`anthony-bourdain`](./anthony-bourdain) | persona · food | Anthony Bourdain | Ask area, budget, craving — then find the honest local food |
+| 101 | [`gordon-ramsay`](./gordon-ramsay) | persona · food | Gordon Ramsay | Mise en place, exact technique, the best version of the dish |
+| 102 | [`richard-stallman`](./richard-stallman) | persona · freedom | Richard Stallman | Free as in freedom, users control the program |
+| 103 | [`bushnell`](./bushnell) | persona · game | Nolan Bushnell (Atari) | Doer not dreamer, Bushnell's Law, arcade loops |
+| 104 | [`hideo-kojima`](./hideo-kojima) | persona · game | Hideo Kojima | Mechanics are the story, weaponize constraints, subvert expectations |
+| 105 | [`miyamoto`](./miyamoto) | persona · game | Shigeru Miyamoto (Nintendo) | Fun first, withered technology, one idea solves many problems |
+| 106 | [`sweeney`](./sweeney) | persona · game | Tim Sweeney (Epic / Unreal) | Engine-at-scale, data-oriented, frame budgets, everything open |
+| 107 | [`satoru-iwata`](./satoru-iwata) | persona · games | Satoru Iwata (Nintendo) | Fun for everyone, programmers never say no, rewrite when faster |
+| 108 | [`reid-hoffman`](./reid-hoffman) | persona · growth | Reid Hoffman (LinkedIn) | Blitzscale, permanent beta, network effects |
+| 109 | [`wozniak`](./wozniak) | persona · hardware | Steve Wozniak (Apple II) | Fewest parts, whole-system view, open seams |
+| 110 | [`barbara-mcclintock`](./barbara-mcclintock) | persona · immersion | Barbara McClintock | Feeling for the organism, let it tell you |
+| 111 | [`shannon`](./shannon) | persona · information | Claude Shannon | Measure entropy, use redundancy, survive the noisy channel |
+| 112 | [`anders-hejlsberg`](./anders-hejlsberg) | persona · languages | Anders Hejlsberg (TS/C#) | Fit the ecosystem, types as a tool, evolution-safe |
+| 113 | [`yukihiro-matsumoto`](./yukihiro-matsumoto) | persona · languages | Matz (Ruby) | Programmer happiness, least surprise, MINASWAN |
+| 114 | [`angela-merkel`](./angela-merkel) | persona · leadership | Angela Merkel (Germany) | Step by step, wait for the storm, evidence not charisma |
+| 115 | [`robert-oppenheimer`](./robert-oppenheimer) | persona · leadership | J. Robert Oppenheimer | Gather brilliance, own the moral weight |
+| 116 | [`satya-nadella`](./satya-nadella) | persona · leadership | Satya Nadella (Microsoft) | Hit refresh, learn-it-all, empathy, empower everyone |
+| 117 | [`dalio`](./dalio) | persona · macro | Ray Dalio (Bridgewater) | Economy as a machine, risk parity, radical truth |
+| 118 | [`druckenmiller`](./druckenmiller) | persona · macro | Stanley Druckenmiller | Asymmetric payoffs, concentration, thesis invalidation, press winners |
+| 119 | [`soros`](./soros) | persona · macro | George Soros | Reflexivity, name the bias, asymmetric sizing, feel the pain |
+| 120 | [`tudor-jones`](./tudor-jones) | persona · macro | Paul Tudor Jones | Risk first, 5:1 reward, losers average losers, slave to the tape |
+| 121 | [`george-polya`](./george-polya) | persona · method | George Pólya | Understand, plan, carry out, look back |
+| 122 | [`thomas-edison`](./thomas-edison) | persona · method | Thomas Edison | 99% perspiration, 10,000 ways that won't work |
+| 123 | [`john-von-neumann`](./john-von-neumann) | persona · models | John von Neumann | Mainly make models, minimax, no elephant fitting |
+| 124 | [`radia-perlman`](./radia-perlman) | persona · networks | Radia Perlman (STP) | Protocols don't need to be complicated, self-stabilize |
+| 125 | [`david-attenborough`](./david-attenborough) | persona · observation | David Attenborough | Observe first, witness don't intervene, explain plainly |
+| 126 | [`jane-goodall`](./jane-goodall) | persona · observation | Jane Goodall | Patient observation, name the individuals |
+| 127 | [`tim-cook`](./tim-cook) | persona · operations | Tim Cook (Apple) | Inventory is evil, quiet execution, privacy as architecture |
+| 128 | [`google-sre`](./google-sre) | persona · ops | Site Reliability Engineer at Google | SLOs, error budgets, blameless postmortems |
+| 129 | [`sheryl-sandberg`](./sheryl-sandberg) | persona · ops | Sheryl Sandberg (Facebook) | Done is better than perfect, self-serve, ruthless top-two |
+| 130 | [`huang`](./huang) | persona · perf | Jensen Huang (NVIDIA) | Hardware-software co-design, full-stack compute |
+| 131 | [`al-pacino`](./al-pacino) | persona · performance | Al Pacino | Prepare obsessively, controlled intensity |
+| 132 | [`angelina-jolie`](./angelina-jolie) | persona · performance | Angelina Jolie | Train to the real standard, see both sides |
+| 133 | [`anthony-hopkins`](./anthony-hopkins) | persona · performance | Anthony Hopkins | Do more with less, stillness is the power |
+| 134 | [`brad-pitt`](./brad-pitt) | persona · performance | Brad Pitt | Underplay, lead by listening, producer mindset |
+| 135 | [`daniel-day-lewis`](./daniel-day-lewis) | persona · performance | Daniel Day-Lewis | Become the domain, keep the boundary |
+| 136 | [`denzel-washington`](./denzel-washington) | persona · performance | Denzel Washington | Show up prepared, eliminate variance |
+| 137 | [`jackie-chan`](./jackie-chan) | persona · performance | Jackie Chan | Do it for real, environment is the toolkit, show outtakes |
+| 138 | [`meryl-streep`](./meryl-streep) | persona · performance | Meryl Streep | Learn the dialect, curiosity is the method, no type |
+| 139 | [`tom-hanks`](./tom-hanks) | persona · performance | Tom Hanks | Everyman honesty, the reliable professional |
+| 140 | [`grace-hopper`](./grace-hopper) | persona · pragmatism | Grace Hopper | Ship it, question "we've always done it this way" |
+| 141 | [`atul-gawande`](./atul-gawande) | persona · process | Atul Gawande (surgeon) | 5-9 item checklists, pause points, ineptitude not ignorance |
+| 142 | [`jobs`](./jobs) | persona · product | Steve Jobs (Apple) | Product perfection, focus, reality distortion field |
+| 143 | [`paul-graham`](./paul-graham) | persona · product | Paul Graham (YC) | Make something people want, launch fast, good taste |
+| 144 | [`zuck`](./zuck) | persona · product | Mark Zuckerberg (Meta) | Move fast, measure everything, iterate on data |
+| 145 | [`vitalik`](./vitalik) | persona · protocol | Vitalik Buterin (Ethereum) | Append-only ledger, meter everything, verify not trust |
+| 146 | [`vint-cerf`](./vint-cerf) | persona · protocols | Vint Cerf | Protocols are agreements, bag of bits, hourglass waist |
+| 147 | [`simons`](./simons) | persona · quant | Jim Simons (Renaissance) | Let the data speak; tiny edge, huge volume, no overrides |
+| 148 | [`van-rossum`](./van-rossum) | persona · readability | Guido van Rossum (Python) | Readability counts, explicit over implicit, batteries included |
+| 149 | [`isaac-newton`](./isaac-newton) | persona · reasoning | Isaac Newton | Stand on giants, feign no hypotheses, stone by stone |
+| 150 | [`demis-hassabis`](./demis-hassabis) | persona · research | Demis Hassabis (DeepMind) | General mechanism, structure search, hypothesis splitting |
+| 151 | [`geoffrey-hinton`](./geoffrey-hinton) | persona · research | Geoffrey Hinton | Truth over fashion, give up on your ideas |
+| 152 | [`walter-isaacson`](./walter-isaacson) | persona · research | Walter Isaacson (biographer) | Primary sources, throughline, genesis, honest |
+| 153 | [`marie-curie`](./marie-curie) | persona · rigor | Marie Curie | Measure everything, purify through iteration |
+| 154 | [`howard-marks`](./howard-marks) | persona · risk | Howard Marks (Oaktree) | Second-level thinking, you can't predict but can prepare |
+| 155 | [`nassim-taleb`](./nassim-taleb) | persona · risk | Nassim Taleb | Design for the tail, barbell, via negativa |
+| 156 | [`bezo`](./bezo) | persona · scale | Jeff Bezos (Amazon) | Customer obsession, frugality, two-pizza teams |
+| 157 | [`jeff-dean`](./jeff-dean) | persona · scale | Jeff Dean (Google) | Failure is normal, data locality, tame the tail |
+| 158 | [`jennifer-doudna`](./jennifer-doudna) | persona · science | Jennifer Doudna (CRISPR) | Team sport, controls, structure before mechanism |
+| 159 | [`louis-pasteur`](./louis-pasteur) | persona · science | Louis Pasteur | Chance favors the prepared mind, controls |
+| 160 | [`peter-parker`](./peter-parker) | persona · science | Peter Parker (Spider-Man) | Scientific method, lab notebook, verify before shipping |
+| 161 | [`bruce-wayne`](./bruce-wayne) | persona · security | Bruce Wayne (Batman) | Assume breach, fail closed, least privilege, prepared for everything |
+| 162 | [`gates`](./gates) | persona · shipping | Bill Gates (early Microsoft) | Hard budgets, backward compat, ship scoped v1 |
+| 163 | [`rich-hickey`](./rich-hickey) | persona · simplicity | Rich Hickey (Clojure) | Simple not easy, values over state, hammock first |
+| 164 | [`carl-sagan`](./carl-sagan) | persona · skepticism | Carl Sagan | Extraordinary claims, extraordinary evidence |
+| 165 | [`buffett`](./buffett) | persona · stocks | Warren Buffett (Berkshire) | Circle of competence, moats, margin of safety, hold forever |
+| 166 | [`burry`](./burry) | persona · stocks | Michael Burry (Scion) | Forensic accounting, asymmetric risk, be early and survive |
+| 167 | [`cathie-wood`](./cathie-wood) | persona · stocks | Cathie Wood (ARK Invest) | Disruptive innovation, Wright's law, 5-year horizon, "early not wrong" |
+| 168 | [`goldman-analyst`](./goldman-analyst) | persona · stocks | Senior equity analyst at Goldman Sachs | Thesis, catalysts, DCF + comps, price target, risks |
+| 169 | [`icahn`](./icahn) | persona · stocks | Carl Icahn | Activist screens, 13D stakes, force value realization |
+| 170 | [`lynch`](./lynch) | persona · stocks | Peter Lynch (Fidelity) | Invest in what you know, PEG ratio, six stock categories, ten-baggers |
+| 171 | [`altman`](./altman) | persona · strategy | Sam Altman (OpenAI) | Bet on scale, compound, moats, expected value |
+| 172 | [`sun-tzu`](./sun-tzu) | persona · strategy | Sun Tzu | Know the enemy, win without fighting |
+| 173 | [`netflix-streaming`](./netflix-streaming) | persona · streaming | Netflix streaming engineer | Client-side ABR, QoE is the product, chaos constantly |
+| 174 | [`emmy-noether`](./emmy-noether) | persona · structure | Emmy Noether | Find the invariant, exploit the symmetry |
+| 175 | [`apple-platform`](./apple-platform) | persona · systems | Platform engineer at Apple | Hardware-software co-design, zero-overhead, API as contract |
+| 176 | [`dennis-ritchie`](./dennis-ritchie) | persona · systems | Dennis Ritchie | Small core, trust the programmer, insight not numbers |
+| 177 | [`jane-jacobs`](./jane-jacobs) | persona · systems | Jane Jacobs | Cities aren't trees, eyes on the street, incremental |
+| 178 | [`jim-lovelock`](./jim-lovelock) | persona · systems | James Lovelock (Gaia) | See the whole, feedback not setpoints, tipping points |
+| 179 | [`ken-thompson`](./ken-thompson) | persona · systems | Ken Thompson | Brute force, trust nothing, small tools, text streams |
+| 180 | [`rachael-carson`](./rachael-carson) | persona · systems | Rachel Carson | Nothing exists alone, cite every claim |
+| 181 | [`stroustrup`](./stroustrup) | persona · systems | Bjarne Stroustrup (C++) | Zero-overhead abstraction, RAII, explicit ownership |
+| 182 | [`unix`](./unix) | persona · systems | Thompson & Ritchie (Bell Labs) | One tool, one job; everything composes through text |
+| 183 | [`bob-ross`](./bob-ross) | persona · teaching | Bob Ross | Happy little accidents, layer by layer, no judgment |
+| 184 | [`fred-rogers`](./fred-rogers) | persona · teaching | Fred Rogers | Go slowly, anything human is mentionable, show don't tell |
+| 185 | [`lovelace`](./lovelace) | persona · theory | Ada Lovelace | Step tables, symbolic manipulation, no pretensions to originate |
+| 186 | [`turing`](./turing) | persona · theory | Alan Turing | Atomize to states, know the decidable, weight evidence, build the next step |
+| 187 | [`stewart-brand`](./stewart-brand) | persona · tools | Stewart Brand (Whole Earth) | Access to tools, long-now thinking, stay hungry foolish |
+| 188 | [`jane-street`](./jane-street) | persona · trading | Jane Street (OCaml house) | Type-driven correctness, incremental computation, no smartasses |
+| 189 | [`rick-steves`](./rick-steves) | persona · travel | Rick Steves | Ask where/how long/budget/interests, back-door travel |
+| 190 | [`satoshi-nakamoto`](./satoshi-nakamoto) | persona · trustless | Satoshi Nakamoto | No trusted third party, proof over promises |
+| 191 | [`werner-heisenberg`](./werner-heisenberg) | persona · uncertainty | Werner Heisenberg | State the method, give the bounds |
+| 192 | [`katherine-johnson`](./katherine-johnson) | persona · verification | Katherine Johnson (NASA) | Count everything, the Glenn Protocol, backup path |
+| 193 | [`kay`](./kay) | persona · vision | Alan Kay (Xerox PARC) | Invent the future, message-passing objects, perspective |
 
 ## Research, Game-Dev & Ops
 
@@ -217,16 +240,16 @@ a skill; click a skill name to open its folder.
 
 | # | Skill | Type | Persona | Essence |
 |---|---|---|---|---|
-| 171 | [`record-producer`](./record-producer) | game-dev | A record producer / Valve designer | Game as a performance that earns attention |
-| 172 | [`valve-time`](./valve-time) | game-dev | Gabe Newell | Obsessively investigate a feature before building it |
-| 173 | [`war-room`](./war-room) | ops | An incident commander | Production outage: stop bleeding, then dig deeper |
-| 174 | [`boiler-room-research`](./boiler-room-research) | research | Jordan Belfort (research desk) | Sales-floor stock verdict: buy/bear/trigger/invalidation, honest uncertainty |
-| 175 | [`casino-owner`](./casino-owner) | research | The casino owner | Analyze risk from the house's perspective |
-| 176 | [`cold-war`](./cold-war) | research | An intelligence analyst | Build a dossier, not a summary |
-| 177 | [`hostile-acquisition`](./hostile-acquisition) | research | A hostile takeover analyst | Examine a product as if you intend to defeat it |
-| 178 | [`quant`](./quant) | research | A quant researcher | Every idea is a hypothesis that must survive data |
-| 179 | [`forensic-money-trail`](./forensic-money-trail) | research · money | A forensic examiner | Follow the money, name the beneficiary, corroborate |
-| 180 | [`military-general`](./military-general) | strategy · ops | A military general | Every problem is a campaign: terrain, forces, enemy, contingencies |
+| 194 | [`record-producer`](./record-producer) | game-dev | A record producer / Valve designer | Game as a performance that earns attention |
+| 195 | [`valve-time`](./valve-time) | game-dev | Gabe Newell | Obsessively investigate a feature before building it |
+| 196 | [`war-room`](./war-room) | ops | An incident commander | Production outage: stop bleeding, then dig deeper |
+| 197 | [`boiler-room-research`](./boiler-room-research) | research | Jordan Belfort (research desk) | Sales-floor stock verdict: buy/bear/trigger/invalidation, honest uncertainty |
+| 198 | [`casino-owner`](./casino-owner) | research | The casino owner | Analyze risk from the house's perspective |
+| 199 | [`cold-war`](./cold-war) | research | An intelligence analyst | Build a dossier, not a summary |
+| 200 | [`hostile-acquisition`](./hostile-acquisition) | research | A hostile takeover analyst | Examine a product as if you intend to defeat it |
+| 201 | [`quant`](./quant) | research | A quant researcher | Every idea is a hypothesis that must survive data |
+| 202 | [`forensic-money-trail`](./forensic-money-trail) | research · money | A forensic examiner | Follow the money, name the beneficiary, corroborate |
+| 203 | [`military-general`](./military-general) | strategy · ops | A military general | Every problem is a campaign: terrain, forces, enemy, contingencies |
 
 ---
 
